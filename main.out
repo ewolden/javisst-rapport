@@ -1,0 +1,102 @@
+\BOOKMARK [0][-]{section*.1}{Summary}{}% 1
+\BOOKMARK [0][-]{section*.2}{Preface}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{Table of Contents}{}% 3
+\BOOKMARK [0][-]{chapter*.4}{List of Tables}{}% 4
+\BOOKMARK [0][-]{chapter*.5}{List of Figures}{}% 5
+\BOOKMARK [0][-]{section*.6}{Abbreviations}{}% 6
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
+\BOOKMARK [1][-]{section.1.1}{Equations}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Figures}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.3}{References}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.4}{Tables}{chapter.1}% 11
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 12
+\BOOKMARK [0][-]{chapter.3}{Basic Theory}{}% 13
+\BOOKMARK [0][-]{chapter.4}{Experiment}{}% 14
+\BOOKMARK [0][-]{chapter.5}{Analysis}{}% 15
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 16
+\BOOKMARK [0][-]{section*.8}{Abstract}{}% 17
+\BOOKMARK [0][-]{chapter.7}{Intro}{}% 18
+\BOOKMARK [1][-]{section.7.1}{Stakeholders}{chapter.7}% 19
+\BOOKMARK [2][-]{subsection.7.1.1}{Customer}{section.7.1}% 20
+\BOOKMARK [2][-]{subsection.7.1.2}{Team}{section.7.1}% 21
+\BOOKMARK [1][-]{section.7.2}{Project description}{chapter.7}% 22
+\BOOKMARK [1][-]{section.7.3}{Problem description}{chapter.7}% 23
+\BOOKMARK [0][-]{chapter.8}{Pre-study}{}% 24
+\BOOKMARK [1][-]{section.8.1}{Project assumptions and constraints}{chapter.8}% 25
+\BOOKMARK [1][-]{section.8.2}{Choice of framework}{chapter.8}% 26
+\BOOKMARK [2][-]{subsection.8.2.1}{PhoneGap}{section.8.2}% 27
+\BOOKMARK [2][-]{subsection.8.2.2}{Ionic}{section.8.2}% 28
+\BOOKMARK [2][-]{subsection.8.2.3}{Appcelerator Titanium}{section.8.2}% 29
+\BOOKMARK [2][-]{subsection.8.2.4}{Sencha touch}{section.8.2}% 30
+\BOOKMARK [2][-]{subsection.8.2.5}{Conclusion}{section.8.2}% 31
+\BOOKMARK [1][-]{section.8.3}{Software development process}{chapter.8}% 32
+\BOOKMARK [2][-]{subsection.8.3.1}{Waterfall model}{section.8.3}% 33
+\BOOKMARK [2][-]{subsection.8.3.2}{Extreme programming}{section.8.3}% 34
+\BOOKMARK [2][-]{subsection.8.3.3}{Scrum }{section.8.3}% 35
+\BOOKMARK [2][-]{subsection.8.3.4}{Conclusion}{section.8.3}% 36
+\BOOKMARK [1][-]{section.8.4}{Back end}{chapter.8}% 37
+\BOOKMARK [2][-]{subsection.8.4.1}{Docker}{section.8.4}% 38
+\BOOKMARK [2][-]{subsection.8.4.2}{Language}{section.8.4}% 39
+\BOOKMARK [1][-]{section.8.5}{Personalization algorithms}{chapter.8}% 40
+\BOOKMARK [2][-]{subsection.8.5.1}{Recommender systems}{section.8.5}% 41
+\BOOKMARK [2][-]{subsection.8.5.2}{Content-based filtering}{section.8.5}% 42
+\BOOKMARK [2][-]{subsection.8.5.3}{Collaborative filtering}{section.8.5}% 43
+\BOOKMARK [1][-]{section.8.6}{Existing solutions}{chapter.8}% 44
+\BOOKMARK [2][-]{subsection.8.6.1}{stedr}{section.8.6}% 45
+\BOOKMARK [2][-]{subsection.8.6.2}{Cooltura}{section.8.6}% 46
+\BOOKMARK [2][-]{subsection.8.6.3}{Magic Tate Ball}{section.8.6}% 47
+\BOOKMARK [0][-]{chapter.9}{Project management}{}% 48
+\BOOKMARK [1][-]{section.9.1}{Scrum team and roles}{chapter.9}% 49
+\BOOKMARK [1][-]{section.9.2}{Work breakdown structure}{chapter.9}% 50
+\BOOKMARK [1][-]{section.9.3}{Project milestone plan}{chapter.9}% 51
+\BOOKMARK [1][-]{section.9.4}{Quality assurance}{chapter.9}% 52
+\BOOKMARK [2][-]{subsection.9.4.1}{Group interaction}{section.9.4}% 53
+\BOOKMARK [2][-]{subsection.9.4.2}{Git and version controlling}{section.9.4}% 54
+\BOOKMARK [2][-]{subsection.9.4.3}{Customer interaction}{section.9.4}% 55
+\BOOKMARK [0][-]{chapter.10}{Risk management}{}% 56
+\BOOKMARK [0][-]{chapter.11}{Requirements specification}{}% 57
+\BOOKMARK [1][-]{section.11.1}{Functional requirements}{chapter.11}% 58
+\BOOKMARK [2][-]{subsection.11.1.1}{Summary of the functional requirements}{section.11.1}% 59
+\BOOKMARK [2][-]{subsection.11.1.2}{Use cases}{section.11.1}% 60
+\BOOKMARK [1][-]{section.11.2}{Non-functional requirements}{chapter.11}% 61
+\BOOKMARK [0][-]{chapter.12}{Design and architecture}{}% 62
+\BOOKMARK [1][-]{section.12.1}{Architecture}{chapter.12}% 63
+\BOOKMARK [1][-]{section.12.2}{Database design}{chapter.12}% 64
+\BOOKMARK [1][-]{section.12.3}{User interface}{chapter.12}% 65
+\BOOKMARK [1][-]{section.12.4}{Category mapping}{chapter.12}% 66
+\BOOKMARK [1][-]{section.12.5}{Reuse of code}{chapter.12}% 67
+\BOOKMARK [2][-]{subsection.12.5.1}{Digitalt museum’s application programming interface}{section.12.5}% 68
+\BOOKMARK [0][-]{chapter.13}{Tools}{}% 69
+\BOOKMARK [1][-]{section.13.1}{Development tools}{chapter.13}% 70
+\BOOKMARK [1][-]{section.13.2}{Communication tools}{chapter.13}% 71
+\BOOKMARK [1][-]{section.13.3}{Additional tools}{chapter.13}% 72
+\BOOKMARK [0][-]{chapter.14}{Implementation}{}% 73
+\BOOKMARK [1][-]{section.14.1}{Front end}{chapter.14}% 74
+\BOOKMARK [2][-]{subsection.14.1.1}{User interface}{section.14.1}% 75
+\BOOKMARK [2][-]{subsection.14.1.2}{Prototype}{section.14.1}% 76
+\BOOKMARK [1][-]{section.14.2}{Back end}{chapter.14}% 77
+\BOOKMARK [2][-]{subsection.14.2.1}{Database}{section.14.2}% 78
+\BOOKMARK [2][-]{subsection.14.2.2}{Personalization}{section.14.2}% 79
+\BOOKMARK [2][-]{subsection.14.2.3}{Front end - back end communication}{section.14.2}% 80
+\BOOKMARK [0][-]{chapter.15}{Testing}{}% 81
+\BOOKMARK [1][-]{section.15.1}{Unit testing}{chapter.15}% 82
+\BOOKMARK [1][-]{section.15.2}{Integration test}{chapter.15}% 83
+\BOOKMARK [1][-]{section.15.3}{System testing}{chapter.15}% 84
+\BOOKMARK [1][-]{section.15.4}{Customer acceptance test}{chapter.15}% 85
+\BOOKMARK [1][-]{section.15.5}{Usability testing}{chapter.15}% 86
+\BOOKMARK [1][-]{section.15.6}{Results}{chapter.15}% 87
+\BOOKMARK [2][-]{subsection.15.6.1}{Unit test results}{section.15.6}% 88
+\BOOKMARK [2][-]{subsection.15.6.2}{Integration test}{section.15.6}% 89
+\BOOKMARK [2][-]{subsection.15.6.3}{System test}{section.15.6}% 90
+\BOOKMARK [2][-]{subsection.15.6.4}{Usability testing}{section.15.6}% 91
+\BOOKMARK [2][-]{subsection.15.6.5}{Customer acceptance test}{section.15.6}% 92
+\BOOKMARK [0][-]{chapter.16}{Evaluation}{}% 93
+\BOOKMARK [1][-]{section.16.1}{Product quality}{chapter.16}% 94
+\BOOKMARK [1][-]{section.16.2}{Development process}{chapter.16}% 95
+\BOOKMARK [1][-]{section.16.3}{Project management}{chapter.16}% 96
+\BOOKMARK [1][-]{section.16.4}{Team}{chapter.16}% 97
+\BOOKMARK [1][-]{section.16.5}{Customer interaction}{chapter.16}% 98
+\BOOKMARK [0][-]{chapter.17}{Conclusion and future outlook}{}% 99
+\BOOKMARK [0][-]{chapter.18}{Bibliography}{}% 100
+\BOOKMARK [0][-]{chapter.18}{Bibliography}{}% 101
+\BOOKMARK [0][-]{section*.10}{Appendix}{}% 102

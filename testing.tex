@@ -1,0 +1,122 @@
+%===================================== CHAPTER 9 Testing =================================
+
+\chapter{Testing}
+
+The following subsections will describe the strategies for the testing levels usability test, unit test, integration test and system test. 
+
+\section{Unit testing}
+
+The purpose of unit testing is to ensure that every component that are implemented in the system are functional and correct. The group performed unit tests on new components or units of code that was implemented in the system. It was necessary to prioritize what components that should be tested, considering the amount of time given for the project. Testing of the user interface is required to ensure that the user get the right user experience. The recommendation module is a module that produce a result that is vital for the quality for the app. Therefore the unit testing in back end will focus on the recommendation module. Most of the code in back end is communicating with database, front end and Digitalt fortalt. Because of this we will focus on testing this code in the integration testing(X.X).\newline
+
+Roles \& Responsibilities\newline
+To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (Table 3.xx Role delegation), so the tester would have good knowledge to the code and know how it works.  
+
+TODO sett inn Table 9.x shows the delegated responsibilities for testing the user interface.\newline
+TODO sett inn Table Table 9.x shows the delegated responsibilities in testing the back end part of the system.\newline
+
+Required before performing the tests\newline
+The developers of the user interface needed to install the Angularjs´ Karma, for performing the unit testing. With this tool they could write scripts for each of the test cases.\newline
+
+The developers of the back end of the system needed to install phpunit, a framework for unit testing in php.\newline
+
+After the tests\newline
+The tester investigated the results of the test cases and mended the issues if they appeared during the tests. When the issues in the code were fixed, the tester would run the test again and see if it approved. This was cycle repeated until the code was free of issues and runned the expected way.\newline
+
+Test Cases\newline
+The testers created test cases and used these as a guide for performing the tests. The test cases has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running.   
+
+TODO sett inn Table 9.X present the test cases used for the unit testing.\newline
+
+\section{Integration test}
+
+Integration testing is usually executed after unit testing and before system testing. This test was performed after every individual component was tested and integrated with the rest of the system. This is to ensure that the different modules of the system were communicating correctly and that data was moving properly from one module to another. \newline
+
+How to perform the integration test\newline
+The testing was performed at modules as soon as they were developed and completed, a so-called incremental testing. This approach made it easier to detect issues in the code early and therefore avoid issues to come up at a later stage in the development process - which could be cost-ineffective.
+Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. It was possible to run unit tests across the modules and get the wanted results.\newline
+
+Test cases\newline 
+The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in the figure 5.xx of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in the following table 9.x.
+
+TODO sett inn Table 9.x 
+
+\section{System testing}
+
+The system testing is executed after the unit test and integration tests. It was to give developers a measure of whether the system met all the goals set for the project.  The system test included performing a black box testing of the system, where the test cases was based on the use cases(chapter x.x) and the specified requirements(chapter x.x)  defined earlier in this report. \newline
+
+Required before performing the system tests\newline
+The unit tests and integration test were required to be executed and approved before the system test could be executed. To execute the tester also needed the final product in the way it was intended to the end users. Therefore the application in question should be accessible on a mobile device before performing the test. \newline
+
+The main areas to be tested\newline
+The test cases was to cover all the use cases and requirements specified for this project. The main areas are as follows:
+\begin{itemize}
+	\item Create user
+	\item Log in
+	\item Set initial settings
+	\item Browse recommended stories
+	\item Add stories to list
+	\item View story
+	\item Rate story 
+	\item View list \newline
+\end{itemize}
+
+How are the test to be performed? \newline
+In this test one of the developers were executing the test. Because it is a black box test, the tester would do the test cases with no access to the code. the tester went through all of the test cases one by one and performed the test cases manually. Due to the time limits of this project the team were not able to write scripts to perform the test cases. \newline
+
+After the test\newline
+After the system test suit is performed and the results are documented, the testers should mend the issues in the system if they appeared during the test. After the mending the test suit was executed again. This cycle was repeated until there was no issues left in the system and all test cases got the expected result.\newline
+
+When the system test is performed and finished, the testers evaluated the tests results and then decided if the system as a whole fulfilled all goals for the project.(See chapter X.X). The test results should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.\newline
+
+Test Cases \newline
+Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. table 9.3.1 and 9.3.2 are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.10. 
+
+TODO sett inn Table 9.3.1\newline
+TODO sett inn Table 9.3.2\newline
+
+\section{Customer acceptance test}
+
+Customer acceptance test (CAT) will be executed during the whole software development life cycle. After a sprint, the customer will test the product, evaluate and bring feedback. In the early stages of the project process this contains testing of the prototypes. When working software is delivered to the customer after a sprint, the customer use their own real input data to test the behaviour of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic when the customer defines it. The customer brings feedback either in meetings or through email. The planned delivery dates are presented in 3.3 Project milestone plan.  
+
+\section{Usability testing}
+
+The user testing was performed by the front end developers. The preliminary work for the user test also included doing an analysis of the requirements, and used these as a base for making a list of scenarios. The scenarios set the grounds for the test cases. IEEE standard 610 defines a test case as; “A set of test inputs, execution conditions, and expected results developed for a particular objective, such as to exercise a particular program path or to verify compliance with a specific requirement.” [KF1] 
+The test case included several test steps that the user followed, and the testers observed how the user reacted in every test case. After each test finished there was a discussion with follow-up questions the user had to answer to get a better insight into what was problematic and what was easily understandable. For further information on this see the framework for the usability testing in Appendix XX(Usability test template).
+
+\section{Results}
+
+This section includes the results from the tests described in sections X.1 through X.4.
+
+\subsection{Unit test results}
+
+Table X.X shows the results we gained from performing the unit test cases. Here are the test cases referred to with their Test case ID. Test Case description and input data are described in the test plan(Chapter X.X).\newline
+
+Detected issues in the system\newline 
+[TODO: Short description of the main issues found in the system, and how they were handled]\newline 
+Summary \newline 
+[TODO: Short description of how the test was, did it give us help to improvement of the code]\newline 
+
+\subsection{Integration test}
+Detected Issues\newline
+Summary
+
+\subsection{System test}
+[TODO: results]\newline
+Detected Issues\newline
+Summary
+
+\subsection{Usability testing}
+[TODO: results]\newline
+Summary
+
+\subsection{Customer acceptance test}
+
+As described in section 9.4 Customer Acceptance test, this test was performed after every product delivery. The following tables display the customer feedback of every delivery. The tables describes general comments and issues the customer detected and wants to improve.  
+
+TODO sett inn Table 9.X shows the date and feedback for the first paper prototype. The feedback information was given to the developers in a customer meeting, and this is a summary from that meeting.\newline
+TODO sett inn Table 9.X shows the date and feedback for the first paper prototype. The feedback information was given to the developers in an email sent from the customer. The text is a summary of the email.\newline
+TODO sett inn Table 9.X shows the date and feedback for the first paper prototype. The feedback information was given to the developers in an email sent from the customer. The text is a summary of the email.\newline
+TODO sett inn Table 9.X .shows the date and feedback for the second working software. The feedback information was given to the developers in a customer meeting.\newline
+TODO sett inn Table 9.X.
+
+\cleardoublepage

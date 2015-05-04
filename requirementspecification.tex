@@ -1,0 +1,76 @@
+%===================================== CHAPTER 5 Requirements specification =================================
+
+\chapter{Requirements specification}
+
+This chapter describe the requirements for the application. The chapter is divided into two sections: one section describing the functional requirements, another that describes the non-functional requirements.
+
+\section{Functional requirements}
+
+The requirements document for this project can be found in appendix A. This document contains a description of the functional requirements. The requirements were elicited and agreed upon with the customer in meetings and formalized in the requirements document. In early customer meetings the functionalities of the application were discussed informally. The group wrote a requirements document which was discussed at subsequent meetings. In these meetings each proposed requirement was refined and given a priority. The priorities were assigned using a high-medium-low scale. This priority has guided the sequence of progress in the project. In addition, the group elicited its own prioritization where all the requirements were ranked, each with its own unique number ranging from 1 to the total number of requirements. The description of requirements in this chapter is less formal and more high-level than the one found in the requirements document. 
+
+\subsection{Summary of the functional requirements}
+
+This section provides an informal summary of the main requirements that were initially proposed. These requirements have been detailed and refined in the use case section, as well as the functional requirements document. \newline
+
+Sign up/Sign in view: The application should in some way be able to identify users, but keep them as anonymous as possible. For research purposes, personal data like age group and gender should be collected.\newline
+
+Preferences/Settings: The user should be able to specify some preferences regarding cultural categories and the use of location from the device.\newline
+
+Main view: Browse recommended stories: The application should provide the user with recommended stories based on the user’s preferences. The user is provided with three choices on each story: to read it now, to reject it or to save it for later.\newline
+
+Story view: The application should present a chosen story in an clear way that respect the work of the author and resemble the presentation on the Digitalt fortalt website. Every story should also include a link to the corresponding story on Digitalt fortalt. The user should be given the opportunity to rate the story and to tag the story. In addition, the application should provide an explanation of why the story was recommended.\newline
+
+Collected story view: The application should keep a collection of stories that the user have been recommended and that have not been rejected. The user should be able to filter this list based on the status of the story (to-read, read, reviewed) or tags (predefined tags like “Favorites” or the user’s own tags).\newline
+
+Notifications: The application should provide the user with the opportunity to set a preferred time it wants to receive a notification about a new recommended story on their device. At the set time, the application should send the notification. In addition, the application should notify the user when a story is missing a rating.\newline
+
+About / help site: The application should include an about site, which explains the context in which the application was created. \newline
+
+Personalization: When recommending stories the application should employ both content-based filtering and collaborative filtering algorithms.\newline
+
+Research: The application should gather information about the use. This data is to be presented to the customer at SINTEF through a simple interface.\newline
+
+\subsection{Use cases}
+
+The use cases in this section give an overview of the interaction with the system. In the requirements document one can find references to the use cases for requirements that involve external interaction.\newline
+
+A use case is a simple scenario that identifies actors involved in an interaction with a system and describe this interaction[AS1]. Actors are entities outside the system interacting with it to accomplish some task. This can be a human using the system or it can be some other system. In eliciting requirements in a software development process, use cases are particularly effective in making it clear what is expected of the system in terms of user interaction. A use case diagram is usually presented with ellipses and stick figures. The ellipses represent the use case and the stick figures represent the actors (even if the actor is an external system). This simple notation is often complemented by a textual description which provide more detail.\newline
+
+The use cases in this section define interactions between an actor and the application. Actors in these use cases are the user of the system, the device on which the application run, and Digitalt fortalt . The use cases consist of a textual description accompanied by a visual representation in the form of use case diagrams. The textual description follows a template which consists of these items:
+\begin{itemize}
+\item ID: A unique identification for the use case.
+\item Name: A short text describing the goal of the use case.
+\item Brief description: This is a more elaborate explanation of the use case than the above.
+\item Actors: These are the users/systems outside the application interacting with it.
+\item Priority: A metric describing the priority of this use case. This metric is derived from the functional requirements document, and uses a high-medium-low scale.
+\item Preconditions: Describe what state the system should be in before the use case can start. Typically, some of the other use cases are already performed to set up the use case.
+\item Basic flow: This describe the normal flow from preconditions to postconditions in a numbered list.
+\item Alternate flow: A description of scenarios that differ from the basic flow described above. This includes exceptions and errors. It is also presented as a list, but the numbering in this list refers to the items in the basic flow list. The items in this list do not relate to each other.
+\item Postconditions: Describe what state the system should be in after the use case is performed.
+\end{itemize}
+
+TODO sett inn use cases U1 - U10\newline
+
+\section{Non-functional requirements}
+
+A general requirement for the project was to use english as language in all parts related to the documentation of the application, while the language in the application would be norwegian. Other general requirements concerned the platforms the application should run on. It was decided that it should run on both Android and iOS, and that the design of the application should approach a native feel as much as possible on these platforms.\newline
+
+To make better decisions at a top-level design perspective, and to make better decisions on a component and implementation level, the team wanted the customer to rank each of the quality attributes below. The basis for the list and its descriptions are sourced in Software Architecture in Practice (REF). The ranked list was helpful in choosing the solutions that were most inline with the customer’s needs. Normally there would be a system for measuring and quantifying each of the attributes, but this would broaden the scope and workload of the project and instead this was used as a prioritized list assisting the development, since this was believed by the team to be adequate in terms of the scope and length of the project.\newline
+
+There are many more quality attributes but this list describes the most generic ones, plus some specific attributes that the team believed might suit the project. Also, keep in mind that there are a lot of crossover attributes(e.g.. Maintainability/Testability may increase availability)\newline
+\begin{itemize}
+\item Availability: How important is the reliability of the product. The easy representation to think of this is uptime of the service.
+\item Interoperability: How important is the ability for the system to work together with other systems. (e.g. making use of specific communication protocols or the use of a specified data format)
+\item Modifiability: How important and how easy should the product be able to be changed after it is finalized? (e.g. making changes to the UI)
+\item Performance: How important is time and speed of the system? (e.g. response time for retrieving stories)
+\item Security: How important is the system’s ability to protect data and information from unauthorized access? (e.g. losing personalized data)
+\item Testability: How important is the ability to set up tests for the system (e.g. setting up automated test for components and parts of the system)
+\item Usability: How easy is it for the user to accomplish a desired task, and what kind of user support should the system focus on. (e.g. tutorials or hints)
+\item Monitorability: How important is the ability to monitor how the system while its executing. (e.g. statistics etc.)
+\item Other: These have been considered not very relevant for the project due to various reasons; variability, portability, development distributability, scalability, deployability, mobility, safety, marketability
+\end{itemize}
+
+(TODO Supplement: diagram non-functional requirement)
+
+\cleardoublepage
+
