@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.2)  4 MAY 2015 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.2)  5 MAY 2015 20:40
 entering extended mode
 **main.tex
 (main.tex
@@ -548,7 +548,7 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 9.
 ("C:\Program Files\MiKTeX\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<fig/pikachu.jpg, id=570, 217.81375pt x 232.87pt>
+<fig/pikachu.jpg, id=596, 217.81375pt x 232.87pt>
 File: fig/pikachu.jpg Graphic file (type jpg)
  <use fig/pikachu.jpg>
 Package pdftex.def Info: fig/pikachu.jpg used on input line 44.
@@ -625,11 +625,14 @@ Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∏ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∏ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ¶ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∏ in font ptmr7t!
 [17
 
 ] [18]) (pre-study.tex
@@ -644,9 +647,62 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]\OT1/ptm/b/n/12 PhoneGap w/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/ptm/m/n/12 also pro-vides
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/ptm/m/n/12 a per-for-mance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/ptm/m/n/12 pro-vides di-rect
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 45--45
+\OT1/ptm/m/n/12 ac-cess to na-tive
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/ptm/m/n/12 performance- fo-cused
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]\OT1/ptm/m/n/12 HTML5, CSS,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\OT1/ptm/m/n/12 Javascript with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]\OT1/ptm/m/n/12 HTML5, CSS,
+ []
+
+
+Overfull \hbox (31.21283pt too wide) in paragraph at lines 39--49
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no ¬ in font ptmr7t!
 Missing character: There is no ´ in font ptmr7t!
@@ -656,35 +712,29 @@ Missing character: There is no ª in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
+ [21]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+
+Overfull \hbox (64.72447pt too wide) in paragraph at lines 82--93
+ [] 
+ []
+
+[22]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
 Underfull \vbox (badness 2020) has occurred while \output is active []
-
- [21]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
-
- []
-
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-[22]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-
-Underfull \vbox (badness 2065) has occurred while \output is active []
 
  [23]
 Missing character: There is no ‚ in font ptmr7t!
@@ -702,10 +752,9 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 
 [24]
 Missing character: There is no ‚ in font ptmr7t!
@@ -714,11 +763,8 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
@@ -727,35 +773,12 @@ Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
- []
-
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
@@ -763,8 +786,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
@@ -772,25 +824,34 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
@@ -800,8 +861,8 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
@@ -809,7 +870,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
@@ -822,64 +883,55 @@ Missing character: There is no É in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-[27] [28
-
-]) (projectmanagement.tex
+[28]) (projectmanagement.tex
 Chapter 9.
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
+Underfull \hbox (badness 4316) in paragraph at lines 18--18
+[]\OT1/ptm/m/n/10.95 Jacqueline Floch
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]\OT1/ptm/m/n/10.95 Hanne Marie,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\OT1/ptm/m/n/10.95 Eivind, Kjer-sti,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]\OT1/ptm/m/n/10.95 Interaction be-tween
  []
 
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-[29
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]\OT1/ptm/m/n/10.95 Ragnhild, Roar,
  []
 
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
+Overfull \hbox (47.6656pt too wide) in paragraph at lines 14--46
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
@@ -888,7 +940,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-[31] [32]) (riskmanagement.tex
+[29
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+[32] [33] [34
+
+]) (riskmanagement.tex
 Chapter 10.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
@@ -896,16 +998,349 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]\OT1/ptm/b/n/10.95 Likelihood
  []
 
-[33
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]\OT1/ptm/b/n/10.95 Impact
+ []
 
 
-] [34
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]\OT1/ptm/b/n/10.95 Importance
+ []
 
-]) (requirementspecification.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+\OT1/ptm/b/n/10.95 (Like-li-hood
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]\OT1/ptm/m/n/10.95 Underestimate the
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 16--16
+\OT1/ptm/m/n/10.95 time planned to use
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]\OT1/ptm/m/n/10.95 Estimate a lit-tle
+ []
+
+
+Underfull \hbox (badness 4886) in paragraph at lines 16--16
+\OT1/ptm/m/n/10.95 higher. con-tin-u-ous
+ []
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 18--18
+\OT1/ptm/m/n/10.95 can-not max-i-mize the
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 18--18
+\OT1/ptm/m/n/10.95 re-port meet the de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]\OT1/ptm/m/n/10.95 Ask con-crete ques-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\OT1/ptm/m/n/10.95 or other com-pe-tent
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 18--18
+\OT1/ptm/m/n/10.95 ac-quain-tances of the
+ []
+
+
+Underfull \hbox (badness 6284) in paragraph at lines 20--20
+\OT1/ptm/m/n/10.95 and talk with each
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 22--22
+[]\OT1/ptm/m/n/10.95 Be pre-pared for su-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\OT1/ptm/m/n/10.95 per-vi-sor meet-ings.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\OT1/ptm/m/n/10.95 Pre-pare con-crete
+ []
+
+
+Underfull \hbox (badness 3679) in paragraph at lines 24--24
+[]\OT1/ptm/m/n/10.95 Project com-plex-ity /
+ []
+
+
+Underfull \hbox (badness 7704) in paragraph at lines 24--24
+[]\OT1/ptm/m/n/10.95 Do not plan many
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]\OT1/ptm/m/n/10.95 Poor com-mu-ni-ca-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\OT1/ptm/m/n/10.95 with the cus-tomer
+ []
+
+
+Underfull \hbox (badness 2173) in paragraph at lines 26--26
+\OT1/ptm/m/n/10.95 lead-ing to mis-un-der-
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 26--26
+\OT1/ptm/m/n/10.95 stand-ings and doubts
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 26--26
+\OT1/ptm/m/n/10.95 fore-hand. Es-tab-lish
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 26--26
+\OT1/ptm/m/n/10.95 to the cus-tomer for
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 26--26
+\OT1/ptm/m/n/10.95 Co-op-er-ate with cus-
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 26--26
+\OT1/ptm/m/n/10.95 tomer to repri-or-i-tize
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]\OT1/ptm/m/n/10.95 Poor com-mu-ni-ca-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\OT1/ptm/m/n/10.95 within the group
+ []
+
+
+Underfull \hbox (badness 2173) in paragraph at lines 28--28
+\OT1/ptm/m/n/10.95 lead-ing to mis-un-der-
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 28--28
+\OT1/ptm/m/n/10.95 stand-ings and doubts
+ []
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 28--28
+\OT1/ptm/m/n/10.95 Have fre-quent meet-
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 28--28
+\OT1/ptm/m/n/10.95 they have done and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]\OT1/ptm/m/n/10.95 Absence of group
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/10.95 mem-ber(s) over a
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 32--32
+\OT1/ptm/m/n/10.95 take over the ab-sent
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 32--32
+\OT1/ptm/m/n/10.95 halted by a per-son's
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 32--32
+\OT1/ptm/m/n/10.95 ab-sence, other group
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 34--34
+\OT1/ptm/m/n/10.95 torted. Some mem-
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 34--34
+[]\OT1/ptm/m/n/10.95 Continuous meet-ings,
+ []
+
+
+Underfull \hbox (badness 3536) in paragraph at lines 34--34
+\OT1/ptm/m/n/10.95 team mem-bers del-e-
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 36--36
+[]\OT1/ptm/m/n/10.95 Poor choice of pro-
+ []
+
+
+Underfull \hbox (badness 6001) in paragraph at lines 36--36
+\OT1/ptm/m/n/10.95 be-comes dif-fi-cult to
+ []
+
+
+Underfull \hbox (badness 4872) in paragraph at lines 36--36
+\OT1/ptm/m/n/10.95 pro-duce the prod-uct
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]\OT1/ptm/m/n/10.95 Reevaluate non-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/ptm/m/n/10.95 functional re-quire-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/ptm/m/n/10.95 ments with the
+ []
+
+
+Underfull \hbox (badness 6332) in paragraph at lines 40--40
+[]\OT1/ptm/m/n/10.95 Restore lat-est avail-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]\OT1/ptm/m/n/10.95 Disagreement within
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\OT1/ptm/m/n/10.95 the group on key
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 42--42
+\OT1/ptm/m/n/10.95 cuss key is-sues and
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 42--42
+\OT1/ptm/m/n/10.95 fi-nal. Make demo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]\OT1/ptm/m/n/10.95 If the dis-agree-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\OT1/ptm/m/n/10.95 can-not be solved,
+ []
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 42--42
+\OT1/ptm/m/n/10.95 one may in-volve the
+ []
+
+
+Underfull \hbox (badness 1194) in paragraph at lines 44--44
+\OT1/ptm/m/n/10.95 for the team so that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]\OT1/ptm/m/n/10.95 First try to solve
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 44--44
+\OT1/ptm/m/n/10.95 the con-flict be-tween
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+\OT1/ptm/m/n/10.95 the group mem-bers
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 44--44
+\OT1/ptm/m/n/10.95 in ques-tion. If this
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 48--48
+\OT1/ptm/m/n/10.95 ments so it is clear
+ []
+
+
+Underfull \hbox (badness 5133) in paragraph at lines 48--48
+\OT1/ptm/m/n/10.95 how much ef-fort it
+ []
+
+
+Underfull \hbox (badness 7415) in paragraph at lines 48--48
+\OT1/ptm/m/n/10.95 time con-sum-ing as-
+ []
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 50--50
+[]\OT1/ptm/m/n/10.95 Have fre-quent meet-
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 52--52
+[]\OT1/ptm/m/n/10.95 Product is not user-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]\OT1/ptm/m/n/10.95 Technical is-
+ []
+
+
+Overfull \hbox (55.21281pt too wide) in paragraph at lines 12--56
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 868.4109pt on input line 58.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[35
+
+] [36]) (requirementspecification.tex
 Chapter 11.
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
@@ -922,7 +1357,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[35
+[37
+
 
 ]
 Missing character: There is no ‚ in font ptmr7t!
@@ -982,7 +1418,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-[36]
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
@@ -1000,7 +1436,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-[37]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
@@ -1008,7 +1444,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[38]) (designandarchitecture.tex
+[40]) (designandarchitecture.tex
 Chapter 12.
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
@@ -1023,7 +1459,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
 Underfull \vbox (badness 4634) has occurred while \output is active []
 
- [39
+ [41
 
 
 ]
@@ -1047,7 +1483,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[40]
+[42]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
@@ -1078,10 +1514,46 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-[41]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
+
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∏ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no • in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∏ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no • in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∏ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∏ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ¶ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no • in font ptmr7t!
+
+Overfull \hbox (35.6656pt too wide) in paragraph at lines 67--79
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no ‚ in font ptmb7t!
 Missing character: There is no Ä in font ptmb7t!
@@ -1093,18 +1565,18 @@ Missing character: There is no ∏ in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no ∏ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-[42] [43] [44
+[44] [45] [46
 
 ]) (tools.tex
 Chapter 13.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[45
+[47
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
@@ -1123,7 +1595,7 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[46] [47] [48
+[48] [49] [50
 
 ]) (implementation.tex
 Chapter 14.
@@ -1153,7 +1625,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[49
+[51
 
 ]
 Missing character: There is no ‚ in font ptmr7t!
@@ -1188,7 +1660,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-[50]
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
@@ -1209,8 +1681,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
 Underfull \vbox (badness 4168) has occurred while \output is active []
 
- [51]
-[52]) (testing.tex
+ [53]
+[54]) (testing.tex
 Chapter 15.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
@@ -1218,88 +1690,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
-
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no ¬ in font ptmr7t!
 Missing character: There is no ¥ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-[53
+[55
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]\OT1/ptm/b/n/10.95 Test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
-
-Underfull \vbox (badness 3088) has occurred while \output is active []
-
- [54]
-Underfull \hbox (badness 10000) in paragraph at lines 47--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-
- []
-
-[55]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
-
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/ptm/b/n/10.95 case
  []
 
 Missing character: There is no ‚ in font ptmr7t!
@@ -1308,28 +1728,292 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 1859) in paragraph at lines 68--69
+\OT1/ptm/m/n/10.95 -story with sound
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Overfull \hbox (5.71155pt too wide) in paragraph at lines 77--77
+[]\OT1/ptm/m/n/10.95 alreadyexistingemail 
+ []
+
+
+Underfull \hbox (badness 2503) in paragraph at lines 83--83
+\OT1/ptm/m/n/10.95 pro-duce col-lab-o-ra-tive rec-om-men-da-tions
+ []
+
+
+Overfull \hbox (59.66557pt too wide) in paragraph at lines 58--85
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
 
  []
 
 [56]
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+[]\OT1/ptm/b/n/12 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+\OT1/ptm/b/n/12 case
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Overfull \hbox (4.71288pt too wide) in paragraph at lines 108--108
+[]\OT1/ptm/m/n/12 newuser@mail.no,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+\OT1/ptm/m/n/12 0,0,1,his-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+\OT1/ptm/m/n/12 tory,literature,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+\OT1/ptm/m/n/12 tech-nol-ogy.
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Overfull \hbox (4.71288pt too wide) in paragraph at lines 110--110
+[]\OT1/ptm/m/n/12 newuser@mail.no,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+\OT1/ptm/m/n/12 0,0,1,his-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+\OT1/ptm/m/n/12 tory,literature,
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 112--112
+[]\OT1/ptm/m/n/12 user model with
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Underfull \hbox (badness 5954) in paragraph at lines 116--117
+[]\OT1/ptm/m/n/12 -usermodel with
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 119--119
+[]\OT1/ptm/m/n/12 ip adress, user-
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 119--119
+\OT1/ptm/m/n/12 name and pass-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+[]\OT1/ptm/m/n/12 datamodel with
+ []
+
+
+Overfull \hbox (59.66557pt too wide) in paragraph at lines 104--123
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-[57] [58]) (evaluation.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--152
+
+ []
+
+[58]
+Underfull \vbox (badness 6608) has occurred while \output is active []
+
+ [59]
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no • in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no • in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Underfull \hbox (badness 2452) in paragraph at lines 170--170
+[]\OT1/ptm/m/n/12 Any de-pend-abil-ity be-tween
+ []
+
+
+Overfull \hbox (35.6656pt too wide) in paragraph at lines 160--172
+ [] 
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Underfull \hbox (badness 2452) in paragraph at lines 195--195
+[]\OT1/ptm/m/n/12 Any de-pend-abil-ity be-tween
+ []
+
+
+Overfull \hbox (35.6656pt too wide) in paragraph at lines 179--197
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--223
+
+ []
+
+[62] [63] [64
+
+]) (evaluation.tex
 Chapter 16.
-[59
+[65
 
-
-] [60
+] [66
 
 ]) (conclusion.tex
 Chapter 17.
-[61
+[67
 
-] [62
+] [68
 
 ]) (bibliography.tex
 Chapter 18.
@@ -1344,12 +2028,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--50
 
  []
 
-[63
+[69
 
-] [64]) (references.tex (main.bbl) [65
+] [70]) (references.tex (main.bbl) [71
 
 
-] [66
+] [72
 
 ]) (appendix.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1386,7 +2070,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
-[67]
+[73]
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
@@ -1416,22 +2100,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
 
-[68])
+[74])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EA0144E8F1EA47DE3BDB47806CD23B1F;6480.
+(rerunfilecheck)             Checksum: 3CD1FB71E97C297AB08D921F0F52126E;6480.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 9113 strings out of 493698
- 130356 string characters out of 3144413
- 232709 words of memory out of 3000000
- 11997 multiletter control sequences out of 15000+200000
- 28222 words of font info for 61 fonts, out of 3000000 for 9000
+ 9150 strings out of 493698
+ 130905 string characters out of 3144413
+ 249677 words of memory out of 3000000
+ 12016 multiletter control sequences out of 15000+200000
+ 29935 words of font info for 68 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  38i,12n,51p,1339b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/Mi
@@ -1442,9 +2126,9 @@ fb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fil
 es/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (80 pages, 291410 bytes).
+Output written on main.pdf (86 pages, 322387 bytes).
 PDF statistics:
- 974 PDF objects out of 1000 (max. 8388607)
- 209 named destinations out of 1000 (max. 500000)
+ 1036 PDF objects out of 1200 (max. 8388607)
+ 227 named destinations out of 1000 (max. 500000)
  822 words of extra memory for PDF output out of 10000 (max. 10000000)
 

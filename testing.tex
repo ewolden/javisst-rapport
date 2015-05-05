@@ -11,8 +11,35 @@ The purpose of unit testing is to ensure that every component that are implement
 Roles \& Responsibilities\newline
 To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (Table 3.xx Role delegation), so the tester would have good knowledge to the code and know how it works.  
 
-TODO sett inn Table 9.x shows the delegated responsibilities for testing the user interface.\newline
-TODO sett inn Table Table 9.x shows the delegated responsibilities in testing the back end part of the system.\newline
+\begin{table}[!h]
+	\begin{center}
+		\begin{tabular}{ | l | l | l |}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Angularjs Karma testing}} \\
+			\hline
+			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
+			U1 & Log in & Roar \\ \hline
+			U2 & Story View & Ragnhild \\ \hline
+			U3 & Settings & Espen \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{shows the delegated responsibilities for testing the user interface.}
+	\label{Tab_karmatesting}
+\end{table}
+
+\begin{table}[!h]
+	\begin{center}
+		\begin{tabular}{ | l | l | l |}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{PHP unit testing}} \\
+			\hline
+			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
+			U6 & Recommendation module & Audun/Kjersti \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{shows the delegated responsibilities in testing the back end part of the system.}
+	\label{Tab_phptesting}
+\end{table}
 
 Required before performing the tests\newline
 The developers of the user interface needed to install the Angularjs´ Karma, for performing the unit testing. With this tool they could write scripts for each of the test cases.\newline
@@ -25,7 +52,41 @@ The tester investigated the results of the test cases and mended the issues if t
 Test Cases\newline
 The testers created test cases and used these as a guide for performing the tests. The test cases has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running.   
 
-TODO sett inn Table 9.X present the test cases used for the unit testing.\newline
+\begin{table}[!h]
+	\centering
+	\small
+		\begin{tabular}{ | p{1cm} | p{6.5cm} | p{3cm} | p{6.5cm} |}
+			\hline
+			\textbf{Test case ID} & \textbf{Description} & \textbf{Input data} & \textbf{Expected results} \\ \hline
+			
+			U1.1 & - Try to log in with an already existing user\newline - Check if response is correct & existinguser@\newline mail.no & The user should get access and be directed to the recommendation view(main view) \\ \hline
+			
+			U1.2 & - Try to log in with a non-existing user \newline - Check if response is correct & “newemail@\newline gmail.com” & The user should get access and be directed to the setup view. \\ \hline
+			
+			U1.3 & -Try to login a user with the wrong email format \newline - Check if response message is correct & “newemail” & The user should not get access and get a textual response from the system that the format of the input is wrong.  \\ \hline
+			
+			U2.1 & - If story contains sound clip or video, check if these are presented properly & - story with video\newline
+			-story with sound clip & Should show the presence sound clip and video in the tabs. Should be able to handle the different video types, and be able to play them.  \\ \hline
+			
+			U2.2 & - Give a rating\newline - Check if the stars change color and response message are visible to the user.  & & Stars should change color when user performs rating, and the user should get a response message from the system which says that this story has been rated.  \\ \hline
+			
+			U2.3 & - give the story a new bookmark with a name\newline -add this \newline -Check if response message is visible to the user  & “new bookmark”  & When a new bookmark is made and the story is stored here, the user should get response message about this. \\ \hline
+			
+			U3.1 & Update profile with the wrong email format  & updateemail  & The user should get a response message from the system that the input was not valid and that the user should try again.  \\ \hline
+			
+			U3.2 & Update profile with a email that already exists in the system  & “alreadyexistingemail\newline @email.com”  & The user should get a response message from the system that the input was not valid and that the user should try again.   \\ \hline
+			
+			U6 & Create data model with only one user and interests.  & & The recommendation module should only produce content-based recommendations   \\ \hline
+			
+			U6 & Create data model with only one user and ratings  & & The recommendation module should only produce content-based recommendations   \\ \hline
+			
+			U6 & - create three different data models with users and ratings\newline- simulate one specific test user with multiple ratings together with the data models\newline- check if the collaborative recommendations is running for the correct data models  & & The recommendation module should only produce collaborative recommendations when: the amount of users are > 5 AND amount of ratings > 15 AND amount of joint ratings with other users are > 5.  \\ \hline
+		\end{tabular}
+	\caption{Unit test cases. Here presented by a testId, description of how the test could run, what input data to use and expected results.}
+	\label{Tab_unittestcases}
+\end{table}
+
+
 
 \section{Integration test}
 
@@ -38,7 +99,30 @@ Because of the time limitations and the difficulty with learning a new interface
 Test cases\newline 
 The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in the figure 5.xx of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in the following table 9.x.
 
-TODO sett inn Table 9.x 
+\begin{table}[!h]
+	\centering
+		\begin{tabular}{ | p{1cm} | p{6.5cm} | p{3cm} | p{6.5cm} |}
+			\hline
+			\textbf{Test case ID} & \textbf{Description} & \textbf{Input data} & \textbf{Expected results} \\ \hline
+			
+			I.1 & -create user model in UI\newline -send it through back end \newline -check if database created new user with a new id & newuser@mail.no, 0,0,1,”history,literature, technology”. getuserbyEmail() & Database should return a row from the user table with the content of the input data. \\ \hline
+			
+			I.2 & - update a users preferences in UI\newline - send it through back end\newline -check if the right user in the database is updated & “newuser@mail.no”, 0,0,1,”history,literature, technology, food” & The database should return a row of the user table with the updated input data \\ \hline
+			
+			I.3 & - create user rating to a story\newline- check if the system update the story state in database\newline - check if the preferenced value is updated with correct value & user model with ratings & The database should return a row with the story and the state “rated”, a row with the preferenced value that correspond with the rating.  \\ \hline
+			
+			I.4 & - create a user with ratings\newline - reject a story\newline - check if the story in the database is marked as rejected\newline - check the preferenced value for this story & - user model with ratings\newline - reject message & Database should have given the story a rejected state. The preferenced value should be less for this story. \\ \hline
+			
+			I.5 & - create a user with enough ratings to perform collaborative filtering\newline - close every story in the recommendation view\newline - check if recommendation is running and give the user new recommendations.  & -usermodel with ratings\newline
+			- give every story in the recommendation list the rejected state. & The list of recommendations should be updated when the user reject all of the current recommended stories. \\ \hline
+			
+			I.6 & - DB-connection: check if construct is running properly & ip adress, username and password & Should connect to the database \\ \hline
+			
+			I.7 & - create user with ratings\newline - generate recommended stories \newline - check if the recommended stories are the ones with the highest recommendation value. & datamodel with user ratings. & Should give a list of the recommendations with the highest recommendation value(equal to or higher than 5.0)  \\ \hline
+		\end{tabular}
+	\caption{Integration test cases}
+	\label{Tab_integrationtestcases}
+\end{table}
 
 \section{System testing}
 
@@ -71,8 +155,49 @@ When the system test is performed and finished, the testers evaluated the tests 
 Test Cases \newline
 Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. table 9.3.1 and 9.3.2 are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.10. 
 
-TODO sett inn Table 9.3.1\newline
-TODO sett inn Table 9.3.2\newline
+\begin{table}[!h]
+	\begin{center}
+		\begin{tabular}{| p{5cm} | p{12cm} |}
+			\hline
+			TestID & T1 \\ \hline
+			Test item & Create recoverable profile  \\ \hline
+			Approach & The testobject locate and press the “register user” button in the app. Applies his/hers email in the right format.. The response is valid and the user gets feedback.  \\ \hline
+			Item pass/Fail criteria & The testobject should get positive feedback only if the input is correct. Otherwise the system should inform the user about the mistake  \\ \hline
+			Input Data & “user@gmail.com”  \\ \hline
+			Expected results & The testobject writes the correct email address and get the correct feedback from the system: “Email din er registrert. Du kan nå logge deg inn på systemet”   \\ \hline
+			Testing task & 1. Testobject press “create user”-button. \newline 2. Testobject types inn his/hers email address\newline
+			3. The system give feedback \newline 4.1 If the email is registered, the user should get access to the system by        performing Test T2 Log in with email\newline 4.2 If the email is not registered, the user should not get access to the system by performing T2 Log in with email  \\ \hline
+			Any dependability between this and other tests & NaN  \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Create profile}
+	\label{Tab_systemtest1}
+\end{table}
+
+\begin{table}[!h]
+	\begin{center}
+		\begin{tabular}{| p{5cm} | p{12cm} |}
+			\hline
+			TestID & T3 \\ \hline
+			Test item & Set initial settings  \\ \hline
+			
+			Approach & The user is logged in to the system for the first time. The user will choose age group and gender in the initial settings that will appear the first time the user is logged on to the system. After this the user will be asked to choose cultural category preferences.   \\ \hline
+			
+			Item pass/Fail criteria & The user will choose the buttons for his/hers age group and gender and will get access to the system. If the user do not perform these settings the user will get a response for the system that it is necessary.  \\ \hline
+			
+			Input Data & User action: press the buttons for the age group, sex and interests.   \\ \hline
+			
+			Expected results & The buttons that were pressed will change color and the user are allowed to continue   \\ \hline
+			
+			Testing task & 1. The user press “start app”\newline 2. The user press the correct age group and gender. \newline
+			3. Navigates to the next page \newline 4. Select two interests \newline 5. Navigate to the next page  \\ \hline
+			
+			Any dependability between this and other tests & NaN \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Set initial settings}
+	\label{Tab_systemtest2}
+\end{table}
 
 \section{Customer acceptance test}
 
