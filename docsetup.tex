@@ -23,17 +23,23 @@
 %\makenomenclature
 \usepackage{natbib}
 \usepackage{float}
-\usepackage{enumitem}
+\usepackage{enumitem}			% Endre utseende på lister
+\usepackage{gensymb}			% Degree tegn
+\usepackage[utf8]{inputenc}		% Norsk tegnsett
+%\usepackage{ltxtable} 			% Long tables
+\usepackage{longtable}			% Long tables
+\setlength{\LTleft}{-1cm}
+
 %\floatstyle{boxed} 
 \restylefloat{figure}
 
-\usepackage[number=none]{glossary}
-\makeglossary
-\newglossarytype[abr]{abbr}{abt}{abl}
-\newglossarytype[alg]{acronyms}{acr}{acn}
-\newcommand{\abbrname}{Abbreviations} 
-\newcommand{\shortabbrname}{Abbreviations}
-%\makeabbr
+%\usepackage[number=none]{glossary}
+%\makeglossary
+%\newglossarytype[abr]{abbr}{abt}{abl}
+%\newglossarytype[alg]{acronyms}{acr}{acn}
+%\newcommand{\abbrname}{Abbreviations} 
+%\newcommand{\shortabbrname}{Abbreviations}
+%%\makeabbr
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \renewcommand*\contentsname{Table of Contents}
