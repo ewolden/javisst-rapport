@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.2)  6 MAY 2015 02:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.2)  6 MAY 2015 12:52
 entering extended mode
 **main.tex
 (main.tex
@@ -725,7 +725,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Overfull \hbox (64.72447pt too wide) in paragraph at lines 80--91
+Overfull \hbox (64.72447pt too wide) in paragraph at lines 82--93
  [] 
  []
 
@@ -764,7 +764,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
@@ -778,7 +778,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
@@ -796,15 +796,15 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-<fig/stedr_screenshot.png, id=758, 722.7pt x 1284.8pt>
+<fig/stedr_screenshot.png, id=759, 722.7pt x 1284.8pt>
 File: fig/stedr_screenshot.png Graphic file (type png)
 
 <use fig/stedr_screenshot.png>
-Package pdftex.def Info: fig/stedr_screenshot.png used on input line 152.
+Package pdftex.def Info: fig/stedr_screenshot.png used on input line 156.
 (pdftex.def)             Requested size: 236.01561pt x 419.57431pt.
 
 
@@ -826,7 +826,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
@@ -834,7 +834,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
@@ -842,38 +842,38 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
 [27 <./fig/stedr_screenshot.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
-<fig/cooltura_screenshot1.png, id=767, 722.7pt x 1284.8pt>
+<fig/cooltura_screenshot1.png, id=768, 722.7pt x 1284.8pt>
 File: fig/cooltura_screenshot1.png Graphic file (type png)
 
 <use fig/cooltura_screenshot1.png>
-Package pdftex.def Info: fig/cooltura_screenshot1.png used on input line 173.
+Package pdftex.def Info: fig/cooltura_screenshot1.png used on input line 177.
 (pdftex.def)             Requested size: 188.8096pt x 335.64769pt.
 
-<fig/cooltura_screenshot2.png, id=768, 722.7pt x 1284.8pt>
+<fig/cooltura_screenshot2.png, id=769, 722.7pt x 1284.8pt>
 File: fig/cooltura_screenshot2.png Graphic file (type png)
 
 <use fig/cooltura_screenshot2.png>
-Package pdftex.def Info: fig/cooltura_screenshot2.png used on input line 179.
+Package pdftex.def Info: fig/cooltura_screenshot2.png used on input line 183.
 (pdftex.def)             Requested size: 188.8096pt x 335.64769pt.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
 [28 <./fig/cooltura_screenshot1.png> <./fig/cooltura_screenshot2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
@@ -884,7 +884,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
@@ -892,15 +892,15 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
-<fig/tateball_screenshot.png, id=778, 722.7pt x 1284.8pt>
+<fig/tateball_screenshot.png, id=779, 722.7pt x 1284.8pt>
 File: fig/tateball_screenshot.png Graphic file (type png)
 
 <use fig/tateball_screenshot.png>
-Package pdftex.def Info: fig/tateball_screenshot.png used on input line 200.
+Package pdftex.def Info: fig/tateball_screenshot.png used on input line 204.
 (pdftex.def)             Requested size: 236.01561pt x 419.57431pt.
 
 
@@ -918,22 +918,22 @@ Missing character: There is no ù in font ptmr7t!
 [29] [30 <./fig/tateball_screenshot.png>]) (projectmanagement.tex
 Chapter 9.
 
-Underfull \hbox (badness 4316) in paragraph at lines 18--18
+Underfull \hbox (badness 4316) in paragraph at lines 19--19
 []\OT1/ptm/m/n/10.95 Jacqueline Floch
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
 []\OT1/ptm/m/n/10.95 Hanne Marie,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
 \OT1/ptm/m/n/10.95 Eivind, Kjer-sti,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
 []\OT1/ptm/m/n/10.95 Interaction be-tween
  []
 
@@ -941,7 +941,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--30
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
 []\OT1/ptm/m/n/10.95 Ragnhild, Roar,
  []
 
@@ -952,7 +952,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Overfull \hbox (47.6656pt too wide) in paragraph at lines 14--46
+Overfull \hbox (47.6656pt too wide) in paragraph at lines 15--47
  [][] 
  []
 
@@ -963,21 +963,21 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-<fig/wbs.png, id=789, 1117.17375pt x 817.0525pt>
+<fig/wbs.png, id=790, 1117.17375pt x 817.0525pt>
 File: fig/wbs.png Graphic file (type png)
  <use fig/wbs.png>
-Package pdftex.def Info: fig/wbs.png used on input line 58.
+Package pdftex.def Info: fig/wbs.png used on input line 59.
 (pdftex.def)             Requested size: 472.03123pt x 345.2168pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
@@ -988,7 +988,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32]
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
@@ -1006,12 +1006,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
@@ -1020,8 +1015,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
@@ -1030,347 +1030,347 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
 ]) (riskmanagement.tex
 Chapter 10.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
 []\OT1/ptm/b/n/10.95 Likelihood
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
 []\OT1/ptm/b/n/10.95 Impact
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
 []\OT1/ptm/b/n/10.95 Importance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
 \OT1/ptm/b/n/10.95 (Like-li-hood
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
 []\OT1/ptm/m/n/10.95 Underestimate the
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 16--16
+Underfull \hbox (badness 2351) in paragraph at lines 17--17
 \OT1/ptm/m/n/10.95 time planned to use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
 []\OT1/ptm/m/n/10.95 Estimate a lit-tle
  []
 
 
-Underfull \hbox (badness 4886) in paragraph at lines 16--16
+Underfull \hbox (badness 4886) in paragraph at lines 17--17
 \OT1/ptm/m/n/10.95 higher. con-tin-u-ous
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 18--18
+Underfull \hbox (badness 1635) in paragraph at lines 19--19
 \OT1/ptm/m/n/10.95 can-not max-i-mize the
  []
 
 
-Underfull \hbox (badness 3792) in paragraph at lines 18--18
+Underfull \hbox (badness 3792) in paragraph at lines 19--19
 \OT1/ptm/m/n/10.95 re-port meet the de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
 []\OT1/ptm/m/n/10.95 Ask con-crete ques-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
 \OT1/ptm/m/n/10.95 or other com-pe-tent
  []
 
 
-Underfull \hbox (badness 2980) in paragraph at lines 18--18
+Underfull \hbox (badness 2980) in paragraph at lines 19--19
 \OT1/ptm/m/n/10.95 ac-quain-tances of the
  []
 
 
-Underfull \hbox (badness 6284) in paragraph at lines 20--20
+Underfull \hbox (badness 6284) in paragraph at lines 21--21
 \OT1/ptm/m/n/10.95 and talk with each
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 22--22
+Underfull \hbox (badness 2680) in paragraph at lines 23--23
 []\OT1/ptm/m/n/10.95 Be pre-pared for su-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
 \OT1/ptm/m/n/10.95 per-vi-sor meet-ings.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
 \OT1/ptm/m/n/10.95 Pre-pare con-crete
  []
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 24--24
+Underfull \hbox (badness 3679) in paragraph at lines 25--25
 []\OT1/ptm/m/n/10.95 Project com-plex-ity /
  []
 
 
-Underfull \hbox (badness 7704) in paragraph at lines 24--24
+Underfull \hbox (badness 7704) in paragraph at lines 25--25
 []\OT1/ptm/m/n/10.95 Do not plan many
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
 []\OT1/ptm/m/n/10.95 Poor com-mu-ni-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
 \OT1/ptm/m/n/10.95 with the cus-tomer
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 26--26
+Underfull \hbox (badness 2173) in paragraph at lines 27--27
 \OT1/ptm/m/n/10.95 lead-ing to mis-un-der-
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 26--26
+Underfull \hbox (badness 1297) in paragraph at lines 27--27
 \OT1/ptm/m/n/10.95 stand-ings and doubts
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 26--26
+Underfull \hbox (badness 2478) in paragraph at lines 27--27
 \OT1/ptm/m/n/10.95 fore-hand. Es-tab-lish
  []
 
 
-Underfull \hbox (badness 3792) in paragraph at lines 26--26
+Underfull \hbox (badness 3792) in paragraph at lines 27--27
 \OT1/ptm/m/n/10.95 to the cus-tomer for
  []
 
 
-Underfull \hbox (badness 4168) in paragraph at lines 26--26
+Underfull \hbox (badness 4168) in paragraph at lines 27--27
 \OT1/ptm/m/n/10.95 Co-op-er-ate with cus-
  []
 
 
-Underfull \hbox (badness 4168) in paragraph at lines 26--26
+Underfull \hbox (badness 4168) in paragraph at lines 27--27
 \OT1/ptm/m/n/10.95 tomer to repri-or-i-tize
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--28
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
 []\OT1/ptm/m/n/10.95 Poor com-mu-ni-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--28
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
 \OT1/ptm/m/n/10.95 within the group
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 28--28
+Underfull \hbox (badness 2173) in paragraph at lines 29--29
 \OT1/ptm/m/n/10.95 lead-ing to mis-un-der-
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 28--28
+Underfull \hbox (badness 1297) in paragraph at lines 29--29
 \OT1/ptm/m/n/10.95 stand-ings and doubts
  []
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 28--28
+Underfull \hbox (badness 2790) in paragraph at lines 29--29
 \OT1/ptm/m/n/10.95 Have fre-quent meet-
  []
 
 
-Underfull \hbox (badness 2980) in paragraph at lines 28--28
+Underfull \hbox (badness 2980) in paragraph at lines 29--29
 \OT1/ptm/m/n/10.95 they have done and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
 []\OT1/ptm/m/n/10.95 Absence of group
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
 \OT1/ptm/m/n/10.95 mem-ber(s) over a
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 32--32
+Underfull \hbox (badness 1728) in paragraph at lines 33--33
 \OT1/ptm/m/n/10.95 take over the ab-sent
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 32--32
+Underfull \hbox (badness 1552) in paragraph at lines 33--33
 \OT1/ptm/m/n/10.95 halted by a per-son's
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 32--32
+Underfull \hbox (badness 1286) in paragraph at lines 33--33
 \OT1/ptm/m/n/10.95 ab-sence, other group
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 34--34
+Underfull \hbox (badness 1112) in paragraph at lines 35--35
 \OT1/ptm/m/n/10.95 torted. Some mem-
  []
 
 
-Underfull \hbox (badness 1515) in paragraph at lines 34--34
+Underfull \hbox (badness 1515) in paragraph at lines 35--35
 []\OT1/ptm/m/n/10.95 Continuous meet-ings,
  []
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 34--34
+Underfull \hbox (badness 3536) in paragraph at lines 35--35
 \OT1/ptm/m/n/10.95 team mem-bers del-e-
  []
 
 
-Underfull \hbox (badness 2671) in paragraph at lines 36--36
+Underfull \hbox (badness 2671) in paragraph at lines 37--37
 []\OT1/ptm/m/n/10.95 Poor choice of pro-
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 36--36
+Underfull \hbox (badness 6001) in paragraph at lines 37--37
 \OT1/ptm/m/n/10.95 be-comes dif-fi-cult to
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 36--36
+Underfull \hbox (badness 4872) in paragraph at lines 37--37
 \OT1/ptm/m/n/10.95 pro-duce the prod-uct
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--36
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 []\OT1/ptm/m/n/10.95 Reevaluate non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--36
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 \OT1/ptm/m/n/10.95 functional re-quire-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--36
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 \OT1/ptm/m/n/10.95 ments with the
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 40--40
+Underfull \hbox (badness 6332) in paragraph at lines 41--41
 []\OT1/ptm/m/n/10.95 Restore lat-est avail-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 []\OT1/ptm/m/n/10.95 Disagreement within
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 \OT1/ptm/m/n/10.95 the group on key
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 42--42
+Underfull \hbox (badness 2818) in paragraph at lines 43--43
 \OT1/ptm/m/n/10.95 cuss key is-sues and
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 42--42
+Underfull \hbox (badness 2205) in paragraph at lines 43--43
 \OT1/ptm/m/n/10.95 fi-nal. Make demo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 []\OT1/ptm/m/n/10.95 If the dis-agree-ment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 \OT1/ptm/m/n/10.95 can-not be solved,
  []
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 42--42
+Underfull \hbox (badness 1199) in paragraph at lines 43--43
 \OT1/ptm/m/n/10.95 one may in-volve the
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 44--44
+Underfull \hbox (badness 1194) in paragraph at lines 45--45
 \OT1/ptm/m/n/10.95 for the team so that
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
 []\OT1/ptm/m/n/10.95 First try to solve
  []
 
 
-Underfull \hbox (badness 4168) in paragraph at lines 44--44
+Underfull \hbox (badness 4168) in paragraph at lines 45--45
 \OT1/ptm/m/n/10.95 the con-flict be-tween
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
 \OT1/ptm/m/n/10.95 the group mem-bers
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 44--44
+Underfull \hbox (badness 1281) in paragraph at lines 45--45
 \OT1/ptm/m/n/10.95 in ques-tion. If this
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 48--48
+Underfull \hbox (badness 2080) in paragraph at lines 49--49
 \OT1/ptm/m/n/10.95 ments so it is clear
  []
 
 
-Underfull \hbox (badness 5133) in paragraph at lines 48--48
+Underfull \hbox (badness 5133) in paragraph at lines 49--49
 \OT1/ptm/m/n/10.95 how much ef-fort it
  []
 
 
-Underfull \hbox (badness 7415) in paragraph at lines 48--48
+Underfull \hbox (badness 7415) in paragraph at lines 49--49
 \OT1/ptm/m/n/10.95 time con-sum-ing as-
  []
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 50--50
+Underfull \hbox (badness 2790) in paragraph at lines 51--51
 []\OT1/ptm/m/n/10.95 Have fre-quent meet-
  []
 
 
-Underfull \hbox (badness 2460) in paragraph at lines 52--52
+Underfull \hbox (badness 2460) in paragraph at lines 53--53
 []\OT1/ptm/m/n/10.95 Product is not user-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []\OT1/ptm/m/n/10.95 Technical is-
  []
 
 
-Overfull \hbox (55.21281pt too wide) in paragraph at lines 12--56
+Overfull \hbox (55.21281pt too wide) in paragraph at lines 13--57
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 868.4109pt on input line 58.
+LaTeX Warning: Float too large for page by 868.4109pt on input line 59.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1380,17 +1380,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ] [38]) (requirementspecification.tex
 Chapter 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
@@ -1402,12 +1402,12 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
@@ -1421,32 +1421,27 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
@@ -1455,13 +1450,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
@@ -1469,12 +1469,12 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
@@ -1483,7 +1483,7 @@ Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 [42]) (designandarchitecture.tex
 Chapter 12.
-<fig/system_structure.png, id=847, 405.515pt x 307.1475pt>
+<fig/system_structure.png, id=855, 405.515pt x 307.1475pt>
 File: fig/system_structure.png Graphic file (type png)
 
 <use fig/system_structure.png>
@@ -1493,7 +1493,7 @@ Package pdftex.def Info: fig/system_structure.png used on input line 13.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/architecture.png, id=848, 1346.02875pt x 1098.1025pt>
+<fig/architecture.png, id=856, 1346.02875pt x 1098.1025pt>
 File: fig/architecture.png Graphic file (type png)
 
 <use fig/architecture.png>
@@ -1504,7 +1504,7 @@ Package pdftex.def Info: fig/architecture.png used on input line 22.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
@@ -1512,15 +1512,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-<fig/er_diagram.png, id=856, 1418.29875pt x 1109.14375pt>
+<fig/er_diagram.png, id=865, 1418.29875pt x 1109.14375pt>
 File: fig/er_diagram.png Graphic file (type png)
 
 <use fig/er_diagram.png>
-Package pdftex.def Info: fig/er_diagram.png used on input line 37.
+Package pdftex.def Info: fig/er_diagram.png used on input line 38.
 (pdftex.def)             Requested size: 472.03123pt x 369.13261pt.
 
 
@@ -1533,7 +1533,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 [44 <./fig/system_structure.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 49--51
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
@@ -1542,16 +1542,16 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
 [46 <./fig/er_diagram.png>]
-<fig/flow_diagram.png, id=877, 981.6675pt x 537.00626pt>
+<fig/flow_diagram.png, id=886, 981.6675pt x 537.00626pt>
 File: fig/flow_diagram.png Graphic file (type png)
 
 <use fig/flow_diagram.png>
-Package pdftex.def Info: fig/flow_diagram.png used on input line 65.
+Package pdftex.def Info: fig/flow_diagram.png used on input line 66.
 (pdftex.def)             Requested size: 472.03123pt x 258.21893pt.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -1560,11 +1560,11 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-<fig/recommendation_view.png, id=878, 376.40625pt x 669.50125pt>
+<fig/recommendation_view.png, id=887, 376.40625pt x 669.50125pt>
 File: fig/recommendation_view.png Graphic file (type png)
 
 <use fig/recommendation_view.png>
-Package pdftex.def Info: fig/recommendation_view.png used on input line 76.
+Package pdftex.def Info: fig/recommendation_view.png used on input line 77.
 (pdftex.def)             Requested size: 236.01561pt x 419.80617pt.
 
 
@@ -1577,11 +1577,11 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 [47 <./fig/flow_diagram.png>]
-<fig/story_view.png, id=884, 752.8125pt x 1339.0025pt>
+<fig/story_view.png, id=893, 752.8125pt x 1339.0025pt>
 File: fig/story_view.png Graphic file (type png)
 
 <use fig/story_view.png>
-Package pdftex.def Info: fig/story_view.png used on input line 86.
+Package pdftex.def Info: fig/story_view.png used on input line 87.
 (pdftex.def)             Requested size: 236.01561pt x 419.78574pt.
 
 
@@ -1623,7 +1623,7 @@ Missing character: There is no ª in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no • in font ptmr7t!
 
-Overfull \hbox (35.6656pt too wide) in paragraph at lines 99--111
+Overfull \hbox (35.6656pt too wide) in paragraph at lines 101--113
  [] 
  []
 
@@ -1637,7 +1637,7 @@ Missing character: There is no ∏ in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no ∏ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
@@ -1722,13 +1722,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-<fig/prototype1.png, id=932, 325.215pt x 579.16376pt>
+<fig/prototype1.png, id=948, 325.215pt x 579.16376pt>
 File: fig/prototype1.png Graphic file (type png)
  <use fig/prototype1.png>
 Package pdftex.def Info: fig/prototype1.png used on input line 32.
 (pdftex.def)             Requested size: 188.8096pt x 336.25102pt.
 
-<fig/prototype2.png, id=933, 325.215pt x 578.16pt>
+<fig/prototype2.png, id=949, 325.215pt x 578.16pt>
 File: fig/prototype2.png Graphic file (type png)
  <use fig/prototype2.png>
 Package pdftex.def Info: fig/prototype2.png used on input line 36.
@@ -1761,7 +1761,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--64
 ]) (testing.tex
 Chapter 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
@@ -1771,29 +1771,29 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Missing character: There is no ¬ in font ptmr7t!
 Missing character: There is no ¥ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
 
  []
 
 [63
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--51
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
 []\OT1/ptm/b/n/10.95 Test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
 \OT1/ptm/b/n/10.95 case
  []
 
@@ -1810,7 +1810,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 1859) in paragraph at lines 68--69
+Underfull \hbox (badness 1859) in paragraph at lines 70--71
 \OT1/ptm/m/n/10.95 -story with sound
  []
 
@@ -1827,17 +1827,17 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Overfull \hbox (5.71155pt too wide) in paragraph at lines 77--77
+Overfull \hbox (5.71155pt too wide) in paragraph at lines 79--79
 []\OT1/ptm/m/n/10.95 alreadyexistingemail 
  []
 
 
-Underfull \hbox (badness 2503) in paragraph at lines 83--83
+Underfull \hbox (badness 2503) in paragraph at lines 85--85
 \OT1/ptm/m/n/10.95 pro-duce col-lab-o-ra-tive rec-om-men-da-tions
  []
 
 
-Overfull \hbox (59.66557pt too wide) in paragraph at lines 58--85
+Overfull \hbox (59.66557pt too wide) in paragraph at lines 60--87
  [][] 
  []
 
@@ -1845,12 +1845,12 @@ Overfull \hbox (59.66557pt too wide) in paragraph at lines 58--85
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--98
+Underfull \hbox (badness 10000) in paragraph at lines 98--101
 
  []
 
@@ -1858,12 +1858,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--98
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [65]
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
 []\OT1/ptm/b/n/12 Test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
 \OT1/ptm/b/n/12 case
  []
 
@@ -1874,22 +1874,22 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Overfull \hbox (4.71288pt too wide) in paragraph at lines 108--108
+Overfull \hbox (4.71288pt too wide) in paragraph at lines 111--111
 []\OT1/ptm/m/n/12 newuser@mail.no,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
 \OT1/ptm/m/n/12 0,0,1,his-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
 \OT1/ptm/m/n/12 tory,literature,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
 \OT1/ptm/m/n/12 tech-nol-ogy.
  []
 
@@ -1906,22 +1906,22 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Overfull \hbox (4.71288pt too wide) in paragraph at lines 110--110
+Overfull \hbox (4.71288pt too wide) in paragraph at lines 113--113
 []\OT1/ptm/m/n/12 newuser@mail.no,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
 \OT1/ptm/m/n/12 0,0,1,his-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
 \OT1/ptm/m/n/12 tory,literature,
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 112--112
+Underfull \hbox (badness 1107) in paragraph at lines 115--115
 []\OT1/ptm/m/n/12 user model with
  []
 
@@ -1932,27 +1932,27 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 5954) in paragraph at lines 116--117
+Underfull \hbox (badness 5954) in paragraph at lines 119--120
 []\OT1/ptm/m/n/12 -usermodel with
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 119--119
+Underfull \hbox (badness 3525) in paragraph at lines 122--122
 []\OT1/ptm/m/n/12 ip adress, user-
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 119--119
+Underfull \hbox (badness 3148) in paragraph at lines 122--122
 \OT1/ptm/m/n/12 name and pass-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--121
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
 []\OT1/ptm/m/n/12 datamodel with
  []
 
 
-Overfull \hbox (59.66557pt too wide) in paragraph at lines 104--123
+Overfull \hbox (59.66557pt too wide) in paragraph at lines 107--126
  [][] 
  []
 
@@ -1960,22 +1960,17 @@ Overfull \hbox (59.66557pt too wide) in paragraph at lines 104--123
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--133
+Underfull \hbox (badness 10000) in paragraph at lines 134--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
@@ -1984,11 +1979,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--152
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
+
+ []
+
 [66]
 Underfull \vbox (badness 6608) has occurred while \output is active []
 
  [67]
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
@@ -2027,12 +2027,12 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 2452) in paragraph at lines 170--170
+Underfull \hbox (badness 2452) in paragraph at lines 173--173
 []\OT1/ptm/m/n/12 Any de-pend-abil-ity be-tween
  []
 
 
-Overfull \hbox (35.6656pt too wide) in paragraph at lines 160--172
+Overfull \hbox (35.6656pt too wide) in paragraph at lines 163--175
  [] 
  []
 
@@ -2043,12 +2043,12 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 2452) in paragraph at lines 195--195
+Underfull \hbox (badness 2452) in paragraph at lines 198--198
 []\OT1/ptm/m/n/12 Any de-pend-abil-ity be-tween
  []
 
 
-Overfull \hbox (35.6656pt too wide) in paragraph at lines 179--197
+Overfull \hbox (35.6656pt too wide) in paragraph at lines 182--200
  [] 
  []
 
@@ -2067,12 +2067,12 @@ Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
 [69]
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--223
+Underfull \hbox (badness 10000) in paragraph at lines 224--228
 
  []
 
@@ -2186,10 +2186,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 9300 strings out of 493698
- 133782 string characters out of 3144413
- 247204 words of memory out of 3000000
- 12131 multiletter control sequences out of 15000+200000
+ 9320 strings out of 493698
+ 134195 string characters out of 3144413
+ 248173 words of memory out of 3000000
+ 12151 multiletter control sequences out of 15000+200000
  29935 words of font info for 68 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,12n,51p,1339b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2201,9 +2201,9 @@ fb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fil
 es/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on main.pdf (94 pages, 7371215 bytes).
+Output written on main.pdf (94 pages, 7377175 bytes).
 PDF statistics:
- 1129 PDF objects out of 1200 (max. 8388607)
+ 1157 PDF objects out of 1200 (max. 8388607)
  248 named destinations out of 1000 (max. 500000)
  887 words of extra memory for PDF output out of 10000 (max. 10000000)
 
