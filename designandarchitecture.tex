@@ -6,25 +6,41 @@ To get a brief overview of the complete product and its required parts the desig
 
 \section{Architecture}
 
-The overall architectural design of the system was made to achieve a rough mapping of what needed to be done in terms of actual programing. The architecture focuses heavily on interactions between the different instances in the systems without going into the specific details on how this is done. To illustrate the architecture two different views were created. One showing only the components, with another showing the processes in the different components. The overall system structure can be seen in figure 6.XX, this shows the four different components and how they interact. In figure 6.XX a diagram showing the architecture with processes can be found. As seen in the legend, the square boxes represents individual components or processes. The boxes with oval corners represents compound processes or larger parts. These are mainly shown because they give an overview over which processes belong to and will be performed by which part of the system. Double lined boxes are external sources that provide an API. Lastly, arrows indicate information flow.
+The overall architectural design of the system was made to achieve a rough mapping of what needed to be done in terms of actual programing. The architecture focuses heavily on interactions between the different instances in the systems without going into the specific details on how this is done. To illustrate the architecture two different views were created. One showing only the components, with another showing the processes in the different components. The overall system structure can be seen in \textbf{Fig \ref{system_structure}}, this shows the four different components and how they interact. In \textbf{Fig \ref{architecture}} a diagram showing the architecture with processes can be found. As seen in the legend, the square boxes represents individual components or processes. The boxes with oval corners represents compound processes or larger parts. These are mainly shown because they give an overview over which processes belong to and will be performed by which part of the system. Double lined boxes are external sources that provide an API. Lastly, arrows indicate information flow.
 
-TODO sett inn Figure 6.xx Diagram of the overall system structure for this project.\newline
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig/system_structure}
+	\caption{Diagram of the overall system structure for this project.}
+	\label{system_structure}
+\end{figure}
 
 It is a difficult task to model a whole system in an accurate way, and while the architecture diagram shows an overlook, it can not give much insight into the complexity of each process. This is further complicated by the fact that in the startup phase of the project there are a great number of unknowns. Both complexity and requirements are subject to change. As such, the diagram should only be used as a guide for understanding the composition of the complete system.
 
-TODO sett inn Figure 6.xx Diagram of the architecture for this project.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/architecture}
+	\caption{Diagram of the architecture for this project.}
+	\label{architecture}
+\end{figure}
 
 \section{Database design}
 
-The database was designed with the goal of facilitating the recommendation of stories to users. The data model underpinning the database is visualized in the ER-diagram in figure 6.XX. User and story are the central entities in this diagram, since the goal of the application is to connect users to stories. Both of these entities has a number of attributes describing the entity. The central relationship in the diagram is the recommendation-relationship, where a user and a story is connected. This connection is described by some additional attributes, such as rating, tag and state. \newline
+The database was designed with the goal of facilitating the recommendation of stories to users. The data model underpinning the database is visualized in the ER-diagram in \textbf{Fig \ref{er_diagram}}. User and story are the central entities in this diagram, since the goal of the application is to connect users to stories. Both of these entities has a number of attributes describing the entity. The central relationship in the diagram is the recommendation-relationship, where a user and a story is connected. This connection is described by some additional attributes, such as rating, tag and state. \newline
 
 To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see chapter XX.XX - design and architecture, category mapping). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
 
 Another goal of this project is to provide some research data to the customer (see requirement RXX in appendix XX). To do this, some data about the use of the application is stored. This include registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e the rating) and the media format contained in the story.
 
-TODO sett inn Figure 6.XX: ER-diagram showing the data model.\newline
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/er_diagram}
+	\caption{ER-diagram showing the data model.}
+	\label{er_diagram}
+\end{figure}
 
 In mapping the ER-diagram to a relational database the algorithm in [AS2, p.270-278] has been used. To ensure a good database design, four informal guidelines in [AS2, p. 487-497] have also been used. These guidelines are:
+
 \begin{enumerate}
 \item Making sure that the semantics of the attributes is clear in the schema\newline 
 	This means that a relation schema (table) in the database corresponds to a entity type or a relationship type. The relational database used in this project follows this guideline by making a table for each entity and each relationship in the ER-diagram. The n-ary relationship “user recommend story” is split into tables according to the mapping algorithm.
@@ -42,19 +58,35 @@ In mapping the ER-diagram to a relational database the algorithm in [AS2, p.270-
 
 The user interface design was an essential part of the project, as the customer prioritized usability over all other nonfunctional requirements. The design thus went through many iterations by working on a prototype and continually getting feedback from customer and user tests. This feedback loop was important as the customer did not have clear requirements to the application from the beginning, and making everything easy to understand for the user was also challenging.  Balsamiq was first used to create a basic wireframe, but as it’s functionality was limited the next iteration of the design was made using Proto.io. This made it possible to receive better feedback on the flow of the app and not just the views individually. \newline
 
-The following diagram explains the overall flow between all the different views in the application. The blue boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explains what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail.
+The following \textbf{Fig \ref{flow_diagram}} explains the overall flow between all the different views in the application. The blue boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explains what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail.
 
-TODO sett inn Figure 6.xx Diagram of the flow between views in the user interface.\newline
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/flow_diagram}
+	\caption{Diagram of the flow between views in the user interface.}
+	\label{flow_diagram}
+\end{figure}
+
 
 Recommendation view\newline
 This view displays the stories that should be the most relevant to the user. The user can browse them by swiping through them or by clicking the left and right arrows. When tapping on a card the detailed view of the story will be displayed. The “X” in the right corner of each card is used to reject the story, which takes it out of the list of the current recommendations and makes that kind of stories less likely to appear in the future. The bookmark icon in the top bar opens a modal for adding a bookmark. 
 
-TODO sett inn Figure 6.xx Recommendation view\newline
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig/recommendation_view}
+	\caption{Recommendation view}
+	\label{recommendation_view}
+\end{figure}
 
 Story view\newline
 This view displays the chosen story in detail. There is a box which displays the media files associated with the story. The tabs above it will depend on which media types the story contains. Videos will be displayed by default if there are any, as they can be a major component of the story which should not be hidden in another tab. When tapping on a video or image it will be displayed in fullscreen mode. The user can give feedback on the story either by tapping the stars on the bottom part of the view, or by tapping the star icon in the top bar which will open up a modal. The modal will ask the user to rate the story, and the user can exit it by tapping “Ferdig” or by tapping outside of the modal. Tapping the bookmark icon will make the same modal as in the recommendation view appear.
 
-TODO sett inn Figure 6.xx Story view\newline
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig/story_view}
+	\caption{Story view}
+	\label{story_view}
+\end{figure}
 
 TODO: Screenshots and explanations of other views
 

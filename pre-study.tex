@@ -75,8 +75,6 @@ The framework combination chosen for this project was Ionic and PhoneGap, as thi
 
 The choice of which development process to use in the project was a central decision to be made. The following sections describe the different models that were under consideration by the team, as well as some advantages and disadvantages of each, which influenced the decision of which one to be used for the project. \textbf{Table \ref{Tab_dev-process}} below gives a comparison of some aspects of the various processes that were considered relevant for the project.
 
-TODO sett inn Table 2.xx Development process comparison\newline
-
 \begin{table}[!h]
 	\begin{center}
 		\begin{tabular}{ | l | l | l | l |}
@@ -147,9 +145,14 @@ These three applications were evaluated using the following criteria:
 
 The stedr application was developed by students as a prototype to test some research hypothesis. Content was not the primary focus in the application and thus consists mainly of stories related to places in Trondheim. Each place in the application is composed of a main picture and some brief general info about the place plus stories, pictures and sounds. Most of the places have one or more stories related, but pictures and sounds are less common. A possible problem in the application is finding the place the user is looking for. This is not easy unless the user have prior knowledge of the geographical area the desired place is located in. The reason for this is that the application’s main view consist of a map with markers representing each available place, but in order to know which place each marker represents the user have to click on the marker. If the user doesn’t know where for instance Nidarosdomen is located in Trondheim, they may have to click on all markers on the map before being able to navigate to the Nidarosdomen place view. \newline
 
-Our application does not use a map, so the most relevant views are the place view and the story view. The place view consist of a main picture and three tabs for different ways to explore this story as seen in Figure 2.XX. When changing the tabs, the content below the tabs changes. To see all the content, one might have to scroll down. The main picture is static when scrolling, occupying the upper half of the screen. This is also the case when viewing a specific story in the story view. Nielsen’s heuristic of aesthetic and minimalist design states that: “Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.”[AS3] It might be argued that when scrolling for content below the tabs or reading the story in the story view, the main picture’s importance in the dialogue is diminished and should not compete as strongly with the other information as it does now. \newline
+Our application does not use a map, so the most relevant views are the place view and the story view. The place view consist of a main picture and three tabs for different ways to explore this story as seen in \textbf{Fig \ref{stedr_screenshot}}. When changing the tabs, the content below the tabs changes. To see all the content, one might have to scroll down. The main picture is static when scrolling, occupying the upper half of the screen. This is also the case when viewing a specific story in the story view. Nielsen’s heuristic of aesthetic and minimalist design states that: “Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.”[AS3] It might be argued that when scrolling for content below the tabs or reading the story in the story view, the main picture’s importance in the dialogue is diminished and should not compete as strongly with the other information as it does now. \newline
 
-TODO sett inn Figure 2.XX: A screenshot from stedr showing the available options for one place
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig/stedr_screenshot}
+	\caption{A screenshot from stedr showing the available options for one place}
+	\label{stedr_screenshot}
+\end{figure}
 
 Other than finding information, the application also provides the user with the opportunity to add content themselves. Unfortunately this is a rather cumbersome process, as adding stories has to be done through Digitalt fortalt, adding pictures has to be done through Instagram and adding sound has to be done through Soundcloud. According to Nielsen, it is important to avoid making the user remember information from one dialogue to another. When adding pictures and sounds, specific words and/or tags has to be added on Instagram and Soundcloud. The user doesn’t have to remember these words since the application provides the opportunity to add them to the clipboard after clicking “Add picture” or “Add sound”, from where it can be fetched when adding the picture or sound. However, the use of the clipboard can be problematic because it hides the content from the user. It may not be obvious to all users how to paste the content into Instagram or Soundcloud, and such users might be forced to remember the words or abandon the action altogether. \newline
 
@@ -163,22 +166,41 @@ Cooltura is another application developed under the TagCloud umbrella. The versi
 
 The content is somewhat similar to stedr, with respect to the places and the stories available. In fact, when clicking to view stories in Cooltura one is directed to the stedr app, however not to the relevant story but the main view. Because of this, the user might have to remember what place it was visiting in Cooltura to see the stories connected to the place in stedr. While it might seem trivial to remember this, the user might be interrupted somewhere in the process and to complete it later it have to either remember the place or start the process all over again. As Nielsen has pointed out, a system should try not to make the user remember information, but rather recognize it. A better solution would therefore be to direct the user to the relevant place view in stedr, so that when the user later opens stedr it will open on the chosen place view and the user will recognize the action it was performing. Cooltura provides a more thorough description of each place, but other than that the content is the same as in stedr. Cooltura does not use a map like stedr, but instead a list of available locations. This makes it far easier for the user to navigate to the right place, especially since the selection is quite limited. \newline
 
-TODO sett inn Figure 2.XX: A screenshot of Cooltura showing recommended places
-TODO sett inn Figure 2.XX: A screenshot of Cooltura showing the view for one particular place
+ 
+\begin{figure}
+\centering
+	\begin{subfigure}[h]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{fig/cooltura_screenshot1}
+		\caption{A screenshot of Cooltura showing recommended places}
+		\label{cooltura_screenshot1}
+	\end{subfigure}
+	%
+	\begin{subfigure}[h]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{fig/cooltura_screenshot2}
+		\caption{A screenshot of Cooltura showing the view for one particular place}
+		\label{cooltura_screenshot2}
+	\end{subfigure}
+	\caption{Cooltura}
+\end{figure}
 
-When viewing a specific place on Cooltura the user gets a view with a main picture and some text describing the place as seen in figure 2.XX. Like in stedr the user can scroll down to see more content, but unlike stedr the main picture is not static, that is, the user see less and less of it as it scrolls down. This is more in accordance with Nielsen’s point of aesthetic and minimalist design, where less relevant information fills up less space in the user interface. The same is true for the view for a specific tourist attraction. \newline
+When viewing a specific place on Cooltura the user gets a view with a main picture and some text describing the place as seen in \textbf{Fig \ref{cooltura_screenshot2}}. Like in stedr the user can scroll down to see more content, but unlike stedr the main picture is not static, that is, the user see less and less of it as it scrolls down. This is more in accordance with Nielsen’s point of aesthetic and minimalist design, where less relevant information fills up less space in the user interface. The same is true for the view for a specific tourist attraction. \newline
 
 The application does not provide any help site, but the possible user actions are quite few and similar (most of them are about navigating to the desired place), so this might not be a problem. \newline
 
-It appears that the application intends to make use of personalization, but this is not implemented at the time of writing this report[AS4]. The “Anbefalte steder”-view in figure 2.XX now list every place added in the application (which is three different places), but the heading suggests that personalization is planned for. 
+It appears that the application intends to make use of personalization, but this is not implemented at the time of writing this report[AS4]. The “Anbefalte steder”-view in \textbf{Fig \ref{cooltura_screenshot1}} now list every place added in the application (which is three different places), but the heading suggests that personalization is planned for. 
 
 \subsection{Magic Tate Ball}
 
 Magic Tate Ball is an application that presents the user with an artwork based on the input parameters: date, time-of-day, geographical location, live weather data and ambient noise levels [AS5]. The content in the application is the artwork, a description of the artwork and an explanation of why the artwork was chosen. It is unknown how many artworks there are, but the information given on each artwork seems adequate. \newline
 
-The main task in the application is to be presented with an artwork. This is done by shaking the phone or by clicking a button in the center of the magic ball, see figure 2.XX for a screenshot of this. Another task is to browse all artworks presented to the user, which is done by swiping or clicking on arrows. Providing these two options makes it easy to for different types of users, those accustomed to swiping and those who are not. When the application is processing to come up with an artwork to present to the user, it shows the user what the input parameters are. This is in accordance with Nielsen’s heuristics on visibility of system status. \newline
+The main task in the application is to be presented with an artwork. This is done by shaking the phone or by clicking a button in the center of the magic ball, see \textbf{Fig \ref{tateball_screenshot}} for a screenshot of this. Another task is to browse all artworks presented to the user, which is done by swiping or clicking on arrows. Providing these two options makes it easy to for different types of users, those accustomed to swiping and those who are not. When the application is processing to come up with an artwork to present to the user, it shows the user what the input parameters are. This is in accordance with Nielsen’s heuristics on visibility of system status. \newline
 
-TODO sett inn Figure 2.XX: A screenshot of the main view of Magic Tate Ball
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig/tateball_screenshot}
+	\caption{A screenshot of the main view of Magic Tate Ball}
+	\label{tateball_screenshot}
+\end{figure}
 
 Personalization is the main selling point of Magic Tate Ball. The application uses the five input parameters described above to give the user some control of what content is presented. The user can turn each of these parameters on and off. What the user cannot do however, is to specify preferences regarding art. To that extent, the user has no direct control over what artwork it will be presented, because it is hard to know what to expect when an input parameter for instance is ”10℃ sunny weather”. Even though the application provides an explanation to why an artwork was chosen, how it was chosen remains in the dark (e.g. how to know which input parameter was emphasized in the personalization).
 
