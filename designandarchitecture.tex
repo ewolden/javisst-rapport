@@ -25,10 +25,11 @@ It is a difficult task to model a whole system in an accurate way, and while the
 \end{figure}
 
 \section{Database design}
+\label{sec_database_design}
 
 The database was designed with the goal of facilitating the recommendation of stories to users. The data model underpinning the database is visualized in the ER-diagram in \textbf{Fig \ref{er_diagram}}. User and story are the central entities in this diagram, since the goal of the application is to connect users to stories. Both of these entities has a number of attributes describing the entity. The central relationship in the diagram is the recommendation-relationship, where a user and a story is connected. This connection is described by some additional attributes, such as rating, tag and state. \newline
 
-To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see chapter XX.XX - design and architecture, category mapping). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
+To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see \textbf{Section \ref{sec_categorymapping}} category mapping). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
 
 Another goal of this project is to provide some research data to the customer (see requirement RXX in appendix XX). To do this, some data about the use of the application is stored. This include registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e the rating) and the media format contained in the story.
 
@@ -91,6 +92,7 @@ This view displays the chosen story in detail. There is a box which displays the
 TODO: Screenshots and explanations of other views
 
 \section{Category mapping} 
+\label{sec_categorymapping}
 
 There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 to 31 subcategories attached to it. To achieve a content based filtering the user has to select some interest categories. To make it easier for the user, these subcategories are divided into nine main interests categories. Some of these categories of interest were already predefined in [EHW1], while the rest was changed according to discussions with the customer. The subcategories were put into the category interest field that fit them best, with some subcategories being in several category interests. In \textbf{Table \ref{Tab_categorymapping}} this mapping is illustrated. It is obvious that some category interests will have more stories, however, subcategories such as literature contain more stories than most others. In such a way, it was intended to create nine category interests that contain roughly the same amount of stories. Even distribution of stories into category interests was intended, however, when a subset of stories was chosen this intention did not hold true as can be seen in chapter XX. Furthermore, the category interests needed to be distinct while still encompassing all the subcategories. 
 
@@ -118,6 +120,7 @@ There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 
 Reusing written code can be a great help to quickly have progress when programming.  To investigate possibilities of this, the code from stedr was reviewed. However, since stedr used a different framework on the front end and java as the server language reusing code proved difficult. Therefore, the code written was developed without relying on previous work.
 
 \subsection{Digitalt museum’s application programming interface}
+\label{subsec_api}
 
 All content related to stories displayed in the application was collected from Digitalt fortalt. Initially, to achieve better results when testing the personalization algorithms, the stories collected are limited to the areas Nord-Trøndelag and Sør-Trøndelag. The API [HM1] used to retrieve stories belongs to Digitalt museum. This API enables search through data from Digitalt museum, displaying pictures and provides access to an XML representation of available objects.\newline
 

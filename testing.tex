@@ -1,15 +1,17 @@
 %===================================== CHAPTER 9 Testing =================================
 
 \chapter{Testing}
+\label{chap_testing}
 
 The following subsections will describe the strategies for the testing levels usability test, unit test, integration test and system test. 
 
 \section{Unit testing}
+\label{sec_unit_testing}
 
-The purpose of unit testing is to ensure that every component that are implemented in the system are functional and correct. The group performed unit tests on new components or units of code that was implemented in the system. It was necessary to prioritize what components that should be tested, considering the amount of time given for the project. Testing of the user interface is required to ensure that the user get the right user experience. The recommendation module is a module that produce a result that is vital for the quality for the app. Therefore the unit testing in back end will focus on the recommendation module. Most of the code in back end is communicating with database, front end and Digitalt fortalt. Because of this we will focus on testing this code in the integration testing(X.X).\newline
+The purpose of unit testing is to ensure that every component that are implemented in the system are functional and correct. The group performed unit tests on new components or units of code that was implemented in the system. It was necessary to prioritize what components that should be tested, considering the amount of time given for the project. Testing of the user interface is required to ensure that the user get the right user experience. The recommendation module is a module that produce a result that is vital for the quality for the app. Therefore the unit testing in back end will focus on the recommendation module. Most of the code in back end is communicating with database, front end and Digitalt fortalt. Because of this we will focus on testing this code in the integration testing(\textbf{Section \ref{sec_integration_testing}}).\newline
 
 Roles \& Responsibilities\newline
-To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (Table 3.xx Role delegation), so the tester would have good knowledge to the code and know how it works.  
+To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec_scrum_team_and_roles}}), so the tester would have good knowledge to the code and know how it works.  
 
 \begin{table}[!h]
 	\begin{center}
@@ -89,6 +91,7 @@ The testers created test cases and used these as a guide for performing the test
 
 
 \section{Integration test}
+\label{sec_integration_testing}
 
 Integration testing is usually executed after unit testing and before system testing. This test was performed after every individual component was tested and integrated with the rest of the system. This is to ensure that the different modules of the system were communicating correctly and that data was moving properly from one module to another. \newline
 
@@ -97,7 +100,7 @@ The testing was performed at modules as soon as they were developed and complete
 Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. It was possible to run unit tests across the modules and get the wanted results.\newline
 
 Test cases\newline 
-The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in the figure 5.xx of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in the following table 9.x.
+The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Fig \ref{architecture}} of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab_integrationtestcases}}.
 
 \begin{table}[!h]
 	\centering
@@ -126,7 +129,7 @@ The test cases were made by first having a closer look at the different modules 
 
 \section{System testing}
 
-The system testing is executed after the unit test and integration tests. It was to give developers a measure of whether the system met all the goals set for the project.  The system test included performing a black box testing of the system, where the test cases was based on the use cases(chapter x.x) and the specified requirements(chapter x.x)  defined earlier in this report. \newline
+The system testing is executed after the unit test and integration tests. It was to give developers a measure of whether the system met all the goals set for the project.  The system test included performing a black box testing of the system, where the test cases was based on the use cases(\textbf{Section \ref{subsec_use_cases}}) and the specified requirements(\textbf{Section \ref{subsec_summary_functional_requirements}})  defined earlier in this report. \newline
 
 Required before performing the system tests\newline
 The unit tests and integration test were required to be executed and approved before the system test could be executed. To execute the tester also needed the final product in the way it was intended to the end users. Therefore the application in question should be accessible on a mobile device before performing the test. \newline
@@ -150,10 +153,10 @@ In this test one of the developers were executing the test. Because it is a blac
 After the test\newline
 After the system test suit is performed and the results are documented, the testers should mend the issues in the system if they appeared during the test. After the mending the test suit was executed again. This cycle was repeated until there was no issues left in the system and all test cases got the expected result.\newline
 
-When the system test is performed and finished, the testers evaluated the tests results and then decided if the system as a whole fulfilled all goals for the project.(See chapter X.X). The test results should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.\newline
+When the system test is performed and finished, the testers evaluated the tests results and then decided if the system as a whole fulfilled all goals for the project.(See \textbf{Section \ref{sec_test_results}}). The test results should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.\newline
 
 Test Cases \newline
-Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. table 9.3.1 and 9.3.2 are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.10. 
+Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. table \textbf{Table \ref{Tab_systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.10. 
 
 \begin{table}[!h]
 	\begin{center}
@@ -200,8 +203,9 @@ Each test case has a test identifier and an approach for the tester, and a descr
 \end{table}
 
 \section{Customer acceptance test}
+\label{sec_acceptance_test}
 
-Customer acceptance test (CAT) will be executed during the whole software development life cycle. After a sprint, the customer will test the product, evaluate and bring feedback. In the early stages of the project process this contains testing of the prototypes. When working software is delivered to the customer after a sprint, the customer use their own real input data to test the behaviour of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic when the customer defines it. The customer brings feedback either in meetings or through email. The planned delivery dates are presented in 3.3 Project milestone plan.  
+Customer acceptance test (CAT) will be executed during the whole software development life cycle. After a sprint, the customer will test the product, evaluate and bring feedback. In the early stages of the project process this contains testing of the prototypes. When working software is delivered to the customer after a sprint, the customer use their own real input data to test the behaviour of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic when the customer defines it. The customer brings feedback either in meetings or through email. The planned delivery dates are presented in \textbf{Section \ref{sec_milestone_plan}} Project milestone plan.  
 
 \section{Usability testing}
 
@@ -209,8 +213,9 @@ The user testing was performed by the front end developers. The preliminary work
 The test case included several test steps that the user followed, and the testers observed how the user reacted in every test case. After each test finished there was a discussion with follow-up questions the user had to answer to get a better insight into what was problematic and what was easily understandable. For further information on this see the framework for the usability testing in Appendix XX(Usability test template).
 
 \section{Results}
+\label{sec_test_results}
 
-This section includes the results from the tests described in sections X.1 through X.4.
+This section includes the results from the tests described in sections \textbf{\ref{sec_unit_testing}} through \textbf{\ref{sec_acceptance_test}}.
 
 \subsection{Unit test results}
 

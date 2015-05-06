@@ -8,8 +8,8 @@ This section briefly describes all the tools used for this project, which includ
 
 Front end
 \begin{itemize}
-	\item Ionic [es1] - Ionic is a front end UI framework designed to assist the development of hybrid mobile applications. By using this framework it became easy for the team to speed up the design of the interface and test the application both on computers and devices. More details about Ionic can be found in section X.XX
-	\item PhoneGap (Apache Cordova) [RA2] - PhoneGap is a framework that enables software developers to automatically wrap HTML5, CSS and Javascript code into platform-specific code that can run on devices such as iOS and Android phones and tablets. The Ionic framework is based on using PhoneGap for compiling its code. More details about PhoneGap can be found in section X.XX
+	\item Ionic [es1] - Ionic is a front end UI framework designed to assist the development of hybrid mobile applications. By using this framework it became easy for the team to speed up the design of the interface and test the application both on computers and devices. More details about Ionic can be found in \textbf{Section \ref{subsec_ionic}}
+	\item PhoneGap (Apache Cordova) [RA2] - PhoneGap is a framework that enables software developers to automatically wrap HTML5, CSS and Javascript code into platform-specific code that can run on devices such as iOS and Android phones and tablets. The Ionic framework is based on using PhoneGap for compiling its code. More details about PhoneGap can be found in \textbf{Section \ref{subsec_phonegap}}
 	\item Android Studio [es22] - Android Studio is the official IDE for Android application development, and it was necessary to have this installed in order to develop our application on android devices. It also provided a way to install various plugins that were useful or needed for the project.
 	\item Node.js [es23] - Node.js is a platform built on Chrome’s JavaScript runtime for easily building fast, scalable network applications. This was another tool that was necessary to install, because PhoneGap is built on it. First released in May of 2009, Node.js has been gaining much popularity as a server-side platform.
 	\item Gulp.js [es24] - Gulp is a build tool that is used as a part of PhoneGap in order to automate many common tasks, such as build processes and plugin handling.
@@ -22,14 +22,15 @@ Front end
 
 \noindent Back end
 \begin{itemize}
-	\item Docker [EHW2] - Docker is an open platform that provides the possibility for system developers to build their application and ship it to another computer or server, which can then run the same application, unchanged. The motivation for using Docker was mainly so the team could run the developed application on SINTEF’s own server. More details about Docker is described in section X.XX
-	\item MySQL [es8] - MySQL is one of the most widely used open source databases. It has many advantages when it comes to scalability and flexibility, and it is well suited for many types of application development. More details about this project’s database and its design can be found in section X.XX
-	\item Digitalt musem API [es9] - The source of the stories in the application was Digitalt Fortalt, and in order to access these it was necessary to use Digitalt museum’s API. The API is documented on its website and was incorporated into the project’s database. Details about the API can be found in section X.XX
-	\item phpunit[KF2] - Phpunit is a framework for writing and performing unit tests on php code. More details about how phpunit was used in this project can be found in [X.X Test Plan - Unit test]
-	\item Karma[KF3] - Karma is a test runner for Angularjs. Karma has it . With Karma it is possible to write javascript tests and run it in different browsers on both desktops and mobile phones. It is easy to run a test for every integration you make. More details about how Karma was used in this project can be found in [X.X Test Plan - Unit test]
+	\item Docker [EHW2] - Docker is an open platform that provides the possibility for system developers to build their application and ship it to another computer or server, which can then run the same application, unchanged. The motivation for using Docker was mainly so the team could run the developed application on SINTEF’s own server. More details about Docker is described in \textbf{Section \ref{subsec_docker}}
+	\item MySQL [es8] - MySQL is one of the most widely used open source databases. It has many advantages when it comes to scalability and flexibility, and it is well suited for many types of application development. More details about this project’s database and its design can be found in \textbf{Section \ref{sec_database_design}}
+	\item Digitalt musem API [es9] - The source of the stories in the application was Digitalt Fortalt, and in order to access these it was necessary to use Digitalt museum’s API. The API is documented on its website and was incorporated into the project’s database. Details about the API can be found in \textbf{Section \ref{subsec_api}}
+	\item phpunit[KF2] - Phpunit is a framework for writing and performing unit tests on php code. More details about how phpunit was used in this project can be found in \textbf{Section \ref{sec_unit_testing}}
+	\item Karma[KF3] - Karma is a test runner for Angularjs. Karma has it . With Karma it is possible to write javascript tests and run it in different browsers on both desktops and mobile phones. It is easy to run a test for every integration you make. More details about how Karma was used in this project can be found in \textbf{Section \ref{sec_unit_testing}}
 \end{itemize}
 
 \section{Communication tools}
+\label{sec_communication tools}
 
 \begin{itemize}
 	\item Google drive [es10] - Used for creating and sharing documents with the whole group, as well as editing shared documents in real-time. it also made it possible to share all files, whether it was images/diagrams/spreadsheets, or anything else. That was why the team decided to use this as a good solution for sharing all documentation.
@@ -39,6 +40,7 @@ Front end
 \end{itemize}
 
 \section{Additional tools}
+\label{sec_additional_tools}
 
 \begin{itemize}
 	\item Github [es12] - Used for making a code repository to be shared by the group while developing the system. The customer requested the use of Github, and it was also used because it seemed like the easiest way to share and implement code, as well as sharing the code with the customer.
