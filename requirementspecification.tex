@@ -49,7 +49,34 @@ The use cases in this section define interactions between an actor and the appli
 \item Postconditions: Describe what state the system should be in after the use case is performed.
 \end{itemize}
 
-TODO sett inn use cases U1 - U10\newline
+TODO sett inn use cases U2 - U10\newline
+\begin{table}[htp]
+	\centering
+	\caption{}
+	\begin{tabular}[b]{|l | l|}\hline
+		\textbf{ID} 				& U1									\\\hline
+		\textbf{Name} 				& Create recoverable profile.			\\\hline
+		\textbf{Brief description}	& Enter mail to register. 				\\\hline
+		\textbf{Actors} 			& User									\\\hline
+		\textbf{Priority}			& High									\\\hline
+		\textbf{Preconditions}		& Application installed					\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+									  \begin{enumerate}[noitemsep]
+										\item User clicks on register new user
+										\item User fills in mail into a registration form
+										\item Input validated
+										\item User finishes the registration and the syestem saves the user ID
+									  \end{enumerate}						
+									  \end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+									  \begin{enumerate}[noitemsep]
+										\item User skips registration and starts using the system
+										\item The system stores the new user by an ID internally
+									  \end{enumerate}
+									 \end{minipage}							\\\hline
+		\textbf{Postconditions}		& User is created and saved by the system\\\hline
+	\end{tabular}
+\end{table}
 
 \section{Non-functional requirements}
 
