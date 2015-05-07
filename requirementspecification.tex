@@ -51,10 +51,10 @@ The use cases in this section define interactions between an actor and the appli
 \item Postconditions: Describe what state the system should be in after the use case is performed.
 \end{itemize}
 
-TODO sett inn use cases U2 - U10\newline
 \begin{table}[htp]
+	\includegraphics[width=\textwidth]{fig/U1}
 	\centering
-	\caption{}
+	\caption{U1. Create profile}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U1									\\\hline
 		\textbf{Name} 				& Create recoverable profile.			\\\hline
@@ -77,6 +77,260 @@ TODO sett inn use cases U2 - U10\newline
 									  \end{enumerate}
 									 \end{minipage}							\\\hline
 		\textbf{Postconditions}		& User is created and saved by the system\\\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+	\includegraphics[width=0.5\textwidth]{fig/U2}
+	\centering
+	\caption{U2. Sign in}
+	\begin{tabular}[b]{|l | l|}\hline
+		\textbf{ID} 				& U2									\\\hline
+		\textbf{Name} 				& Sign in.								\\\hline
+		\textbf{Brief description}	& Enter email address to sign in. 		\\\hline
+		\textbf{Actors} 			& User									\\\hline
+		\textbf{Priority}			& High									\\\hline
+		\textbf{Preconditions}		& User has already registered			\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item User clicks on sign in
+				\item User fills in mail into form
+				\item System checks email address. User id returned
+				\item Main view displayed
+			\end{enumerate}						
+		\end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item User not found
+				\item Error message displayed, go to 2.
+			\end{enumerate}
+		\end{minipage}							\\\hline
+		\textbf{Postconditions}		& User is logged in to the system\\\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+	\includegraphics[width=\textwidth]{fig/U3}
+	\centering
+	\caption{U3. Set initial settings}
+	\begin{tabular}[b]{|l | p{13cm}|}\hline
+		\textbf{ID} 				& U3									\\\hline
+		\textbf{Name} 				& Set initial settings.					\\\hline
+		\textbf{Brief description}	& Specify user information to be used for receiving stories. \\\hline
+		\textbf{Actors} 			& User									\\\hline
+		\textbf{Priority}			& High									\\\hline
+		\textbf{Preconditions}		& Application installed					\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item User is initially asked to fill a form about preferences by the system
+					\begin{enumerate}
+						\item Personal info: age group and sex
+						\item Cultural category preferences
+					\end{enumerate}
+				\item The system saves information about the user’s preferences
+			\end{enumerate}						
+		\end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item User clicks on settings in order to change preferences
+			\end{enumerate}
+		\end{minipage}							\\\hline
+		\textbf{Postconditions}		& The system has information about the user in order to provide personalized story recommendations.\\\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+	\includegraphics[width=\textwidth]{fig/U4}
+	\centering
+	\caption{U4. Browse recommended stories}
+	\begin{tabular}[b]{|l | l|}\hline
+		\textbf{ID} 				& U4									\\\hline
+		\textbf{Name} 				& Browse recommended stories.			\\\hline
+		\textbf{Brief description}	& User is shown a list of recommended stories to choose from. 		\\\hline
+		\textbf{Actors} 			& User									\\\hline
+		\textbf{Priority}			& High									\\\hline
+		\textbf{Preconditions}		& Preferences already set				\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item User is shown a list of recommended stories
+				\item User does one of the three following actions on a story:
+					\begin{enumerate}
+						\item Choose to read the story now
+						\item Reject the story
+						\item Add story to list  
+					\end{enumerate}
+				\item If option (b) or (c) is chosen the user is shown a recommendation list without the story
+			\end{enumerate}						
+		\end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item If the user chose to read the story now, the story - and not the updated recommendation list - will be shown.
+			\end{enumerate}
+		\end{minipage}							\\\hline
+		\textbf{Postconditions}		& The system has stored information about the choice of the user.\\\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+	\includegraphics[width=0.5\textwidth]{fig/U5}
+	\centering
+	\caption{U5. Add story to list}
+	\begin{tabular}[b]{|l | l|}\hline
+		\textbf{ID} 				& U5									\\\hline
+		\textbf{Name} 				& Add story to list.					\\\hline
+		\textbf{Brief description}	& Put a story in to-read list or user-defined  list. 		\\\hline
+		\textbf{Actors} 			& User									\\\hline
+		\textbf{Priority}			& Medium								\\\hline
+		\textbf{Preconditions}		& User is registered and signed in		\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item User opens a story to read
+				\item User clicks the bookmark button in the story and selects the desired collections to put the story in.
+				\item Story will be put in the selected list
+			\end{enumerate}						
+		\end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item The desired collection does not exist. The user clicks to add new collection.
+			\end{enumerate}
+		\end{minipage}							\\\hline
+		\textbf{Postconditions}		& Story will be added to and/or removed from various lists according to user's actions\\\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+	\includegraphics[width=\textwidth]{fig/U6}
+	\centering
+	\caption{U6. View story}
+	\begin{tabular}[b]{|l | l|}\hline
+		\textbf{ID} 				& U6									\\\hline
+		\textbf{Name} 				& View story.							\\\hline
+		\textbf{Brief description}	& Display media (text, images, video, sound clips) related to the story selected. 		\\\hline
+		\textbf{Actors} 			& User, Digitalt fortalt				\\\hline
+		\textbf{Priority}			& High									\\\hline
+		\textbf{Preconditions}		& The story is in the list of recommended stories or favorites			\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item User selects story
+				\item Display:
+					\begin{enumerate}
+						\item Available media files
+						\item Link to story on Digitalt fortalt
+						\item Explanation of why the story was recommended
+					\end{enumerate}
+				\item User selects media type (text default)
+			\end{enumerate}						
+		\end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+		\end{minipage}							\\\hline
+		\textbf{Postconditions}		& The story is shown according to the user preferences\\\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+	\includegraphics[width=\textwidth]{fig/U7}
+	\centering
+	\caption{U7. Rate story}
+	\begin{tabular}[b]{|l | l|}\hline
+		\textbf{ID} 				& U7									\\\hline
+		\textbf{Name} 				& Give feedback / rating.				\\\hline
+		\textbf{Brief description}	& Give a rating on a story. 			\\\hline
+		\textbf{Actors} 			& User									\\\hline
+		\textbf{Priority}			& High									\\\hline
+		\textbf{Preconditions}		& User has opened a story for reading	\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item After reading the story,  the user clicks on a rating to give feedback on the story
+				\item The system saves the rating
+				\item Story will be put in read list
+			\end{enumerate}						
+		\end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item User does not give a rating on the story before closing it
+				\item The system reminds the user to rate the story at a later time
+			\end{enumerate}
+		\end{minipage}							\\\hline
+		\textbf{Postconditions}		& The rating of the story from the user is saved\\\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+	\includegraphics[width=\textwidth]{fig/U8}
+	\centering
+	\caption{U8. View list}
+	\begin{tabular}[b]{|l | l|}\hline
+		\textbf{ID} 				& U8									\\\hline
+		\textbf{Name} 				& View list.							\\\hline
+		\textbf{Brief description}	& View list of collected stories (favorites,to-read,tags defined by user). 			\\\hline
+		\textbf{Actors} 			& User									\\\hline
+		\textbf{Priority}			& Medium								\\\hline
+		\textbf{Preconditions}		& User is registered and signed in		\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item User selects list from menu
+				\item List of stories shown
+			\end{enumerate}						
+		\end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item No stories found
+				\item Display message “No stories found”
+			\end{enumerate}
+		\end{minipage}							\\\hline
+		\textbf{Postconditions}		& User is shown all of the stories collected\\\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+	\includegraphics[width=0.5\textwidth]{fig/U9}
+	\centering
+	\caption{U9. Specify settings}
+	\begin{tabular}[b]{|l | l|}\hline
+		\textbf{ID} 				& U9									\\\hline
+		\textbf{Name} 				& Specify settings.						\\\hline
+		\textbf{Brief description}	& Specify and change system settings. 	\\\hline
+		\textbf{Actors} 			& User									\\\hline
+		\textbf{Priority}			& High									\\\hline
+		\textbf{Preconditions}		& User is signed in						\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item While logged in, user clicks on settings
+				\item User edits the data in settings
+					\begin{enumerate}
+						\item Category preferences
+						\item Age group / sex
+						\item User e-mail
+					\end{enumerate}
+				\item The system saves the new settings
+			\end{enumerate}						
+		\end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+		\end{minipage}							\\\hline
+		\textbf{Postconditions}		& Settings are changed and saved\\\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+	\includegraphics[width=0.5\textwidth]{fig/U10}
+	\centering
+	\caption{U10. Read about app}
+	\begin{tabular}[b]{|l | l|}\hline
+		\textbf{ID} 				& U10									\\\hline
+		\textbf{Name} 				& Read about app.						\\\hline
+		\textbf{Brief description}	& Basic info about the application. 	\\\hline
+		\textbf{Actors} 			& User									\\\hline
+		\textbf{Priority}			& High									\\\hline
+		\textbf{Preconditions}		& User is signed in						\\\hline&\\[-2ex]
+		\textbf{Basic flow}			& \begin{minipage}{5in}
+			\begin{enumerate}[noitemsep]
+				\item While logged in, user clicks on settings
+				\item User clicks on read about app and is presented with information about the app
+			\end{enumerate}						
+		\end{minipage}						\\\hline&\\[-2ex]
+		\textbf{Alternate flow}		& \begin{minipage}{5in}
+		\end{minipage}							\\\hline
+		\textbf{Postconditions}		& \\\hline
 	\end{tabular}
 \end{table}
 
