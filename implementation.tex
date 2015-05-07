@@ -6,6 +6,35 @@ This chapter discusses the details of the system implementation process, both fo
 
 \section{Front end}
 
+The front end of the application was designed by using Ionic and AngularJS. In this section, there will first be a description of how a system made in AngularJS is structured, and in the subsequent section will be an elaboration of some challenges and limitations during the creation of the user interface, both concerning the design and the implementation aspects of the process.
+
+\subsection{AngularJS system structure}
+
+AngularJS is based on a Model-View-Controller architecture, but provides a variety of components to assist in easing the programming and speeding up the application. It is essentially another layer of abstraction above writing regular Javascript. These are some of the main concepts that are used to create an Angular application:
+
+\begin{description}
+	\item[Model] \hfill \\ 
+	The data that can be interacted with by the user.
+	
+	\item[View] \hfill \\ 
+	The interfaces that the user can see.
+	
+	\item[Controller] \hfill \\ 
+	The logic and behavior of the views.
+	
+	\item[Directive] \hfill \\ 
+	Special functionality applied to the DOM elements, you can create your own directives as well as use the numerous ones provided by AngularJS itself. In "Vettu hva?", several of these were used, such as directives that call on some function when DOM elements are clicked on, or directives that show or hide parts of the DOM based on some condition.
+	
+	\item[Module] \hfill \\ 
+	A module encapsulates a part of the application. Instead of having a single "main" function that holds the application together, Angular applications normally have multiple modules that work together. The benefit of this is that the application is decomposed into logical parts that can be reused, loaded, and tested in any order. In "Vettu hva?", each controller is its own module. The part of the program that communicated with the back end is also encapsulated in a module. Furthermore, there is a module that starts up the application and binds together views and controller into different states.
+	
+	\item[Scope] \hfill \\ 
+	The scope contains all the elements that the application currently has access too. It can be viewed as a container that stores the current model, and so if a controller or directive is going to modify or access the model, this has to be done by using the scope.
+	
+	\item[Service] \hfill \\ 
+	A service contains "global" logic that is accessible to the entire application. In "Vettu hva?", this is used in the module that contains the communication with the back end. This module has three different services, which respectively gives the application access to User data, story data, and requests from front end to back end.
+\end{description}
+
 \subsection{User interface}
 
 Early on in development, the team discovered several limitations of the Ionic framework. For example when using a list to display stories, it was not possible to swipe the list both left and right. The idea was to swipe one way to add a story to be read later, and swipe the other way to reject a story from the list entirely.  Because this proved to be impossible, the views were redesigned into a different solution which was much less based around swiping.\newline
@@ -24,7 +53,7 @@ The prototype has been through multiple iterations. Early on, it was imagined to
 
 Another of the early ideas was for the user to receive a “daily story” or some sort of schedule for being presented with recommended stories. However, due to workload and time constraints, this requirement was heavily down prioritized. The most important parts were the personalization and usability aspects, so receiving notifications seemed like an unnecessary extra feature.\newline
 
-A big issue for the interface design has been the handling of the different media elements (text, pictures, audio, video) and how these should be positioned relative to each other. For a while the team designed the application to have one tab for each of these four elements in the story view, as shown to the left in figure 8.XX. The customer had a concern that this might not be the optimal solution, as a user would for example not be able to read text and view pictures simultaneously. After some discussion, the interface was redesigned so that the text would be persistent, and instead the user could tab between pictures, audio, and video. The resulting design can be seen to the right in \textbf{Fig \ref{prototype}}. 
+A big issue for the interface design has been the handling of the different media elements (text, pictures, audio, video) and how these should be positioned relative to each other. For a while the team designed the application to have one tab for each of these four elements in the story view, as shown to the left in figure 8.XX. The customer had a concern that this might not be the optimal solution, as a user would for example not be able to read text and view pictures simultaneously. After some discussion, the interface was redesigned so that the text would be persistent, and instead the user could tab between pictures, audio, and video. The resulting design can be seen to the right in \textbf{Fig \ref{Fig:prototype}}. 
 
 \begin{figure}
 	\centering
@@ -36,7 +65,7 @@ A big issue for the interface design has been the handling of the different medi
 		\includegraphics[width=\textwidth]{fig/prototype2}
 	\end{subfigure}
 	\caption{Comparison of the story view in the first and second version of the prototype.}
-	\label{prototype}
+	\label{Fig:prototype}
 \end{figure}
 
 \section{Back end}
@@ -55,7 +84,7 @@ The team did not decide or understand how to do the personalization until mid Ma
 
 \subsection{Personalization}
 
-The way personalization was implemented was by having the user give their preferences about which types of stories they enjoy, and also by harvesting circumstantial  information about the user in order to provide relevant stories. Users of this system are also allowed to give feedback on the recommendation of stories from the database to achieve further personalization.  Users receive story recommendations based on other users’ preferences and recommendations, i.e. collaborative filtering. The system was developed as a client/server architecture, while the database containing the stories was provided by Digitalt fortalt [es19]. The stories are found in a variety of formats such as text, images, audio and video.
+The way personalization was implemented was by having the user give their preferences about which types of stories they enjoy, and also by harvesting circumstantial  information about the user in order to provide relevant stories. Users of this system are also allowed to give feedback on the recommendation of stories from the database to achieve further personalization.  Users receive story recommendations based on other users' preferences and recommendations, i.e. collaborative filtering. The system was developed as a client/server architecture, while the database containing the stories was provided by Digitalt fortalt [es19]. The stories are found in a variety of formats such as text, images, audio and video.
 
 \subsection{Front end - back end communication}
 

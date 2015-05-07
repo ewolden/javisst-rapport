@@ -32,7 +32,7 @@ Constraints which the team had to work within throughout the project:
 
 As one of the requirements from the customer was that the application should be cross-platform (Android and iOS), a hybrid app was found to be the best option. The alternative would have been to create two separate native apps for both platforms. However, this would have been too much work to complete within the deadline, especially as the team had little experience with developing for either of the platforms. A hybrid app is a web app made with HTML and JavaScript wrapped in a native shell so that it can be run like a normal native app. This was a big advantage, as the team already had experience with web design. It also makes it possible to make use of the many tools available for web development, and most of the code can be reused for multiple platforms. Bad performance used to be a disadvantage to the hybrid approach, however mobile hardware has improved significantly in the last few years, so this is not a large issue any longer. The following sections will discuss the advantages and disadvantages of different frameworks that were considered, and explain the final choice for this project. \newline
 
-\textbf{Table \ref{Tab_framework}} below summarizes some of the capabilities and limitations of the various frameworks that were under consideration.
+\textbf{Table \ref{Tab:framework}} below summarizes some of the capabilities and limitations of the various frameworks that were under consideration.
 
 \begin{table}[!h]
 	\begin{center}
@@ -48,16 +48,16 @@ As one of the requirements from the customer was that the application should be 
 		\end{tabular}
 	\end{center}
 	\caption{Framework comparison}
-	\label{Tab_framework}
+	\label{Tab:framework}
 \end{table}
 
 \subsection{PhoneGap}
-\label{subsec_phonegap}
+\label{subsec:phonegap}
 
 PhoneGap is an open-source mobile app framework for native packaging [RA2]. What it does is take in a mobile app consisting of HTML, CSS and JavaScript files, and wrap it in a native shell. It can then be deployed to iOS, Android and Windows 8. It also gives easy access to the native features of the phones (geolocation, notifications, storage, etc.) through different APIs. It is not necessary to think about the native SDKs, as the app will be compiled and built with the newest SDK for the platform.  It is a very popular framework, and there are many plugins created for it that provide additional functionality.
 
 \subsection{Ionic}
-\label{subsec_ionic}
+\label{subsec:ionic}
 
 Ionic is an open-source UI framework focused on making it easier to create hybrid mobile apps with a native feel [RA1]. It accomplishes this by offering a foundation to build on and UI components based on design patterns and best practices found in native apps. The foundation can be built on and customized with additional HTML, CSS and JavaScript. Part of the foundation is AngularJS, which is a JavaScript framework that extends HTML to make dynamic views in web applications. It gives the app a modular architecture, which means that code can more easily be reused for both iOS and Android. A disadvantage is that it is necessary to take time to learn AngularJS in order to take full advantage of Ionic. As Ionic is one of the most popular hybrid mobile frameworks, there exists more learning material about it, and it also has an active user community. Performance is not quite as good on older devices, especially if using large amounts of animations or media.
 
@@ -75,7 +75,7 @@ The framework combination chosen for this project was Ionic and PhoneGap, as thi
 
 \section{Software development process}
 
-The choice of which development process to use in the project was a central decision to be made. The following sections describe the different models that were under consideration by the team, as well as some advantages and disadvantages of each, which influenced the decision of which one to be used for the project. \textbf{Table \ref{Tab_dev-process}} below gives a comparison of some aspects of the various processes that were considered relevant for the project.
+The choice of which development process to use in the project was a central decision to be made. The following sections describe the different models that were under consideration by the team, as well as some advantages and disadvantages of each, which influenced the decision of which one to be used for the project. \textbf{Table \ref{Tab:dev-process}} below gives a comparison of some aspects of the various processes that were considered relevant for the project.
 
 \begin{table}[!h]
 	\begin{center}
@@ -93,7 +93,7 @@ The choice of which development process to use in the project was a central deci
 		\end{tabular}
 	\end{center}
 	
-	\label{Tab_dev-process}
+	\label{Tab:dev-process}
 \end{table}
 
 \subsection{Waterfall model}
@@ -104,7 +104,7 @@ Extreme programming is an agile method focused on pushing out new system version
 
 
 \subsection{Scrum }
-\label{sec_scrum}
+\label{sec:scrum}
 Scrum is a general agile method with focus on managing iterative development rather than specific technical engineering approaches [es16 P.72-74]. It also allows for a rapidly changing development environment and close collaboration between the members of a team. To provide this, scrum makes use of phases called sprints, daily scrum meetings, and several types of charts and logs. One of the main challenges for a scrum team is to choose the right amount of work per sprint so that they don’t end up with too little or too much work. Scrum has several similarities with extreme programming, such as high involvement of the customer in the development, as well as continuous testing while implementing new functionality.
 
 \subsection{Conclusion}
@@ -113,7 +113,7 @@ For this project, the agile software development methodology scrum was used. The
 \section{Back end}
 
 \subsection{Docker}
-\label{subsec_docker}
+\label{subsec:docker}
 
 Docker[EHW2] was made to help automation of application deployment. This happens by providing a virtual operative-system-level abstraction. This means that on a server, it is possible to run several virtual operative systems called docker images, which can easily be deployed to another server. This is beneficial for software development, because it means it is easy to setup identical back ends. The customer used this on their servers, which made using it during development as well, a good choice. A benefit of using docker, is that it can directly access repositories on git. This means that the latest revision is guaranteed to run when starting the back end. However, there are also drawbacks. It is not possible to update files within the docker image currently running without rebuilding it. This means that to update a single line of code, the whole image needs to be rebuilt. This means that while the newest revision is guaranteed to be running, any changes made to the application after the start of that docker image requires manually stopping, rebuilding, and starting the docker image.
 
@@ -142,21 +142,22 @@ Among the previous work there has been developed applications through the TagClo
 These three applications were evaluated using the following criteria:
 \begin{itemize}
 \item Content. Does the application provide satisfying content or is something lacking?
-\item Usability. Usability concerns how easy it is for the user to accomplish a task. (see \textbf{Section \ref{sec_non-functional_requirements}} (non-functional requirements) for a more elaborate definition). The evaluation here draw on Jacob Nielsen’s ten usability heuristics as defined in [AS3].  
+\item Usability. Usability concerns how easy it is for the user to accomplish a task. (see \textbf{Section \ref{sec:non-functional_requirements}} (non-functional requirements) for a more elaborate definition). The evaluation here draw on Jacob Nielsen’s ten usability heuristics as defined in [AS3].  
 \item Personalization. To what extent does the application provide the user with the opportunity for individualized content?
 \end{itemize}
 
 \subsection{stedr}
+\label{subsec:stedr}
 
 The stedr application was developed by students as a prototype to test some research hypothesis. Content was not the primary focus in the application and thus consists mainly of stories related to places in Trondheim. Each place in the application is composed of a main picture and some brief general info about the place plus stories, pictures and sounds. Most of the places have one or more stories related, but pictures and sounds are less common. A possible problem in the application is finding the place the user is looking for. This is not easy unless the user have prior knowledge of the geographical area the desired place is located in. The reason for this is that the application’s main view consist of a map with markers representing each available place, but in order to know which place each marker represents the user have to click on the marker. If the user doesn’t know where for instance Nidarosdomen is located in Trondheim, they may have to click on all markers on the map before being able to navigate to the Nidarosdomen place view. \newline
 
-Our application does not use a map, so the most relevant views are the place view and the story view. The place view consist of a main picture and three tabs for different ways to explore this story as seen in \textbf{Fig \ref{stedr_screenshot}}. When changing the tabs, the content below the tabs changes. To see all the content, one might have to scroll down. The main picture is static when scrolling, occupying the upper half of the screen. This is also the case when viewing a specific story in the story view. Nielsen’s heuristic of aesthetic and minimalist design states that: “Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.”[AS3] It might be argued that when scrolling for content below the tabs or reading the story in the story view, the main picture’s importance in the dialogue is diminished and should not compete as strongly with the other information as it does now. \newline
+Our application does not use a map, so the most relevant views are the place view and the story view. The place view consist of a main picture and three tabs for different ways to explore this story as seen in \textbf{Fig \ref{Fig:stedr_screenshot}}. When changing the tabs, the content below the tabs changes. To see all the content, one might have to scroll down. The main picture is static when scrolling, occupying the upper half of the screen. This is also the case when viewing a specific story in the story view. Nielsen’s heuristic of aesthetic and minimalist design states that: “Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.”[AS3] It might be argued that when scrolling for content below the tabs or reading the story in the story view, the main picture’s importance in the dialogue is diminished and should not compete as strongly with the other information as it does now. \newline
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{fig/stedr_screenshot}
 	\caption{A screenshot from stedr showing the available options for one place}
-	\label{stedr_screenshot}
+	\label{Fig:stedr_screenshot}
 \end{figure}
 
 Other than finding information, the application also provides the user with the opportunity to add content themselves. Unfortunately this is a rather cumbersome process, as adding stories has to be done through Digitalt fortalt, adding pictures has to be done through Instagram and adding sound has to be done through Soundcloud. According to Nielsen, it is important to avoid making the user remember information from one dialogue to another. When adding pictures and sounds, specific words and/or tags has to be added on Instagram and Soundcloud. The user doesn’t have to remember these words since the application provides the opportunity to add them to the clipboard after clicking “Add picture” or “Add sound”, from where it can be fetched when adding the picture or sound. However, the use of the clipboard can be problematic because it hides the content from the user. It may not be obvious to all users how to paste the content into Instagram or Soundcloud, and such users might be forced to remember the words or abandon the action altogether. \newline
@@ -177,34 +178,34 @@ The content is somewhat similar to stedr, with respect to the places and the sto
 	\begin{subfigure}[h]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{fig/cooltura_screenshot1}
 		\caption{A screenshot of Cooltura showing recommended places}
-		\label{cooltura_screenshot1}
+		\label{Fig:cooltura_screenshot1}
 	\end{subfigure}
 	%
 	\begin{subfigure}[h]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{fig/cooltura_screenshot2}
 		\caption{A screenshot of Cooltura showing the view for one particular place}
-		\label{cooltura_screenshot2}
+		\label{Fig:cooltura_screenshot2}
 	\end{subfigure}
 	\caption{Cooltura}
 \end{figure}
 
-When viewing a specific place on Cooltura the user gets a view with a main picture and some text describing the place as seen in \textbf{Fig \ref{cooltura_screenshot2}}. Like in stedr the user can scroll down to see more content, but unlike stedr the main picture is not static, that is, the user see less and less of it as it scrolls down. This is more in accordance with Nielsen’s point of aesthetic and minimalist design, where less relevant information fills up less space in the user interface. The same is true for the view for a specific tourist attraction. \newline
+When viewing a specific place on Cooltura the user gets a view with a main picture and some text describing the place as seen in \textbf{Fig \ref{Fig:cooltura_screenshot2}}. Like in stedr the user can scroll down to see more content, but unlike stedr the main picture is not static, that is, the user see less and less of it as it scrolls down. This is more in accordance with Nielsen’s point of aesthetic and minimalist design, where less relevant information fills up less space in the user interface. The same is true for the view for a specific tourist attraction. \newline
 
 The application does not provide any help site, but the possible user actions are quite few and similar (most of them are about navigating to the desired place), so this might not be a problem. \newline
 
-It appears that the application intends to make use of personalization, but this is not implemented at the time of writing this report[AS4]. The “Anbefalte steder”-view in \textbf{Fig \ref{cooltura_screenshot1}} now list every place added in the application (which is three different places), but the heading suggests that personalization is planned for. 
+It appears that the application intends to make use of personalization, but this is not implemented at the time of writing this report[AS4]. The “Anbefalte steder”-view in \textbf{Fig \ref{Fig:cooltura_screenshot1}} now list every place added in the application (which is three different places), but the heading suggests that personalization is planned for. 
 
 \subsection{Magic Tate Ball}
 
 Magic Tate Ball is an application that presents the user with an artwork based on the input parameters: date, time-of-day, geographical location, live weather data and ambient noise levels [AS5]. The content in the application is the artwork, a description of the artwork and an explanation of why the artwork was chosen. It is unknown how many artworks there are, but the information given on each artwork seems adequate. \newline
 
-The main task in the application is to be presented with an artwork. This is done by shaking the phone or by clicking a button in the center of the magic ball, see \textbf{Fig \ref{tateball_screenshot}} for a screenshot of this. Another task is to browse all artworks presented to the user, which is done by swiping or clicking on arrows. Providing these two options makes it easy to for different types of users, those accustomed to swiping and those who are not. When the application is processing to come up with an artwork to present to the user, it shows the user what the input parameters are. This is in accordance with Nielsen’s heuristics on visibility of system status. \newline
+The main task in the application is to be presented with an artwork. This is done by shaking the phone or by clicking a button in the center of the magic ball, see \textbf{Fig \ref{Fig:tateball_screenshot}} for a screenshot of this. Another task is to browse all artworks presented to the user, which is done by swiping or clicking on arrows. Providing these two options makes it easy to for different types of users, those accustomed to swiping and those who are not. When the application is processing to come up with an artwork to present to the user, it shows the user what the input parameters are. This is in accordance with Nielsen’s heuristics on visibility of system status. \newline
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{fig/tateball_screenshot}
 	\caption{A screenshot of the main view of Magic Tate Ball}
-	\label{tateball_screenshot}
+	\label{Fig:tateball_screenshot}
 \end{figure}
 
 Personalization is the main selling point of Magic Tate Ball. The application uses the five input parameters described above to give the user some control of what content is presented. The user can turn each of these parameters on and off. What the user cannot do however, is to specify preferences regarding art. To that extent, the user has no direct control over what artwork it will be presented, because it is hard to know what to expect when an input parameter for instance is ”10\degree C sunny weather”. Even though the application provides an explanation to why an artwork was chosen, how it was chosen remains in the dark (e.g. how to know which input parameter was emphasized in the personalization).
