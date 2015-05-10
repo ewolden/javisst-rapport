@@ -115,6 +115,36 @@ There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 
 	\label{Tab:categorymapping}
 \end{table}
 
+\section{Personalization}
+\label{sec:personalization_how}
+
+Users are recommended stories by means of content-based and collaborative filtering, described in \textbf{section \ref{sec:personalization_algorithms}}. The system gathers information about the stories and the users and feed this information into the recommender engine Mahout which produces a list of recommendations for the desired user. The details of Mahouts inner workings will not be presented here. What will be described is how the input data delivered to Mahout is gathered and produced by our application, what methods of Mahout is used and when they are used, and how the resulting list of recommendations are dealt with.\newline
+
+Both content-based and collaborative filtering rely on giving a numerical value that express how much a user like a story. We call this a preference value. In our application this value is computed by combining several measures representing different types of user feedback. These are: the rating a user have given to a story, the categories the user have expressed an interest in, the number of times a story has been recommended to the user, the number of times the story has been opened and the number of times a story has been put in the to-be-read list. Weights are assigned to the measures to differentiate between what impact they should have on the preference value. Rating is considered the most important user feedback, since this value is given to a story by direct user action. The other measures are either less connected to a specific story or more intangible. When computing recommendations, preference values for all stories for the user in question are calculated first.\newline
+
+Each time Mahout is run up to ten recommendations are inserted in the database. How these are chosen depend on a number of factors. Since a requirement from the customer was to include false recommendations, one of the recommendations is always picked from the lower parts of the recommendation rankings. The other stories are picked from the top of the rankings. Depending on a two factors some top recommendations may be skipped for a given run. The first of these factors is that rated stories are not recommended again to the user. The other one is whether the list of recommendations should be added to the existing list of recommendations browsed by the user in the recommendation view or not. When adding to the existing list recommendations should not be repeated.\newline
+
+Mahout uses a data model and a similarity model to compute recommendations. The data model is a collection of triplets, where each triplet consists of a user id, a story id and a preference value. The selection of which preference values to include is different in content-based and collaborative filtering. The similarity model is also different for content-based and collaborative filtering. A description of these differences follows in the subsequent sections.    
+
+\subsection{Content-based filtering}
+
+When doing content-based filtering the input data model consist of a collection of all the preference values for the user we are making recommendations for. This means that the size of the model will be equal to the number of stories harvested from Digitalt fortalt. To make recommendations Mahout also need measures describing how similar stories are. Similarities between stories are computed based on the subcategories found in the second column in \textbf{table \ref{Tab:categorymapping}} using the cosine similarity formula: 
+
+\begin{equation}
+similarity = \frac{\vec{x}\cdot\vec{y}}{||\vec{x}||\cdot||\vec{y}||}
+\end{equation}
+
+The dot product in the numerator is in our system equivalent to the number of common subcategories for two stories, while the denominator is the product of the square roots of the number of subcategories for the two stories. If two stories have exactly the same subcategories the similarity value will be 1, and if they don't share any subcategory the value will be 0. \newline
+
+These similarities are put in a CSV file at the time of harvesting. This file is read when the recommendation is run and the values put in the appropriate Mahout objects. Mahout then uses the data model and the similarity model with similarity values for all possible pairs of stories to produce a ranked list of recommendations using item based recommending.
+
+
+\subsection{Collaborative filtering}
+
+Collaborative filtering uses a data model with multiple users. Only the stories a user has rated will be included in the data model since this is the most precise user feedback. In our application collaborative filtering is done by combining two different methods provided by Mahout, namely item based recommendations and user based recommendations. The item based approach creates a similarity model based on similarity between items in the data model, while the user based approach creates a similarity model based on similarity between users in the data model. To avoid that not similar users affect the recommendations in the user based approach a threshold value for the similarity is set. Two list of recommendations are produced and then merged to get one list of ranked recommendations.\newline
+
+As was noted in \textbf{\ref{sec:personalization_algorithms}} collaborative filtering requires a large amount of data to make recommendations. Since only rated stories are included, collaborative filtering cannot be run when a new user starts using the application as the user will not be part of the data model. The criteria for using collaborative filtering needed to met is that the user has rated at least ten stories that at least ten other users also have rated. 
+
 \section{Reuse of code}
 
 Reusing written code can be a great help to quickly have progress when programming.  To investigate possibilities of this, the code from stedr was reviewed. However, since stedr used a different framework on the front end and java as the server language reusing code proved difficult. Therefore, the code written was developed without relying on previous work.
