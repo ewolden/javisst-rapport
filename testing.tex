@@ -9,156 +9,184 @@ The following subsections will describe the strategies for the testing levels us
 
 The purpose of unit testing is to ensure that every component that are implemented in the system are functional and correct. The group performed unit tests on new components or units of code that was implemented in the system. It was necessary to prioritize what components that should be tested, considering the amount of time given for the project. Testing of the user interface is required to ensure that the user get the right user experience. The recommendation module is a module that produce a result that is vital for the quality for the app. Therefore the unit testing in back end will focus on the recommendation module. Most of the code in back end is communicating with database, front end and Digitalt fortalt. Because of this we will focus on testing this code in the integration testing(\textbf{Section \ref{sec_integration_testing}}).\newline
 
-Roles \& Responsibilities\newline
+\paragraph{Roles \& Responsibilities}
 To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec_scrum_team_and_roles}}), so the tester would have good knowledge to the code and know how it works.  
 
-\begin{table}[!h]
-	\begin{center}
-		\begin{tabular}{ | l | l | l |}
-			\hline
-			\multicolumn{3}{|c|}{\textbf{Angularjs Karma testing}} \\
-			\hline
-			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
-			U1 & Log in & Roar \\ \hline
-			U2 & Story View & Ragnhild \\ \hline
-			U3 & Settings & Espen \\ \hline
-		\end{tabular}
-	\end{center}
-	\caption{shows the delegated responsibilities for testing the user interface.}
-	\label{Tab_karmatesting}
-\end{table}
 
-\begin{table}[!h]
+
+\begin{table}[H]
 	\begin{center}
 		\begin{tabular}{ | l | l | l |}
 			\hline
 			\multicolumn{3}{|c|}{\textbf{PHP unit testing}} \\
 			\hline
 			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
-			U6 & Recommendation module & Audun/Kjersti \\ \hline
+			U1 & Database Helper & Kjersti \\ \hline
+			U2 & Database Story & Kjersti \\ \hline
+			U3 & Database User & Eivind \\ \hline			
+			U4 & Compute Preference Value & Kjersti \\ \hline			
+			U5 & Recommendation module & Audun \\ \hline
 		\end{tabular}
 	\end{center}
 	\caption{shows the delegated responsibilities in testing the back end part of the system.}
 	\label{Tab_phptesting}
 \end{table}
 
-Required before performing the tests\newline
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ | l | l | l |}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Angularjs Karma testing}} \\
+			\hline
+			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
+			U7 & Log in & Roar \\ \hline
+			U8 & Story View & Ragnhild \\ \hline
+			U9 & Settings & Espen \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{shows the delegated responsibilities for testing the user interface.}
+	\label{Tab_karmatesting}
+\end{table}
+
+\paragraph {Required before performing the tests}
 The developers of the user interface needed to install the Angularjs' Karma, for performing the unit testing. With this tool they could write scripts for each of the test cases.\newline
 
 The developers of the back end of the system needed to install phpunit, a framework for unit testing in php.\newline
 
-After the tests\newline
+\paragraph{After the tests}
 The tester investigated the results of the test cases and mended the issues if they appeared during the tests. When the issues in the code were fixed, the tester would run the test again and see if it approved. This was cycle repeated until the code was free of issues and runned the expected way.\newline
 
-Test Cases\newline
+\paragraph{Test Cases}
 The testers created test cases and used these as a guide for performing the tests. The test cases has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running.   
 
 {\renewcommand{\arraystretch}{2}%
 \begin{center}
-\begin{longtable}{ | p{1.5cm} | p{6.5cm} | p{3cm} | p{6.5cm} |}
+\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
 \caption[Unit Test cases]{ Here presented by a testId, description of how the test should be perfomed, what input data to use and expected results.} \label{Tab_unittestcases}\\
 
-\hline {\bf Test case ID} & {\bf Description} & {\bf Input data} & {\bf Expected results} \\ \hline
+\hline {\bf Test case ID} & {\bf Description} & {\bf Input data} & {\bf Expected results} & {\bf Result}\\ \hline
 
-\multicolumn{4}{c}{Unit 1: Database Helper}	\\\hline
+\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 1: Database Helper}	\\\hline
+
 			
-			UN1.1 & Update one rating value in the database & Random userId, random storyId, updateValue: 2 & The function should return true when running the database request. \\\hline
+			UN1.1 & Update one rating value in the database & Random userId, random storyId, updateValue: 2 & The function should return true when running the database request. & Pass \\\hline
 			
-			UN1.2 & Update rating values in the database & Random userId, random storyId, update Value : 5 & The function should return true when running the database request\\\hline
+			UN1.2 & Update rating values in the database & Random userId, random storyId, update Value : 5 & The function should return true when running the database request & Pass\\\hline
 			
-			UN1.3 & Update new tag that user have created & Random userId, tagName: 'NyTestTag2' & The function should return true when running the database request\\\hline
+			UN1.3 & Update new tag that user have created & Random userId, tagName: 'NyTestTag2' & The function should return true when running the database request& Pass \\\hline
 			
-			UN1.4 & Update a users tag which is connected to a story & Random userId, Random storyId, tagName: 'Les senere' & The function should return true when running the database request \\\hline
+			UN1.4 & Update a users tag which is connected to a story & Random userId, Random storyId, tagName: 'Les senere' & The function should return true when running the database request& Pass \\\hline
 			
-			UN1.5 & Update a users action of rejecting a story & Random userId, Random storyId & The function should return true when running the database request  \\\hline
+			UN1.5 & Update a users action of rejecting a story & Random userId, Random storyId & The function should return true when running the database request & Pass \\\hline
 			
-			UN1.6 & Update a story as recommended & Random userId, Random storyId & The function should return true when running the database request \\\hline
+			UN1.6 & Update a story as recommended & Random userId, Random storyId & The function should return true when running the database request & Pass\\\hline
 			
-			UN1.7 & Get rating on a story done by a user  & Random userId, Random storyId & Should return row with the rating presented as a integer  \\ \hline			
+			UN1.7 & Get rating on a story done by a user  & Random userId, Random storyId & Should return row with the rating presented as a integer & Pass\\ \hline			
 		
-			UN1.8 & Get the predefined tags connected to a user & Random userId & Should return row with the tags "Les senere" and "Les" which all users in the system is connected to. If this user has self made tags, they should be included \\ \hline
+			UN1.8 & Get the predefined tags connected to a user & Random userId & Should return row with the tags "Les senere" and "Les" which all users in the system is connected to. If this user has self made tags, they should be included & Pass\\ \hline
 			
-			UN1.9 & Get all the tags connected to a user & Specified userId: 105 & Should return row with the tags "Les senere" and "Les" which all users in the system is connected to, included the added tag 'NyTestTag'  \\ \hline
+			UN1.9 & Get all the tags connected to a user & Specified userId: 105 & Should return row with the tags "Les senere" and "Les" which all users in the system is connected to, included the added tag 'NyTestTag' & Pass\\ \hline
 			
-			UN1.10 & Get the tags connected to a story and a user & Specified userId: 105, specified storyId: 'DF.1295' & Should return row with the tag 'NyTestTag'  \\ \hline
+			UN1.10 & Get the tags connected to a story and a user & Specified userId: 105, specified storyId: 'DF.1295' & Should return row with the tag 'NyTestTag' & Pass \\ \hline
 			
-			UN1.11 & Get stories with timestamp & -  & Should return rows with 167 storyId and a timestamp which indicate when the story was last changed  \\ \hline
+			UN1.11 & Get stories with timestamp & -  & Should return rows with 167 storyId and a timestamp which indicate when the story was last changed & Pass \\ \hline
 			
-			UN1.12 & Get subcategories to a specific story & Random storyId & Should return a row with an array of subcategory Ids  \\ \hline
+			UN1.12 & Get subcategories to a specific story & Random storyId & Should return a row with an array of subcategory Ids & Pass\\ \hline
 			
-			UN1.13 & Get story information & Specified userId: 105, specified storyId: 'DF.5220' & Should return row with an array with the keys: userId, storyId, explanation, rating, false\textunderscore recommend, recommended\textunderscore ranking, in\textunderscore frontend\textunderscore array, estimated\textunderscore Rating  \\ \hline
+			UN1.13 & Get story information & Specified userId: 105, specified storyId: 'DF.5220' & Should return row with an array with the keys: userId, storyId, explanation, rating, false\textunderscore recommend, recommended\textunderscore ranking, in\textunderscore frontend\textunderscore array, estimated\textunderscore Rating & Pass  \\ \hline
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 2: Database Story}	\\\hline			
 			
-			\multicolumn{4}{c}{Unit 2: Database Story}	\\\hline
+			UN2.1 & Fetch Story & Specified storyId: 'DF.1812', specified userId: 105 & Should return row with an array of the categories to the story and tags and tagName that are connected to the userId  & Pass\\ \hline
 			
-			UN2.1 & Fetch Story & Specified storyId: 'DF.1812', specified userId: 105 & Should return row with an array of the categories to the story and tags and tagName that are connected to the userId  \\ \hline
+			UN2.2 & Get recommended stories for a user & random userId &  Should return 10 rows with stories, and they should include: userId, storyId, recommended\textunderscore ranking, explanation, false\textunderscore recommend, title, introduction, author, categories and mediaId & Pass\\ \hline
 			
-			UN2.2 & Get recommended stories for a user & random userId &  Should return 10 rows with stories, and they should include: userId, storyId, recommended\textunderscore ranking, explanation, false\textunderscore recommend, title, introduction, author, categories and mediaId\\ \hline
+			UN2.3 & Get list of stories which is tagged by a user & Specified userId: 103, tagName: 'NyTestTag' & Should return rows with stories, and they should include: storyId, title, author, introduction, date, tagName, categories and mediaId & Pass\\ \hline
 			
-			U2.3 & Get list of stories which is tagged by a user & Specified userId: 103, tagName: 'NyTestTag' & Should return rows with stories, and they should include: storyId, title, author, introduction, date, tagName, categories and mediaId\\ \hline
+			UN2.4 & Get subcategories per story & - & Should return 167 stories  with numericalId and subcategory ids  & Pass\\ \hline
 			
-			U2.4 & Get subcategories per story & - & Should return 167 stories  with numericalId and subcategory ids   \\ \hline
+			UN2.5 & Get all stories with storyId, numericalId and categories & - & Should return 167 rows with storyId, numericalId and categories & Pass\\ \hline
 			
-			U2.5 & Get all stories with storyId, numericalId and categories & - & Should return 167 rows with storyId, numericalId and categories  \\ \hline
-			
-			U2.6 & Get states per story  & Specified userId: 258, specified storyId: 'DF.1600'& Should return a row with stateId, numTimesRecorded and latestStateTime  \\ \hline
-			
-			\multicolumn{4}{c}{Unit 3: Database User}	\\\hline
+			UN2.6 & Get states per story  & Specified userId: 258, specified storyId: 'DF.1600'& Should return a row with stateId, numTimesRecorded and latestStateTime &  Pass\\ \hline
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 3: Database User}	\\\hline
+
 						
-			U3.1 &  & &   \\ \hline
+			UN3.1 & Add user   & example mail: example@example.com & The function should return true when running the database request &  Pass\\ \hline
 			
-			U3.2 &  & &  \\ \hline
+			UN3.2 & Get user from Id & &   & Pass\\ \hline
 			
-			U3.3 &  & &   \\ \hline
+			UN3.3 & Update user mail & &   & Pass\\ \hline
 			
-			U3.4 &  & &   \\ \hline
+			UN3.4 & Update user age & &   & Pass\\ \hline
 			
-			\multicolumn{4}{c}{Unit 4: Compute Preference Value}	\\\hline
+			UN3.5 & Update user categories & &   & Pass\\ \hline
 			
-			U4.1 & Compute preference value for all stories for a  user & Random userId & Should return 167 rows from the database, and every row should include: storyId, userId, numericalId and preferenceValue   \\ \hline
+			UN3.6 & Get user from email & &   & Pass\\ \hline							
 			
-			U4.2 & Compute preference value of a story for a user  & Random userId , specific 'DF.1098' & Should return an array with userId, storyId, numericalId and the preference value \\ \hline
+			UN3.7 & Get user categories & &   & Pass\\ \hline
 			
-			U4.3 & Compute preference value & Specific storyId  & Should return the preference value which is the type double \\ \hline
-			
-			\multicolumn{4}{c}{Unit 5: Run Recommender}	\\\hline
-			
-			U5.1 & Run recommender & Random userId  &  \\ \hline			
-			
-			\multicolumn{4}{c}{Unit 6: Recommendation}	\\\hline 
-			
+			UN3.8 & Get user mail from Id  & &   & Pass\\ \hline
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 3: User Model}	\\\hline
+
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 3: Story Model}	\\\hline
+
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 4: Compute Preference Value}	\\\hline
 
 			
-			U6.1 &  & &  \\ \hline			
+			UN4.1 & Compute preference value for all stories for a  user & Random userId & Should return 167 rows from the database, and every row should include: storyId, userId, numericalId and preferenceValue  & Pass\\ \hline
 			
-			U6.2 &  & &  \\ \hline	
+			UN4.2 & Compute preference value of a story for a user  & Random userId , specific 'DF.1098' & Should return an array with userId, storyId, numericalId and the preference value& Pass\\ \hline
 			
-			U6.3 &  & &  \\ \hline							
-					
-			\multicolumn{4}{c}{Unit 7: Log in}	\\\hline			
+			UN4.3 & Compute preference value & Specific storyId  & Should return the preference value which is the type double & Pass\\ \hline
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 5: Run Recommender}	\\\hline
+
+
+			UN5.1 & Run recommender & Random userId  & & Pass\\ \hline			
 			
-			U6.1 & - Log in with an already existing user\newline - Check if response is correct & existinguser@\newline mail.no & The user should get access and be directed to the recommendation view(main view)   \\ \hline			
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 6: Recommendation}	\\\hline
+
 			
-			U6.2 & Log in with a non-existing user \newline - Check if response is correct & “newemail@\newline gmail.com” & The user should get access and be directed to the setup view. \\\hline	
+			UN6.1 & New content based recommendation & & &  Pass\\ \hline			
+			
+			UN6.2 & Add content based recommendation & &  & Pass\\ \hline	
+			
+			UN6.3 &  & & & Pass\\ \hline							
+				
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 6:  Database connection with Java}	\\\hline
+						
+			UN6.3 &  & & & Pass\\ \hline							
+			UN6.3 &  & & & Pass\\ \hline										
+			UN6.3 &  & & & Pass\\ \hline							
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 7: Log in}	\\\hline			
+			
+			UN7.1 & - Log in with an already existing user\newline - Check if response is correct & existinguser@\newline mail.no & The user should get access and be directed to the recommendation view(main view) & Pass \\ \hline			
+			
+			UN7.2 & Log in with a non-existing user \newline - Check if response is correct & “newemail@\newline gmail.com” & The user should get access and be directed to the setup view.& Pass \\\hline	
 								
-			U6.3 &  Login a user with the wrong email format \newline - Check if response message is correct & “newemail” & The user should not get access and get a textual response from the system that the format of the input is wrong. \\ \hline						
-			
-			\multicolumn{4}{c}{Unit 8: Story View}	\\\hline		
-			U6.1 & If story contains sound clip or video, check if these are presented properly & - story with video\newline
-			-story with sound clip & Should show the presence sound clip and video in the tabs. Should be able to handle the different video types, and be able to play them.   \\ \hline			
-			
-			U7.2 & Give a rating\newline - Check if the stars change color and response message are visible to the user.  & & Stars should change color when user performs rating, and the user should get a response message from the system which says that this story has been rated.  \\\hline	
+			UN7.3 &  Login a user with the wrong email format \newline - Check if response message is correct & “newemail” & The user should not get access and get a textual response from the system that the format of the input is wrong.& Pass\\ \hline	
 								
-			U7.3 & Give the story a new bookmark with a name\newline -add this \newline -Check if response message is visible to the user  & “new bookmark”  & When a new bookmark is made and the story is stored here, the user should get response message about this. \\ \hline	
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 8: Story View}	\\\hline			
+
+			UN8.1 & If story contains sound clip or video, check if these are presented properly & - story with video\newline
+			-story with sound clip & Should show the presence sound clip and video in the tabs. Should be able to handle the different video types, and be able to play them. & Pass \\ \hline			
 			
-			\multicolumn{4}{c}{Unit 9: Update profile}	\\\hline			
+			UN8.2 & Give a rating\newline - Check if the stars change color and response message are visible to the user.  & & Stars should change color when user performs rating, and the user should get a response message from the system which says that this story has been rated. & Pass \\\hline	
+								
+			UN8.3 & Give the story a new bookmark with a name\newline -add this \newline -Check if response message is visible to the user  & “new bookmark”  & When a new bookmark is made and the story is stored here, the user should get response message about this.& Pass\\ \hline	
 			
-			U8.1 & Update profile with the wrong email format  & updateemail  & The user should get a response message from the system that the input was not valid and that the user should try again.   \\ \hline			
-			U8.2 & Update profile with a email that already exists in the system  & “alreadyexistingemail\newline @email.com”  & The user should get a response message from the system that the input was not valid and that the user should try again.    \\\hline						
-			U8.3 &  &   &  \\ \hline	
+			\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 9: Update profile}	\\\hline					
+			
+			UN9.1 & Update profile with the wrong email format  & updateemail  & The user should get a response message from the system that the input was not valid and that the user should try again. & Pass  \\ \hline
+						
+			UN9.2 & Update profile with a email that already exists in the system  & “alreadyexistingemail\newline @email.com”  & The user should get a response message from the system that the input was not valid and that the user should try again.   & Pass \\\hline	
+								
+			UN9.3 &  &   & & Pass \\ \hline	
 			
 		\end{longtable}
 \end{center}
 
+\paragraph{Issues detected}
+
+\paragraph{Summary}
 
 
 \section{Integration test}
@@ -166,175 +194,221 @@ The testers created test cases and used these as a guide for performing the test
 
 Integration testing is usually executed after unit testing and before system testing. This test was performed after every individual component was tested and integrated with the rest of the system. This is to ensure that the different modules of the system were communicating correctly and that data was moving properly from one module to another. \newline
 
-How to perform the integration test\newline
+\paragraph{How to perform the integration test}
 The testing was performed at modules as soon as they were developed and completed, a so-called incremental testing. This approach made it easier to detect issues in the code early and therefore avoid issues to come up at a later stage in the development process - which could be cost-ineffective.
 Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. It was possible to run unit tests across the modules and get the wanted results.\newline
 
-Test cases\newline 
+\paragraph{Test cases}
 The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Fig \ref{architecture}} of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab_integrationtestcases}}.
 
-{\renewcommand{\arraystretch}{2}%
+\renewcommand{\arraystretch}{2}%
 \begin{center}
-	\begin{longtable}{ | p{1cm} | p{6.5cm} | p{3cm} | p{6.5cm} |}
+	\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
 
 		\caption[Integration Test Cases]{Integration Test Cases} \label{Tab_integrationtestcases}\\
 			\hline
-			\textbf{Test case ID} & \textbf{Description} & \textbf{Input data} & \textbf{Expected results} \\ \hline
+			\textbf{Test case ID} & \textbf{Description} & \textbf{Input data} & \textbf{Expected results} & \textbf{Result} \\ \hline
 			
-			I.1 & Simulate a http request which will log in a user for the first time with an email adress \newline Call getUserFromEmail to the database & email: 'testnr16@example.com,\newline requestType: addUser & The http request should return successfull message included the newly created userId. The database  function should return a row with the userId, mail, age\textunderscore group, gender and use\textunderscore of\textunderscore location  \\ \hline
+			I.1 & Simulate a http request which will log in a user for the first time with an email adress \newline Call getUserFromEmail to the database & email: 'testnr16@example.com,\newline requestType: addUser & The http request should return successfull message included the newly created userId. The database  function should return a row with the userId, mail, age\textunderscore group, gender and use\textunderscore of\textunderscore location  & Pass \\ \hline
 			
-			I.2 & Simulate a http request which will log in a user for the first time without an email adress. /newline Call getUserFromId to the database & email:null, \newline request type:addUser  & The http request should return a successful message included the newly created userId The database function should return the usermodel containing userId, mail, age\textunderscore group, gender and user\textunderscore of\textunderscore location.   \\ \hline
+			I.2 & Simulate a http request which will log in a user for the first time without an email adress. /newline Call getUserFromId to the database & email:null, \newline request type:addUser  & The http request should return a successful message included the newly created userId The database function should return the usermodel containing userId, mail, age\textunderscore group, gender and user\textunderscore of\textunderscore location.  & Pass \\ \hline
 			
-			I.3 & Simulate a http request which will update a users profile. \newline Call getUserFromId to the database.  \newline Check if the updates where correct & email: 'testMail23@example.com', request type: updateUser,  & The http request should return a successfull message. The database function should return a usermodel where the email match the input. \\ \hline
+			I.3 & Simulate a http request which will update a users profile. \newline Call getUserFromId to the database.  \newline Check if the updates where correct & email: 'testMail23@example.com', request type: updateUser,  & The http request should return a successfull message. The database function should return a usermodel where the email match the input.& Pass\\ \hline
 			
-			I.4 & Simulate a http request that will create a new test user without an email, Simulate another http request which will update email to this test user, with an email that already exists in the system \newline  Call the getUserFromId function to the database. \newline Check if the user is not updated & email: 'testMail23@example.com' & The http request should return a failure message. The database function should return an usermodel where the email is null.  \\ \hline
+			I.4 & Simulate a http request that will create a new test user without an email, Simulate another http request which will update email to this test user, with an email that already exists in the system \newline  Call the getUserFromId function to the database. \newline Check if the user is not updated & email: 'testMail23@example.com' & The http request should return a failure message. The database function should return an usermodel where the email is null. & Pass\\ \hline
 			
-			I.5 & Simulate a http request that will create a new test user without an email, \newline Simulate another http request which will update email to this test user \newline  Call the getUserFromId function to the database. \newline Check if the user is updated &  & The http request should return a successfull message. The database function should return an usermodel where the email matches the input.  \\ \hline
+			I.5 & Simulate a http request that will create a new test user without an email, \newline Simulate another http request which will update email to this test user \newline  Call the getUserFromId function to the database. \newline Check if the user is updated &  & The http request should return a successfull message. The database function should return an usermodel where the email matches the input. & Pass\\ \hline
 			
-			I.6 & Simulate a http request that will create a new test user with an email\newline  Simulate another http request that will return the user model from the users email \newline Check if the returned data has all attributes required, and that the data match with the input data & email: 'getUserFromEmailTest@example.com",\newline request type: addUser/getUserFromEmail  & The http request should return a usermodel with the attributes userId, email, age\textunderscore group, gender, use\textunderscore of\textunderscore location and with the data which match the input data.  \\ \hline
+			I.6 & Simulate a http request that will create a new test user with an email\newline  Simulate another http request that will return the user model from the users email \newline Check if the returned data has all attributes required, and that the data match with the input data & email: 'getUserFromEmailTest@example.com",\newline request type: addUser/getUserFromEmail  & The http request should return a usermodel with the attributes userId, email, age\textunderscore group, gender, use\textunderscore of\textunderscore location and with the data which match the input data.& Pass \\ \hline
 			
-			I.7 & Simulate a http request that will create a new test user without an email\newline  Simulate another http request that will return the user model from the users id \newline Check if the returned data has all attributes required, and that the data match with the input data & email: null,\newline request type: addUser/getUserFromId  & The http request should return a usermodel with the attributes userId, email, age\textunderscore group, gender, use\textunderscore of\textunderscore location and with the data which match the input data.  \\ \hline
+			I.7 & Simulate a http request that will create a new test user without an email\newline  Simulate another http request that will return the user model from the users id \newline Check if the returned data has all attributes required, and that the data match with the input data & email: null,\newline request type: addUser/getUserFromId  & The http request should return a usermodel with the attributes userId, email, age\textunderscore group, gender, use\textunderscore of\textunderscore location and with the data which match the input data. & Pass\\ \hline
 			
-			I.8 & Simulate a http request that will create a new test user without an email. \newline Call the getNumberOfRatingsDoneByThisUser to the database \newline  Simulate another http request which will connect a rating to a story for this user.  \newline Call the getNumberOfRatingsDoneByThisUser to the database again \newline Check if another rating is registered & email: null,\newline request type: rating, storyId: 'DF.52201, random userId  & The http request should return a usermodel with the attributes userId, email, age\textunderscore group, gender, use\textunderscore of\textunderscore location and with the data which match the input data.  \\ \hline
+			I.8 & Simulate a http request that will create a new test user without an email. \newline Call the getNumberOfRatingsDoneByThisUser to the database \newline  Simulate another http request which will connect a rating to a story for this user.  \newline Call the getNumberOfRatingsDoneByThisUser to the database again \newline Check if another rating is registered & email: null,\newline request type: rating, storyId: 'DF.52201, random userId  & The http request should return a usermodel with the attributes userId, email, age\textunderscore group, gender, use\textunderscore of\textunderscore location and with the data which match the input data. & Pass \\ \hline
 			
 			%THIS IS NOT DONE YET
-			I.8 & Simulate a http request that will create a new test user without an email. \newline  \newline  Simulate another http request where the user rejects a story.  \newline  \newline Check if the rejection is stored & email: null,\newline request type: rejectStory  &   \\ \hline
+			I.9 & Simulate a http request that will create a new test user without an email. \newline  \newline  Simulate another http request where the user rejects a story.  \newline  \newline Check if the rejection is stored & email: null,\newline request type: rejectStory  &  & Pass \\ \hline
 
-			I.9 & Simulate a http request that will create a new test user without an email. \newline  Simulate a http request that will create a new tag for this user \newline Simulate a http request that will return the list of tags for this user \newline Check if the new tag has been added  & request type: addUser/addNewTag/getList  tagName: 'newTag1' & The returned list should only include the one tag that where created. \\ \hline
+			I.10 & Simulate a http request that will create a new test user without an email. \newline  Simulate a http request that will create a new tag for this user \newline Simulate a http request that will return the list of tags for this user \newline Check if the new tag has been added  & request type: addUser/addNewTag/getList  tagName: 'newTag1' & The returned list should only include the one tag that where created.& Pass\\ \hline
 			
-			I.10 & Simulate a http request that will create a new test user without an email. \newline  Simulate a http request that will create a new tag for this user \newline Simulate a http request that will return the list of stories contained in this taglist \newline Check if the new tag has been added  & request type: addUser/tagStory/getList \newline tagName: 'newTag1',\newline storyId: 'DF.5223' & The returned list should have the recently added story in the top of the list. The list should have the following attributes connected to every story: id, title, description, false\textunderscore recommend, explanation, picture, thumbnail, categories, mediaType, author, data  \\ \hline
+			I.11 & Simulate a http request that will create a new test user without an email. \newline  Simulate a http request that will create a new tag for this user \newline Simulate a http request that will return the list of stories contained in this taglist \newline Check if the new tag has been added  & request type: addUser,tagStory,getList \newline tagName: 'newTag1',\newline storyId: 'DF.5223' & The returned list should have the recently added story in the top of the list. The list should have the following attributes connected to every story: id, title, description, false\textunderscore recommend, explanation, picture, thumbnail, categories, mediaType, author, data  & Pass\\ \hline
 			
-			I.11 & Simulate a http request that will create a new tag for a user. \newline  Simulate a http request that will return all the tags connected to this user \newline Check if the tag was stored \newline Simulate a http request that will remove the new tag that were created earlier \newline Simulate another http request that will return all the tags connected to this user \newline Check if the new tag has been removed  & Specified userId: 105, \newline request type: addnewTag/getAllLists/removeTag,\newline tagName: 'tagToBeRemoved',\newline storyId: 'DF.6081' & The returned list should have the recently added story in the top of the list. The list should have the following attributes connected to every story: id, title, description, false\textunderscore recommend, explanation, picture, thumbnail, categories, mediaType, author, data  \\ \hline
+			I.11 & Simulate a http request that will create a new tag for a user. \newline  Simulate a http request that will return all the tags connected to this user \newline Check if the tag was stored \newline Simulate a http request that will remove the new tag that were created earlier \newline Simulate another http request that will return all the tags connected to this user \newline Check if the new tag has been removed  & Specified userId: 105, \newline request type: addnewTag, getAllLists, removeTag,\newline tagName: 'tagToBeRemoved',\newline storyId: 'DF.6081' & The returned list should have the recently added story in the top of the list. The list should have the following attributes connected to every story: id, title, description, false\textunderscore recommend, explanation, picture, thumbnail, categories, mediaType, author, data  & Pass\\ \hline
 									
 				
-			I.11 & Simulate a http request that will return the list connected to a tag for an user  & Specified userId: 105, request type: getList,\newline tagName: 'Les senere' & Should return a list of the stories connected to this tag. The stories should have the following attributes: id, title, description, false\textunderscore recommend, explanation, picture, thumbnail, categories, mediaType, author, date \\ \hline					
+			I.12 & Simulate a http request that will return the list connected to a tag for an user  & Specified userId: 105, request type: getList,\newline tagName: 'Les senere' & Should return a list of the stories connected to this tag. The stories should have the following attributes: id, title, description, false\textunderscore recommend, explanation, picture, thumbnail, categories, mediaType, author, date & Pass\\ \hline					
 					
 					
-			I.12 & Simulate a http request that will return all the tags connected to a user  & Specified userId: 105, \newline request type: getList, \newline tagName: 'Les senere' & Should return a list of the tags. The tags should have the attributes text and checked. \\ \hline	
+			I.13 & Simulate a http request that will return all the tags connected to a user  & Specified userId: 105, \newline request type: getList, \newline tagName: 'Les senere' & Should return a list of the tags. The tags should have the attributes text and checked. & Pass\\ \hline	
 
 \end{longtable}
 \end{center}
+
+\paragraph{Issues detected}
+
+\paragraph{Summary}
+
 
 \section{System testing}
 
 The system testing is executed after the unit test and integration tests. It was to give developers a measure of whether the system met all the goals set for the project.  The system test included performing a black box testing of the system, where the test cases was based on the use cases(\textbf{Section \ref{subsec_use_cases}}) and the specified requirements(\textbf{Section \ref{subsec_summary_functional_requirements}})  defined earlier in this report. \newline
 
-Required before performing the system tests\newline
+\paragraph{Required before performing the system tests}
 The unit tests and integration test were required to be executed and approved before the system test could be executed. To execute the tester also needed the final product in the way it was intended to the end users. Therefore the application in question should be accessible on a mobile device before performing the test. \newline
 
-The main areas to be tested\newline
+\paragraph{The main areas to be tested}
 The test cases was to cover all the use cases and requirements specified for this project. The main areas are as follows:
-\begin{itemize}
+\begin{itemize}[noitemsep]
 	\item Create user
 	\item Log in
 	\item Set initial settings
 	\item Browse recommended stories
-	\item Add stories to list
-	\item View story
+	\item Add stories to collection
 	\item Rate story 
-	\item View list \newline
+	\item Specify settings \newline
 \end{itemize}
 
-How are the test to be performed? \newline
+\paragraph{How are the test performed?}
 In this test one of the developers were executing the test. Because it is a black box test, the tester would do the test cases with no access to the code. the tester went through all of the test cases one by one and performed the test cases manually. Due to the time limits of this project the team were not able to write scripts to perform the test cases. \newline
 
-After the test\newline
+\paragraph{After the tests}
 After the system test suit is performed and the results are documented, the testers should mend the issues in the system if they appeared during the test. After the mending the test suit was executed again. This cycle was repeated until there was no issues left in the system and all test cases got the expected result.\newline
 
 When the system test is performed and finished, the testers evaluated the tests results and then decided if the system as a whole fulfilled all goals for the project.(See \textbf{Section \ref{sec_test_results}}). The test results should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.\newline
 
-Test Cases \newline
-Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. table \textbf{Table \ref{Tab_systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.10. 
+\paragraph{Test cases}
+Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. 
+Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. table \textbf{Table \ref{Tab_systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.9. 
 
-\begin{table}[!h]
-	\begin{center}
-		\begin{tabular}{| p{5cm} | p{12cm} |}
-			\hline
-			TestID & T1 \\ \hline
-			Test item & Create recoverable profile  \\ \hline
-			Approach & The testobject locate and press the “register user” button in the app. Applies his/hers email in the right format.. The response is valid and the user gets feedback.  \\ \hline
-			Item pass/Fail criteria & The testobject should get positive feedback only if the input is correct. Otherwise the system should inform the user about the mistake  \\ \hline
-			Input Data & “user@gmail.com”  \\ \hline
-			Expected results & The testobject writes the correct email address and get the correct feedback from the system: “Email din er registrert. Du kan nå logge deg inn på systemet”   \\ \hline
-			Testing task & 1. Testobject press “create user”-button. \newline 2. Testobject types inn his/hers email address\newline
-			3. The system give feedback \newline 4.1 If the email is registered, the user should get access to the system by        performing Test T2 Log in with email\newline 4.2 If the email is not registered, the user should not get access to the system by performing T2 Log in with email  \\ \hline
-			Any dependability between this and other tests & NaN  \\ \hline
-		\end{tabular}
-	\end{center}
-	\caption{Create profile}
-	\label{Tab_systemtest1}
-\end{table}
+\paragraph{Issues detected}
 
-\begin{table}[!h]
-	\begin{center}
-		\begin{tabular}{| p{5cm} | p{12cm} |}
-			\hline
-			TestID & T3 \\ \hline
-			Test item & Set initial settings  \\ \hline
-			
-			Approach & The user is logged in to the system for the first time. The user will choose age group and gender in the initial settings that will appear the first time the user is logged on to the system. After this the user will be asked to choose cultural category preferences.   \\ \hline
-			
-			Item pass/Fail criteria & The user will choose the buttons for his/hers age group and gender and will get access to the system. If the user do not perform these settings the user will get a response for the system that it is necessary.  \\ \hline
-			
-			Input Data & User action: press the buttons for the age group, sex and interests.   \\ \hline
-			
-			Expected results & The buttons that were pressed will change color and the user are allowed to continue   \\ \hline
-			
-			Testing task & 1. The user press “start app”\newline 2. The user press the correct age group and gender. \newline
-			3. Navigates to the next page \newline 4. Select two interests \newline 5. Navigate to the next page  \\ \hline
-			
-			Any dependability between this and other tests & NaN \\ \hline
-		\end{tabular}
-	\end{center}
-	\caption{Set initial settings}
-	\label{Tab_systemtest2}
-\end{table}
+\paragraph{Summary}
 
 \section{Customer acceptance test}
 \label{sec_acceptance_test}
 
 Customer acceptance test (CAT) will be executed during the whole software development life cycle. After a sprint, the customer will test the product, evaluate and bring feedback. In the early stages of the project process this contains testing of the prototypes. When working software is delivered to the customer after a sprint, the customer use their own real input data to test the behaviour of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic when the customer defines it. The customer brings feedback either in meetings or through email. The planned delivery dates are presented in \textbf{Section \ref{sec_milestone_plan}} Project milestone plan.  
 
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
+		
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab_cattest1}\\
+		\hline
+		\textbf{Delivery} & First paper prototype\\ \hline
+		\textbf{Date} & 20.02.15 \\ \hline 
+		\textbf{Comments} &Intuitive interface. The selection of categories is good and fast. Category icon in the listview looks very good.
+		\\ \hline
+		\textbf{Issues} &	
+		\begin{itemize}
+		\item It should have a description of why the user have to sign in by email and give the user the option to choose age group and gender,
+		\item The customer thinks it is easier to click something than to drag a icon from one place to another. 
+		\item The customer prefer one story per view when the user browse recommended stories, the swiping from one story to another should be explained. 
+		\item Customer want a to-be-rated list and a to-read list. To have a trash is confusing. It is okay to not prioritize the notifications in the app. 
+		\end{itemize}	
+		 \\ \hline
+		
+	\end{longtable}
+\end{center}
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
+		
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Second prototype presented in proto.io}\\
+		\hline
+		\textbf{Delivery} & Second prototype presented in prototyping tool\\ \hline
+		\textbf{Date} & 27.02.15 \\ \hline 
+		\textbf{Comments}&
+		The customer is overall pleased with the prototype, but they have some constructive comments. 
+		There are some confusing icons, some lack of consistent terminology, missing introduction for the app, suggestions for other text for buttons and headlines.
+		\\ \hline
+		\textbf{Issues} 	 &	 	 	 	
+		\begin{itemize}[noitemsep]
+		\item Overlap between not interested and one star. Remove the not interested.
+		\item The author of a story expects that the story is presented the way he/her made it. It would be more correct to have the elements of the story together, in accordance with the authors intention.The elements of every story is now separated with the tabs in the storyview. 
+			\end{itemize}
+		\\ \hline
+		\textbf{Suggestions} &
+		\begin{itemize}[noitemsep]
+		\item Have a number connected to the rating stars.
+		\item It is interesting for the customer to know if the user prefer picture, video or sound. The system should log this for every user. 
+		\item 	It is important to collect the information about the user of the system(age, gender, preferences), want to make it hard for the user to skip this step. Profile information such as age and gender can not be changed after the specification is once set by the user. 
+		\item Have a little text that appear when you hover the category icons, or apply a function where you can press a button and reveal the descriptions of the categories. \newline
+		\item Have the option to share the saved stories on social media. The customer have given this a low priority.
+	\end{itemize}
+		  \\ \hline
+	\end{longtable}
+\end{center}
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
+		
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab_cattest}\\
+		\hline
+		\textbf{Delivery} & First working software\\ \hline
+		\textbf{Date} & 17.03.15 \\ \hline
+		\textbf{Comments} & The customer likes the user interface of this version and says that it is not necessary to add more functionality, except for the concept view that are not yet implemented. The customer thinks that fetching the stories from Digitalt Fortalt is working fast enough.  \\ \hline			
+		\textbf{Issues} & 
+		\begin{itemize}[noitemsep]
+
+		\item Missing a concept description for the application 
+		\item There are some stories that do not have categories connected to them. 
+		\item These stories should be included in the collaborative filtering.
+	\end{itemize}
+		\\ \hline		
+	\end{longtable}
+\end{center}
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
+		
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab_cattest}\\
+		\hline
+		\textbf{Delivery} & Second working software\\ \hline
+		\textbf{Date} & 20.04.15\\ \hline
+		 \textbf{Comments} & The customer is satisfied with the appearance and structure in the story view. 
+		   \\ \hline
+		 \textbf{Issues} & 
+		 \begin{itemize}[noitemsep]
+		 	
+		 \item There are only 3 stories in the recommendation view 
+		 When you choose interests in the setup of the application - the interests are not marked when you click on them. \newline
+		 \item When choosing a gender in the setup of the application, the selection is not stored in the settings view
+		 The customer discovered some stories have mismatched icons connected to them. \newline
+		 \item Stories that include a sound clip, does not view this immediately. The sound clip is located inside a tab, and the user would have to click on this will reveal it. \newline
+		\item  Some stories include video clips that are not playing.  \newline
+		\item  A user have to sign in every time to visit the app, the user is not remembered. \newline
+		\item  A story that are read are not automatically stored in the ‘Read List’. \newline
+		\item  Uncertain about the cross in the corner of a story in ‘recommended stories view’. The use of this button could mean two things. Either that the user is not interested in this story, or that the user have read this story and just want to close it for now. \newline
+		\item  The application does not at any time give the user new recommended stories. \newline
+		 Missing some kind of feedback when a user has changed the interests in settings. The system should let the user know that it is trying to get new recommended stories based on the new interests. \newline
+		 \item Some stories do not have a picture attached to it. The customer is suggesting a default picture for these stories.
+		 \end{itemize}
+		 \\ \hline 
+		 
+
+		
+	\end{longtable}
+\end{center}
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
+		
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab_cattest}\\
+		\hline
+		\textbf{Delivery} & Final product\\ \hline
+		\textbf{Date} & 01.05.15 \\ \hline
+		 \textbf{Comments} &   \\ \hline
+		 \textbf{Issues} \\ \hline
+	\end{longtable}
+\end{center}
+
 \section{Usability testing}
 
 The user testing was performed by the front end developers. The preliminary work for the user test also included doing an analysis of the requirements, and used these as a base for making a list of scenarios. The scenarios set the grounds for the test cases. IEEE standard 610 defines a test case as; “A set of test inputs, execution conditions, and expected results developed for a particular objective, such as to exercise a particular program path or to verify compliance with a specific requirement.” [KF1] 
 The test case included several test steps that the user followed, and the testers observed how the user reacted in every test case. After each test finished there was a discussion with follow-up questions the user had to answer to get a better insight into what was problematic and what was easily understandable. For further information on this see the framework for the usability testing in Appendix XX(Usability test template).
-
-\section{Results}
-\label{sec_test_results}
-
-This section includes the results from the tests described in sections \textbf{\ref{sec_unit_testing}} through \textbf{\ref{sec_acceptance_test}}.
-
-\subsection{Unit test results}
-
-Table X.X shows the results we gained from performing the unit test cases. Here are the test cases referred to with their Test case ID. Test Case description and input data are described in the test plan(Chapter X.X).\newline
-
-Detected issues in the system\newline 
-[TODO: Short description of the main issues found in the system, and how they were handled]\newline 
-Summary \newline 
-[TODO: Short description of how the test was, did it give us help to improvement of the code]\newline 
-
-\subsection{Integration test}
-Detected Issues\newline
-Summary
-
-\subsection{System test}
-[TODO: results]\newline
-Detected Issues\newline
-Summary
-
-\subsection{Usability testing}
-[TODO: results]\newline
-Summary
-
-\subsection{Customer acceptance test}
-
-As described in section 9.4 Customer Acceptance test, this test was performed after every product delivery. The following tables display the customer feedback of every delivery. The tables describes general comments and issues the customer detected and wants to improve.  
-
-TODO sett inn Table 9.X shows the date and feedback for the first paper prototype. The feedback information was given to the developers in a customer meeting, and this is a summary from that meeting.\newline
-TODO sett inn Table 9.X shows the date and feedback for the first paper prototype. The feedback information was given to the developers in an email sent from the customer. The text is a summary of the email.\newline
-TODO sett inn Table 9.X shows the date and feedback for the first paper prototype. The feedback information was given to the developers in an email sent from the customer. The text is a summary of the email.\newline
-TODO sett inn Table 9.X .shows the date and feedback for the second working software. The feedback information was given to the developers in a customer meeting.\newline
-TODO sett inn Table 9.X.
 
 \cleardoublepage
