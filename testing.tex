@@ -54,7 +54,6 @@ Test Cases\newline
 The testers created test cases and used these as a guide for performing the tests. The test cases has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running.   
 
 {\renewcommand{\arraystretch}{2}%
-\begin{center}
 \begin{longtable}{ | p{1.5cm} | p{6.5cm} | p{3cm} | p{6.5cm} |}
 \caption[Unit Test cases]{ Here presented by a testId, description of how the test should be perfomed, what input data to use and expected results.} \label{Tab_unittestcases}\\
 
@@ -157,7 +156,7 @@ The testers created test cases and used these as a guide for performing the test
 			U8.3 &  &   &  \\ \hline	
 			
 		\end{longtable}
-\end{center}
+
 
 
 
@@ -174,7 +173,6 @@ Test cases\newline
 The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Fig \ref{architecture}} of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab_integrationtestcases}}.
 
 {\renewcommand{\arraystretch}{2}%
-\begin{center}
 	\begin{longtable}{ | p{1cm} | p{6.5cm} | p{3cm} | p{6.5cm} |}
 
 		\caption[Integration Test Cases]{Integration Test Cases} \label{Tab_integrationtestcases}\\
@@ -213,7 +211,6 @@ The test cases were made by first having a closer look at the different modules 
 			I.12 & Simulate a http request that will return all the tags connected to a user  & Specified userId: 105, \newline request type: getList, \newline tagName: 'Les senere' & Should return a list of the tags. The tags should have the attributes text and checked. \\ \hline	
 
 \end{longtable}
-\end{center}
 
 \section{System testing}
 
