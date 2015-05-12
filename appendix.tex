@@ -184,85 +184,84 @@ Status report week 6\newline
 		Understanding properly what the customer wants and prioritizes has also been a focus this week. While this sounds easy enough, the technical details are often lost in communication. This is something that will require constant feedback and monitoring so that the project stays on track in regards to what is desired by the customer.\newline
 		
 		\textbf{Planned work for next period}\newline
-		\begin{itemize}[noitemsep]
+		\begin{itemize}
 			\item Familiarization with the chosen framework.
 			\item Familiarization with digitaltfortalt.no API.
-			\item Creating a design prototype is a goal, this will unify the group and make sure all members are working towards the same goal. Furthermore, this will explore what options there are and highlight any basic flaws in design.\newline
+			\item Creating a design prototype is a goal, this will unify the group and make sure all members are working towards the same goal. Furthermore, this will explore what options there are and highlight any basic flaws in design.
 		\end{itemize}
-
-		
+\raggedbottom
+\newpage		
 \section{Appendix C: System test cases}
 
-\begin{center}
-	\begin{table}[H]
-		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+\begin{table}[H]
+	\centering
+	\caption{System test case for creating a recoverable profile.}
+	\begin{tabular}[b]{ | l | l  |}
 			\hline
 			\textbf{Test ID} & T1  \\ \hline
 			\textbf{Test Item} & Create recoverable profile \\ \hline
-			\textbf{Approach} & The user locate and press the “register user” button in the app. Applies the email in the correct format.. The response is valid and the user gets feedback. \\ \hline
+			\textbf{Approach} & \begin{minipage}{5in}The user locate and press the “register user” button in the app. Applies the email in the correct format.. The response is valid and the user gets feedback. \end{minipage}\\ \hline
 			\textbf{Input data} &  “newuser@example.com”\\ \hline
 			
-			\textbf{Expected results} & The user writes the correct email address and get the correct feedback from the system: "Kontakter server" and will be directed to the startup page.\\ \hline
+			\textbf{Expected results} & \begin{minipage}{5in}The user writes the correct email address and get the correct feedback from the system: "Kontakter server" and will be directed to the startup page.\end{minipage}\\ \hline&\\[-3.8ex]
 		
-			\textbf{Testing task} & 
+			\textbf{Testing task} & \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 			\item Click  “create user”-button.
 			\item Apply email address to the email input field 
 			\item Receive feedback feedback from the system
 			\item Check email inbox to se if the correct mail from the system was received 
-			 \end{enumerate}
-			\\ \hline
-			\textbf{Any dependability between this and other tests} & NaN \\ \hline	
+			 \end{enumerate} \end{minipage}
+			\\&\\[-3.8ex] \hline
+			\textbf{Depends on tests}& NaN \\ \hline	
 			\textbf{Pass/Fail} & Passed \\\hline				
 		\end{tabular}
+	\label{Tab:systemTesting1}
+\end{table}
 
-	\caption{System test case for creating a recoverable profile.}
-	\label{Tab_systemTesting1}
-	\end{table}
-\end{center}
 
-\begin{center}	
 	\begin{table}[H]
-		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+		\centering
+		\caption{System test case for login with email registration}
+		\begin{tabular}{ | l | l  |}
 			\hline
 			\textbf{Test ID} & T2  \\ \hline 
 			\textbf{Test Item} & Log in with email registration \\ \hline
-			\textbf{Approach} & The user locate the login-button and applies the registrated email and obtain access to the system and the profile connected to this email address . \\ \hline
-			\textbf{Input data} &  valid email: “user@example.com”, \newline example invalid email: “mail@example”\\ \hline
-			\textbf{Expected results} & 
+			\textbf{Approach} & \begin{minipage}{5in}The user locate the login-button and applies the registrated email and obtain access to the system and the profile connected to this email address . \end{minipage}\\ \hline
+			\textbf{Input data} &  valid email: “user@example.com”, \newline example invalid email: “mail@example”\\ \hline&\\[-3.8ex]
+			\textbf{Expected results} & \begin{minipage}{5in}
 			\begin{itemize}[noitemsep]
 				\item The first time the user have logged in \newline System Response:  Choose preferences-view should appear.
 				\item The user have done this process before \newline System Response: "Vennligst vent mens vi finner historier vi tror du vil like" and direct the user to the view with the recommended stories.
 				\item The user types an email with wrong email format \newline System Response: "Ikke en gyldig adresse" 
 				
-			\end{itemize}
-			 \\ \hline
-			\textbf{Testing task} & 
+			\end{itemize} \end{minipage}
+			 \\ &\\[-3.8ex]\hline&\\[-3.8ex]
+			\textbf{Testing task} & \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 			\item Navigate to the login view
 			\item Apply email address to the email input field
 			\item Receive response from system
-			\end{enumerate}
-			 \\ \hline
-			\textbf{Any dependability between this and other tests} & T1 \\ \hline					
+			\end{enumerate}\end{minipage}
+			 \\ &\\[-3.8ex]\hline
+			\textbf{Depends on tests} & T1 \\ \hline					
 			\textbf{Pass/Fail} & Passed \\\hline
 		\end{tabular}
-	\caption{System test case for login with email registration}
+	
 	\label{Tab_systemTesting2}
 	\end{table}
-\end{center}
 
-\begin{center}
 	\begin{table}[H]
-		\begin{tabular}{ | p{4cm} | p{12cm}  |}			
+		\centering
+		\begin{tabular}{ | l | l |}			
 			\hline
 			\textbf{Test ID} & T3  \\ \hline
 			\textbf{Test Item} & Set initial settings \\ \hline
-			\textbf{Approach} & The user is logged in to the system for the first time. The user will choose age group and gender in the inital settings that will appear the frist time the user is logged on to the system. After this the user will be asked to choose cultural category preferences.  \\ \hline
+			\textbf{Approach} & \begin{minipage}{5in}The user is logged in to the system for the first time. The user will choose age group and gender in the inital settings that will appear the frist time the user is logged on to the system. After this the user will be asked to choose cultural category preferences.  \end{minipage}\\ \hline
 			\textbf{Item pass/Fail criteria} & \\ \hline
-			\textbf{Input data} &  User action: click the buttons for the age group, gender and interests, and next buttons  \\ \hline
-			\textbf{Expected results} & The user will click the buttons for age group, gender, and interests. The buttons will change color when clicked on. The user navigates to next view by clicking the next button and will obtain access to the system. If the user do not select interests the user will get a response for the system that it is necessary. \\ \hline
-			\textbf{Testing task} & 
+			\textbf{Input data} & \begin{minipage}{5in} User action: click the buttons for the age group, gender and interests, and next buttons  \end{minipage}\\ \hline
+			\textbf{Expected results} & \begin{minipage}{5in}The user will click the buttons for age group, gender, and interests. The buttons will change color when clicked on. The user navigates to next view by clicking the next button and will obtain access to the system. If the user do not select interests the user will get a response for the system that it is necessary. \end{minipage}\\ \hline&\\[-3.8ex]
+			\textbf{Testing task} & \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 				\item Start app
 				\item Click the correct age group and gender.
@@ -271,56 +270,58 @@ Status report week 6\newline
 				\item Receive feedback from system
 				\item Select two interests
 				\item Navigate to the next page
-			\end{enumerate}
-			\\ \hline
-			\textbf{Any dependability between this and other tests} & NaN \\ \hline	
+			\end{enumerate}\end{minipage}
+			\\ &\\[-3.8ex]\hline
+			\textbf{Depends on tests} & NaN \\ \hline	
 			\textbf{Pass/Fail} & Passed \\\hline				
 		\end{tabular}
 
 	\caption{System test case of performing the initial settings}
-	\label{Tab_systemTesting3}
+	\label{Tab:systemTesting3}
 	\end{table}
-\end{center}
 
-\begin{center}
+
 	\begin{table}[H]
-		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+		\centering
+		\caption{}
+		\begin{tabular}{ | l | l  |}
 			\hline
 			\hline
 			\textbf{Test ID} & T4  \\ \hline
 			\textbf{Test Item} & Browse recommended stories \\ \hline
-			\textbf{Approach} & The user is shown a list of recommended stories. The user will click on the first story. The story will be viewed and the user closes it. 
-			  \\ \hline
+			\textbf{Approach} & \begin{minipage}{5in}The user is shown a list of recommended stories. The user will click on the first story. The story will be viewed and the user closes it. 
+			\end{minipage}\\ \hline
 			\textbf{Item pass/Fail criteria} &  \\ \hline			
 			\textbf{Input data} &  User action: click arrow\\ \hline
-			\textbf{Expected results} & The view should show a list with recommended stories. The view of the stories will include a title, story picture or default picture, an introduction, category icons, media icons and a explanation of why this story is recommended to the user.  The view should show 10 more recommendations when the user have browes through the 10 first stories in the list.
-			When the user clicks a story the full story should appear in a full screen, including text and potential pictures, videos and sound clips.   \\ \hline
-			\textbf{Testing task} & 
+			\textbf{Expected results} & \begin{minipage}{5in}The view should show a list with recommended stories. The view of the stories will include a title, story picture or default picture, an introduction, category icons, media icons and a explanation of why this story is recommended to the user.  The view should show 10 more recommendations when the user have browes through the 10 first stories in the list.
+			When the user clicks a story the full story should appear in a full screen, including text and potential pictures, videos and sound clips.   \end{minipage}\\ \hline&\\[-3.8ex]
+			\textbf{Testing task} & \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 			\item Click on a recommended story
 			\item Locate back-button and close the story
 			\item Click on the next recommended story
 			\item Navigate 
-			\end{enumerate}
-			\\ \hline
-			\textbf{Any dependability between this and other tests} & T1,T2 \\ \hline		
+			\end{enumerate}\end{minipage}
+			\\ &\\[-3.8ex]\hline
+			\textbf{Depends on tests} & T1,T2 \\ \hline		
 			\textbf{Pass/Fail} & Passed \\\hline			
 		\end{tabular}
-	\caption{}
-	\label{Tab_systemTesting4}
+	
+	\label{Tab:systemTesting4}
 	\end{table}
-\end{center}
 
-\begin{center}
+
 	\begin{table}[H]
-		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+		\centering
+		\caption{}
+		\begin{tabular}{ | l | l  |}
 			\hline 
 			\textbf{Test ID} & T5  \\ \hline
 			\textbf{Test Item}  & Add story to list	 \\ \hline
-			\textbf{Approach} & The user navigate to a story and gives the story a rating. The user clicks the bookmark button in the story, and gives a name to a new collection of stories.   \\ \hline
-			\textbf{Input data} & User action: Click on a star, Give name to a new collection of stories: ex. “My Favorite Stories” \\ \hline
-			\textbf{Expected results} & The story that was rated with stars are automatically put in the “read” collection. The story should be stored in the new collection of “My Favorite Stories” and the user have access to this by navigating to the menu, and then to “Bokmerker”. \\ \hline
-			\textbf{Testing task} & 
+			\textbf{Approach} & \begin{minipage}{5in}The user navigate to a story and gives the story a rating. The user clicks the bookmark button in the story, and gives a name to a new collection of stories.   \end{minipage}\\ \hline
+			\textbf{Input data} & \begin{minipage}{5in}User action: Click on a star, Give name to a new collection of stories: ex. “My Favorite Stories” \end{minipage}\\ \hline
+			\textbf{Expected results} & \begin{minipage}{5in}The story that was rated with stars are automatically put in the “read” collection. The story should be stored in the new collection of “My Favorite Stories” and the user have access to this by navigating to the menu, and then to “Bokmerker”. \end{minipage}\\ \hline&\\[-3.8ex]
+			\textbf{Testing task} & \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 			\item Click on a story in the recommendation view 
 			\item Click on the star icon to in the right upper corner 
@@ -334,26 +335,27 @@ Status report week 6\newline
 			\item Click on the first story in the collection
 			\item Navigates to the “read” collection
 			\item Click on the first story in the collection
-			\end{enumerate}
-			\\ \hline
-			\textbf{Any dependability between this and other tests} & NaN \\ \hline			
+			\end{enumerate}\end{minipage}
+			\\ &\\[-3.8ex]\hline
+			\textbf{Depends on tests} & NaN \\ \hline			
 			\textbf{Pass/Fail} & Passed \\\hline		
 		\end{tabular}
-	\caption{}
-	\label{Tab_systemTesting5}
+	
+	\label{Tab:systemTesting5}
 	\end{table}
-\end{center}	
+	
 
-\begin{center}
+
 	\begin{table}[H]
-		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+		\centering
+		\begin{tabular}{ | l | l  |}
 			\hline
 			\textbf{Test ID} & T6  \\ \hline
 			\textbf{Test Item} & Give a rating \\ \hline
-			\textbf{Approach} & The user gives a story a rating by clicking the stars. The user goes to collections and checks if the story was stored in the “read” list \\ \hline
-			\textbf{Input data} &  User action: clicks on story, navigated to rating view, clicks on a star. \\ \hline
-			\textbf{Expected results} & The star buttons that were pressed will change color.  The system should store the rating for that story. The next time the user clicks on this story - the yellow stars will show the users rating.  \\ \hline
-			\textbf{Testing task} & 
+			\textbf{Approach} & \begin{minipage}{5in}The user gives a story a rating by clicking the stars. The user goes to collections and checks if the story was stored in the “read” list \end{minipage}\\ \hline
+			\textbf{Input data} &  \begin{minipage}{5in}User action: clicks on story, navigated to rating view, clicks on a star. \end{minipage}\\ \hline
+			\textbf{Expected results} & \begin{minipage}{5in}The star buttons that were pressed will change color.  The system should store the rating for that story. The next time the user clicks on this story - the yellow stars will show the users rating.  \end{minipage}\\ \hline&\\[-3.8ex]
+			\textbf{Testing task} & \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 			\item Click on a story in the recommendation view
 			\item Click on the star icon to in the right upper corner
@@ -361,45 +363,45 @@ Status report week 6\newline
 			\item Click out from the view. 
 			\item Click on the star icon again
 			\item Close rating view
-			\end{enumerate}
-			\\ \hline
-			\textbf{Any dependability between this and other tests} & T1,T2 \\ \hline		
+			\end{enumerate}\end{minipage}
+			\\ &\\[-3.8ex]\hline
+			\textbf{Depends on tests} & T1,T2 \\ \hline		
 			\textbf{Pass/Fail} & Passed \\\hline			
 		\end{tabular}
 
 	\caption{System test case for giving rating}
 	\label{Tab_systemTesting6}
 	\end{table}
-\end{center}
 
 
-\begin{center}
+
+
 	\begin{table}[H]
-		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+		\centering
+		\caption{}
+		\begin{tabular}{ | l | l  |}
 			\hline
 			\textbf{Test ID} & T7  \\ \hline
 			\textbf{Test Item} & Specify settings \\ \hline
-			\textbf{Approach} & The user navigates to Settings via the sidebar menu. The user then adds preferences and change the permission to use location. \\ \hline		
-			\textbf{Input data} &  User action: click the buttons for the age group, gender and interests. \\ \hline
-			\textbf{Expected results} &  The user will click the buttons for age group, gender, and interests. The buttons will change color when clicked on. The user navigates to next view by clicking the next button and the system will give the response: "Vennligst vent mens vi finner historier vi tror du vil like". 
-			The system saves the users preferences and updates the recommended stories list. The list of stories should now be updated.  \\ \hline
-			\textbf{Testing task} & 
+			\textbf{Approach} & \begin{minipage}{5in}The user navigates to Settings via the sidebar menu. The user then adds preferences and change the permission to use location. \end{minipage}\\ \hline		
+			\textbf{Input data} &  \begin{minipage}{5in}User action: click the buttons for the age group, gender and interests. \end{minipage}\\ \hline
+			\textbf{Expected results} &  \begin{minipage}{5in}The user will click the buttons for age group, gender, and interests. The buttons will change color when clicked on. The user navigates to next view by clicking the next button and the system will give the response: "Vennligst vent mens vi finner historier vi tror du vil like". 
+			The system saves the users preferences and updates the recommended stories list. The list of stories should now be updated.  \end{minipage}\\ \hline&\\[-3.8ex]
+			\textbf{Testing task} & \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 				\item Navigate to settings
 				\item Navigate to preferences
 				\item Add another preferences
 				\item Check the recommended stories list to see if it is updated
 
-			\end{enumerate}
-			\\ \hline
-			\textbf{Any dependability between this and other tests} & NaN \\ \hline		
+			\end{enumerate}\end{minipage}
+			\\ &\\[-3.8ex]\hline
+			\textbf{Depends on tests} & NaN \\ \hline		
 			\textbf{Pass/Fail} & Passed \\\hline			
 		\end{tabular}
-
-	\caption{}
-	\label{Tab_systemTesting7}
+	\label{Tab:systemTesting7}
 	\end{table}
-\end{center}
+
 
 
 
