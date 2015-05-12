@@ -1,16 +1,16 @@
 %===================================== CHAPTER 9 Testing =================================
 \chapter{Testing}
-\label{chap_testing}
+\label{chap:testing}
 
 The following subsections will describe the strategies for the testing levels usability test, unit test, integration test and system test. 
 
 \section{Unit testing}
-\label{sec_unit_testing}
+\label{sec:unit_testing}
 
-The purpose of unit testing is to ensure that every component that are implemented in the system are functional and correct. The group performed unit tests on new components or units of code that was implemented in the system. It was necessary to prioritize what components that should be tested, considering the amount of time given for the project. Testing of the user interface is required to ensure that the user get the right user experience. The recommendation module is a module that produce a result that is vital for the quality for the app. Therefore the unit testing in back end will focus on the recommendation module. Most of the code in back end is communicating with database, front end and Digitalt fortalt. Because of this we will focus on testing this code in the integration testing(\textbf{Section \ref{sec_integration_testing}}).\newline
+The purpose of unit testing is to ensure that every component that are implemented in the system are functional and correct. The group performed unit tests on new components or units of code that was implemented in the system. It was necessary to prioritize what components that should be tested, considering the amount of time given for the project. Testing of the user interface is required to ensure that the user get the right user experience. The recommendation module is a module that produce a result that is vital for the quality for the app. Therefore the unit testing in back end will focus on the recommendation module. Most of the code in back end is communicating with database, front end and Digitalt fortalt. Because of this we will focus on testing this code in the integration testing(\textbf{Section \ref{sec:integration_testing}}).\newline
 
 \paragraph{Roles \& Responsibilities}
-To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec_scrum_team_and_roles}}), so the tester would have good knowledge to the code and know how it works.  
+To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec:scrum_team_and_roles}}), so the tester would have good knowledge to the code and know how it works.  
 
 
 
@@ -29,7 +29,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 		\end{tabular}
 	\end{center}
 	\caption{shows the delegated responsibilities in testing the back end part of the system.}
-	\label{Tab_phptesting}
+	\label{Tab:phptesting}
 \end{table}
 
 \begin{table}[H]
@@ -45,7 +45,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 		\end{tabular}
 	\end{center}
 	\caption{shows the delegated responsibilities for testing the user interface.}
-	\label{Tab_karmatesting}
+	\label{Tab:karmatesting}
 \end{table}
 
 \paragraph {Required before performing the tests}
@@ -60,10 +60,11 @@ The tester investigated the results of the test cases and mended the issues if t
 The testers created test cases and used these as a guide for performing the tests. The test cases has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running.   
 
 {\renewcommand{\arraystretch}{2}%
-	
-\begin{longtable}{| p{1cm} | p{5.5cm} | p{3cm} | p{5.5cm} | p{2cm} |}
-\caption[Unit Test cases]{ Here presented by a testId, description of how the test should be perfomed, what input data to use and expected results.} \label{Tab_unittestcases}\\\hline 
-{\bf Test case ID} & {\bf Description} & {\bf Input data} & {\bf Expected results} & {\bf Result}\\ \hline
+\begin{center}
+\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
+\caption[Unit Test cases]{ Here presented by a testId, description of how the test should be perfomed, what input data to use and expected results.} \label{Tab:unittestcases}\\
+
+\hline {\bf Test case ID} & {\bf Description} & {\bf Input data} & {\bf Expected results} & {\bf Result}\\ \hline
 
 \multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 1: Database Helper}	\\\hline
 
@@ -181,7 +182,7 @@ The testers created test cases and used these as a guide for performing the test
 			UN9.3 &  &   & & Pass \\ \hline	
 			
 		\end{longtable}
-
+\end{center}
 
 \paragraph{Issues detected}
 
@@ -189,7 +190,7 @@ The testers created test cases and used these as a guide for performing the test
 
 
 \section{Integration test}
-\label{sec_integration_testing}
+\label{sec:integration_testing}
 
 Integration testing is usually executed after unit testing and before system testing. This test was performed after every individual component was tested and integrated with the rest of the system. This is to ensure that the different modules of the system were communicating correctly and that data was moving properly from one module to another. \newline
 
@@ -198,12 +199,13 @@ The testing was performed at modules as soon as they were developed and complete
 Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. It was possible to run unit tests across the modules and get the wanted results.\newline
 
 \paragraph{Test cases}
-The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Fig \ref{architecture}} of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab_integrationtestcases}}.
+The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Fig \ref{architecture}} of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab:integrationtestcases}}.
 
-{\renewcommand{\arraystretch}{2}%
-	\begin{longtable}{| p{1cm} | p{5.5cm} | p{3cm} | p{5.5cm} | p{2cm} |}
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
 
-		\caption[Integration Test Cases]{Integration Test Cases} \label{Tab_integrationtestcases}\\
+		\caption[Integration Test Cases]{Integration Test Cases} \label{Tab:integrationtestcases}\\
 			\hline
 			\textbf{Test case ID} & \textbf{Description} & \textbf{Input data} & \textbf{Expected results} & \textbf{Result} \\ \hline
 			
@@ -239,6 +241,7 @@ The test cases were made by first having a closer look at the different modules 
 			I.13 & Simulate a http request that will return all the tags connected to a user  & Specified userId: 105, \newline request type: getList, \newline tagName: 'Les senere' & Should return a list of the tags. The tags should have the attributes text and checked. & Pass\\ \hline	
 
 \end{longtable}
+\end{center}
 
 \paragraph{Issues detected}
 
@@ -247,7 +250,7 @@ The test cases were made by first having a closer look at the different modules 
 
 \section{System testing}
 
-The system testing is executed after the unit test and integration tests. It was to give developers a measure of whether the system met all the goals set for the project.  The system test included performing a black box testing of the system, where the test cases was based on the use cases(\textbf{Section \ref{subsec_use_cases}}) and the specified requirements(\textbf{Section \ref{subsec_summary_functional_requirements}})  defined earlier in this report. \newline
+The system testing is executed after the unit test and integration tests. It was to give developers a measure of whether the system met all the goals set for the project.  The system test included performing a black box testing of the system, where the test cases was based on the use cases(\textbf{Section \ref{subsec:use_cases}}) and the specified requirements(\textbf{Section \ref{subsec:summary_functional_requirements}})  defined earlier in this report. \newline
 
 \paragraph{Required before performing the system tests}
 The unit tests and integration test were required to be executed and approved before the system test could be executed. To execute the tester also needed the final product in the way it was intended to the end users. Therefore the application in question should be accessible on a mobile device before performing the test. \newline
@@ -270,26 +273,26 @@ In this test one of the developers were executing the test. Because it is a blac
 \paragraph{After the tests}
 After the system test suit is performed and the results are documented, the testers should mend the issues in the system if they appeared during the test. After the mending the test suit was executed again. This cycle was repeated until there was no issues left in the system and all test cases got the expected result.\newline
 
-When the system test is performed and finished, the testers evaluated the tests results and then decided if the system as a whole fulfilled all goals for the project.(See \textbf{Section \ref{sec_test_results}}). The test results should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.\newline
+When the system test is performed and finished, the testers evaluated the tests results and then decided if the system as a whole fulfilled all goals for the project.(See \textbf{Section \ref{sec:test_results}}). The test results should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.\newline
 
 \paragraph{Test cases}
 Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. 
-Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. table \textbf{Table \ref{Tab_systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.9. 
+Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. table \textbf{Table \ref{Tab:systemtest1}} and \textbf{Table \ref{Tab:systemtest2}} are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.9. 
 
 \paragraph{Issues detected}
 
 \paragraph{Summary}
 
 \section{Customer acceptance test}
-\label{sec_acceptance_test}
+\label{sec:acceptance_test}
 
-Customer acceptance test (CAT) will be executed during the whole software development life cycle. After a sprint, the customer will test the product, evaluate and bring feedback. In the early stages of the project process this contains testing of the prototypes. When working software is delivered to the customer after a sprint, the customer use their own real input data to test the behaviour of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic when the customer defines it. The customer brings feedback either in meetings or through email. The planned delivery dates are presented in \textbf{Section \ref{sec_milestone_plan}} Project milestone plan.  
+Customer acceptance test (CAT) will be executed during the whole software development life cycle. After a sprint, the customer will test the product, evaluate and bring feedback. In the early stages of the project process this contains testing of the prototypes. When working software is delivered to the customer after a sprint, the customer use their own real input data to test the behaviour of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic when the customer defines it. The customer brings feedback either in meetings or through email. The planned delivery dates are presented in \textbf{Section \ref{sec:milestone_plan}} Project milestone plan.  
 
 \renewcommand{\arraystretch}{2}%
 \begin{center}
 	\begin{longtable}{ | p{4cm} | p{13cm} | }
 		
-		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab_cattest1}\\
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab:cattest1}\\
 		\hline
 		\textbf{Delivery} & First paper prototype\\ \hline
 		\textbf{Date} & 20.02.15 \\ \hline 
@@ -311,7 +314,7 @@ Customer acceptance test (CAT) will be executed during the whole software develo
 \begin{center}
 	\begin{longtable}{ | p{4cm} | p{13cm} | }
 		
-		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Second prototype presented in proto.io}\\
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab:cattest2}\\
 		\hline
 		\textbf{Delivery} & Second prototype presented in prototyping tool\\ \hline
 		\textbf{Date} & 27.02.15 \\ \hline 
@@ -341,7 +344,7 @@ Customer acceptance test (CAT) will be executed during the whole software develo
 \begin{center}
 	\begin{longtable}{ | p{4cm} | p{13cm} | }
 		
-		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab_cattest}\\
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab:cattest3}\\
 		\hline
 		\textbf{Delivery} & First working software\\ \hline
 		\textbf{Date} & 17.03.15 \\ \hline
@@ -361,7 +364,7 @@ Customer acceptance test (CAT) will be executed during the whole software develo
 \begin{center}
 	\begin{longtable}{ | p{4cm} | p{13cm} | }
 		
-		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab_cattest}\\
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab:cattest4}\\
 		\hline
 		\textbf{Delivery} & Second working software\\ \hline
 		\textbf{Date} & 20.04.15\\ \hline
@@ -394,7 +397,7 @@ Customer acceptance test (CAT) will be executed during the whole software develo
 \begin{center}
 	\begin{longtable}{ | p{4cm} | p{13cm} | }
 		
-		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab_cattest}\\
+		\caption[Customer Acceptance test]{Customer Acceptance Test } \label{Tab:cattest5}\\
 		\hline
 		\textbf{Delivery} & Final product\\ \hline
 		\textbf{Date} & 01.05.15 \\ \hline
@@ -405,7 +408,239 @@ Customer acceptance test (CAT) will be executed during the whole software develo
 
 \section{Usability testing}
 
-The user testing was performed by the front end developers. The preliminary work for the user test also included doing an analysis of the requirements, and used these as a base for making a list of scenarios. The scenarios set the grounds for the test cases. IEEE standard 610 defines a test case as; “A set of test inputs, execution conditions, and expected results developed for a particular objective, such as to exercise a particular program path or to verify compliance with a specific requirement.” [KF1] 
-The test case included several test steps that the user followed, and the testers observed how the user reacted in every test case. After each test finished there was a discussion with follow-up questions the user had to answer to get a better insight into what was problematic and what was easily understandable. For further information on this see the framework for the usability testing in Appendix XX(Usability test template).
+The user testing was performed by the front end developers. The preliminary work for the user test included doing an analysis of the requirements, and used these as a base for making several test cases. 
+A test case included several test steps that the user followed, and the tester observed how the user reacted in every test case. After each test finished there was a discussion with follow-up questions the user had to answer to get a better insight into what was problematic and what was easily understandable. For further information on this see the framework for the usability testing in Appendix XX(Usability test template).
+
+\subsection{Introduction}
+%FRA USERTEST ROUND 1/2
+The user testing was performed over several days where the first test was conducted the in on the 21th and 22th. of february 2015. This was an early paper prototype while the second session was with the revised prototype on the digital devices (see Proto.io), this was carried out on feb. 28th and march 1th. All the tests were performed in accordance with the guidelines and tips provided in the book: Designing the User Interface: Strategies for Effective Human-Computer Interaction (5th Edition) – 2009
+
+\subsection{Test Cases}
+
+\begin{itemize}
+	\item Create a user 	
+		\begin{enumerate}
+			\item Login 
+			\item Set personal data 
+			\item Add at least 2 categories 
+		\end{enumerate}
+	\item Read a story 
+		\begin{enumerate}
+			\item Browse the suggestions 
+			\item Add a story to "Les senere" 
+			\item Read another story and look at images 
+		\end{enumerate}
+	\item Find and delete 
+		\begin{enumerate}
+			\item Find the "Les senere" collection
+			\item Delete a story from the collection
+			\item Read another story from the list 
+		\end{enumerate}
+	\item Change settings 
+		\begin{enumerate}
+			\item Navigate to settings 
+			\item Change preferences 
+		\end{enumerate}
+	
+\end{itemize}
+
+\subsection{Test users}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ | l | l | l | l |}
+			\hline
+			\textbf{Gender} & \textbf{Age} & \textbf{Application usage} & \textbf{Other} \\ \hline
+			Female & 26 & Medium & Reads some \\\hline
+			Male & 32 & High & Does not read much \\\hline
+			Female & 51 & Low & Reads alot \\\hline
+			Male & 31 & High & Reads some \\\hline 
+			
+		\end{tabular}
+	\end{center}
+\end{table}
+
+The test subjects was in advance  asked how much and how many applications they use on the handheld devices. They were also asked if and how much reading they see themselves generally doing.
+
+Low - 1-2 applications/ 1-2 times a day.
+Medium - 2-4 applications/ 2-4 times a day.
+High - more the 5 applications/ more than 5 times a day.
+
+
+\subsection{Summary}
+Time set aside for each test was about 20 min for the test and with about 10 minutes for some follow-up questions. Both observations during the test and the answers provided in the follow-up is implemented in the view feedback and/or the general changes.
+
+To summarize the tests; each user had his or her own problems with the application but on the whole the user is able to do the task they are asked to complete. So considering the scenarios and use-cases the application is translating and making the user understand what its functionalities are. There are of course some major inadequate parts, but this is as intended for the test and we are aware of the missing parts.
+
+When it comes to the intuitive understanding, the application has some work to be done. This is covered on a per view basis. And since the user group is not narrow enough we go to design for everybody and this will act as a constraint for the UI. 
+
+The parts where users are confused are mentioned in the views section.
+
+Paths are on the whole followed by the majority of the testers with some deviation, but this is expected since the prototype is a bit unclear on its formulation on some of the views. But to conclude, the users are almost without issues following the scenarios to the point.
+
+\subsection{title}
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{3cm} | p{9cm}|}
+		
+		\caption[Usability test]{Usability Test } \label{Tab:usabilityTest}\\
+		\hline
+		\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
+		\\ \hline
+		
+			\textbf{1. Intro/Tutorial} & 2 & 
+			\begin{itemize}
+				\item “Do  I swipe?”
+				\item This view is very lacking in content
+				\item Are the user able to navigate both ways at the start
+				\item It`s nice to have a introduction to the application
+			\end{itemize}
+			Changes:
+			Add animation/intro
+			\\\hline
+			
+			\textbf{2. Login} & 3  & 
+			\begin{itemize}
+			\item Several users don’t want to login, they want to test the application first.
+			\item “Am I supposed to verify mail after entering?”
+			\item	The text over Email is not clear about  what its for. (Need new wording)
+			\item The text was too small
+			\item Mail verification?
+			\end{itemize}
+			Changes:
+			\begin{itemize}
+			\item Change wording
+			\item Make the “Hopp over” button a small link and encourage users to user the “Logg inn”
+			\item  Add a “?” for hints
+			\end{itemize}
+			\\\hline
+			
+			\textbf{3. Profil} & 4 & 
+			\begin{itemize}
+			\item Should separate this from the personalization, some user thought this was part of the recommendation. 
+			\item Is this research data or for the application
+			\end{itemize}
+			Changes:
+			\begin{itemize}
+			\item Explain why this is needed and if this is related to the personalizing.
+			\item Make the default NONE selected
+			\item Add/Change a category to “Hemmelig/Ønsker ikke dele”
+			\end{itemize}
+						\\\hline
+						
+			\textbf{4. Interests} & 5  & 
+			\begin{itemize}		
+			\item “What is this”
+			\item This would need an explanation 
+			\item Can one choose more the one.
+			\end{itemize}			
+			Changes:
+			\begin{itemize}
+			\item Change the wording: “Velg kategorier”
+			\end{itemize}\\\hline
+			\textbf{5.Media format} & 5 & 
+			Text>Image>Sound>Video
+				\begin{itemize}
+			\item The sound icon was interpreted as music
+			\item Some users did not understand this; it was not the icons what how this affected the stories
+			\item several users reported the this was a bit confusing 
+			\end{itemize}
+			Changes:
+			\begin{itemize}
+			\item Removing this view; because is not adding much to the application and user tests uncovering a lot of misunderstanding about its function and meaning.
+			\end{itemize}
+			\\\hline
+			
+			\textbf{6. Recommendations} & 6 & 
+			\begin{itemize}
+
+			\item The read later is very misunderstood, they don’t seem to understand that this is placed in a list. And what happen when I press this again
+			\item Missing hint to the swipe right/left
+			\item The user feels a bit dumped into this view
+			\item “What can I touch?”
+			\end{itemize}
+			Changes:
+			\begin{itemize}
+			\item Remove button and add a bookmark icon at the top right of the card. 
+			\item Adding cards at either side to show that there is more. (or adding a card deck to incentive a swipe)
+			\item Add a loading animation, Simulating the “magic” that is finding stories for the user.
+			\item Add/Change title: Anbefalte Fortellinger/Historier
+			\item Make it clear the the card is touchable (ie. make the text fade out in the card)
+			\item Add and function to remove the card.
+			\end{itemize}
+								\\\hline
+								
+			\textbf{7. Story View} & 7 & 
+			\begin{itemize}
+			\item Bookmark icon was not understood by some.
+			\item Everything else ok.
+			\item “Where do I touch”
+			\item A bit of confusion about what the “ikke interessert” button does.
+			\end{itemize}
+			Changes:
+			\begin{itemize}
+			\item Add a back button
+			\item Change name of button “Ikke interessert”
+			\item Make a better link to the icons (Add color etc.)
+			\end{itemize}
+						\\\hline
+						
+			\textbf{8.Story view(images and videos)} & 8 & 
+			\begin{itemize}
+				\item 	Expects full screen when touching
+			\end{itemize}
+			
+			
+			Changes:
+			NON
+						\\\hline
+			\textbf{Story bookmark} & 9  & 
+				\begin{itemize}
+					\item “Can I change the name of the lists?”
+				\end{itemize}
+			
+			Changes: None	
+			\\\hline
+			\textbf{9.Menu} & 10  &
+			 	\begin{itemize}
+			 		\item “What is utforsk?” 
+			 	\end{itemize}
+			Changes
+				\begin{itemize}
+			 		\item Change name of “Utforsk” - Make is clear that this is where the main function/personalisation happens  		 	
+			 		\item Skill “Utforsk” og innstillinger (ie. old font)
+			 	\end{itemize}			
+						\\\hline
+			\textbf{10. List} & 10 \textgreater 12 &
+			\begin{itemize}
+				\item Some users is a bit unsure about how to delete a story.
+				\item Want to swipe both direction
+			\end{itemize} 
+		
+			Changes:
+			\begin{itemize}
+				\item Add a hint to show the one can swipe
+				\item 	Add swipe both ways?
+			\end{itemize}
+		
+						\\\hline
+			\textbf{11.Settings} & 4   & 
+			\begin{itemize}
+				\item This look exactly the same
+			\end{itemize}
+			Changes: 
+			\begin{itemize}
+				\item Remove the page indicator?
+			\end{itemize}
+			\\ \hline
+	\end{longtable}
+\end{center}
+
+General changes/implementation before next usertest:
+
+Add navigation between the setup views make the user also able to navigate back 
+Add finalized icons
+Add the intended color scheme 
+
 
 \cleardoublepage
