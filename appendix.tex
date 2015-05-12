@@ -1,55 +1,356 @@
 \section*{\begin{center}{\Huge Appendix}\end{center}}
 \addcontentsline{toc}{chapter}{Appendix}
-$\\[0.5cm]$
+%$\\[0.5cm]$
 
 \noindent
-Appendix A: Functional requirements\newline
-TODO sett inn Appendix A: Functional requirements\newline
+\section{Appendix A: Functional requirements}
 
-Appendix B: Status report example\newline
-B.1 Status report example\newline
+\renewcommand{\arraystretch}{2}
+\begin{center}
+	\begin{longtable}{ | p{1cm} | p{3cm} | p{5cm} | p{1.5cm} | p{2.5cm} | p{3cm} | }
+	\caption[Functional requirements]{The functional requirements listed up and  prioritized by the customers wishes} \label{Tab_unittestcases}\\
+	
+	\hline {\bf ID} & {\bf Name} & {\bf Description} & {\bf Priority} & {\bf Use Case Ref.} & {\bf Comments}\\ \hline
+	
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}}c |}{General}	\\\hline			
+		R1 &  Language & The documentation should be written in english. The application will be written in norwegian and the stories from Digitalt fortalt will appear as they are, most of them in norwegian. & H  &  &  \\\hline
+		
+		R2& Cross-platform design &The application should run on both Android and iOS. & H &  & 	\\\hline
+		
+		R3& Cross-platform design & The application design should appear similar on both Android and iOS. & H &  &\\\hline
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Sign up /Sign in view}	\\\hline			
+		
+		R4& User recovery & The application should provide the opportunity for the user to enter email address, which then becomes the user identifier in the system from the user's point of view. & H & U1,U2 & This means that the user can access the profile from different devices.		\\\hline
+		
+		R5& Anonymous sign in &The application should provide the option to enter the application without registering a user by mail address.  & H & U1 & Device remembers user. User got id in database, but not mail\\\hline
+	
+		R6& Demo view & It should be possible to run the application mode in a demo view where the system can't identify the user & L &  &				\\\hline
+		
+		R7& Personal info & The application should obtain some personal info about the user, such as age group and gender. & H & U3 & Only for research purposes \\\hline
+		
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Preferences/Settings}	\\\hline
+		
+		R8 & Initial specification of preferences & 
+		The user should be asked to set preferences in the startup process. Preferences include: 
+		\begin{enumerate}[label=(\alph*)]
+			\item selection of categories
+			\item permission to use location, 
+			\item notifications preferences.
+		\end{enumerate}	 & M & U3 & a) is the most important preference, b) and c) are low prioritized 
+		 \\\hline
+		 
+		R9&	Changing preferences&  The application should provide a settings view where the user can change the preferences. & H & U9 &	\\\hline
+		
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Preferences/Settings}	\\\hline
+		
+		R10& 
+		Show list of recommended stories & The application should provide the user with a list of recommended stories based on the set preferences. The stories is presented by a picture and a short text harvested from Digitalt fortalt. & H & U4  &\\\hline
+		R11& Recommend story outside user's preferences  & The application should once in a while recommend a story outside the user comfort zone, i.e. a story that the recommender algorithm does not pick out. & M &  & Purpose: To broaden the user's horizon. The purpose is not to test the algorithm\\\hline		
+		
+		R12& Make decision about story  & The application should provide the user with three options regarding each recommended story: to choose to read the story now, to reject the story or to save the story for later & H & U4 &\\\hline
+		
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Preferences/Settings}	\\\hline
+		
+		R13& Present story & The application should present the chosen story in a specific story view.The presentation of the story should be in accordance with the presentation on Digitalt fortalt. & H & U6 &\\\hline				
+	
+		R14&Give feedback/rating on story  & The application should provide the user with the opportunity to rate the story. The rating is in the form of a star system with 5 stars.  & H & U7 &\\\hline
+				
+		R15 & Tag story  & The user should be given the opportunity to connect a story to tags. The tags could be predefined by the system, like "Favorites" or defined by the user & M  & U5 &\\\hline
+		
+		R16& Link to Digitalt fortalt  & Every story should include a link to the corresponding story on Digitalt fortalt. & H &  &	\\\hline
+		
+		R17& Explain why a story was recommended & The application should provide an explanation why a given story was recommended. & H &  & Could just be a general statement like: "Other users who liked similar stories to you, also liked this one"\\\hline
+		
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Preferences/Settings}	\\\hline
+		
+		R18& Show list & The application should show a list of collected stories. The stories is presented by a picture and a short text. & M &  U8 &		\\\hline
+		
+		R19& Filter list & The application should provide the user with the opportunity to filter the list. Filters include: favorites, user-defined tags, to-read, reviewed. & M & U8 &\\\hline
+		
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Notifications}	\\\hline
+		
+		R20& Notifications outside the application & The application should send a notification to the user's device at the time specified in the preferences  & L &  &				\\\hline
+		
+		R21& Notifications inside the application & The application should create a notification after a defined amount time to remind the user of stories that have been read but not rated & L &  &\\\hline
+		
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{About app}	\\\hline
+		
+		R22 & About site information  & The application should include an about app, which should include basic info about the project. This include references to TAGCLOUD. & H  & U10 &\\\hline
+	
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Help site}	\\\hline
+	
+		R23& Help site information & The application should include some service to the user. This will include: 
+		\begin{enumerate}[label=(\alph*)]
+			\item A quick tour when user opens app for the first time
+			\item A help site located in the menu, which should explain the user interface and courses of action.
+		\end{enumerate} 
+		& M &  & a) has high priority, \newline b) has low priority\\\hline
+		
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Personalization}	\\\hline
+		
+		R24& Use content-based filtering & The application should use content-based filtering to recommend stories to user initially. This should in particular be based on category preferences. & H  &  & Implement this before R25. \\\hline
+		
+		R25& Use collaborative filtering & The application should collaborative filtering to recommend stories when the user base is large enough for the algorithm to be effective. & H  &  &\\\hline
+		
+		\multicolumn{6}{ | >{\columncolor[gray]{0.8}} c |}{Research}	\\\hline		
+		
+		R26& Gather data to SINTEF for research & The application should gather and store in a file information about the use. This include frequency of use, success rate of recommendations and perhaps other things.  &  &  & Log files are sufficient\\\hline
+		
+	\end{longtable}
+\end{center}
+\pagebreak
+
+\section{Appendix B: Status report example}
+\subsection{Status report example}
 Status report week 6\newline
 
-1 Introduction\newline
-This week has mostly been spent organising and making decisions that will impact the whole project.\newline
 
-2 Progress summary\newline
-The decisions that have been made will decide how the work is distributed in the coming weeks. Work has been made on defining goals and milestones. Furthermore, some of the tools to complete the given tasks have been found.\newline
-
-3 Open / closed problems\newline
-Closed problems:
-\begin{itemize}
-	\item A cross-platform framework have been chosen.
-	\item A rough estimate of what needs doing, how long it will take and when it is due has been performed in the form of a product backlog.
-	\item A list of functional requirements have been compiled after a discussion with the customer.
-	Use case diagrams and scenarios have been made.
-	\item Justification on some of the choices made so far have been written for the report:
+		\textbf{Introduction} \newline
+		This week has mostly been spent organising and making decisions that will impact the whole project.\newline
+		
+		\textbf{Progress summary} \newline
+		The decisions that have been made will decide how the work is distributed in the coming weeks. Work has been made on defining goals and milestones. Furthermore, some of the tools to complete the given tasks have been found.\newline
+		
+		\textbf{Open / closed problems}\newline
+		Closed problems:
 		\begin{itemize}
-			\item SCRUM
-			\item Framework
+			\item A cross-platform framework have been chosen.
+			\item A rough estimate of what needs doing, how long it will take and when it is due has been performed in the form of a product backlog.
+			\item A list of functional requirements have been compiled after a discussion with the customer.
+			Use case diagrams and scenarios have been made.
+			\item Justification on some of the choices made so far have been written for the report:
+			\begin{itemize}
+				\item Scrum
+				\item Framework
+			\end{itemize}
+			\item Complete a WBS chart.
+			\item A rules of engagement have been signed, this helps solidify what is expected of every member in the group.\newline
 		\end{itemize}
-	\item Complete a WBS chart.
-	\item A rules of engagement have been signed, this helps solidify what is expected of every member in the group.\newline
-\end{itemize}
+		
+		Open problems:\newline
+		No specific ongoing problem at the end of this week.\newline
+		
+		Choosing a cross-platform framework was a difficult process for various reasons. There is not much experience in the group using such tools. Additionally there was an internal debate about what is expected from the customer and what does the team expect the end product to look like. This was discussed in light of the the constraints imposed from various aspects. However, the team members now feel confident that an appropriate tool have been chosen and are aware of some limitations this leads to.\newline
+		
+		Understanding properly what the customer wants and prioritizes has also been a focus this week. While this sounds easy enough, the technical details are often lost in communication. This is something that will require constant feedback and monitoring so that the project stays on track in regards to what is desired by the customer.\newline
+		
+		\textbf{Planned work for next period}\newline
+		\begin{itemize}[noitemsep]
+			\item Familiarization with the chosen framework.
+			\item Familiarization with digitaltfortalt.no API.
+			\item Creating a design prototype is a goal, this will unify the group and make sure all members are working towards the same goal. Furthermore, this will explore what options there are and highlight any basic flaws in design.\newline
+		\end{itemize}
 
-Open problems:\newline
-No specific ongoing problem at the end of this week.\newline
+		
+\pagebreak
+\section{Appendix C: System test cases}
 
-Choosing a cross-platform framework was a difficult process for various reasons. There is not much experience in the group using such tools. Additionally there was an internal debate about what is expected from the customer and what does the team expect the end product to look like. This was discussed in light of the the constraints imposed from various aspects. However, the team members now feel confident that an appropriate tool have been chosen and are aware of some limitations this leads to.\newline
+\begin{center}
+	\begin{table}[H]
+		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+			\hline
+			\textbf{Test ID} & T1  \\ \hline
+			\textbf{Test Item} & Create recoverable profile \\ \hline
+			\textbf{Approach} & The user locate and press the “register user” button in the app. Applies the email in the correct format.. The response is valid and the user gets feedback. \\ \hline
+			\textbf{Input data} &  “newuser@example.com”\\ \hline
+			
+			\textbf{Expected results} & The user writes the correct email address and get the correct feedback from the system: "Kontakter server" and will be directed to the startup page.\\ \hline
+		
+			\textbf{Testing task} & 
+			\begin{enumerate}[noitemsep]
+			\item Click  “create user”-button.
+			\item Apply email address to the email input field 
+			\item Receive feedback feedback from the system
+			\item Check email inbox to se if the correct mail from the system was received 
+			 \end{enumerate}
+			\\ \hline
+			\textbf{Any dependability between this and other tests} & NaN \\ \hline	
+			\textbf{Pass/Fail} & Passed \\\hline				
+		\end{tabular}
 
-Understanding properly what the customer wants and prioritizes has also been a focus this week. While this sounds easy enough, the technical details are often lost in communication. This is something that will require constant feedback and monitoring so that the project stays on track in regards to what is desired by the customer.\newline
+	\caption{System test case for creating a recoverable profile.}
+	\label{Tab_systemTesting1}
+	\end{table}
+\end{center}
 
-4 Planned work for next period\newline
-\begin{itemize}
-	\item Familiarization with the chosen framework.
-	\item Familiarization with digitaltfortalt.no API.
-	\item Creating a design prototype is a goal, this will unify the group and make sure all members are working towards the same goal. Furthermore, this will explore what options there are and highlight any basic flaws in design.\newline
-\end{itemize}
+\begin{center}	
+	\begin{table}[H]
+		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+			\hline
+			\textbf{Test ID} & T2  \\ \hline 
+			\textbf{Test Item} & Log in with email registration \\ \hline
+			\textbf{Approach} & The user locate the login-button and applies the registrated email and obtain access to the system and the profile connected to this email address . \\ \hline
+			\textbf{Input data} &  valid email: “user@example.com”, \newline example invalid email: “mail@example”\\ \hline
+			\textbf{Expected results} & 
+			\begin{itemize}[noitemsep]
+				\item The first time the user have logged in \newline System Response:  Choose preferences-view should appear.
+				\item The user have done this process before \newline System Response: "Vennligst vent mens vi finner historier vi tror du vil like" and direct the user to the view with the recommended stories.
+				\item The user types an email with wrong email format \newline System Response: "Ikke en gyldig adresse" 
+				
+			\end{itemize}
+			 \\ \hline
+			\textbf{Testing task} & 
+			\begin{enumerate}[noitemsep]
+			\item Navigate to the login view
+			\item Apply email address to the email input field
+			\item Receive response from system
+			\end{enumerate}
+			 \\ \hline
+			\textbf{Any dependability between this and other tests} & T1 \\ \hline					
+			\textbf{Pass/Fail} & Passed \\\hline
+		\end{tabular}
+	\caption{System test case for login with email registration}
+	\label{Tab_systemTesting2}
+	\end{table}
+\end{center}
 
-Appendix C: System test cases\newline
-TODO sett inn Appendix C alle tabeller\newline
+\begin{center}
+	\begin{table}[H]
+		\begin{tabular}{ | p{4cm} | p{12cm}  |}			
+			\hline
+			\textbf{Test ID} & T3  \\ \hline
+			\textbf{Test Item} & Set initial settings \\ \hline
+			\textbf{Approach} & The user is logged in to the system for the first time. The user will choose age group and gender in the inital settings that will appear the frist time the user is logged on to the system. After this the user will be asked to choose cultural category preferences.  \\ \hline
+			\textbf{Item pass/Fail criteria} & \\ \hline
+			\textbf{Input data} &  User action: click the buttons for the age group, gender and interests, and next buttons  \\ \hline
+			\textbf{Expected results} & The user will click the buttons for age group, gender, and interests. The buttons will change color when clicked on. The user navigates to next view by clicking the next button and will obtain access to the system. If the user do not select interests the user will get a response for the system that it is necessary. \\ \hline
+			\textbf{Testing task} & 
+			\begin{enumerate}[noitemsep]
+				\item Start app
+				\item Click the correct age group and gender.
+				\item Navigate to the next page
+				\item Navigate to the next page without selecting interests
+				\item Receive feedback from system
+				\item Select two interests
+				\item Navigate to the next page
+			\end{enumerate}
+			\\ \hline
+			\textbf{Any dependability between this and other tests} & NaN \\ \hline	
+			\textbf{Pass/Fail} & Passed \\\hline				
+		\end{tabular}
 
-Appendix D: Test results \newline
-TODO sett inn Appendix D alle tabeller\newline
+	\caption{System test case of performing the initial settings}
+	\label{Tab_systemTesting3}
+	\end{table}
+\end{center}
+
+\begin{center}
+	\begin{table}[H]
+		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+			\hline
+			\hline
+			\textbf{Test ID} & T4  \\ \hline
+			\textbf{Test Item} & Browse recommended stories \\ \hline
+			\textbf{Approach} & The user is shown a list of recommended stories. The user will click on the first story. The story will be viewed and the user closes it. 
+			  \\ \hline
+			\textbf{Item pass/Fail criteria} &  \\ \hline			
+			\textbf{Input data} &  User action: click arrow\\ \hline
+			\textbf{Expected results} & The view should show a list with recommended stories. The view of the stories will include a title, story picture or default picture, an introduction, category icons, media icons and a explanation of why this story is recommended to the user.  The view should show 10 more recommendations when the user have browes through the 10 first stories in the list.
+			When the user clicks a story the full story should appear in a full screen, including text and potential pictures, videos and sound clips.   \\ \hline
+			\textbf{Testing task} & 
+			\begin{enumerate}[noitemsep]
+			\item Click on a recommended story
+			\item Locate back-button and close the story
+			\item Click on the next recommended story
+			\item Navigate 
+			\end{enumerate}
+			\\ \hline
+			\textbf{Any dependability between this and other tests} & T1,T2 \\ \hline		
+			\textbf{Pass/Fail} & Passed \\\hline			
+		\end{tabular}
+	\caption{}
+	\label{Tab_systemTesting4}
+	\end{table}
+\end{center}
+
+\begin{center}
+	\begin{table}[H]
+		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+			\hline 
+			\textbf{Test ID} & T5  \\ \hline
+			\textbf{Test Item}  & Add story to list	 \\ \hline
+			\textbf{Approach} & The user navigate to a story and gives the story a rating. The user clicks the bookmark button in the story, and gives a name to a new collection of stories.   \\ \hline
+			\textbf{Input data} & User action: Click on a star, Give name to a new collection of stories: ex. “My Favorite Stories” \\ \hline
+			\textbf{Expected results} & The story that was rated with stars are automatically put in the “read” collection. The story should be stored in the new collection of “My Favorite Stories” and the user have access to this by navigating to the menu, and then to “Bokmerker”. \\ \hline
+			\textbf{Testing task} & 
+			\begin{enumerate}[noitemsep]
+			\item Click on a story in the recommendation view 
+			\item Click on the star icon to in the right upper corner 
+			\item Click on one of the stars in the rating view to give rate.
+			\item Click out from the view. 
+			\item Click the bookmark button in the story 
+			\item Click the plus icon
+			\item Type in a "My Favorite Stories" and click out of the view.
+			\item Navigate to the collections via the menu
+			\item Click on "My Favorite Stories"
+			\item Click on the first story in the collection
+			\item Navigates to the “read” collection
+			\item Click on the first story in the collection
+			\end{enumerate}
+			\\ \hline
+			\textbf{Any dependability between this and other tests} & NaN \\ \hline			
+			\textbf{Pass/Fail} & Passed \\\hline		
+		\end{tabular}
+	\caption{}
+	\label{Tab_systemTesting5}
+	\end{table}
+\end{center}	
+
+\begin{center}
+	\begin{table}[H]
+		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+			\hline
+			\textbf{Test ID} & T6  \\ \hline
+			\textbf{Test Item} & Give a rating \\ \hline
+			\textbf{Approach} & The user gives a story a rating by clicking the stars. The user goes to collections and checks if the story was stored in the “read” list \\ \hline
+			\textbf{Input data} &  User action: clicks on story, navigated to rating view, clicks on a star. \\ \hline
+			\textbf{Expected results} & The star buttons that were pressed will change color.  The system should store the rating for that story. The next time the user clicks on this story - the yellow stars will show the users rating.  \\ \hline
+			\textbf{Testing task} & 
+			\begin{enumerate}[noitemsep]
+			\item Click on a story in the recommendation view
+			\item Click on the star icon to in the right upper corner
+			\item Click on one of the stars in the rating view to give rate.
+			\item Click out from the view. 
+			\item Click on the star icon again
+			\item Close rating view
+			\end{enumerate}
+			\\ \hline
+			\textbf{Any dependability between this and other tests} & T1,T2 \\ \hline		
+			\textbf{Pass/Fail} & Passed \\\hline			
+		\end{tabular}
+
+	\caption{System test case for giving rating}
+	\label{Tab_systemTesting6}
+	\end{table}
+\end{center}
+
+
+\begin{center}
+	\begin{table}[H]
+		\begin{tabular}{ | p{4cm} | p{12cm}  |}
+			\hline
+			\textbf{Test ID} & T7  \\ \hline
+			\textbf{Test Item} & Specify settings \\ \hline
+			\textbf{Approach} & The user navigates to Settings via the sidebar menu. The user then adds preferences and change the permission to use location. \\ \hline		
+			\textbf{Input data} &  User action: click the buttons for the age group, gender and interests. \\ \hline
+			\textbf{Expected results} &  The user will click the buttons for age group, gender, and interests. The buttons will change color when clicked on. The user navigates to next view by clicking the next button and the system will give the response: "Vennligst vent mens vi finner historier vi tror du vil like". 
+			The system saves the users preferences and updates the recommended stories list. The list of stories should now be updated.  \\ \hline
+			\textbf{Testing task} & 
+			\begin{enumerate}[noitemsep]
+				\item Navigate to settings
+				\item Navigate to preferences
+				\item Add another preferences
+				\item Check the recommended stories list to see if it is updated
+
+			\end{enumerate}
+			\\ \hline
+			\textbf{Any dependability between this and other tests} & NaN \\ \hline		
+			\textbf{Pass/Fail} & Passed \\\hline			
+		\end{tabular}
+
+	\caption{}
+	\label{Tab_systemTesting7}
+	\end{table}
+\end{center}
 
 \cleardoublepage
