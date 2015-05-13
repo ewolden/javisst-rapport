@@ -134,16 +134,16 @@ When doing content-based filtering the input data model consist of a collection 
 similarity = \frac{\vec{x}\cdot\vec{y}}{||\vec{x}||\cdot||\vec{y}||}
 \end{equation}
 
-The dot product in the numerator is in our system equivalent to the number of common subcategories for two stories, while the denominator is the product of the square roots of the number of subcategories for the two stories. If two stories have exactly the same subcategories the similarity value will be 1, and if they don't share any subcategory the value will be 0. \newline
+The dot product in the numerator is in our system equivalent to the number of common subcategories for two stories, while the denominator is the product of the square roots of the number of subcategories for each of the two stories. If two stories have exactly the same subcategories the similarity value will be 1, and if they don't share any subcategory the value will be 0. \newline
 
 These similarities are put in a CSV file at the time of harvesting. This file is read when the recommendation is run and the values put in the appropriate Mahout objects. Mahout then uses the data model and the similarity model with similarity values for all possible pairs of stories to produce a ranked list of recommendations using item based recommending.
 
 
 \subsection{Collaborative filtering}
 
-Collaborative filtering uses a data model with multiple users. Only the stories a user has rated will be included in the data model since this is the most precise user feedback. In our application collaborative filtering is done by combining two different methods provided by Mahout, namely item based recommendations and user based recommendations. The item based approach creates a similarity model based on similarity between items in the data model, while the user based approach creates a similarity model based on similarity between users in the data model. To avoid that not similar users affect the recommendations in the user based approach a threshold value for the similarity is set. Two list of recommendations are produced and then merged to get one list of ranked recommendations.\newline
+Collaborative filtering uses a data model with multiple users. Only the stories a user has rated will be included in the data model since this is the most precise user feedback. In our application collaborative filtering is done by combining two different methods provided by Mahout, namely item based recommendations and user based recommendations. The item based approach creates a similarity model based on similarity between items in the data model using Log Likelihood, while the user based approach creates a similarity model based on similarity between users in the data model using Pearson correlation. To avoid that not similar users affect the recommendations in the user based approach a threshold value for the similarity is set. Two list of recommendations are produced and then merged to get one list of ranked recommendations.\newline
 
-As was noted in \textbf{\ref{sec:personalization_algorithms}} collaborative filtering requires a large amount of data to make recommendations. Since only rated stories are included, collaborative filtering cannot be run when a new user starts using the application as the user will not be part of the data model. The criteria for using collaborative filtering needed to met is that the user has rated at least ten stories that at least ten other users also have rated. 
+As was noted in \textbf{section \ref{sec:personalization_algorithms}} collaborative filtering requires a large amount of data to make recommendations. Since only rated stories are included, collaborative filtering cannot be run when a new user starts using the application as the user will not be part of the data model. The criteria for using collaborative filtering needed to be met is that the user has rated at least ten stories that at least ten other users also have rated. 
 
 \section{Reuse of code}
 
@@ -155,5 +155,12 @@ Reusing written code can be a great help to quickly have progress when programmi
 All content related to stories displayed in the application was collected from Digitalt fortalt. Initially, to achieve better results when testing the personalization algorithms, the stories collected are limited to the areas Nord-Trøndelag and Sør-Trøndelag. The API [HM1] used to retrieve stories belongs to Digitalt museum. This API enables search through data from Digitalt museum, displaying pictures and provides access to an XML representation of available objects.\newline
 
 Digitalt fortalt is established on the same technical platform as Digitalt museum [HM2]. This makes the integration better between the two and the remaining services in Norvegiana. Norvegiana is a datamodel, database and a web service with the purpose of making cultural heritage information more accessible [HM3]. Example services available in Norvegiana are Digitalt museum, Digitalt fortalt, Arkivportalen and Musikkarkiv. 
+
+\section{Front end - back end communication}
+
+Communication between front end and back end was handled using HTTP post requests.
+AngularJs \$http is a core service for reading data from remote servers, which is called every time the application needs to add, retrieve, update or delete data. When an HTTP request is made four fields are set: method, headers, URL and data. The method field determines the HTTP request method, which in this application is set to post, and the headers field sets the content type to JSON. The URL is the location of the remote server script that handles HTTP requests. In the data field the action to be executed is specified, in addition to any data needed to perform the desired action.\newline
+
+Each HTTP request is managed by the same back end PHP script. This script decodes the HTTP request, determines which action to perform and executes it. When the script has finished executing, a JSON response is returned to front end with the desired data.
 
 \cleardoublepage
