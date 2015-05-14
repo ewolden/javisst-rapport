@@ -2,19 +2,24 @@
 \chapter{Testing}
 \label{chap:testing}
 
-The following subsections will describe the strategies for the testing levels usability test, unit test, integration test and system test. 
+The following subsections describes the strategies for the testing levels unit test, integration test, system test, costumer acceptance test and usability test. 
+The unit, integration and system tests were done in a iterative manner. After the test suits were performed and the results were documented, the testers mended the issues in the system if they appeared during the test. After the mending, the test suit was executed again. This cycle was repeated until there was no issues left in the system and all test cases got the expected result. 
+The issues that were discovered during all the tests are described in every testing level section. 
+
 
 \section{Unit testing}
 \label{sec:unit_testing}
 
-The purpose of unit testing is to ensure that every component that are implemented in the system are functional and correct. The group performed unit tests on new components or units of code that was implemented in the system. It was necessary to prioritize what components that should be tested, considering the amount of time given for the project. Testing of the user interface is required to ensure that the user get the right user experience. The recommendation module is a module that produce a result that is vital for the quality for the app. Therefore the unit testing in back end will focus on the recommendation module. Most of the code in back end is communicating with database, front end and Digitalt fortalt. Because of this we will focus on testing this code in the integration testing(\textbf{Section \ref{sec:integration_testing}}).\newline
+The purpose of unit testing is to ensure that every component that are implemented in the system are functional and correct. The group performed unit tests on new components or units of code that was implemented in the system. It was necessary to prioritize what components that should be tested, considering the amount of time given for the project. Testing of the user interface is required to ensure that the user get the right user experience. The recommendation module is a module that produce a result that is vital for the quality for the app. Therefore the unit testing in back end will focus on the recommendation module. Most of the code in back end is communicating with database, front end and Digitalt fortalt. Because of this, the focus will be on testing this code in the integration testing(\textbf{Section \ref{sec:integration_testing}}).\newline
 
-\paragraph{Roles \& Responsibilities}
+\subsection{Roles \& Responsibilities}
 To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec:scrum_team_and_roles}}), so the tester would have good knowledge to the code and know how it works.  
 
 
 
 \begin{table}[H]
+	\caption{shows the delegated responsibilities in testing the back end part of the system written in php code.}
+	\label{Tab:phptesting}
 	\begin{center}
 		\begin{tabular}{ | l | l | l |}
 			\hline
@@ -23,75 +28,99 @@ To get a structured testing experience, the team had to delegate responsibility 
 			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
 			U1 & Database Helper & Kjersti \\ \hline
 			U2 & Database Story & Kjersti \\ \hline
-			U3 & Database User & Eivind \\ \hline			
-			U4 & Compute Preference Value & Kjersti \\ \hline			
-			U5 & Recommendation module & Audun \\ \hline
+			U3 & Database User & Eivind \\ \hline
+			U4 & User Model & Eivind \\ \hline			
+			U5 & Compute Preference Value & Kjersti \\ \hline			
 		\end{tabular}
 	\end{center}
-	\caption{shows the delegated responsibilities in testing the back end part of the system.}
-	\label{Tab:phptesting}
 \end{table}
 
 \begin{table}[H]
+		\caption{shows the delegated responsibilities for the back end part of the system written in java code.}
+		\label{Tab:junittesting}
+	\begin{center}
+		\begin{tabular}{ | l | l | l |}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{JUnit and DbUnit testing}} \\
+			\hline
+			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
+			U6 & Recommendation  & Audun \\ \hline
+			U7 & Database connection with Java & Audun \\\hline			
+		\end{tabular}
+	\end{center}
+
+\end{table}
+
+\begin{table}[H]
+	\caption{shows the delegated responsibilities for testing the user interface.}
+	\label{Tab:karmatesting}
 	\begin{center}
 		\begin{tabular}{ | l | l | l |}
 			\hline
 			\multicolumn{3}{|c|}{\textbf{Angularjs Karma testing}} \\
 			\hline
 			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
-			U7 & Log in & Roar \\ \hline
-			U8 & Story View & Ragnhild \\ \hline
-			U9 & Settings & Espen \\ \hline
+			U8 & UI Login & Ragnhild \\ \hline
+			U9 & UI Story View & Ragnhild \\ \hline
+			U10 & UI Setting & Roar \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{shows the delegated responsibilities for testing the user interface.}
-	\label{Tab:karmatesting}
+
 \end{table}
 
-\paragraph {Required before performing the tests}
+\subsection {Required before performing the tests}
 The developers of the user interface needed to install the Angularjs' Karma, for performing the unit testing. With this tool they could write scripts for each of the test cases.\newline
 
 The developers of the back end of the system needed to install phpunit, a framework for unit testing in php.\newline
 
-\paragraph{After the tests}
-The tester investigated the results of the test cases and mended the issues if they appeared during the tests. When the issues in the code were fixed, the tester would run the test again and see if it approved. This was cycle repeated until the code was free of issues and runned the expected way.\newline
+\subsection{After the tests}
+The tester investigated the results of the test cases and mended the issues if they appeared during the tests. When the issues in the code were fixed, the tester would run the test again and see if it approved. This cycle was repeated until the code was free of issues and runned the expected way.\newline
 
-\paragraph{Test Cases}
+\subsection{Test Cases}
 The testers created test cases and used these as a guide for performing the tests. The test cases has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running.   
 
+\subsection{Detected and mended issues}
+This section includes some of the most important issues that were discovered the unit testing, and how they were solved. 
 
+In the database communication there was some changes done during the development which made it easier to handle the code. One example was to make the database connection return an array where the array keys matched the column names. This way made it easier to access the different values returned from the database.  
+Another issue that was discovered with the media format per story that was not stored correctly in the database, because of an error during the harvesting of the stories from Digitalt Fortalt. These types of issues were solves with several checks to see if the information was in the right format or was not null. 
 
-\paragraph{Issues detected}
+During the tests of the first version of the recommender it was running with the time of 11-12 seconds. This was improved by increasing the efficiency of the communication with the database. The recommender was more efficient when the insertion of preference values and recommendations was done with one insert statement to the database in stead of respectively 167 or 10 statements. Previously the recommender fetched a whole table from the database with the preference values. By fetching a preference value to a specific user helped the recommendation module to run faster too.
 
-\paragraph{Summary}
 
 
 \section{Integration test}
 \label{sec:integration_testing}
 
-Integration testing is usually executed after unit testing and before system testing. This test was performed after every individual component was tested and integrated with the rest of the system. This is to ensure that the different modules of the system were communicating correctly and that data was moving properly from one module to another. \newline
+Integration testing is usually executed after unit testing and before system testing. This test was performed after every individual component was tested and integrated with the rest of the system. This is to ensure that the different modules of the system were communicating correctly and that data was moving properly from one module to another.  This approach made it easier to detect issues in the code early and therefore avoid issues to come up at a later stage in the development process - which could be cost-ineffective.\newline
+Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. All the tests was executing by simulating http requests from the UI and check that the back end gives the correct response to the specific http request. \newline
 
-\paragraph{How to perform the integration test}
-The testing was performed at modules as soon as they were developed and completed, a so-called incremental testing. This approach made it easier to detect issues in the code early and therefore avoid issues to come up at a later stage in the development process - which could be cost-ineffective.
-Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. It was possible to run unit tests across the modules and get the wanted results.\newline
 
-\paragraph{Test cases}
+\subsection{Test cases}
 The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Fig \ref{architecture}} of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab:integrationtestcases}}.
 
 
-\paragraph{Issues detected}
+\subsection{Detected and mended issues}
 
-\paragraph{Summary}
+The following paragaph includes some of the most important issues that were discovered the integration testing, and how they were solved.
+
+The issue that was considered to be the most time consuming one, was to update a user in the database. This issue was detected in the test case I.3. When a user was updated in the UI in the application, the unchanged information that should still be there, was deleted. This was tried to be fixed several times with methods that was not adequate. The problem was eventually solved with fetching all information about a user in the database, update the fields in the user model that had been changed, and then insert all the information in the database again. \newline
+
+Other minor issues that were handled were syntax-issues, redundant code that created unnecessary confusion and missing table attributes in the database.\newline
+Changes in the code where made to obtain better structure in the code, such as dividing long code files into smaller ones and to make sure functions returns a response if an error occur. \newline
+
+Due to a misunderstanding between frontend and backend developers, the database returned names of category preference and story category, and not ids. \newline
 
 
 \section{System testing}
 
 The system testing was executed after the unit test and integration tests. The test gave the developers a measure of whether the system met all the goals set for the project.  The system test included performing a black box testing of the system, where the test cases was based on the use cases(\textbf{Section \ref{subsec:use_cases}}) and the specified requirements(\textbf{Section \ref{subsec:summary_functional_requirements}})  defined earlier in this report. \newline
+In this test one of the developers were executing the test. Because it is a black box test, the tester executed the test cases with no access to the code. The tester went through all of the test cases one by one and performed the test cases manually. Due to the time limits of this project the team were not able to write scripts to perform the test cases. \newline
 
-\paragraph{Required before performing the system tests}
-The unit tests and integration test were required to be executed and approved before the system test could be executed. To execute, the tester needed the final product in the way it was intended to the end users. Therefore the application needed to be deployed on a mobile device. \newline
+\subsection{Required before performing the system tests}
+The unit tests and integration test were to be executed and approved before the system test could be executed. To execute, the tester needed the final product in the way it was intended to the end users. Therefore the application needed to be deployed on a mobile device. \newline
 
-\paragraph{The main areas to be tested}
+\subsection{The main areas to be tested}
 The test cases was to cover all the use cases and requirements specified for this project. The main areas are as follows:
 \begin{itemize}[noitemsep]
 	\item Create user
@@ -103,17 +132,13 @@ The test cases was to cover all the use cases and requirements specified for thi
 	\item Specify settings \newline
 \end{itemize}
 
-\paragraph{How are the test performed?}
-In this test one of the developers were executing the test. Because it is a black box test, the tester would do the test cases with no access to the code. the tester went through all of the test cases one by one and performed the test cases manually. Due to the time limits of this project the team were not able to write scripts to perform the test cases. \newline
-
-\paragraph{After the tests}
-After the system test suit is performed and the results are documented, the testers should mend the issues in the system if they appeared during the test. After the mending the test suit was executed again. This cycle was repeated until there was no issues left in the system and all test cases got the expected result.\newline
+\subsection{After the tests}
 
 When the system test is performed and finished, the testers evaluated the tests results and then decided if the system as a whole fulfilled all goals for the project. The test results should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.\newline
 
-\paragraph{Test cases}
+\subsection{Test cases}
 Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. 
-Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. \textbf{Table \ref{Tab:systemtest1}} and \textbf{Table \ref{Tab:systemtest2}} are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.9. 
+Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. \textbf{Table \ref{Tab:systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} are presenting two of the test cases that were used. The whole test case document are in Appendix C in tables C1.-C.9. 
 
 \begin{table}[H]
 	\centering
@@ -174,10 +199,20 @@ Some of the test cases have a dependability of other tests. If an issue is detec
 			\end{table}
 			
 			
-			\paragraph{Issues detected}
+			\subsection{Detected and mended issues}
+		
+			\todo{Fyll ut hvordan de forskjellige bugsene ble fikset}
+			Found repeating recommended stories. This was solved by checking if the frontend array and the top ten recommendations and the ratings done by the user. 
+			Picture description, 
+			categories ? 
+			Sound clips not working.
+			Log in and out, log in again with a different user - Gives the previous users recommendations. 
+			Use a long time to load recommendations - or it doesnt show up at all.
+			Can not scroll down if you are scrolling by touching the frame of video, picture and sound 
+			Cant remove bookmark list the user made.  
+			Icons are different in different views.
+			Cant scroll if you have many bookmark lists.
 			
-			\paragraph{Summary}
-			-hvordan ble det egentlig utført
 			\section{Customer acceptance test}
 			\label{sec:acceptance_test}
 			

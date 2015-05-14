@@ -262,7 +262,8 @@ Status report week 6\newline
 		UN3.7 & Get user categories & UserId: generated new id, \newline category preferences: [1,3,5,7,9] & Should return the categories from the database that is equal to the category preferences input  & Pass\\ \hline
 		
 		UN3.8 & Get user mail from Id  & UserId: generated new id  &  Should return a  user model from the database,which includes the email that is equal the email input. & Pass\\ \hline
-		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 3: User Model}	\\\hline
+	
+		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 4: User Model}	\\\hline
 		
 		UN4.1 & Initiate User   & userId:1, \newline mail: example@example.com & Should create a user model with the correct input. The getters should return the values that matches with the input values& Pass\\ \hline
 		
@@ -270,60 +271,63 @@ Status report week 6\newline
 		
 		UN4.2 & Print All  &  userId:1, \newline mail: example@example.com,gender: 0, age group: 1, use of loc. : 0 , category preference: [1,3,5,7,9] & The printAll function should return a string with all the correct attributes and values that matches the input values .   & Pass\\ \hline
 		
-		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 4: Compute Preference Value}	\\\hline
+		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 5: Compute Preference Value}	\\\hline
 		
 		
-		UN4.1 & Compute preference value for all stories for a  user & Random userId & Should return 167 rows from the database, and every row should include: storyId, userId, numericalId and preferenceValue  & Pass\\ \hline
+		UN5.1 & Compute preference value for all stories for a  user & Random userId & Should return 167 rows from the database, and every row should include: storyId, userId, numericalId and preferenceValue  & Pass\\ \hline
 		
-		UN4.2 & Compute preference value of a story for a user  & Random userId , specific 'DF.1098' & Should return an array with userId, storyId, numericalId and the preference value& Pass\\ \hline
+		UN5.2 & Compute preference value of a story for a user  & Random userId , specific 'DF.1098' & Should return an array with userId, storyId, numericalId and the preference value& Pass\\ \hline
 		
-		UN4.3 & Compute preference value & Specific storyId  & Should return the preference value which is the type double & Pass\\ \hline
+		UN5.3 & Compute preference value & Specific storyId  & Should return the preference value which is the type double & Pass\\ \hline
 		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 5: Run Recommender}	\\\hline
 		
 		
-		UN5.1 & Run recommender & Random userId  & & Pass\\ \hline			
+		
 		
 		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 6: Recommendation}	\\\hline
 		
+		UN6.1 & Run recommender & Random userId  & & Pass\\ \hline	
 		
-		UN6.1 & New content based recommendation & Input: setUp.xml - a data model with userIds and connected preference values. & The recommender should return the correct number of recommendations when it should create new ones &  Pass\\ \hline			
+		UN6.2 & New content based recommendation & Input: setUp.xml - a data model with userIds and connected preference values. & The recommender should return the correct number of recommendations when it should create new ones &  Pass\\ \hline			
 		
-		UN6.2 & Add content based recommendation & Input: setUp.xml- a data model with userIds and connected preference values. & the recommender should return the correct number of recommendations when its adding recommendations to existing ones & Pass\\ \hline	
+		UN6.3 & Add content based recommendation & Input: setUp.xml- a data model with userIds and connected preference values. & the recommender should return the correct number of recommendations when its adding recommendations to existing ones & Pass\\ \hline	
 		
-		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 6:  Database connection with Java}	\\\hline
+		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 7:  Database connection with Java}	\\\hline
 		
-		UN6.3 & Insert recommendation  & userId: 1,\newline  storyId: Df.1098,\newline DF.1501,\newline explanation: 0, \newline false\textunderscore rec. :0, \newline ranking: 3,4,\newline estimatedValue: 0,0 & Expected table in XML-representation(insert-expected.xml) is the same as the actual from the database & Pass\\ \hline			
+		UN7.1 & Insert recommendation  & userId: 1,\newline  storyId: Df.1098,\newline DF.1501,\newline explanation: 0, \newline false\textunderscore rec. :0, \newline ranking: 3,4,\newline estimatedValue: 0,0 & Expected table in XML-representation(insert-expected.xml) is the same as the actual from the database & Pass\\ \hline			
 		
-		UN6.3 & Insert Update  & userId: 1, \newline storyIds: DF.1709,DF.1849, \newline explanation:“updated”, \newline false\textunderscore rec. : 1,0, \newline typeoffrec. :1,1, \newline  ranking: 3,4 estimatedValue: 4.5, 2.5   & Expected table in XML-representation(insertUpdate-expected.xml) is the same as the actual from the databas & Pass\\ \hline										
+		UN7.2 & Insert Update  & userId: 1, \newline storyIds: DF.1709,DF.1849, \newline explanation:“updated”, \newline false\textunderscore rec. : 1,0, \newline typeoffrec. :1,1, \newline  ranking: 3,4 estimatedValue: 4.5, 2.5   & Expected table in XML-representation(insertUpdate-expected.xml) is the same as the actual from the databas & Pass\\ \hline										
 		
-		UN6.3 & Delete recommendations & UserId: 1 & Expected table in XML representation(delete-expected.xml)  is the same table returned from DB & Pass\\ \hline		
+		UN7.3 & Delete recommendations & UserId: 1 & Expected table in XML representation(delete-expected.xml)  is the same table returned from DB & Pass\\ \hline		
 		
-		UN6.3 & Rated  & UserIds: 3,5 \newline	numericalId: 1812,1901 & the getRated function should fetch the correct stories. The input rating should be the same as the returned ratings & Pass \\ \hline						
-		UN6.3 & Test frontend array & Numerical Ids: 1849, 1901  & Get stories from frontend array should match the fronted array in XML format(setUp.xml) & Pass\\ \hline	
-		UN6.3 & create explanation  & Numerical Ids: 1098,1115,1501  & The create explanation function should return a string with the correct storyIds and their titles. & Pass\\ \hline								
+		UN7.4 & Rated  & UserIds: 3,5 \newline	numericalId: 1812,1901 & the getRated function should fetch the correct stories. The input rating should be the same as the returned ratings & Pass \\ \hline						
+		UN7.5 & Test frontend array & Numerical Ids: 1849, 1901  & Get stories from frontend array should match the fronted array in XML format(setUp.xml) & Pass\\ \hline	
 		
-		UN7.1 & - Log in with an already existing user\newline - Check if response is correct & existinguser@\newline mail.no & The user should get access and be directed to the recommendation view(main view) & Pass \\ \hline			
+		UN7.6 & Create explanation  & Numerical Ids: 1098,1115,1501  & The create explanation function should return a string with the correct storyIds and their titles. & Pass\\ \hline								
 		
-		UN7.2 & Log in with a non-existing user \newline - Check if response is correct & “newemail@\newline gmail.com” & The user should get access and be directed to the setup view.& Pass \\\hline	
+		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 8: UI-Log in}	\\\hline			
 		
-		UN7.3 &  Login a user with the wrong email format \newline - Check if response message is correct & “newemail” & The user should not get access and get a textual response from the system that the format of the input is wrong.& Pass\\ \hline	
+		UN8.1 & Log in with an already existing user\newline - Check if response is correct & existinguser@\newline mail.no & The user should get access and be directed to the recommendation view(main view) & Pass \\ \hline			
 		
-		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 8: Story View}	\\\hline			
+		UN8.2 & Log in with a non-existing user \newline - Check if response is correct & “newemail@\newline gmail.com” & The user should get access and be directed to the setup view.& Pass \\\hline	
 		
-		UN8.1 & If story contains sound clip or video, check if these are presented properly & - story with video\newline
+		UN8.3 &  Login a user with the wrong email format \newline - Check if response message is correct & “newemail” & The user should not get access and get a textual response from the system that the format of the input is wrong.& Pass\\ \hline	
+		
+		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 9: UI-Story View}	\\\hline			
+		
+		UN9.1 & If story contains sound clip or video, check if these are presented properly & - story with video\newline
 		-story with sound clip & Should show the presence sound clip and video in the tabs. Should be able to handle the different video types, and be able to play them. & Pass \\ \hline			
 		
-		UN8.2 & Give a rating\newline - Check if the stars change color and response message are visible to the user.  & & Stars should change color when user performs rating, and the user should get a response message from the system which says that this story has been rated. & Pass \\\hline	
+		UN9.2 & Give a rating\newline - Check if the stars change color and response message are visible to the user.  & & Stars should change color when user performs rating, and the user should get a response message from the system which says that this story has been rated. & Pass \\\hline	
 		
-		UN8.3 & Give the story a new bookmark with a name\newline -add this \newline -Check if response message is visible to the user  & “new bookmark”  & When a new bookmark is made and the story is stored here, the user should get response message about this.& Pass\\ \hline	
+		UN9.3 & Give the story a new bookmark with a name\newline -add this \newline -Check if response message is visible to the user  & “new bookmark”  & When a new bookmark is made and the story is stored here, the user should get response message about this.& Pass\\ \hline	
 		
-		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 9: Update profile}	\\\hline					
+		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 10: Settings}	\\\hline					
 		
-		UN9.1 & Update profile with the wrong email format  & updateemail  & The user should get a response message from the system that the input was not valid and that the user should try again. & Pass  \\ \hline
+		UN10.1 & Update profile with the wrong email format  & updateemail  & The user should get a response message from the system that the input was not valid and that the user should try again. & Pass  \\ \hline
 		
-		UN9.2 & Update profile with a email that already exists in the system  & “alreadyexistingemail\newline @email.com”  & The user should get a response message from the system that the input was not valid and that the user should try again.   & Pass \\\hline	
+		UN10.2 & Update profile with a email that already exists in the system  & “alreadyexistingemail\newline @email.com”  & The user should get a response message from the system that the input was not valid and that the user should try again.   & Pass \\\hline	
 		
-		UN9.3 &  &   & & Pass \\ \hline	
 		
 	\end{longtable}
 \end{center}
