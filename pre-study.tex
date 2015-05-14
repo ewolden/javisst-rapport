@@ -116,8 +116,15 @@ For this project, the agile software development methodology scrum was used. The
 Docker[EHW2] was made to help automation of application deployment. This happens by providing a virtual operative-system-level abstraction. This means that on a server, it is possible to run several virtual operative systems called docker images, which can easily be deployed to another server. This is beneficial for software development, because it means it is easy to setup identical back ends. The customer used this on their servers, which made using it during development as well, a good choice. A benefit of using docker, is that it can directly access repositories on git. This means that the latest revision is guaranteed to run when starting the back end. However, there are also drawbacks. It is not possible to update files within the docker image currently running without rebuilding it. This means that to update a single line of code, the whole image needs to be rebuilt. This means that while the newest revision is guaranteed to be running, any changes made to the application after the start of that docker image requires manually stopping, rebuilding, and starting the docker image.
 
 \subsection{Language}
+\label{subsec:backend_language}
+\subsection{PHP}
+PHP is a server-side scripting language that is especially suited for web development produced by The PHP Group [HM8]. It is a general-purpose scripting language often used to provide dynamic content from a web server to a client. During the pre-study period several reasons for choosing PHP as the main back end language were presented. Firstly, all back end team members were experienced in the use of PHP. Secondly, as inexperienced users of Docker, more documentation existed on how to implement PHP with Docker than with the other language alternatives \todo{DO WE HAVE TO WRITE THE LANGUAGE ALTERNATIVES IF I WRITE THIS?}considered.  Lastly, it was easily combined with the HTTP protocol used by front end to request and receive data (see \textbf{Section \ref{subsec:frontend-backend_communication}}).
 
-\section{Personalization algorithms}
+\subsection{Java}
+Java is a very popular general-purpose object oriented programming language developed by Sun Microsystems and later Oracle Corporation [HM9]. Java was later in the project chosen as a secondary back end language. This was because Mahout, which was used to implement the recommender engine (see \textbf{Section \ref{sec:personalization_how}}), is written in Java.  
+
+
+\section{Personalization}
 \label{sec:personalization_algorithms}
 
 To provide story recommendations in accordance with each user’s interests the content needs to be personalized. Personalization involves using technology to tailor content, to individual users’ characteristics or preferences, and to accommodate the differences between individuals. It is a way of meeting the user’s needs by making interactions faster and easier, which will hopefully increase customer satisfaction and the likelihood of repeat visits. Personalization may be achieved using recommender systems.

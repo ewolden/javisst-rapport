@@ -145,6 +145,37 @@ Collaborative filtering uses a data model with multiple users. Only the stories 
 
 As was noted in \textbf{section \ref{sec:personalization_algorithms}} collaborative filtering requires a large amount of data to make recommendations. Since only rated stories are included, collaborative filtering cannot be run when a new user starts using the application as the user will not be part of the data model. The criteria for using collaborative filtering needed to be met is that the user has rated at least ten stories that at least ten other users also have rated. 
 
+\section{Back end overview}
+\todo{Skal dette være med? I så fall i designarchitecture eller implementation?}
+The back end implementation is divided into five sections, such that each section addresses a separate concern. A concern is a set of information that affects the code of the application. The value of such a separation is that it simplifies the development and maintenance of the application code. By splitting the code into separate parts the system is more logically structured, and cleaner code is achieved. The result is that e.g. SQL related code is maintained by one part of the system, while for instance HTTP processing is executed by another. Below is a description of the different back end sections.
+
+\begin{description}
+	\item[Models] \hfill \\
+	Consisting of storyModel, userModel and preferenceValue. The models are used to temporarily hold information about a story, a user and a user’s preference value for a story to be utilized by other files. Information is either retrieved from the database, sent from front end, harvested from Digitalt museum’s API or a combination of two. These models also contain formatting methods, which makes it possible to return story or user information to front end.
+	
+	\item[Database] \hfill \\
+	This section contains dbStory, dbUser, dbHelper and harvesting. The db classes are responsible for accessing the database. dbStory contains methods for adding or retrieving story related information from the database and dbUser is responsible for user related information. dbHelper consists of more general methods and is the class which establish a connection with the database. The harvesting script is responsible for collecting all database stories from Digitalt museums API and adding stories to or updating stories in the database. \todo{Skrive om harvesting og referere til det her}
+
+	\item[Personalization] \hfill \\
+	Consisting of computePreferences and runRecommender. This section computes preference values for each Digitalt fortalt story in the database for each user. runRecommender is also responsible for initializing the Mahout recommendation engine when a user’s preference values have been calculated.
+	
+	\item[Recommender] \hfill \\
+	This section consists of the java code and recommender.jar file which make up the Mahout recommender (see \textbf{Section \ref{sec:personalization_how}}).
+	
+	\item[Requests] \hfill \\
+	Contains the controller script, which receives and handles front end HTTP requests and returns JSON responses (see \textbf{Section \ref{subsec:frontend-backend_communication}}).
+	
+\end{description}
+	
+\textbf{Figure \ref{Fig:overall_backend}} depict the different back end classes introduced in the previous paragraphs and give an overview of their dependencies.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/overall_backend}
+	\caption{Class diagram of the overall back end structure}
+	\label{Fig:overall_backend}
+\end{figure}
+
 \section{Reuse of code}
 
 Reusing written code can be a great help to quickly have progress when programming.  To investigate possibilities of this, the code from stedr was reviewed. However, since stedr used a different framework on the front end and java as the server language reusing code proved difficult. Therefore, the code written was developed without relying on previous work.
@@ -157,6 +188,7 @@ All content related to stories displayed in the application was collected from D
 Digitalt fortalt is established on the same technical platform as Digitalt museum [HM2]. This makes the integration better between the two and the remaining services in Norvegiana. Norvegiana is a datamodel, database and a web service with the purpose of making cultural heritage information more accessible [HM3]. Example services available in Norvegiana are Digitalt museum, Digitalt fortalt, Arkivportalen and Musikkarkiv. 
 
 \section{Front end - back end communication}
+\label{subsec:frontend-backend_communication}
 
 Communication between front end and back end was handled using HTTP post requests.
 AngularJs \$http is a core service for reading data from remote servers, which is called every time the application needs to add, retrieve, update or delete data. When an HTTP request is made four fields are set: method, headers, URL and data. The method field determines the HTTP request method, which in this application is set to post, and the headers field sets the content type to JSON. The URL is the location of the remote server script that handles HTTP requests. In the data field the action to be executed is specified, in addition to any data needed to perform the desired action.\newline
