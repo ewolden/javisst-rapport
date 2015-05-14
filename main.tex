@@ -16,14 +16,14 @@
 \input{docsetup.tex}
 
 \begin{document}
+\frontmatter
+\pagenumbering{Roman}
 
 %% PART 1
 %%The title page will be automatically generated and added by the DAIM system
 \input{dedication.tex}		%% Optional
 
 %% PART 2
-\frontmatter
-\pagenumbering{Roman}
 \input{abstract.tex}		%% Optional
 \input{preface.tex}			%% Optional
 \input{list.tex}			%% Generate TOC, list of tables, and list of figures automatically
@@ -33,10 +33,9 @@
 \mainmatter
 \input{introduction.tex}
 \input{requirementspecification.tex}
-\input{tools.tex}
 \input{pre-study.tex}
+\input{tools.tex}
 \input{projectmanagement.tex}
-\input{riskmanagement.tex}
 \input{designandarchitecture.tex}
 \input{implementation.tex}
 \input{testing.tex}
@@ -46,7 +45,7 @@
 
 
 %% PART 4
-%\input{references.tex}	%% Edit your references in "mylib.bib"
+\input{references.tex}	%% Edit your references in "mylib.bib"
 \input{appendix.tex}		%% Optional
 
 \end{document}
