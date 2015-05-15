@@ -31,7 +31,7 @@ The database was designed with the goal of facilitating the recommendation of st
 
 To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see \textbf{Section \ref{sec:categorymapping}} category mapping). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
 
-Another goal of this project is to provide some research data to the customer (see requirement RXX in appendix XX). To do this, some data about the use of the application is stored. This include registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e the rating) and the media format contained in the story.
+Another goal of this project is to provide some research data to the customer. To do this, some data about the use of the application is stored. This include registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e the rating) and the media format contained in the story.
 
 \begin{figure}[h!]
 	\centering
@@ -40,7 +40,7 @@ Another goal of this project is to provide some research data to the customer (s
 	\label{Fig:er_diagram}
 \end{figure}
 
-In mapping the ER-diagram to a relational database the algorithm in [AS2, p.270-278] has been used. To ensure a good database design, four informal guidelines in [AS2, p. 487-497] have also been used. These guidelines are:
+In mapping the ER-diagram to a relational database the algorithm in \cite[p.270-278]{AS2} has been used. To ensure a good database design, four informal guidelines in \cite[p.487-497]{AS2} have also been used. These guidelines are:
 
 \begin{enumerate}
 \item Making sure that the semantics of the attributes is clear in the schema\newline 
@@ -128,7 +128,7 @@ Mahout uses a data model and a similarity model to compute recommendations. The 
 
 \subsection{Content-based filtering}
 
-When doing content-based filtering the input data model consist of a collection of all the preference values for the user we are making recommendations for. This means that the size of the model will be equal to the number of stories harvested from Digitalt fortalt. To make recommendations Mahout also need measures describing how similar stories are. Similarities between stories are computed based on the subcategories found in the second column in \textbf{table \ref{Tab:categorymapping}} using the cosine similarity formula: 
+When doing content-based filtering the input data model consist of a collection of all the preference values for the user we are making recommendations for. This means that the size of the model will be equal to the number of stories harvested from Digitalt fortalt. To make recommendations Mahout also need measures describing how similar stories are. Similarities between stories are computed based on the subcategories found in the second column in \textbf{Table \ref{Tab:categorymapping}} using the cosine similarity formula: 
 
 \begin{equation}
 similarity = \frac{\vec{x}\cdot\vec{y}}{||\vec{x}||\cdot||\vec{y}||}
@@ -143,7 +143,7 @@ These similarities are put in a CSV file at the time of harvesting. This file is
 
 Collaborative filtering uses a data model with multiple users. Only the stories a user has rated will be included in the data model since this is the most precise user feedback. In our application collaborative filtering is done by combining two different methods provided by Mahout, namely item based recommendations and user based recommendations. The item based approach creates a similarity model based on similarity between items in the data model using Log Likelihood, while the user based approach creates a similarity model based on similarity between users in the data model using Pearson correlation. To avoid that not similar users affect the recommendations in the user based approach a threshold value for the similarity is set. Two list of recommendations are produced and then merged to get one list of ranked recommendations.\newline
 
-As was noted in \textbf{section \ref{sec:personalization_algorithms}} collaborative filtering requires a large amount of data to make recommendations. Since only rated stories are included, collaborative filtering cannot be run when a new user starts using the application as the user will not be part of the data model. The criteria for using collaborative filtering needed to be met is that the user has rated at least ten stories that at least ten other users also have rated. 
+As was noted in \textbf{Section \ref{sec:personalization_algorithms}} collaborative filtering requires a large amount of data to make recommendations. Since only rated stories are included, collaborative filtering cannot be run when a new user starts using the application as the user will not be part of the data model. The criteria for using collaborative filtering needed to be met is that the user has rated at least ten stories that at least ten other users also have rated. 
 
 \section{Back end overview}
 \todo{Skal dette være med? I så fall i designarchitecture eller implementation?}
@@ -183,9 +183,9 @@ Reusing written code can be a great help to quickly have progress when programmi
 \subsection{Digitalt museum’s application programming interface}
 \label{subsec:api}
 
-All content related to stories displayed in the application was collected from Digitalt fortalt. Initially, to achieve better results when testing the personalization algorithms, the stories collected are limited to the areas Nord-Trøndelag and Sør-Trøndelag. The API [HM1] used to retrieve stories belongs to Digitalt museum. This API enables search through data from Digitalt museum, displaying pictures and provides access to an XML representation of available objects.\newline
+All content related to stories displayed in the application was collected from Digitalt fortalt. Initially, to achieve better results when testing the personalization algorithms, the stories collected are limited to the areas Nord-Trøndelag and Sør-Trøndelag. The API \cite{digitaltMuseum} used to retrieve stories belongs to Digitalt museum. This API enables search through data from Digitalt museum, displaying pictures and provides access to an XML representation of available objects.\newline
 
-Digitalt fortalt is established on the same technical platform as Digitalt museum [HM2]. This makes the integration better between the two and the remaining services in Norvegiana. Norvegiana is a datamodel, database and a web service with the purpose of making cultural heritage information more accessible [HM3]. Example services available in Norvegiana are Digitalt museum, Digitalt fortalt, Arkivportalen and Musikkarkiv. 
+Digitalt fortalt is established on the same technical platform as Digitalt museum \cite{HM2}. This makes the integration better between the two and the remaining services in Norvegiana. Norvegiana is a datamodel, database and a web service with the purpose of making cultural heritage information more accessible \cite{HM3}. Example services available in Norvegiana are Digitalt museum, Digitalt fortalt, Arkivportalen and Musikkarkiv. 
 
 \section{Front end - back end communication}
 \label{subsec:frontend-backend_communication}
