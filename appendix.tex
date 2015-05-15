@@ -65,24 +65,27 @@
 \chapter{Requirements}
 \label{app:requirements}
 
+\section{Requirements}
+\label{app:functional_requirements}
+
 \renewcommand{\arraystretch}{2}
 \begin{center}
 	\begin{longtable}{ | p{1cm} | p{3cm} | p{5cm} | p{1.5cm} | p{2.5cm} | p{3cm} | }
-	\caption[Functional requirements]{The functional requirements listed up and  prioritized by the customers wishes} \label{Tab_unittestcases}\\
+	\caption[Functional requirements]{The functional requirements listed up and  prioritized by the customers wishes} \\
 	
 	\hline {\bf ID} & {\bf Name} & {\bf Description} & {\bf Priority} & {\bf Use Case Ref.} & {\bf Comments}\\ \hline
 	
 		\multicolumn{6}{| >{\columncolor[gray]{0.8}}c |}{General}	\\\hline			
 		R1 &  Language & The documentation should be written in english. The application will be written in norwegian and the stories from Digitalt fortalt will appear as they are, most of them in norwegian. & H  &  &  \\\hline
 		
-		R2& Cross-platform design &The application should run on both Android and iOS. & H &  & 	\\\hline
+		R2& Cross-platform design & The application should run on both Android and iOS. & H &  & 	\\\hline
 		
 		R3& Cross-platform design & The application design should appear similar on both Android and iOS. & H &  &\\\hline
 		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Sign up /Sign in view}	\\\hline			
 		
 		R4& User recovery & The application should provide the opportunity for the user to enter email address, which then becomes the user identifier in the system from the user's point of view. & H & U1,U2 & This means that the user can access the profile from different devices.		\\\hline
 		
-		R5& Anonymous sign in &The application should provide the option to enter the application without registering a user by mail address.  & H & U1 & Device remembers user. User got id in database, but not mail\\\hline
+		R5& Anonymous sign in & The application should provide the option to enter the application without registering a user by mail address.  & H & U1 & Device remembers user. User got id in database, but not mail\\\hline
 	
 		R6& Demo view & It should be possible to run the application mode in a demo view where the system can't identify the user & L &  &				\\\hline
 		
@@ -91,17 +94,20 @@
 		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Preferences/Settings}	\\\hline
 		
 		R8 & Initial specification of preferences & 
-		The user should be asked to set preferences in the startup process. Preferences include: 
-		\begin{enumerate}[label=(\alph*)]
-			\item selection of categories
-			\item permission to use location, 
-			\item notifications preferences.
-		\end{enumerate}	 & M & U3 & a) is the most important preference, b) and c) are low prioritized 
-		 \\\hline
+		The user should be asked to set preferences in the startup process. & H & U3 &  \\\hline
+		
+		R8A & Set category preference & 
+		The user should be asked to enter a number of preferred categories. & H & U3 &  \\\hline
+		
+		R8B & Set location preference & 
+		The user should be asked to specify a preferred location. & L & U3 &  \\\hline
+		
+		R8C & Set notification preferences & 
+		The user should be asked to set some preferences about notifications & L & U3 &  \\\hline
 		 
 		R9&	Changing preferences&  The application should provide a settings view where the user can change the preferences. & H & U9 &	\\\hline
 		
-		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Preferences/Settings}	\\\hline
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Main view: Browse recommended stories}	\\\hline
 		
 		R10& 
 		Show list of recommended stories & The application should provide the user with a list of recommended stories based on the set preferences. The stories is presented by a picture and a short text harvested from Digitalt fortalt. & H & U4  &\\\hline
@@ -109,42 +115,41 @@
 		
 		R12& Make decision about story  & The application should provide the user with three options regarding each recommended story: to choose to read the story now, to reject the story or to save the story for later & H & U4 &\\\hline
 		
-		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Preferences/Settings}	\\\hline
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Story view}	\\\hline
 		
 		R13& Present story & The application should present the chosen story in a specific story view.The presentation of the story should be in accordance with the presentation on Digitalt fortalt. & H & U6 &\\\hline				
 	
-		R14&Give feedback/rating on story  & The application should provide the user with the opportunity to rate the story. The rating is in the form of a star system with 5 stars.  & H & U7 &\\\hline
+		R14& Give feedback/rating on story  & The application should provide the user with the opportunity to rate the story. The rating is in the form of a star system with 5 stars.  & H & U7 &\\\hline
 				
-		R15 & Tag story  & The user should be given the opportunity to connect a story to tags. The tags could be predefined by the system, like "Favorites" or defined by the user & M  & U5 &\\\hline
+		R15 & Tag story / Add story to list  & The user should be given the opportunity to connect a story to tags. The tags could be predefined by the system, like "Les senere" or defined by the user & M  & U5 &\\\hline
 		
-		R16& Link to Digitalt fortalt  & Every story should include a link to the corresponding story on Digitalt fortalt. & H &  &	\\\hline
+		R16& Link to Digitalt fortalt  & Every story should include a link to the corresponding story on Digitalt fortalt. & H & U6 &	\\\hline
 		
 		R17& Explain why a story was recommended & The application should provide an explanation why a given story was recommended. & H &  & Could just be a general statement like: "Other users who liked similar stories to you, also liked this one"\\\hline
 		
-		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Preferences/Settings}	\\\hline
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{List view}	\\\hline
 		
 		R18& Show list & The application should show a list of collected stories. The stories is presented by a picture and a short text. & M &  U8 &		\\\hline
 		
-		R19& Filter list & The application should provide the user with the opportunity to filter the list. Filters include: favorites, user-defined tags, to-read, reviewed. & M & U8 &\\\hline
+		R19& Choose list & The application should provide the user with the opportunity to choose different lists. Lists include: to-read,read and user-defined lists & M & U8 &\\\hline
 		
 		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Notifications}	\\\hline
 		
-		R20& Notifications outside the application & The application should send a notification to the user's device at the time specified in the preferences  & L &  &				\\\hline
+		R20& Notifications outside the application & The application should send a notification to the user's device at the time specified in the preferences  & L &  &	In agreement with the customer this requirement will not be met			\\\hline
 		
-		R21& Notifications inside the application & The application should create a notification after a defined amount time to remind the user of stories that have been read but not rated & L &  &\\\hline
+		R21& Notifications inside the application & The application should create a notification after a defined amount time to remind the user of stories that have been read but not rated & L &  & In agreement with the customer this requirement will not be met\\\hline
 		
 		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{About app}	\\\hline
 		
-		R22 & About site information  & The application should include an about app, which should include basic info about the project. This include references to TAGCLOUD. & H  & U10 &\\\hline
+		R22 & About the application  & The application should include an about section, which should include basic info about the project. This include references to TAGCLOUD. & H  & U10 &\\\hline
 	
-		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Help site}	\\\hline
+		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Quick tour}	\\\hline
 	
-		R23& Help site information & The application should include some service to the user. This will include: 
-		\begin{enumerate}[label=(\alph*)]
-			\item A quick tour when user opens app for the first time
-			\item A help site located in the menu, which should explain the user interface and courses of action.
-		\end{enumerate} 
-		& M &  & a) has high priority, \newline b) has low priority\\\hline
+		R23A & Quick tour at start up & The application should provide a new user with an explanation of the application at start up.
+		& H &  & \\\hline
+		
+		R23B & Quick tour in menu & The application should provide the opportunity to revisit the quick tour via the menu.
+		& L &  & \\\hline
 		
 		\multicolumn{6}{| >{\columncolor[gray]{0.8}} c |}{Personalization}	\\\hline
 		
@@ -154,11 +159,38 @@
 		
 		\multicolumn{6}{ | >{\columncolor[gray]{0.8}} c |}{Research}	\\\hline		
 		
-		R26& Gather data to SINTEF for research & The application should gather and store in a file information about the use. This include frequency of use, success rate of recommendations and perhaps other things.  &  &  & Log files are sufficient\\\hline
+		R26& Gather data to SINTEF for research & The application should gather and store in a file information about the use. This include frequency of use, success rate of recommendations and perhaps other things.  &  &  & Detailed list of what this included provided in mail from the customer. The customer will view this data through the database \\\hline
 		
 	\end{longtable}
 \end{center}
 \pagebreak
+
+\section{Quality attributes}
+\label{app:quality_attributes}
+
+\begin{table}[!h]
+	\centering
+	\caption[Quality attributes]{The quality attributes used in this project. Prioritized by the customer} 
+	\begin{tabular}{ | p{2.5cm} | p{8cm} | p{1.5cm} | p{3cm} | }	
+		\hline {\bf Quality \newline attribute} & {\bf Description} & {\bf Priority} & {\bf Optionally; Why?} \\ \hline
+			
+		Usability & How easy is it for the user to accomplish a desired task and what kind of user support should the system focus on. (eg. tutorials or hints) & 1  & \\\hline
+		
+		Monitorability & How important is the ability to monitor how the system while its executing. (eg. statistics ect.) & 2 &  \\\hline		
+		
+		Modifiability & How important and how easy should the product be able to be changed after it`s finalized? (eg. making changes to the UI) & 3 &\\\hline
+		
+		Performance & How important is time and speed of the system? (eg. response time for fetching stories) & 4 &\\\hline
+		
+		Interoperability & How important is the ability for the system to work together with other systems. (eg. making use of specific communication protocols or the use of a specified data format)B8 & 5 & 	\\\hline
+		
+		Availability & How important is the reliability of the product.The easy representation to think of this is uptime of the service. & 6 & \\\hline
+	
+		Security & How important is the systems ability to protect data and information from unauthorized access. (eg. losing personalized data) & 7 & \\\hline
+		
+		Testability & How important is the ability to set up tests for the system (eg. setting up automated test for components and parts of the system) & 8 &		\\\hline	
+	\end{tabular}
+\end{table}
 
 \chapter{Status report example}
 
