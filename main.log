@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.7)  20 MAY 2015 20:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.7)  20 MAY 2015 21:41
 entering extended mode
 **main.tex
 (Q:\DropBox\SourceTree\Skole\javisst-rapport\main.tex
@@ -1263,7 +1263,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
 
-<fig/U1.png, id=800, 629.35126pt x 108.405pt>
+<fig/U1.png, id=805, 629.35126pt x 108.405pt>
 File: fig/U1.png Graphic file (type png)
  <use fig/U1.png>
 Package pdftex.def Info: fig/U1.png used on input line 57.
@@ -1273,7 +1273,7 @@ Overfull \hbox (0.84546pt too wide) in paragraph at lines 60--83
  [][] 
  []
 
-<fig/U2.png, id=802, 326.21875pt x 113.42375pt>
+<fig/U2.png, id=807, 326.21875pt x 113.42375pt>
 File: fig/U2.png Graphic file (type png)
  <use fig/U2.png>
 Package pdftex.def Info: fig/U2.png used on input line 86.
@@ -1283,7 +1283,7 @@ Overfull \hbox (0.84546pt too wide) in paragraph at lines 89--112
  [][] 
  []
 
-<fig/U3.png, id=803, 537.00626pt x 255.95625pt>
+<fig/U3.png, id=808, 537.00626pt x 255.95625pt>
 File: fig/U3.png Graphic file (type png)
  <use fig/U3.png>
 Package pdftex.def Info: fig/U3.png used on input line 115.
@@ -1293,7 +1293,7 @@ Overfull \hbox (9.38129pt too wide) in paragraph at lines 118--142
  [][] 
  []
 
-<fig/U4.png, id=804, 537.00626pt x 317.185pt>
+<fig/U4.png, id=809, 537.00626pt x 317.185pt>
 File: fig/U4.png Graphic file (type png)
  <use fig/U4.png>
 Package pdftex.def Info: fig/U4.png used on input line 145.
@@ -1303,7 +1303,7 @@ Overfull \hbox (0.84546pt too wide) in paragraph at lines 148--174
  [][] 
  []
 
-<fig/U5.png, id=805, 286.06876pt x 193.72375pt>
+<fig/U5.png, id=810, 286.06876pt x 193.72375pt>
 File: fig/U5.png Graphic file (type png)
  <use fig/U5.png>
 Package pdftex.def Info: fig/U5.png used on input line 177.
@@ -1313,7 +1313,7 @@ Overfull \hbox (41.1196pt too wide) in paragraph at lines 180--201
  [][] 
  []
 
-<fig/U6.png, id=806, 773.89125pt x 384.43625pt>
+<fig/U6.png, id=811, 773.89125pt x 384.43625pt>
 File: fig/U6.png Graphic file (type png)
  <use fig/U6.png>
 Package pdftex.def Info: fig/U6.png used on input line 204.
@@ -1323,7 +1323,7 @@ Overfull \hbox (8.26323pt too wide) in paragraph at lines 207--230
  [][] 
  []
 
-<fig/U7.png, id=807, 496.85625pt x 261.97874pt>
+<fig/U7.png, id=812, 496.85625pt x 261.97874pt>
 File: fig/U7.png Graphic file (type png)
  <use fig/U7.png>
 Package pdftex.def Info: fig/U7.png used on input line 233.
@@ -1333,7 +1333,7 @@ Overfull \hbox (0.84546pt too wide) in paragraph at lines 236--258
  [][] 
  []
 
-<fig/U8.png, id=808, 641.39626pt x 290.08376pt>
+<fig/U8.png, id=813, 641.39626pt x 290.08376pt>
 File: fig/U8.png Graphic file (type png)
  <use fig/U8.png>
 Package pdftex.def Info: fig/U8.png used on input line 261.
@@ -1343,7 +1343,7 @@ Overfull \hbox (0.84546pt too wide) in paragraph at lines 264--285
  [][] 
  []
 
-<fig/U9.png, id=809, 300.12125pt x 295.1025pt>
+<fig/U9.png, id=814, 300.12125pt x 295.1025pt>
 File: fig/U9.png Graphic file (type png)
  <use fig/U9.png>
 Package pdftex.def Info: fig/U9.png used on input line 288.
@@ -1353,7 +1353,7 @@ Overfull \hbox (0.84546pt too wide) in paragraph at lines 291--314
  [][] 
  []
 
-<fig/U10.png, id=810, 336.25626pt x 113.42375pt>
+<fig/U10.png, id=815, 336.25626pt x 113.42375pt>
 File: fig/U10.png Graphic file (type png)
  <use fig/U10.png>
 Package pdftex.def Info: fig/U10.png used on input line 317.
@@ -1638,7 +1638,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
-<fig/stedr_screenshot.png, id=962, 722.7pt x 1284.8pt>
+<fig/stedr_screenshot.png, id=967, 722.7pt x 1284.8pt>
 File: fig/stedr_screenshot.png Graphic file (type png)
 
 <use fig/stedr_screenshot.png>
@@ -1654,7 +1654,7 @@ Underfull \hbox (badness 1406) in paragraph at lines 191--191
 \OT1/ptm/m/n/10.95 show-ing the avail-able op-tions
  []
 
-<fig/cooltura_screenshot2.png, id=963, 722.7pt x 1284.8pt>
+<fig/cooltura_screenshot2.png, id=968, 722.7pt x 1284.8pt>
 File: fig/cooltura_screenshot2.png Graphic file (type png)
 
 <use fig/cooltura_screenshot2.png>
@@ -1665,7 +1665,7 @@ Underfull \hbox (badness 1365) in paragraph at lines 197--197
 []\OT1/ptm/b/n/10.95 (b) |[]\OT1/ptm/m/n/10.95 A screen-shot of Cooltura
  []
 
-<fig/tateball_screenshot.png, id=964, 722.7pt x 1284.8pt>
+<fig/tateball_screenshot.png, id=969, 722.7pt x 1284.8pt>
 File: fig/tateball_screenshot.png Graphic file (type png)
 
 <use fig/tateball_screenshot.png>
@@ -2029,7 +2029,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33] <fig/wbs.png, id=1023, 1141.26375pt x 954.56625pt>
+[33] <fig/wbs.png, id=1028, 1141.26375pt x 954.56625pt>
 File: fig/wbs.png Graphic file (type png)
  <use fig/wbs.png>
 Package pdftex.def Info: fig/wbs.png used on input line 87.
@@ -2050,7 +2050,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Package natbib Warning: Citation `protoIO' on page 35 undefined on input line 1
 02.
 
-<fig/gantt.png, id=1029, 1227.08438pt x 1053.9375pt>
+<fig/gantt.png, id=1034, 1227.08438pt x 1053.9375pt>
 File: fig/gantt.png Graphic file (type png)
  <use fig/gantt.png>
 Package pdftex.def Info: fig/gantt.png used on input line 112.
@@ -2146,7 +2146,7 @@ or  <return>  to continue without it.
 
 LaTeX Warning: Marginpar on page 36 moved.
 
-<fig/burndownstart.png, id=1038, 670.505pt x 308.15125pt>
+<fig/burndownstart.png, id=1043, 670.505pt x 308.15125pt>
 File: fig/burndownstart.png Graphic file (type png)
 
 <use fig/burndownstart.png>
@@ -2201,7 +2201,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [38]) (Q:\DropBox\SourceTree\Skole\javisst-rapport\designandarchitecture.tex
 Chapter 6.
-<fig/system_structure.png, id=1066, 405.515pt x 307.1475pt>
+<fig/system_structure.png, id=1071, 405.515pt x 307.1475pt>
 File: fig/system_structure.png Graphic file (type png)
 
 <use fig/system_structure.png>
@@ -2211,7 +2211,7 @@ Package pdftex.def Info: fig/system_structure.png used on input line 13.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pdffig/architecture.pdf, id=1067, 786.94pt x 613.29124pt>
+<pdffig/architecture.pdf, id=1072, 786.94pt x 613.29124pt>
 File: pdffig/architecture.pdf Graphic file (type pdf)
 
 <use pdffig/architecture.pdf>
@@ -2245,7 +2245,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-<fig/er_diagram.png, id=1082, 1358.07375pt x 1117.17375pt>
+<fig/er_diagram.png, id=1087, 1358.07375pt x 1117.17375pt>
 File: fig/er_diagram.png Graphic file (type png)
 
 <use fig/er_diagram.png>
@@ -2284,14 +2284,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42 <Q:/DropBox/SourceTree/Skole/javisst-rapport/fig/er_diagram.png>]
-<fig/flow_diagram.png, id=1098, 981.6675pt x 537.00626pt>
+<fig/flow_diagram.png, id=1103, 981.6675pt x 537.00626pt>
 File: fig/flow_diagram.png Graphic file (type png)
 
 <use fig/flow_diagram.png>
 Package pdftex.def Info: fig/flow_diagram.png used on input line 66.
 (pdftex.def)             Requested size: 472.03123pt x 258.21893pt.
 
-<fig/recommendation_view.png, id=1099, 376.40625pt x 669.50125pt>
+<fig/recommendation_view.png, id=1104, 376.40625pt x 669.50125pt>
 File: fig/recommendation_view.png Graphic file (type png)
 
 <use fig/recommendation_view.png>
@@ -2308,7 +2308,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [43 <Q:/DropBox/SourceTree/Skole/javisst-rapport/fig/flow_diagram.png>]
-<fig/story_view.png, id=1105, 752.8125pt x 1339.0025pt>
+<fig/story_view.png, id=1110, 752.8125pt x 1339.0025pt>
 File: fig/story_view.png Graphic file (type png)
 
 <use fig/story_view.png>
@@ -2392,7 +2392,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48] <fig/overall_backend.png, id=1140, 622.325pt x 545.03625pt>
+[48] <fig/overall_backend.png, id=1145, 622.325pt x 545.03625pt>
 File: fig/overall_backend.png Graphic file (type png)
 
 <use fig/overall_backend.png>
@@ -2434,10 +2434,95 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [50]) (Q:\DropBox\SourceTree\Skole\javisst-rapport\implementation.tex
 Chapter 7.
+
+LaTeX Warning: Reference `app:activityplan' on page 51 undefined on input line 
+9.
+
+Runaway argument?
+{app:meetingabstract) and Trello archive \todo {Blir dette referet ti\ETC.
+! Paragraph ended before \T@ref was complete.
+<to be read again> 
+                   \par 
+l.10 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+LaTeX Warning: Reference `app:rulesofengagement' on page 51 undefined on input 
+line 14.
+
+
+LaTeX Warning: Reference `wbs' on page 51 undefined on input line 17.
+
+
+LaTeX Warning: Reference `productbacklog' on page 51 undefined on input line 17
+.
+
+
+Overfull \hbox (1.61478pt too wide) in paragraph at lines 20--20
+[][][][]\OT1/ptm/m/n/12 ref:personalization  
+ []
+
+
+Overfull \hbox (1.61478pt too wide) in paragraph at lines 20--20
+[][][][]\OT1/ptm/m/n/12 ref:personalization  
+ []
+
+
+Overfull \hbox (1.61478pt too wide) in paragraph at lines 20--20
+[][][][]\OT1/ptm/m/n/12 ref:personalization  
+ []
+
+
+Overfull \hbox (1.61478pt too wide) in paragraph at lines 20--20
+[][][][]\OT1/ptm/m/n/12 ref:personalization  
+ []
+
+
+LaTeX Warning: Marginpar on page 51 moved.
+
+
+LaTeX Warning: Marginpar on page 51 moved.
+
+
+LaTeX Warning: Marginpar on page 51 moved.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
 [51
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
@@ -2464,29 +2549,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-<fig/prototype1.png, id=1159, 325.215pt x 579.16376pt>
-File: fig/prototype1.png Graphic file (type png)
-
-<use fig/prototype1.png>
-Package pdftex.def Info: fig/prototype1.png used on input line 61.
-(pdftex.def)             Requested size: 188.8096pt x 336.25102pt.
- <fig/prototype2.png, id=1160, 325.215pt x 578.16pt>
-File: fig/prototype2.png Graphic file (type png)
-
-<use fig/prototype2.png>
-Package pdftex.def Info: fig/prototype2.png used on input line 65.
-(pdftex.def)             Requested size: 188.8096pt x 335.66826pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
@@ -2497,41 +2560,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [53]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[54 <Q:/DropBox/SourceTree/Skole/javisst-rapport/fig/prototype1.png> <Q:/DropBo
-x/SourceTree/Skole/javisst-rapport/fig/prototype2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[55]
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
@@ -2541,7 +2590,81 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56]) (Q:\DropBox\SourceTree\Skole\javisst-rapport\testing.tex
+[54] <fig/prototype1.png, id=1183, 325.215pt x 579.16376pt>
+File: fig/prototype1.png Graphic file (type png)
+
+<use fig/prototype1.png>
+Package pdftex.def Info: fig/prototype1.png used on input line 108.
+(pdftex.def)             Requested size: 188.8096pt x 336.25102pt.
+ <fig/prototype2.png, id=1184, 325.215pt x 578.16pt>
+File: fig/prototype2.png Graphic file (type png)
+
+<use fig/prototype2.png>
+Package pdftex.def Info: fig/prototype2.png used on input line 112.
+(pdftex.def)             Requested size: 188.8096pt x 335.66826pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+
+Underfull \vbox (badness 6708) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[55 <Q:/DropBox/SourceTree/Skole/javisst-rapport/fig/prototype1.png> <Q:/DropBo
+x/SourceTree/Skole/javisst-rapport/fig/prototype2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58
+
+]) (Q:\DropBox\SourceTree\Skole\javisst-rapport\testing.tex
 Chapter 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
@@ -2551,8 +2674,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 Underfull \vbox (badness 1755) has occurred while \output is active []
 
- [57
-
+ [59
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 72--73
@@ -2575,13 +2697,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58]
+[60]
 Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
 
-LaTeX Warning: Reference `architecture' on page 59 undefined on input line 100.
+LaTeX Warning: Reference `architecture' on page 61 undefined on input line 100.
 
 
 
@@ -2590,7 +2712,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59]
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
@@ -2621,7 +2743,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60]
+[62]
 Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
@@ -2641,7 +2763,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61]
+[63]
 Overfull \hbox (4.02736pt too wide) in paragraph at lines 173--197
  [][] 
  []
@@ -2652,7 +2774,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62]
+[64]
 Overfull \hbox (8.41284pt too wide) in alignment at lines 223--240
  [] [] 
  []
@@ -2673,7 +2795,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63]
+[65]
 Overfull \hbox (8.41284pt too wide) in alignment at lines 275--290
  [] [] 
  []
@@ -2684,7 +2806,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64]
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 306--308
 
  []
@@ -2735,7 +2857,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65]
+[67]
 Overfull \hbox (8.41284pt too wide) in alignment at lines 328--336
  [] [] 
  []
@@ -2746,21 +2868,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[67]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [68]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[69]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[70]
 Underfull \hbox (badness 10000) in paragraph at lines 418--418
 []|\OT1/ptm/b/n/12 Desired next
  []
@@ -2794,20 +2916,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[70]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [71]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2829,7 +2937,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[74]) (Q:\DropBox\SourceTree\Skole\javisst-rapport\evaluation.tex
+[74]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[75]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[76]) (Q:\DropBox\SourceTree\Skole\javisst-rapport\evaluation.tex
 Chapter 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
@@ -2846,7 +2968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-[75
+[77
 
 
 ]
@@ -2880,7 +3002,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[76]
+[78]
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
@@ -2906,20 +3028,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[78
-
-]) (Q:\DropBox\SourceTree\Skole\javisst-rapport\conclusion.tex
-Chapter 10.
-[79
-
-]
+[79]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2928,17 +3037,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [80
 
+]) (Q:\DropBox\SourceTree\Skole\javisst-rapport\conclusion.tex
+Chapter 10.
+[81
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[82
+
 ]) (Q:\DropBox\SourceTree\Skole\javisst-rapport\references.tex
 No file main.bbl.
 ) (Q:\DropBox\SourceTree\Skole\javisst-rapport\appendix.tex
 Appendix A.
-<pdffig/RulesOfEngagement.pdf, id=1308, 597.432pt x 844.83629pt>
+<pdffig/RulesOfEngagement.pdf, id=1331, 597.432pt x 844.83629pt>
 File: pdffig/RulesOfEngagement.pdf Graphic file (type pdf)
 
 <use pdffig/RulesOfEngagement.pdf>
 Package pdftex.def Info: pdffig/RulesOfEngagement.pdf used on input line 8.
 (pdftex.def)             Requested size: 312.98868pt x 395.49606pt.
- [81
+ [83
 
 
  <Q:/DropBox/SourceTree/Skole/javisst-rapport/pdffig/RulesOfEngagement.pdf
@@ -2946,7 +3068,7 @@ Package pdftex.def Info: pdffig/RulesOfEngagement.pdf used on input line 8.
 pdfTeX warning: pdflatex.exe (file Q:/DropBox/SourceTree/Skole/javisst-rapport/
 pdffig/RulesOfEngagement.pdf): PDF inclusion: Subtype in Resources dict is not 
 a name (key 'Subtype', type <stream>); ignored.
->] [82
+>] [84
 
 ]
 Appendix B.
@@ -3625,7 +3747,7 @@ Overfull \hbox (29.56003pt too wide) in alignment at lines 61--62
  [] [] [] [] [] [] 
  []
 
-[83] [84] [85] [86] [87] [88
+[85] [86] [87] [88] [89] [90
 
 ]
 Appendix C.
@@ -3904,7 +4026,7 @@ Overfull \hbox (29.56003pt too wide) in alignment at lines 114--156
  [] [] [] [] [] [] 
  []
 
-[89] [90]
+[91] [92]
 Underfull \hbox (badness 10000) in paragraph at lines 162--162
 []|\OT1/ptm/m/n/12 Gather data to
  []
@@ -3954,10 +4076,10 @@ Overfull \hbox (29.56003pt too wide) in alignment at lines 156--164
  [] [] [] [] [] [] 
  []
 
-[91] [92] [93]
+[93] [94] [95]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [94]
+ [96]
 Underfull \hbox (badness 10000) in paragraph at lines 175--175
 []|\OT1/ptm/b/n/12 Optionally;
  []
@@ -3972,7 +4094,7 @@ Overfull \hbox (4.76004pt too wide) in paragraph at lines 174--193
  [][] 
  []
 
-[95] [96
+[97] [98
 
 ]
 Appendix D.
@@ -4001,7 +4123,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--224
 
  []
 
-[97]
+[99]
 Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
@@ -4016,7 +4138,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
-[98]
+[100]
 Appendix E.
 
 Underfull \hbox (badness 10000) in paragraph at lines 245--245
@@ -4583,9 +4705,9 @@ Overfull \hbox (45.6128pt too wide) in alignment at lines 281--322
  [] [] [] [] [] 
  []
 
-[99
+[101
 
-] [100]
+] [102]
 Overfull \hbox (3.87517pt too wide) in paragraph at lines 330--330
 []|\OT1/ptm/m/n/12 UN6.1| 
  []
@@ -4800,7 +4922,7 @@ Overfull \hbox (45.6128pt too wide) in alignment at lines 322--364
  [] [] [] [] [] 
  []
 
-[101] [102]
+[103] [104]
 Overfull \hbox (9.87517pt too wide) in paragraph at lines 368--368
 []|\OT1/ptm/m/n/12 UN10.1| 
  []
@@ -4815,7 +4937,7 @@ Overfull \hbox (45.6128pt too wide) in alignment at lines 364--373
  [] [] [] [] [] 
  []
 
-[103] [104] [105] [106]
+[105] [106] [107] [108]
 Appendix F.
 
 Underfull \hbox (badness 10000) in paragraph at lines 387--387
@@ -5212,9 +5334,9 @@ Overfull \hbox (45.6128pt too wide) in alignment at lines 383--420
  [] [] [] [] [] 
  []
 
-[107
+[109
 
-] [108] [109] [110] [111] [112
+] [110] [111] [112] [113] [114
 
 ]
 Appendix G.
@@ -5223,17 +5345,17 @@ Overfull \hbox (4.02736pt too wide) in paragraph at lines 457--481
  [][] 
  []
 
-[113]
+[115]
 Overfull \hbox (27.53316pt too wide) in paragraph at lines 487--509
  [][] 
  []
 
-[114]
+[116]
 Overfull \hbox (27.53316pt too wide) in paragraph at lines 518--540
  [][] 
  []
 
-[115] [116] [117] [118] [119] [120
+[117] [118] [119] [120] [121] [122
 
 ])
 
@@ -5245,7 +5367,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 88CAE406774E8EAE110940C45AE74EA4;7930.
+(rerunfilecheck)             Checksum: E9852A98B46BDD8F6BBC30AFFB4ADCFE;7998.
 
 
 LaTeX Warning: There were undefined references.
@@ -5256,13 +5378,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
  ) 
 Here is how much of TeX's memory you used:
- 20272 strings out of 493921
- 366636 string characters out of 3144877
- 469289 words of memory out of 3000000
- 22653 multiletter control sequences out of 15000+200000
+ 20310 strings out of 493921
+ 367493 string characters out of 3144877
+ 473450 words of memory out of 3000000
+ 22683 multiletter control sequences out of 15000+200000
  29420 words of font info for 66 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 64i,14n,85p,1366b,900s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,14n,85p,1366b,967s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
@@ -5271,9 +5393,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on main.pdf (134 pages, 7066098 bytes).
+Output written on main.pdf (136 pages, 7072606 bytes).
 PDF statistics:
- 1641 PDF objects out of 1728 (max. 8388607)
- 433 named destinations out of 1000 (max. 500000)
- 1109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1665 PDF objects out of 1728 (max. 8388607)
+ 441 named destinations out of 1000 (max. 500000)
+ 1117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

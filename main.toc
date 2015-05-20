@@ -69,52 +69,53 @@
 \contentsline {subsection}{\numberline {6.7.1}Digitalt museum\IeC {\textquoteright }s application programming interface}{50}{subsection.6.7.1}
 \contentsline {section}{\numberline {6.8}Front end - back end communication}{50}{section.6.8}
 \contentsline {chapter}{\numberline {7}Implementation}{51}{chapter.7}
-\contentsline {section}{\numberline {7.1}Front end}{51}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}AngularJS system structure}{51}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}User interface}{52}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}Prototype}{53}{subsection.7.1.3}
-\contentsline {section}{\numberline {7.2}Back end}{53}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Database}{53}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Personalization}{55}{subsection.7.2.2}
-\contentsline {chapter}{\numberline {8}Testing}{57}{chapter.8}
-\contentsline {section}{\numberline {8.1}Unit testing}{57}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Roles \& Responsibilities}{57}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Required before performing the tests}{58}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}After the tests}{58}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}Test Cases}{59}{subsection.8.1.4}
-\contentsline {subsection}{\numberline {8.1.5}Detected and mended issues}{59}{subsection.8.1.5}
-\contentsline {section}{\numberline {8.2}Integration test}{59}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Test cases}{60}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Detected and mended issues}{60}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}System testing}{60}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Required before performing the system tests}{61}{subsection.8.3.1}
-\contentsline {subsection}{\numberline {8.3.2}The main areas to be tested}{61}{subsection.8.3.2}
-\contentsline {subsection}{\numberline {8.3.3}After the tests}{61}{subsection.8.3.3}
-\contentsline {subsection}{\numberline {8.3.4}Test cases}{61}{subsection.8.3.4}
-\contentsline {subsection}{\numberline {8.3.5}Detected and mended issues}{62}{subsection.8.3.5}
-\contentsline {section}{\numberline {8.4}Customer acceptance test}{63}{section.8.4}
-\contentsline {section}{\numberline {8.5}Usability testing}{67}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}Introduction}{67}{subsection.8.5.1}
-\contentsline {subsection}{\numberline {8.5.2}Test Cases}{67}{subsection.8.5.2}
-\contentsline {subsection}{\numberline {8.5.3}Test users}{68}{subsection.8.5.3}
-\contentsline {subsection}{\numberline {8.5.4}Summary}{68}{subsection.8.5.4}
-\contentsline {subsection}{\numberline {8.5.5}title}{69}{subsection.8.5.5}
-\contentsline {chapter}{\numberline {9}Evaluation}{75}{chapter.9}
-\contentsline {section}{\numberline {9.1}Product quality}{75}{section.9.1}
-\contentsline {section}{\numberline {9.2}Development process}{75}{section.9.2}
-\contentsline {section}{\numberline {9.3}Project management}{75}{section.9.3}
-\contentsline {section}{\numberline {9.4}Team}{76}{section.9.4}
-\contentsline {section}{\numberline {9.5}Customer interaction}{77}{section.9.5}
-\contentsline {section}{\numberline {9.6}Limitations}{77}{section.9.6}
-\contentsline {section}{\numberline {9.7}Lessons learned}{77}{section.9.7}
-\contentsline {chapter}{\numberline {10}Conclusion and future outlook}{79}{chapter.10}
-\contentsline {chapter}{Bibliography}{81}{chapter.10}
-\contentsline {chapter}{Appendix \numberline {A}Rules of engagement}{81}{Appendix.a.A}
-\contentsline {chapter}{Appendix \numberline {B}Risk list}{83}{Appendix.a.B}
-\contentsline {chapter}{Appendix \numberline {C}Requirements}{89}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}Requirements}{89}{section.a.C.1}
-\contentsline {section}{\numberline {C.2}Quality attributes}{95}{section.a.C.2}
-\contentsline {chapter}{Appendix \numberline {D}Status report example}{97}{Appendix.a.D}
-\contentsline {chapter}{Appendix \numberline {E}Unit test cases}{99}{Appendix.a.E}
-\contentsline {chapter}{Appendix \numberline {F}Integration test cases}{107}{Appendix.a.F}
-\contentsline {chapter}{Appendix \numberline {G}System test cases}{113}{Appendix.a.G}
+\contentsline {section}{\numberline {7.1}Project Progression}{51}{section.7.1}
+\contentsline {section}{\numberline {7.2}Front end}{52}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}AngularJS system structure}{53}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}User interface}{53}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Prototype}{54}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Back end}{55}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Database}{56}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Personalization}{56}{subsection.7.3.2}
+\contentsline {chapter}{\numberline {8}Testing}{59}{chapter.8}
+\contentsline {section}{\numberline {8.1}Unit testing}{59}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Roles \& Responsibilities}{59}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Required before performing the tests}{60}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}After the tests}{60}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Test Cases}{61}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}Detected and mended issues}{61}{subsection.8.1.5}
+\contentsline {section}{\numberline {8.2}Integration test}{61}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Test cases}{62}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Detected and mended issues}{62}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}System testing}{62}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Required before performing the system tests}{63}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}The main areas to be tested}{63}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.3}After the tests}{63}{subsection.8.3.3}
+\contentsline {subsection}{\numberline {8.3.4}Test cases}{63}{subsection.8.3.4}
+\contentsline {subsection}{\numberline {8.3.5}Detected and mended issues}{64}{subsection.8.3.5}
+\contentsline {section}{\numberline {8.4}Customer acceptance test}{65}{section.8.4}
+\contentsline {section}{\numberline {8.5}Usability testing}{69}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Introduction}{69}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.5.2}Test Cases}{69}{subsection.8.5.2}
+\contentsline {subsection}{\numberline {8.5.3}Test users}{70}{subsection.8.5.3}
+\contentsline {subsection}{\numberline {8.5.4}Summary}{70}{subsection.8.5.4}
+\contentsline {subsection}{\numberline {8.5.5}title}{71}{subsection.8.5.5}
+\contentsline {chapter}{\numberline {9}Evaluation}{77}{chapter.9}
+\contentsline {section}{\numberline {9.1}Product quality}{77}{section.9.1}
+\contentsline {section}{\numberline {9.2}Development process}{77}{section.9.2}
+\contentsline {section}{\numberline {9.3}Project management}{77}{section.9.3}
+\contentsline {section}{\numberline {9.4}Team}{78}{section.9.4}
+\contentsline {section}{\numberline {9.5}Customer interaction}{79}{section.9.5}
+\contentsline {section}{\numberline {9.6}Limitations}{79}{section.9.6}
+\contentsline {section}{\numberline {9.7}Lessons learned}{79}{section.9.7}
+\contentsline {chapter}{\numberline {10}Conclusion and future outlook}{81}{chapter.10}
+\contentsline {chapter}{Bibliography}{83}{chapter.10}
+\contentsline {chapter}{Appendix \numberline {A}Rules of engagement}{83}{Appendix.a.A}
+\contentsline {chapter}{Appendix \numberline {B}Risk list}{85}{Appendix.a.B}
+\contentsline {chapter}{Appendix \numberline {C}Requirements}{91}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}Requirements}{91}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}Quality attributes}{97}{section.a.C.2}
+\contentsline {chapter}{Appendix \numberline {D}Status report example}{99}{Appendix.a.D}
+\contentsline {chapter}{Appendix \numberline {E}Unit test cases}{101}{Appendix.a.E}
+\contentsline {chapter}{Appendix \numberline {F}Integration test cases}{109}{Appendix.a.F}
+\contentsline {chapter}{Appendix \numberline {G}System test cases}{115}{Appendix.a.G}
