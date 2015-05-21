@@ -107,21 +107,6 @@ Scrum is a general agile method with focus on managing iterative development rat
 \subsection{Conclusion}
 For this project, the agile software development methodology scrum was used. The project was not very well defined from the beginning, because the customer was not entirely sure of exactly what they wanted. The team also became more productive, as the deadlines were short and so it was possible to quickly make a simple application which could be tested by users/customer. Also, an agile process was beneficial as it allowed the team to be flexible and rapidly respond to changes in requirements. The customer requested weekly meetings, and it became a logical decision to make use of scrum to have 1-week  sprints, so there would be definite progress to show between each customer meeting. Since the team was a group of seven, it was impossible to always work together. Because of this, the regular scrum meetings were beneficial to share and discuss progress.
 
-\section{Back end}
-
-\subsection{Docker}
-\label{subsec:docker}
-
-Docker \cite{EHW2} was made to help automation of application deployment. This happens by providing a virtual operative-system-level abstraction. This means that on a server, it is possible to run several virtual operative systems called docker images, which can easily be deployed to another server. This is beneficial for software development, because it means it is easy to setup identical back ends. The customer used this on their servers, which made using it during development as well, a good choice. A benefit of using docker, is that it can directly access repositories on git. This means that the latest revision is guaranteed to run when starting the back end. However, there are also drawbacks. It is not possible to update files within the docker image currently running without rebuilding it. This means that to update a single line of code, the whole image needs to be rebuilt. This means that while the newest revision is guaranteed to be running, any changes made to the application after the start of that docker image requires manually stopping, rebuilding, and starting the docker image.
-
-\subsection{Language}
-\label{subsec:backend_language}
-\textbf{PHP}\newline
-PHP is a server-side scripting language that is especially suited for web development produced by The PHP Group \cite{HM8}. It is a general-purpose scripting language often used to provide dynamic content from a web server to a client. During the pre-study period several reasons for choosing PHP as the main back end language were presented. Firstly, all back end team members were experienced in the use of PHP. Secondly, as inexperienced users of Docker, more documentation existed on how to implement PHP with Docker than with the other language alternatives \todo{DO WE HAVE TO WRITE THE LANGUAGE ALTERNATIVES IF I WRITE THIS?}considered.  Lastly, it was easily combined with the HTTP protocol used by front end to request and receive data (see \textbf{Section \ref{subsec:frontend-backend_communication}}).\newline
-
-\noindent\textbf{Java}\newline
-Java is a very popular general-purpose object oriented programming language developed by Sun Microsystems and later Oracle Corporation \cite{HM9}. Java was later in the project chosen as a secondary back end language. This was because Mahout, which was used to implement the recommender engine (see \textbf{Section \ref{sec:personalization_how}}), is written in Java.  
-
 
 \section{Personalization}
 \label{sec:personalization_algorithms}

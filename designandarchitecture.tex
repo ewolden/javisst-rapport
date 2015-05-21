@@ -55,6 +55,11 @@ In mapping the ER-diagram to a relational database the algorithm in \cite[p.270-
 	Means that tables should be joined on attributes that are appropriately related, that is primary keys and foreign keys. This guideline is followed in the database design in this project. 
 \end{enumerate}
 
+\section{Docker}
+\label{subsec:docker}
+
+Docker \cite{EHW2} was made to help automation of application deployment. This happens by providing a virtual operative-system-level abstraction. This means that on a server, it is possible to run several virtual operative systems called docker images, which can easily be deployed to another server. This is beneficial for software development, because it means it is easy to setup identical back ends. The customer used this on their servers, which made using it during development as well, a good choice. A benefit of using docker, is that it can directly access repositories on git. This means that the latest revision is guaranteed to run when starting the back end. However, there are also drawbacks. It is not possible to update files within the docker image currently running without rebuilding it. This means that to update a single line of code, the whole image needs to be rebuilt. This means that while the newest revision is guaranteed to be running, any changes made to the application after the start of that docker image requires manually stopping, rebuilding, and starting the docker image.
+
 \section{User interface}
 
 The user interface design was an essential part of the project, as the customer prioritized usability over all other nonfunctional requirements. The design thus went through many iterations by working on a prototype and continually getting feedback from customer and user tests. This feedback loop was important as the customer did not have clear requirements to the application from the beginning, and making everything easy to understand for the user was also challenging.  Balsamiq was first used to create a basic wireframe, but as it’s functionality was limited the next iteration of the design was made using Proto.io. This made it possible to receive better feedback on the flow of the app and not just the views individually. \newline

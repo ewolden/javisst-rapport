@@ -88,6 +88,8 @@ Early on in development, the team discovered several limitations of the Ionic fr
 
 As this is an application for mobile devices, it had to be adapted to work on different screen sizes. The team found that it would most likely be best to target a relatively small screen size and then simply enlarge it for bigger screens. This eliminated the issue of having to compress the components to fit smaller screen sizes and potentially be forced to redesign the whole view to fit small screens.\newline
 
+The target audience for the application included both those who have an interest in cultural activities, and also those who do not have any interest or experience about this, so as to encourage more of the general population to discover an interest in the subject. A specific target audience of 16-19 year old teenagers were promoted as a possible focus, because of the possibility of encouraging a young audience to develop an interest in cultural heritage. However, this was not stated until around  midway in the project timeline. This fact made it difficult to consider target audience when making design decisions. \newline
+
 The applications uses many different icons in various parts of the interface, and these have been the source of much debate and redesign. The icons used to represent categories were not always understood by users, and some categories like “local tradition and food” were difficult to represent universally with just a single icon. Also the bookmark icon shown in the upper right area of figure 8.xx was confusing to many users, and there was a concern in the team that this icon might not accurately represent that it allows the user to save the story in a collection.\newline
 
 Adopting accurate naming conventions for the different components has also been a considerable issue. Stories can be saved in collections, but these collections have interchangeably been called lists, tags, and bookmarks in the system. Also when asking a user to input their preferred categories to receive stories from, there has been some confusion because of interchangeably calling these categories for interests,  preferences, and categories.\newline
@@ -116,7 +118,7 @@ A big issue for the interface design has been the handling of the different medi
 
 \section{Back end}
 
-This section describe the development of each part of the back end. It aims to give a timeline of the development and explain how and why important decisions were made. The different parts described here are the database and the personalization. 
+This section describe the development of each part of the back end. It aims to give a timeline of the development and explain how and why important decisions were made. The different parts described here are the database and the personalization.  
 
 \subsection{Database}
 
@@ -138,5 +140,12 @@ Mahouts website provided some guiding on how to build a recommender which made i
 
 The customer requested the use of both item based and user based collaborative filtering. There was some doubt in the group as to whether the produced recommendations from the two methods could be combined, but it was found that this was possible as both take the same data model as input. When doing user based collaborative filtering, a threshold value had to be set to tell the recommender engine which users should affect the recommendations. This concerns the similarity found between users. It was difficult to set this value as the computation of the similarity is done by Mahout and because the group did not know what threshold value would be reasonable to set. The value is set by means of trial and error looking at the resulting recommendations produced using different values, and by looking at example use of this method. 
 
+\subsection{Language}
+\label{subsec:backend_language}
+\textbf{PHP}\newline
+PHP is a server-side scripting language that is especially suited for web development produced by The PHP Group \cite{HM8}. It is a general-purpose scripting language often used to provide dynamic content from a web server to a client. During the pre-study period several reasons for choosing PHP as the main back end language were presented. Firstly, all back end team members were experienced in the use of PHP. Secondly, as inexperienced users of Docker, more documentation existed on how to implement PHP with Docker than with the other language alternatives \todo{DO WE HAVE TO WRITE THE LANGUAGE ALTERNATIVES IF I WRITE THIS?}considered.  Lastly, it was easily combined with the HTTP protocol used by front end to request and receive data (see \textbf{Section \ref{subsec:frontend-backend_communication}}).\newline
+
+\noindent\textbf{Java}\newline
+Java is a very popular general-purpose object oriented programming language developed by Sun Microsystems and later Oracle Corporation \cite{HM9}. Java was later in the project chosen as a secondary back end language. This was because Mahout, which was used to implement the recommender engine (see \textbf{Section \ref{sec:personalization_how}}), is written in Java. 
 
 \cleardoublepage
