@@ -485,6 +485,7 @@ Status report week 6\newline
 
 	\begin{table}[H]
 		\centering
+		\caption{System test case for initial settings}
 		\begin{tabular}{ | l | l |}			
 			\hline
 			\textbf{Test ID} & T3  \\ \hline
@@ -515,7 +516,7 @@ Status report week 6\newline
 
 	\begin{table}[H]
 		\centering
-		\caption{}
+		\caption{System test case for browsing recommended stories}
 		\begin{tabular}{ | l | l  |}
 			\hline
 			\hline
@@ -545,14 +546,14 @@ Status report week 6\newline
 
 	\begin{table}[H]
 		\centering
-		\caption{}
+		\caption{System test case for adding a story to list}
 		\begin{tabular}{ | l | l  |}
 			\hline 
 			\textbf{Test ID} & T5  \\ \hline
 			\textbf{Test Item}  & Add story to list	 \\ \hline
-			\textbf{Approach} & \begin{minipage}{5in}The user navigate to a story and gives the story a rating. The user clicks the bookmark button in the story, and gives a name to a new collection of stories.   \end{minipage}\\ \hline
-			\textbf{Input data} & \begin{minipage}{5in}User action: Click on a star, Give name to a new collection of stories: ex. “My Favorite Stories” \end{minipage}\\ \hline
-			\textbf{Expected results} & \begin{minipage}{5in}The story that was rated with stars are automatically put in the “read” collection. The story should be stored in the new collection of “My Favorite Stories” and the user have access to this by navigating to the menu, and then to “Bokmerker”. \end{minipage}\\ \hline&\\[-3.8ex]
+			\textbf{Approach} & \begin{minipage}{5in}The user navigate to a story and gives the story a rating. The user clicks the bookmark button in the story, and gives a name to a new list of stories.   \end{minipage}\\ \hline
+			\textbf{Input data} & \begin{minipage}{5in}User action: Click on a star, Give name to a new list of stories: ex. “My Favorite Stories” \end{minipage}\\ \hline
+			\textbf{Expected results} & \begin{minipage}{5in}The story that was rated with stars are automatically put in the “read” list. The story should be stored in the new list of “My Favorite Stories” and the user have access to this by navigating to the menu, and then to “Bokmerker”. \end{minipage}\\ \hline&\\[-3.8ex]
 			\textbf{Testing task} & \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 			\item Click on a story in the recommendation view 
@@ -562,11 +563,11 @@ Status report week 6\newline
 			\item Click the bookmark button in the story 
 			\item Click the plus icon
 			\item Type in a "My Favorite Stories" and click out of the view.
-			\item Navigate to the collections via the menu
+			\item Navigate to the lists via the menu
 			\item Click on "My Favorite Stories"
-			\item Click on the first story in the collection
-			\item Navigates to the “read” collection
-			\item Click on the first story in the collection
+			\item Click on the first story in the list
+			\item Navigates to the “read” list
+			\item Click on the first story in the list
 			\end{enumerate}\end{minipage}
 			\\ &\\[-3.8ex]\hline
 			\textbf{Depends on tests} & NaN \\ \hline			
@@ -584,7 +585,7 @@ Status report week 6\newline
 			\hline
 			\textbf{Test ID} & T6  \\ \hline
 			\textbf{Test Item} & Give a rating \\ \hline
-			\textbf{Approach} & \begin{minipage}{5in}The user gives a story a rating by clicking the stars. The user goes to collections and checks if the story was stored in the “read” list \end{minipage}\\ \hline
+			\textbf{Approach} & \begin{minipage}{5in}The user gives a story a rating by clicking the stars. The user navigates to bookmark lists and checks if the story was stored in the “read” list \end{minipage}\\ \hline
 			\textbf{Input data} &  \begin{minipage}{5in}User action: clicks on story, navigated to rating view, clicks on a star. \end{minipage}\\ \hline
 			\textbf{Expected results} & \begin{minipage}{5in}The star buttons that were pressed will change color.  The system should store the rating for that story. The next time the user clicks on this story - the yellow stars will show the users rating.  \end{minipage}\\ \hline&\\[-3.8ex]
 			\textbf{Testing task} & \begin{minipage}{5in}
