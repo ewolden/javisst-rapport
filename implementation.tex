@@ -6,21 +6,21 @@ This chapter discusses the details of the system implementation process, both fo
 
 
 \section{Project Progression}
-Project progression is derived from the activity \todo{ref{app:activityplan}}, meeting abstracts \todo{ref{app:meetingabstract)}} and Trello archive \todo{Blir dette referet til? + legg inn ref her. Står det noe om hvor lange sprintene er tidliger? når de slutter of started klokkeslett}  and will only briefly summarize what was done at each sprint.
+Project progression is derived from the activity plan \todo{ref{app:activityplan}}, meeting abstracts \todo{ref{app:meetingabstract)}} and Trello archive \todo{Blir dette referet til? + legg inn ref her. Står det noe om hvor lange sprintene er tidliger? når de slutter of started klokkeslett}  and will only briefly summarize what was done at each sprint.
 
 \begin{description}
 	
 	\item[Sprint 1 - 23.01.15 - 30.01.15] \hfill \\ 
-	The first week mainly consisted of getting familiar with each other and the assignment. as soon as the introductions was done we talked about our personal goals to set the expectation as a group and we formalized a Rule of engagement\ref{app:rulesofengagement} for the group to sign, also dispersed responsibilities. Later we established a meeting agenda with the customer and met for the first time.
+	The first week mainly consisted of getting familiar with each other and the assignment. As soon as the introductions were done, we talked about our personal goals to set the expectation as a group. We formalized some rules of engagement\ref{app:rulesofengagement} for the group to sign, and also delegated responsibilities. Later we established a meeting agenda with the customer and met them for the first time.
 	
 	\item[Sprint 2 - 30.01.15 - 06.02.15] \hfill \\ 
-	Sprint 2 we begun planning and formalizing the requirements after. large section of work like sketching a WBS \ref{wbs}, generating a product backlog \ref{productbacklog}, and Use Cases was done this week. Other design work like the architecture and UI mockups where started on.
+	In sprint 2 we began planning and formalizing the requirements. Large sections of work like sketching a WBS \ref{wbs}, generating a product backlog \ref{productbacklog}, and making use cases were done this week. Other design work like the architecture and UI mock-ups were also started on.
 	
 	\item[Sprint 3 - 06.02.15 - 13.02.15] \hfill \\ 
-	This was the first week of development. We started testing the API \ref{subsec:api} and finalized some paper prototypes for testing \todo{Referanse til papirprototype} and also completed database and architecture design. Research towards the personalization, the front end framework \ref{subsec:ionic} \todo{ref:personalization} and differences between the two operation systems \todo{ref crossplatform OS}. 
+	This was the first week of development. We started testing the API \ref{subsec:api} and finalized some paper prototypes for user testing, \todo{Referanse til papirprototype} and also completed the design for database and architecture. Research towards the personalization, the front end framework \ref{subsec:ionic} \todo{ref:personalization} and differences between the two operating systems \todo{ref crossplatform OS} was also done. 
 	
 	\item[Sprint 4 - 13.02.15 - 20.02.15] \hfill \\ 
-	Analyzing the past work \ref{subsec:stedr} to see if would fit out needs, continuing the research towards collaborative filtering \ref{sec:personalization_algorithms}. and learning docker \ref{subsec:docker}. labor as mapping the Digitalt fortalt \todo{ref} categories to our own and conducting and evaluating the paper prototype test as well as the database code was taking shape.
+	Analyzing the past work \ref{subsec:stedr} to see if would fit our needs, continuing the research towards collaborative filtering \ref{sec:personalization_algorithms}. Also learning docker \ref{subsec:docker}. Mapping the Digitalt fortalt \todo{ref} categories to our own and conducting and evaluating the paper prototype tests as well. During this sprint the database code was also starting to take shape.
 	
 	\item[Sprint 5 - 20.02.15 - 27.02.15] \hfill \\ 
 	
@@ -34,7 +34,7 @@ Project progression is derived from the activity \todo{ref{app:activityplan}}, m
 	\item[Sprint 9 - 20.03.15 - 27.03.15] \hfill \\ 
 	
 	\item[Easter - 27.03.15 - 07.04.15] \hfill \\ 
-	The application was tested under informal condition on family and friends. "in the wild" test
+	The application was tested under informal conditions on family and friends, a so-called "in the wild" test.
 	\item[Sprint 10 - 08.04.15 - 17.04.15] \hfill \\ 
 
 	\item[Sprint 11 - 17.04.15 - 24.04.15] \hfill \\ 
@@ -46,7 +46,7 @@ Project progression is derived from the activity \todo{ref{app:activityplan}}, m
 	\item[Sprint 14 - 08.05.15 - 15.05.15] \hfill \\ 
 	
 	\item[Past 15.05.15] \hfill \\ 
-	Work was conducted after the last sprint(sprint 14) this was was fixing crucial bugs on the applikation the finalizing the report as well as carry out an acceptance test \todo{ref acceptance test} with the custumer
+	Work was conducted after the last sprint(sprint 14) this was mainly fixing crucial bugs in the application, finalizing the report, as well as carry out an acceptance test \todo{ref acceptance test} with the customer.
 	
 \end{description}
 
@@ -73,13 +73,13 @@ AngularJS is based on a Model-View-Controller architecture, but provides a varie
 	Special functionality applied to the DOM elements, you can create your own directives as well as use the numerous ones provided by AngularJS itself. In "Vettu hva?", several of these were used, such as directives that call on some function when DOM elements are clicked on, or directives that show or hide parts of the DOM based on some condition.
 	
 	\item[Module] \hfill \\ 
-	A module encapsulates a part of the application. Instead of having a single "main" function that holds the application together, Angular applications normally have multiple modules that work together. The benefit of this is that the application is decomposed into logical parts that can be reused, loaded, and tested in any order. In "Vettu hva?", each controller is its own module. The part of the program that communicated with the back end is also encapsulated in a module. Furthermore, there is a module that starts up the application and binds together views and controller into different states.
+	A module encapsulates a part of the application. Instead of having a single "main" function that holds the application together, Angular applications normally have multiple modules that work together. The benefit of this is that the application is decomposed into logical parts that can be reused, loaded, and tested in any order. In "Vettu hva?", each controller is its own module. The part of the program that communicates with the back end is also encapsulated in a module. Furthermore, there is a module that starts up the application and binds together views and controller into different states.
 	
 	\item[Scope] \hfill \\ 
 	The scope contains all the elements that the application currently has access too. It can be viewed as a container that stores the current model, and so if a controller or directive is going to modify or access the model, this has to be done by using the scope.
 	
 	\item[Service] \hfill \\ 
-	A service contains "global" logic that is accessible to the entire application. In "Vettu hva?", this is used in the module that contains the communication with the back end. This module has three different services, which respectively gives the application access to User data, story data, and requests from front end to back end.
+	A service contains "global" logic that is accessible to the entire application. In "Vettu hva?", this is used in the module that contains the communication with the back end. This module has three different services, which respectively gives the application access to user data, story data, and requests from front end to back end.
 \end{description}
 
 \subsection{User interface}
@@ -94,13 +94,14 @@ The applications uses many different icons in various parts of the interface, an
 
 Adopting accurate naming conventions for the different components has also been a considerable issue. Stories can be saved in collections, but these collections have interchangeably been called lists, tags, and bookmarks in the system. Also when asking a user to input their preferred categories to receive stories from, there has been some confusion because of interchangeably calling these categories for interests,  preferences, and categories.\newline
 
-Implementing media, and especially video, has been a challenge in the project. An issue with this has been that playing videos is handled differently on iOS and Android, which had resulted in some bugs that only appear on one platform and not the other. These types of issues have been problematic to fix and has taken up much time to fix. In addition, the videos provided by the Digitalt fortalt website come from different sources. Some of them are Youtube videos, others are Vimeo videos, and there are also other variations. Integrating all these different formats smoothly into the application has been a challenge in itself.
+Implementing media, and especially video, has been a challenge in the project. An issue with this has been that playing videos is handled differently on iOS and Android, which had resulted in some bugs that only appear on one platform and not the other. These types of issues have been problematic to fix and has taken up much time. In addition, the videos provided by the Digitalt fortalt website come from different sources. Some of them are Youtube videos, others are Vimeo videos, and there are also other variations. Integrating all these different formats smoothly into the application has been a considerable challenge as well.
 
 \subsection{Prototype}
 
-The prototype has been through multiple iterations. Early on, it was imagined to have a sort of “magic” discovery function where a user would for example rub a crystal ball and receive a recommended story. This idea was later discarded because the team decided it would be better usability to present the user with multiple recommended story that they could simply browse through instead.\newline
+The prototype has been through multiple iterations. Early on, it was imagined to have a sort of “magic” discovery function where a user would for example rub a crystal ball and receive a recommended story. This idea was later discarded because the team and customer realized
+ it would be better usability to present the user with multiple recommended stories that they could simply browse through instead.\newline
 
-Another of the early ideas was for the user to receive a “daily story” or some sort of schedule for being presented with recommended stories. However, due to workload and time constraints, this requirement was heavily down prioritized. The most important parts were the personalization and usability aspects, so receiving notifications seemed like an unnecessary extra feature.\newline
+Another of the early ideas was for the user to receive a “daily story” or some sort of schedule for being presented with recommended stories. However, due to workload and time constraints, this requirement was heavily down-prioritized. The most important parts were the personalization and usability aspects, so receiving notifications seemed like an unnecessary extra feature.\newline
 
 A big issue for the interface design has been the handling of the different media elements (text, pictures, audio, video) and how these should be positioned relative to each other. For a while the team designed the application to have one tab for each of these four elements in the story view, as shown to the left in figure 8.XX. The customer had a concern that this might not be the optimal solution, as a user would for example not be able to read text and view pictures simultaneously. After some discussion, the interface was redesigned so that the text would be persistent, and instead the user could tab between pictures, audio, and video. The resulting design can be seen to the right in \textbf{Fig \ref{Fig:prototype}}. 
 
@@ -112,19 +113,19 @@ A big issue for the interface design has been the handling of the different medi
 	\begin{subfigure}[h]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{fig/prototype2}
 	\end{subfigure}
-	\caption{Comparison of the story view in the first and second version of the prototype.}
+	\caption{Comparison of the story view in the first and second versions of the prototype.}
 	\label{Fig:prototype}
 \end{figure}
 
 \section{Back end}
 
-This section describe the development of each part of the back end. It aims to give a timeline of the development and explain how and why important decisions were made. The different parts described here are the database and the personalization.  
+This section describes the development of each part of the back end. It aims to give a timeline of the development and explain how and why important decisions were made. The different parts described here are the database and the personalization.  
 
 \subsection{Database}
 
-Based on the first version of the functional requirements for the application an initial ER-diagram was made in the middle of February. At this stage the customer and the team had not come to an agreement on a prioritization of the non-functional requirements. This meant that there for instance was not clear how important the performance of the system would be for the customer, an attribute of the system which would influence how much info should be stored for each story in the database versus have much info should be retrieved from Digitalt fortalt every time a user views a story. However, the changes to the initial diagram have been relatively minor. Some of the alterations were based on updated requirements from the customer, while others stem from the group and are optimization of the data model or changes made to facilitate the personalization. \newline
+Based on the first version of the functional requirements for the application, an initial ER-diagram was made in the middle of February. At this stage the customer and the team had not come to an agreement on a prioritization of the non-functional requirements. This meant that it was for instance not clear how important the performance of the system would be for the customer, an attribute of the system which would influence how much info should be stored for each story in the database versus how much info should be retrieved from Digitalt fortalt every time a user views a story. However, the changes to the initial diagram have been relatively minor. Some of the alterations were based on updated requirements from the customer, while others stemmed from the group and were optimization of the data model or changes made to facilitate the personalization. \newline
 
-Shortly after the first ER-diagram was made, an SQL script for creating a database was also made. Since the ER-diagram has undergone changes for quite some time after the first version was made, these changes has also influenced the SQL script. This means that a change in the data model have lead to more work than just updating the ER-diagram. However, the progress of the project relied on testing against an operational database, for instance regarding the harvesting of stories from Digitalt fortalt. \newline
+Shortly after the first ER-diagram was made, an SQL script for creating a database was also made. Since the ER-diagram has undergone changes for quite some time after the first version was made, these changes have also influenced the SQL script. This means that a change in the data model has lead to more work than just updating the ER-diagram. However, the progress of the project relied on testing against an operational database, for instance regarding the harvesting of stories from Digitalt fortalt. \newline
 
 The customer had early on said that the retrieval of research data about the use of the application was important for them. Initially, the details of this was not properly formulated and the initial data model therefore did not reflect this. After receiving a detailed list from the customer describing the research data to be gathered, alterations - mostly additions - in the data model were made to accommodate this. This concerned storing timestamps for user actions and states of stories.  \newline
 
@@ -132,13 +133,13 @@ The team did not decide or understand how to do the personalization until mid Ma
 
 \subsection{Personalization}
 
-At the start of the project much time was devoted to understanding content-based and collaborative filtering and how the theoretical descriptions of these techniques could be turn into a practical implementation in our application. When the back end part of the group had a better understanding on how this could be done, an important decision was whether to use open source recommender engines or to implement the algorithms ourselves. After studying the math and complexity involved in writing our own implementation it became clear that the best solution would be to use existing recommender engines, even if this would require some adjustments to already written code. \newline
+At the start of the project much time was devoted to understanding content-based and collaborative filtering and how the theoretical descriptions of these techniques could be turned into a practical implementation in our application. When the back end part of the group had a better understanding on how this could be done, an important decision was whether to use open source recommender engines or to implement the algorithms ourselves. After studying the math and complexity involved in writing our own implementation it became clear that the best solution would be to use existing recommender engines, even if this would require some adjustments to already written code. \newline
 
-As the project was nearly halfway through when the decision to use an open source recommender engine was made, the team did not find the time to do a thorough review of the many different alternatives. This increased the probability of choosing the wrong tool to work with and violated the stated preventive action in the risk list (see \textbf{appendix \ref{app:risklist}}). However, the customer suggested three different recommender engines that might be worth looking into, one of which was Mahout. In choosing a tool the customer had done some research on, the group found that the risk of doing a wrong choice decreased somewhat. In addition, Mahout presented its features in a way that resembled the groups research on filtering algorithms and it was therefore reason to believe that getting started with Mahout would not require much additional research. Of particular importance was the fact that Mahout offered an explanation on how to do content-based filtering using their recommender engine. Most such engines provided functionality for doing collaborative filtering, but it was not always clear how content-based filtering could be done.\newline
+As the project was nearly halfway through when the decision to use an open source recommender engine was made, the team did not find the time to do a thorough review of the many different alternatives. This increased the probability of choosing the wrong tool to work with and violated the stated preventive action in the risk list (see \textbf{appendix \ref{app:risklist}}). However, the customer suggested three different recommender engines that might be worth looking into, one of which was Mahout. In choosing a tool the customer had done some research on, the group found that the risk of making a wrong choice decreased somewhat. In addition, Mahout presented its features in a way that resembled the groups research on filtering algorithms and it was therefore reason to believe that getting started with Mahout would not require much additional research. Of particular importance was the fact that Mahout offered an explanation on how to do content-based filtering using their recommender engine. Most such engines provided functionality for doing collaborative filtering, but it was not always clear how content-based filtering could be done.\newline
 
-Mahouts website provided some guiding on how to build a recommender which made it possible to use the tool without thorough knowledge of how the different methods worked. Most work in the beginning of doing the personalization thus centered around how to gather and produce data in a format acceptable to Mahout and how to treat the output recommendations. Content-based filtering was implemented first, as this was the customer's wish and because the first recommendations presented to a user would always be content-based. Since Mahout does not provide methods for finding similarities between items based on their attributes, the group had to implement this. There exist a vast number of functions to compute similarity between objects. The group did some research on different similarity measures, but the literature did not provide an clear-cut answer which measure was best fitted to our data. Cosine similarity was chosen for its simplicity and because a story's subcategories lent itself well to be represented as a vector.\newline
+Mahouts website provided some guiding on how to build a recommender which made it possible to use the tool without thorough knowledge of how the different methods worked. Most of the work in the beginning of doing the personalization thus centered around how to gather and produce data in a format acceptable to Mahout and how to treat the output recommendations. Content-based filtering was implemented first, as this was the customer's wish and because the first recommendations presented to a user would always be content-based. Since Mahout does not provide methods for finding similarities between items based on their attributes, the group had to implement this. There exist a vast number of functions to compute similarity between objects. The group did some research on different similarity measures, but the literature did not provide a clear-cut answer to which measure was best fitted to our data. Cosine similarity was chosen for its simplicity and because a story's subcategories lent itself well to be represented as a vector.\newline
 
-The customer requested the use of both item based and user based collaborative filtering. There was some doubt in the group as to whether the produced recommendations from the two methods could be combined, but it was found that this was possible as both take the same data model as input. When doing user based collaborative filtering, a threshold value had to be set to tell the recommender engine which users should affect the recommendations. This concerns the similarity found between users. It was difficult to set this value as the computation of the similarity is done by Mahout and because the group did not know what threshold value would be reasonable to set. The value is set by means of trial and error looking at the resulting recommendations produced using different values, and by looking at example use of this method. 
+The customer requested the use of both item based and user based collaborative filtering. There was some doubt in the group as to whether the produced recommendations from the two methods could be combined, but it was found that this was possible as both take the same data model as input. When doing user based collaborative filtering, a threshold value had to be set to tell the recommender engine which users should affect the recommendations. This concerns the similarity found between users. It was difficult to set this value as the computation of the similarity is done by Mahout and because the group did not know what threshold value would be reasonable to set. The value is set by means of trial and error, looking at the resulting recommendations produced using different values, and by looking at example use of this method. 
 
 \subsection{Language}
 \label{subsec:backend_language}
