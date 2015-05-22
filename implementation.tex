@@ -53,34 +53,7 @@ Project progression is derived from the activity plan \todo{ref{app:activityplan
 
 \section{Front end}
 
-The front end of the application was designed by using Ionic and AngularJS. In this section, there will first be a description of how a system made in AngularJS is structured, and in the subsequent section will be an elaboration of some challenges and limitations during the creation of the user interface, both concerning the design and the implementation aspects of the process.
-
-\subsection{AngularJS system structure}
-
-AngularJS is based on a Model-View-Controller architecture, but provides a variety of components to assist in easing the programming and speeding up the application. It is essentially another layer of abstraction above writing regular Javascript. These are some of the main concepts that are used to create an Angular application:
-
-\begin{description}
-	\item[Model] \hfill \\ 
-	The data that can be interacted with by the user.
-	
-	\item[View] \hfill \\ 
-	The interfaces that the user can see.
-	
-	\item[Controller] \hfill \\ 
-	The logic and behavior of the views.
-	
-	\item[Directive] \hfill \\ 
-	Special functionality applied to the DOM elements, you can create your own directives as well as use the numerous ones provided by AngularJS itself. In "Vettu hva?", several of these were used, such as directives that call on some function when DOM elements are clicked on, or directives that show or hide parts of the DOM based on some condition.
-	
-	\item[Module] \hfill \\ 
-	A module encapsulates a part of the application. Instead of having a single "main" function that holds the application together, Angular applications normally have multiple modules that work together. The benefit of this is that the application is decomposed into logical parts that can be reused, loaded, and tested in any order. In "Vettu hva?", each controller is its own module. The part of the program that communicates with the back end is also encapsulated in a module. Furthermore, there is a module that starts up the application and binds together views and controller into different states.
-	
-	\item[Scope] \hfill \\ 
-	The scope contains all the elements that the application currently has access too. It can be viewed as a container that stores the current model, and so if a controller or directive is going to modify or access the model, this has to be done by using the scope.
-	
-	\item[Service] \hfill \\ 
-	A service contains "global" logic that is accessible to the entire application. In "Vettu hva?", this is used in the module that contains the communication with the back end. This module has three different services, which respectively gives the application access to user data, story data, and requests from front end to back end.
-\end{description}
+In this section will be an elaboration of some challenges and limitations during the creation of the user interface, both concerning the design and the implementation aspects of the process.
 
 \subsection{User interface}
 

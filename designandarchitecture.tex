@@ -2,11 +2,13 @@
 
 \chapter{Design and architecture}
 
-To get a brief overview of the complete product and its required parts the design and architecture is presented in this chapter. It is not meant to give a complete understanding, but rather an overview on how the different parts of the product work together to give a good user experience.
+To get a brief overview of the complete product and its required parts, the design and architecture are presented in this chapter. This is not meant to give a complete understanding of the system, but rather an overview on how the different parts of the product work together to give a pleasant user experience.
 
 \section{Architecture}
 
-The overall architectural design of the system was made to achieve a rough mapping of what needed to be done in terms of actual programing. The architecture focuses heavily on interactions between the different instances in the systems without going into the specific details on how this is done. To illustrate the architecture two different views were created. One showing only the components, with another showing the processes in the different components. The overall system structure can be seen in \textbf{Fig \ref{Fig:system_structure}}, this shows the four different components and how they interact. In \textbf{Fig \ref{Fig:architecture}} a diagram showing the architecture with processes can be found. As seen in the legend, the square boxes represents individual components or processes. The boxes with oval corners represents compound processes or larger parts. These are mainly shown because they give an overview over which processes belong to and will be performed by which part of the system. Double lined boxes are external sources that provide an API. Lastly, arrows indicate information flow.
+The overall architectural design of the system was made to achieve a rough mapping of what needed to be done in terms of actual programming. The architecture focuses heavily on interactions between the different instances in the systems without going into the specific details on how this is done. To illustrate the architecture, two different views were created. One showing only the components, and the other showing the processes in the different components. The overall system structure can be seen in \textbf{Fig \ref{Fig:system_structure}}, this shows the four different components and how they interact. As shown in this diagram, the system is created as a client-server model, where the mobile application constitutes the client, which communicates with the PHP backend server. The server is connected to a database, and Digitalt fortalt provides an API to retrieve stories from.\newline
+
+In \textbf{Fig \ref{Fig:architecture}} a diagram showing the architecture with processes can be found. As seen in the legend, the square boxes represent individual components or processes. The boxes with oval corners represent compound processes or larger parts. These are mainly shown because they give an overview of which processes belong to and will be performed by which part of the system. Double lined boxes are external sources which provide an API. Lastly, arrows indicate information flow.
 
 \begin{figure}[h!]
 	\centering
@@ -31,7 +33,7 @@ The database was designed with the goal of facilitating the recommendation of st
 
 To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see \textbf{Section \ref{sec:categorymapping}}). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
 
-Another goal of this project was to provide some research data to the customer. To do this, some data about the use of the application is stored. This include registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e the rating) and the media format contained in the story.
+Another goal of this project was to provide some research data to the customer. To do this, some data about the use of the application is stored. This includes registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e. the rating) and the media format contained in the story.
 
 \begin{figure}[h!]
 	\centering
@@ -44,13 +46,41 @@ Another goal of this project was to provide some research data to the customer. 
 \section{Docker}
 \label{subsec:docker}
 
-Docker \cite{EHW2} was made to help automation of application deployment. This happens by providing a virtual operative-system-level abstraction. This means that on a server, it is possible to run several virtual operative systems called docker images, which can easily be deployed to another server. This is beneficial for software development, because it means it is easy to setup identical back ends. The customer used this on their servers, which made using it during development as well, a good choice. A benefit of using docker, is that it can directly access repositories on git. This means that the latest revision is guaranteed to run when starting the back end. However, there are also drawbacks. It is not possible to update files within the docker image currently running without rebuilding it. This means that to update a single line of code, the whole image needs to be rebuilt. This means that while the newest revision is guaranteed to be running, any changes made to the application after the start of that docker image requires manually stopping, rebuilding, and starting the docker image.
+Docker \cite{EHW2} was made to help automation of application deployment. This happens by providing a virtual operative-system-level abstraction. This means that on a server, it is possible to run several virtual operative systems called docker images, which can easily be deployed to another server. This is beneficial for software development, because it means it is easy to setup identical back ends. The customer used this on their servers, which made using it during development a good choice as well. A benefit of using docker is that it can directly access repositories on git. This means that the latest revision is guaranteed to run when starting the back end. However, there are also drawbacks. It is not possible to update files within the docker image currently running without rebuilding it. This means that to update a single line of code, the whole image needs to be rebuilt. This means that while the newest revision is guaranteed to be running, any changes made to the application after the start of that docker image requires manually stopping, rebuilding, and starting the docker image.
+
+\section{front end structure}
+The front end of the application was designed by using Ionic and AngularJS, and this section will describe how a system made in AngularJS is structured.
+
+AngularJS provides templates to create systems based on a Model-View-Controller(MVC) architecture, and also provides a variety of components to assist in easing the programming and speeding up the application. It is essentially another layer of abstraction above writing regular Javascript. These are some of the main concepts that are used to create an Angular application:
+
+\begin{description}
+	\item[Model] \hfill \\ 
+	Manages all the data that can be interacted with by the user. The model also keeps the views up to date and can be manipulated by controllers.
+	
+	\item[View] \hfill \\ 
+	The interfaces that the user can see. This means some form of visual representation of the model.
+	
+	\item[Controller] \hfill \\ 
+	The logic and behavior of the views. The controllers also make changes the model.
+	
+	\item[Directive] \hfill \\ 
+	Special functionality applied to the DOM elements, you can create your own directives as well as use the numerous ones provided by AngularJS itself. In "Vettu hva?", several of these were used, such as directives that call on some function when DOM elements are clicked on, or directives that show or hide parts of the DOM based on some condition.
+	
+	\item[Module] \hfill \\ 
+	A module encapsulates a part of the application. Instead of having a single "main" function that holds the application together, Angular applications normally have multiple modules that work together. The benefit of this is that the application is decomposed into logical parts that can be reused, loaded, and tested in any order. In "Vettu hva?", each controller is its own module. The part of the program that communicates with the back end is also encapsulated in a module. Furthermore, there is a module that starts up the application and binds together views and controller into different states.
+	
+	\item[Scope] \hfill \\ 
+	The scope contains all the elements that the application currently has access too. It can be viewed as a container that stores the current model, and so if a controller or directive is going to modify or access the model, this has to be done by using the scope.
+	
+	\item[Service] \hfill \\ 
+	A service contains "global" logic that is accessible to the entire application. In "Vettu hva?", this is used in the module that contains the communication with the back end. This module has three different services, which respectively gives the application access to user data, story data, and requests from front end to back end.
+\end{description}
 
 \section{User interface}
 
-The user interface design was an essential part of the project, as the customer prioritized usability over all other nonfunctional requirements. The design thus went through many iterations by working on a prototype and continually getting feedback from customer and user tests. This feedback loop was important as the customer did not have clear requirements to the application from the beginning, and making everything easy to understand for the user was also challenging.  Balsamiq was first used to create a basic wireframe, but as it’s functionality was limited the next iteration of the design was made using Proto.io. This made it possible to receive better feedback on the flow of the app and not just the views individually. \newline
+The user interface design was an essential part of the project, as the customer prioritized usability over all other nonfunctional requirements. The design thus went through many iterations by working on a prototype and continually getting feedback from customer and user tests. This feedback loop was important as the customer did not have clear requirements to the application from the beginning, and making everything easy to understand for the user was also challenging.  Balsamiq was first used to create a basic wireframe, but as its functionality was limited, the next iteration of the design was made using Proto.io. This made it possible to receive better feedback on the flow of the app and not just the views individually. \newline
 
-The following \textbf{Fig \ref{Fig:flow_diagram}} explains the overall flow between all the different views in the application. The blue boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explains what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail.
+The following \textbf{Fig \ref{Fig:flow_diagram}} explains the overall flow between all the different views in the application. The blue boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explain what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail.
 
 \begin{figure}[h!]
 	\centering
@@ -59,9 +89,15 @@ The following \textbf{Fig \ref{Fig:flow_diagram}} explains the overall flow betw
 	\label{Fig:flow_diagram}
 \end{figure}
 
+\begin{description}
+	
+	\item[Recommendation view] \hfill \\ 
+	This view displays the stories that should be the most relevant to the user. The user can browse them by swiping through them or by clicking the left and right arrows. When tapping on a card the detailed view of the story will be displayed. The “X” in the right corner of each card is used to reject the story, which takes it out of the list of the current recommendations and makes this kind of stories less likely to appear in the future. The bookmark icon in the top bar opens a modal for adding a bookmark. 
+	
+	\item[Story view] \hfill \\
+	This view displays the chosen story in detail. There is a box which displays the media files associated with the story. The tabs above it will depend on which media types the story contains. Videos will be displayed by default if there are any, as they can be a major component of the story which should not be hidden in another tab. When tapping on a video or image it will be displayed in fullscreen mode. The user can give feedback on the story either by tapping the stars on the bottom part of the view, or by tapping the star icon in the top bar which will open up a modal. The modal will ask the user to rate the story, and the user can exit it by tapping “Ferdig” or by tapping outside of the modal. Tapping the bookmark icon will make the same modal as in the recommendation view appear. 
 
-Recommendation view\newline
-This view displays the stories that should be the most relevant to the user. The user can browse them by swiping through them or by clicking the left and right arrows. When tapping on a card the detailed view of the story will be displayed. The “X” in the right corner of each card is used to reject the story, which takes it out of the list of the current recommendations and makes that kind of stories less likely to appear in the future. The bookmark icon in the top bar opens a modal for adding a bookmark. 
+\end{description}
 
 \begin{figure}[h!]
 	\centering
@@ -70,9 +106,6 @@ This view displays the stories that should be the most relevant to the user. The
 	\label{Fig:recommendation_view}
 \end{figure}
 
-Story view\newline
-This view displays the chosen story in detail. There is a box which displays the media files associated with the story. The tabs above it will depend on which media types the story contains. Videos will be displayed by default if there are any, as they can be a major component of the story which should not be hidden in another tab. When tapping on a video or image it will be displayed in fullscreen mode. The user can give feedback on the story either by tapping the stars on the bottom part of the view, or by tapping the star icon in the top bar which will open up a modal. The modal will ask the user to rate the story, and the user can exit it by tapping “Ferdig” or by tapping outside of the modal. Tapping the bookmark icon will make the same modal as in the recommendation view appear.
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{fig/story_view}
@@ -80,12 +113,12 @@ This view displays the chosen story in detail. There is a box which displays the
 	\label{Fig:story_view}
 \end{figure}
 
-TODO: Screenshots and explanations of other views
+\todo{Screenshots and explanations of other views}
 
 \section{Category mapping} 
 \label{sec:categorymapping}
 
-There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 to 31 subcategories attached to it. To achieve a content based filtering the user has to select some interest categories. To make it easier for the user, these subcategories are divided into nine main interests categories. Some of these categories of interest were already predefined in [EHW1], while the rest was changed according to discussions with the customer. The subcategories were put into the category interest field that fit them best, with some subcategories being in several category interests. In \textbf{Table \ref{Tab:categorymapping}} this mapping is illustrated. It is obvious that some category interests will have more stories, however, subcategories such as literature contain more stories than most others. In such a way, it was intended to create nine category interests that contain roughly the same amount of stories. Even distribution of stories into category interests was intended, however, when a subset of stories was chosen this intention did not hold true as can be seen in chapter XX. Furthermore, the category interests needed to be distinct while still encompassing all the subcategories. 
+There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 to 31 subcategories attached to it. To achieve a content based filtering the user has to select some categories of interest. To make it easier for the user, these subcategories are divided into nine main interest categories. Some of these categories were already predefined in [EHW1], while the rest was changed according to discussions with the customer. The subcategories were put into the category interest field that fit them best, with some subcategories being in several category interests. In \textbf{Table \ref{Tab:categorymapping}} this mapping is illustrated. It is obvious that some category interests will have more stories, and some subcategories such as literature contain more stories than most others. In such a way, it was intended to create nine category interests that contain roughly the same amount of stories. Even distribution of stories into category interests was intended, however, when a subset of stories was chosen this intention did not hold true as can be seen in chapter XX. Furthermore, the category interests needed to be distinct while still encompassing all the subcategories. 
 
 \begin{table}[!h]
 	\begin{center}
@@ -109,32 +142,32 @@ There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 
 \section{Personalization}
 \label{sec:personalization_how}
 
-Users are recommended stories by means of content-based and collaborative filtering, described in \textbf{Section \ref{sec:personalization_algorithms}}. The system gathers information about the stories and the users and feed this information into the recommender engine Mahout which produces a list of recommendations for the desired user. The details of Mahouts inner workings will not be presented here. What will be described is how the input data delivered to Mahout is gathered and produced by our application, what methods of Mahout is used and when they are used, and how the resulting list of recommendations are dealt with.\newline
+Users receive recommended stories by means of content-based and collaborative filtering, described in \textbf{Section \ref{sec:personalization_algorithms}}. The system gathers information about the stories and the users, and feed this information into the recommender engine Mahout which produces a list of recommendations for the desired user. The details of Mahouts inner workings will not be presented here. What will be described is how the input data delivered to Mahout is gathered and produced by our application, what methods of Mahout is used and when they are used, and how the resulting list of recommendations is dealt with.\newline
 
-Both content-based and collaborative filtering rely on giving a numerical value that express how much a user like a story. We call this a preference value. In our application this value is computed by combining several measures representing different types of user feedback. These are: the rating a user have given to a story, the categories the user have expressed an interest in, the number of times a story has been recommended to the user, the number of times the story has been opened and the number of times a story has been put in the to-be-read list. Weights are assigned to the measures to differentiate between what impact they should have on the preference value. Rating is considered the most important user feedback, since this value is given to a story by direct user action. The other measures are either less connected to a specific story or more intangible. When computing recommendations, preference values for all stories for the user in question are calculated first.\newline
+Both content-based and collaborative filtering rely on giving a numerical value that express how much a user likes a story. We call this a preference value. In our application this value is computed by combining several measures representing different types of user feedback. These are: the rating a user have given to a story, the categories the user has expressed an interest in, the number of times a story has been recommended to the user, the number of times the story has been opened and the number of times a story has been put in the to-be-read list. Weights are assigned to the measures to differentiate between what impact they should have on the preference value. Rating is considered the most important user feedback, since this value is given to a story by direct user action. The other measures are either less connected to a specific story or more intangible. When computing recommendations, preference values for all stories for the user in question are calculated first.\newline
 
-Each time Mahout is run up to ten recommendations are inserted in the database. How these are chosen depend on a number of factors. Since a requirement from the customer was to include false recommendations, one of the recommendations is always picked from the lower parts of the recommendation rankings. The other stories are picked from the top of the rankings. Depending on a two factors some top recommendations may be skipped for a given run. The first of these factors is that rated stories are not recommended again to the user (only an issue for content-based filtering). The other one is whether the list of recommendations should be added to the existing list of recommendations browsed by the user in the recommendation view or not. When adding to the existing list recommendations should not be repeated.\newline
+Each time Mahout is run, up to ten recommendations are inserted in the database. How these are chosen depends on a number of factors. Since a requirement from the customer was to include false recommendations, one of the recommendations is always picked from the lower parts of the recommendation rankings. The other stories are picked from the top of the rankings. Depending on two factors some top recommendations may be skipped for a given run. The first of these factors is that rated stories are not recommended again to the user (only an issue for content-based filtering). The other one is whether the list of recommendations should be added to the existing list of recommendations browsed by the user in the recommendation view or not. When adding to the existing list, recommendations should not be repeated.\newline
 
-Mahout uses a data model and a similarity model to compute recommendations. The data model is a collection of triplets, where each triplet consists of a user id, a story id and a preference value. The selection of which preference values to include is different in content-based and collaborative filtering. The similarity model is also different for content-based and collaborative filtering. A description of these differences follows in the subsequent sections.    
+Mahout uses a data model and a similarity model to compute recommendations. The data model is a collection of triplets, where each triplet consists of a user ID, a story ID and a preference value. The selection of which preference values to include is different in content-based and collaborative filtering. The similarity model is also different for content-based and collaborative filtering. A description of these differences follows in the subsequent sections.    
 
 \subsection{Content-based filtering}
 
-When doing content-based filtering the input data model consist of a collection of all the preference values for the user we are making recommendations for. This means that the size of the model will be equal to the number of stories harvested from Digitalt fortalt. To make recommendations Mahout also need measures describing how similar stories are. Similarities between stories are computed based on the subcategories found in the second column in \textbf{Table \ref{Tab:categorymapping}} using the cosine similarity formula: 
+When doing content-based filtering, the input data model consists of a collection of all the preference values for the user we are making recommendations for. This means that the size of the model will be equal to the number of stories harvested from Digitalt fortalt. To make recommendations Mahout also need measures describing how similar stories are. Similarities between stories are computed based on the subcategories found in the second column in \textbf{Table \ref{Tab:categorymapping}} using the cosine similarity formula: 
 
 \begin{equation}
 similarity = \frac{\vec{x}\cdot\vec{y}}{||\vec{x}||\cdot||\vec{y}||}
 \end{equation}
 
-The dot product in the numerator is in our system equivalent to the number of common subcategories for two stories, while the denominator is the product of the square roots of the number of subcategories for each of the two stories. If two stories have exactly the same subcategories the similarity value will be 1, and if they don't share any subcategory the value will be 0. \newline
+The dot product in the numerator is in our system equivalent to the number of common subcategories for two stories, while the denominator is the product of the square roots of the number of subcategories for each of the two stories. If two stories have exactly the same subcategories the similarity value will be 1, and if they do not share any subcategory the value will be 0. \newline
 
-These similarities are put in a CSV file at the time of harvesting. This file is read when the recommendation is run and the values put in the appropriate Mahout objects. Mahout then uses the data model and the similarity model with similarity values for all possible pairs of stories to produce a ranked list of recommendations using item based recommending.
+These similarities are put in a CSV file at the time of harvesting. This file is read when the recommendation is run and the values are put in the appropriate Mahout objects. Mahout then uses the data model and the similarity model with similarity values for all possible pairs of stories to produce a ranked list of recommendations using item based recommending.
 
 
 \subsection{Collaborative filtering}
 
-Collaborative filtering uses a data model with multiple users. Only the stories a user has rated will be included in the data model since this is the most precise user feedback. In our application collaborative filtering is done by combining two different methods provided by Mahout, namely item based recommendations and user based recommendations. The item based approach creates a similarity model based on similarity between items in the data model using Log Likelihood, while the user based approach creates a similarity model based on similarity between users in the data model using Pearson correlation. To avoid that not similar users affect the recommendations in the user based approach a threshold value for the similarity is set. Two list of recommendations are produced and then merged to get one list of ranked recommendations.\newline
+Collaborative filtering uses a data model with multiple users. Only the stories a user has rated will be included in the data model since this is the most precise user feedback. In our application collaborative filtering is done by combining two different methods provided by Mahout, namely item based recommendations and user based recommendations. The item based approach creates a similarity model based on similarity between items in the data model using Log Likelihood, while the user based approach creates a similarity model based on similarity between users in the data model using Pearson correlation. To prevent dissimilar users from affecting the recommendations in the user based approach, a threshold value for the similarity is set. Two lists of recommendations are produced and then merged to get one list of ranked recommendations.\newline
 
-As was noted in \textbf{Section \ref{sec:personalization_algorithms}} collaborative filtering requires a large amount of data to make recommendations. Since only rated stories are included, collaborative filtering cannot be run when a new user starts using the application as the user will not be part of the data model. The criteria for using collaborative filtering needed to be met is that the user has rated at least ten stories that at least ten other users also have rated. 
+As was noted in \textbf{Section \ref{sec:personalization_algorithms}} collaborative filtering requires a large amount of data to make recommendations. Since only rated stories are included, collaborative filtering cannot be run when a new user starts using the application as the user will not be part of the data model. The criteria for using collaborative filtering needed to be met is that the user has rated at least ten stories which at least ten other users also have rated. 
 
 \section{Back end overview}
 \todo{Skal dette være med? I så fall i designarchitecture eller implementation?}
@@ -158,7 +191,7 @@ The back end implementation is divided into five sections, such that each sectio
 	
 \end{description}
 	
-\textbf{Figure \ref{Fig:overall_backend}} depict the different back end classes introduced in the previous paragraphs and give an overview of their dependencies.
+\textbf{Figure \ref{Fig:overall_backend}} depicts the different back end classes introduced in the previous paragraphs and give an overview of their dependencies.
 
 \begin{figure}[h!]
 	\centering
@@ -169,20 +202,20 @@ The back end implementation is divided into five sections, such that each sectio
 
 \section{Reuse of code}
 
-Reusing written code can be a great help to quickly have progress when programming.  To investigate possibilities of this, the code from stedr was reviewed. However, since stedr used a different framework on the front end and java as the server language reusing code proved difficult. Therefore, the code written was developed without relying on previous work.
+Reusing written code can be a great help to quickly achieve progress when programming.  To investigate possibilities of this, the code from stedr was reviewed. However, since stedr used a different framework on the front end and Java as the server language, reusing code proved difficult. Therefore, the front end code was developed without relying on previous work.
 
 \subsection{Digitalt museum’s application programming interface}
 \label{subsec:api}
 
-All content related to stories displayed in the application was collected from Digitalt fortalt. Initially, to achieve better results when testing the personalization algorithms, the stories collected are limited to the areas Nord-Trøndelag and Sør-Trøndelag. The API \cite{digitaltMuseum} used to retrieve stories belongs to Digitalt museum. This API enables search through data from Digitalt museum, displaying pictures and provides access to an XML representation of available objects.\newline
+All content related to stories displayed in the application was collected from Digitalt fortalt. Initially, to achieve better results when testing the personalization algorithms, the stories collected are limited to the areas Nord-Trøndelag and Sør-Trøndelag. The API \cite{digitaltMuseum} used to retrieve stories belongs to Digitalt museum. This API enables search through data from Digitalt museum, displaying pictures, and provides access to an XML representation of available objects.\newline
 
-Digitalt fortalt is established on the same technical platform as Digitalt museum \cite{HM2}. This makes the integration better between the two and the remaining services in Norvegiana. Norvegiana is a datamodel, database and a web service with the purpose of making cultural heritage information more accessible \cite{HM3}. Example services available in Norvegiana are Digitalt museum, Digitalt fortalt, Arkivportalen and Musikkarkiv. 
+Digitalt fortalt is established on the same technical platform as Digitalt museum \cite{HM2}. This makes the integration better between the two and the remaining services in Norvegiana. Norvegiana is a data model, database and a web service with the purpose of making cultural heritage information more accessible \cite{HM3}. Example services available in Norvegiana are Digitalt museum, Digitalt fortalt, Arkivportalen and Musikkarkiv. 
 
 \section{Front end - back end communication}
 \label{subsec:frontend-backend_communication}
 
 Communication between front end and back end was handled using HTTP post requests.
-AngularJs \$http is a core service for reading data from remote servers, which is called every time the application needs to add, retrieve, update or delete data. When an HTTP request is made four fields are set: method, headers, URL and data. The method field determines the HTTP request method, which in this application is set to post, and the headers field sets the content type to JSON. The URL is the location of the remote server script that handles HTTP requests. In the data field the action to be executed is specified, in addition to any data needed to perform the desired action.\newline
+AngularJs \$http is a core service for reading data from remote servers, which is called every time the application needs to add, retrieve, update or delete data. When an HTTP request is made, four fields are set: method, headers, URL and data. The method field determines the HTTP request method, which in this application is set to post, and the headers field sets the content type to JSON. The URL is the location of the remote server script that handles HTTP requests. In the data field the action to be executed is specified, in addition to any data needed to perform the desired action.\newline
 
 Each HTTP request is managed by the same back end PHP script. This script decodes the HTTP request, determines which action to perform and executes it. When the script has finished executing, a JSON response is returned to front end with the desired data.
 
