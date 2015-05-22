@@ -29,9 +29,9 @@ It is a difficult task to model a whole system in an accurate way, and while the
 
 The database was designed with the goal of facilitating the recommendation of stories to users. The data model underpinning the database is visualized in the ER-diagram in \textbf{Fig \ref{Fig:er_diagram}}. User and story are the central entities in this diagram, since the goal of the application is to connect users to stories. Both of these entities has a number of attributes describing the entity. The central relationship in the diagram is the recommendation-relationship, where a user and a story is connected. This connection is described by some additional attributes, such as rating, tag and state. \newline
 
-To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see \textbf{Section \ref{sec:categorymapping}} category mapping). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
+To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see \textbf{Section \ref{sec:categorymapping}}). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
 
-Another goal of this project is to provide some research data to the customer. To do this, some data about the use of the application is stored. This include registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e the rating) and the media format contained in the story.
+Another goal of this project was to provide some research data to the customer. To do this, some data about the use of the application is stored. This include registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e the rating) and the media format contained in the story.
 
 \begin{figure}[h!]
 	\centering
@@ -40,20 +40,6 @@ Another goal of this project is to provide some research data to the customer. T
 	\label{Fig:er_diagram}
 \end{figure}
 
-In mapping the ER-diagram to a relational database the algorithm in \cite[p.270-278]{AS2} has been used. To ensure a good database design, four informal guidelines in \cite[p.487-497]{AS2} have also been used. These guidelines are:
-
-\begin{enumerate}
-\item Making sure that the semantics of the attributes is clear in the schema\newline 
-	This means that a relation schema (table) in the database corresponds to a entity type or a relationship type. The relational database used in this project follows this guideline by making a table for each entity and each relationship in the ER-diagram. The n-ary relationship “user recommend story” is split into tables according to the mapping algorithm.
-\item Reducing the redundant information in tuples\newline
-	This means that the tables should contain no insertion, deletion or modification anomalies. Our database is designed to avoid redundant information, so that modification of one attribute only have to be performed in one tuple in one relation schema. This results in quite a few tables, but maintains a consistent database.
-\item Reducing the NULL values in tuples\newline
-	Some of the tables in our database has the potential for NULL values. For instance, a user may access the application without entering an email address, which means that the user table could be filled with NULL values in the mail-column. An alternative solution would be to to create a user-mail table, which contain only a userId and the email address for those users who actually have entered a email address. The story table also has the potential for NULL values, for instance if a story lacks a connection to an institution.\newline
-	
-	Some of the problems associated with NULL values such as the use of aggregate operations and the multiple possible interpretations of what the NULL represents does not apply to our tables. Alternative solutions has not been employed because guideline 1 has taken priority. Story and user are the most important entities in our data model and should not be divided among too many tables since that makes retrieving complete information about them harder. 
-\item Disallowing the possibility of generating spurious tuples \newline
-	Means that tables should be joined on attributes that are appropriately related, that is primary keys and foreign keys. This guideline is followed in the database design in this project. 
-\end{enumerate}
 
 \section{Docker}
 \label{subsec:docker}
@@ -123,7 +109,7 @@ There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 
 \section{Personalization}
 \label{sec:personalization_how}
 
-Users are recommended stories by means of content-based and collaborative filtering, described in \textbf{section \ref{sec:personalization_algorithms}}. The system gathers information about the stories and the users and feed this information into the recommender engine Mahout which produces a list of recommendations for the desired user. The details of Mahouts inner workings will not be presented here. What will be described is how the input data delivered to Mahout is gathered and produced by our application, what methods of Mahout is used and when they are used, and how the resulting list of recommendations are dealt with.\newline
+Users are recommended stories by means of content-based and collaborative filtering, described in \textbf{Section \ref{sec:personalization_algorithms}}. The system gathers information about the stories and the users and feed this information into the recommender engine Mahout which produces a list of recommendations for the desired user. The details of Mahouts inner workings will not be presented here. What will be described is how the input data delivered to Mahout is gathered and produced by our application, what methods of Mahout is used and when they are used, and how the resulting list of recommendations are dealt with.\newline
 
 Both content-based and collaborative filtering rely on giving a numerical value that express how much a user like a story. We call this a preference value. In our application this value is computed by combining several measures representing different types of user feedback. These are: the rating a user have given to a story, the categories the user have expressed an interest in, the number of times a story has been recommended to the user, the number of times the story has been opened and the number of times a story has been put in the to-be-read list. Weights are assigned to the measures to differentiate between what impact they should have on the preference value. Rating is considered the most important user feedback, since this value is given to a story by direct user action. The other measures are either less connected to a specific story or more intangible. When computing recommendations, preference values for all stories for the user in question are calculated first.\newline
 
