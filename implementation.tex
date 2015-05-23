@@ -6,7 +6,7 @@ This chapter discusses the details of the system implementation process, both fo
 
 
 \section{Project Progression}
-Project progression is derived from the activity plan \todo{ref{app:activityplan}}, meeting abstracts \todo{ref{app:meetingabstract)}} and Trello archive \todo{Blir dette referet til? + legg inn ref her. Står det noe om hvor lange sprintene er tidliger? når de slutter of started klokkeslett}  and will only briefly summarize what was done at each sprint.
+Project progression is derived from the activity plan \todo{ref{app:activityplan}}, meeting abstracts \todo{ref{app:meetingabstract)}} and Trello archive \todo{Blir dette referet til? + legg inn ref her. Står det noe om hvor lange sprintene er tidliger? når de slutter of started klokkeslett}  and will only briefly summarize what was done at each sprint and only serves as a "quick tour" through the development process  
 
 \begin{description}
 	
@@ -20,33 +20,45 @@ Project progression is derived from the activity plan \todo{ref{app:activityplan
 	This was the first week of development. We started testing the API \ref{subsec:api} and finalized some paper prototypes for user testing, \todo{Referanse til papirprototype} and also completed the design for database and architecture. Research towards the personalization, the front end framework \ref{subsec:ionic} \todo{ref:personalization} and differences between the two operating systems \todo{ref crossplatform OS} was also done. 
 	
 	\item[Sprint 4 - 13.02.15 - 20.02.15] \hfill \\ 
-	Analyzing the past work \ref{subsec:stedr} to see if would fit our needs, continuing the research towards collaborative filtering \ref{sec:personalization_algorithms}. Also learning docker \ref{subsec:docker}. Mapping the Digitalt fortalt \todo{ref} categories to our own and conducting and evaluating the paper prototype tests as well. During this sprint the database code was also starting to take shape.
+	Analyzing the past work \ref{subsec:stedr} to see if would fit our needs, continuing the research towards collaborative filtering \ref{sec:personalization_algorithms}. Also learning docker \ref{subsec:docker}. Mapping the Digitalt fortalt \todo{ref} categories to our own and conducting and evaluating the paper prototype tests as well. During this sprint the database code was also starting to take shape. Prioritizing the functional requirements done in order to better plan the next sprint.  
 	
 	\item[Sprint 5 - 20.02.15 - 27.02.15] \hfill \\ 
-	
+	In this sprint we manage to get the harvesting up and running after the database was ready. A lot of work with the internal models on the backend was done. The frontend team moved steadily though the initial work on on the prioritized views.(login, story and list.) there was also a revision of the prototype to accommodate costumer and user-test feedback.
 		
 	\item[Sprint 6 - 27.02.15 - 06.03.15] \hfill \\ 
-
+	Finalizing the database communication was done in order to fully test frontend and to get the backend team to get started on the personalization. The testplan was in stage of being attuned and formalized for the documentation. After the new prototype was finished there was conducted new usertest and the worked continued on each of the application views.
+	
 	\item[Sprint 7 - 06.03.15 - 13.03.15] \hfill \\ 
+	Some work to meet a report delivery was done early in the sprint. ahead in the sprint backend was showing good progress on finding/testing a suitable filtering framework. While fronted refined the look of each view to better fit the users needs. but also working out some issues with the server communication.
 	
 	\item[Sprint 8 - 13.03.15 - 20.03.15] \hfill \\ 
+	The application was taking shape on many fronts so this week we worked more on video support and started on the on-boarding section of the application. On the backend the Mahout\todo{ref til mahout}  framework setup was on the way. There was also used some resources on testing.
 
 	\item[Sprint 9 - 20.03.15 - 27.03.15] \hfill \\ 
+	Polishing some features and functionality to hit the milestone (Beta version) this week so the the application was ready for some testing in the wild the upcoming easter. Further development on the Mahout framework, content-based filtering and fixed some unforeseen issues on the harvester was the done on the serverside.
 	
 	\item[Easter - 27.03.15 - 07.04.15] \hfill \\ 
 	The application was tested under informal conditions on family and friends, a so-called "in the wild" test.
+	
 	\item[Sprint 10 - 08.04.15 - 17.04.15] \hfill \\ 
+	We dealt with the feedback from the test conducted during the passover \todo{Blir dette riktig?} . which some of teh problems where platform specific. Did some more polish on the  views and cleared out some frontend bugs. on backend work continued on filtering both collaborative and content-based witch it would for the rest of the sprints. 
 
 	\item[Sprint 11 - 17.04.15 - 24.04.15] \hfill \\ 
+	The application is beginning to be close finished on a functional level. Resource dedicated to polish and bugsfixing increased while a lot of testing was conducted on the server. while the last big task on backend was to finalize the filtering.
 
 	\item[Sprint 12 - 24.04.15 - 01.05.15] \hfill \\ 
+	Sprint 12 was similar to sprint 11 but there were a lot more hours used this week due to the a next milestone. Final build (costumer ready) which we intended to hit at the end of this week. This did not happen but since we aimed for a final build for 1th of may we had some time for some last minute changes and fix undiscovered bugs which was the case. we also used some extra time for component and system testing and the filtering was done this week.
 	
 	\item[Sprint 13 - 01.05.15 - 08.05.15] \hfill \\ 
+	This week was mainly bug fixing for some member for the group while the majority did a lot og report and documentation work. Planning a acceptance test with the costumer the following week. We walked through the application and did extensive functional tests prior to the costumer meeting 
 
 	\item[Sprint 14 - 08.05.15 - 15.05.15] \hfill \\ 
+	During the tests the week before more undiscovered issues was uncovered and we needed some more time for polish and fixing. We had not yet locked in a date for the costumer to do a acceptance test other the before the end of the month so the costumer did not appeal, and agreed to set up a final meeting the following Monday. Which we felt very confident we would take care of our main concerns and give us some time to go the extra mile.
 	
 	\item[Past 15.05.15] \hfill \\ 
-	Work was conducted after the last sprint(sprint 14) this was mainly fixing crucial bugs in the application, finalizing the report, as well as carry out an acceptance test \todo{ref acceptance test} with the customer.
+	At the start of the week we meet with the costumer to go go through the functionality in conjunction with the functional requirements to see if the costumer also thought we hit our goal\todo{ref til acceptance test}.
+	  
+	Work was conducted after the last sprint(sprint 14) this was mainly fixing some bugs, finalizing the report and the application and source code handover.
 	
 \end{description}
 
