@@ -26,28 +26,6 @@ It is a difficult task to model a whole system in an accurate way, and while the
 	\label{Fig:architecture}
 \end{figure}
 
-\section{Database design}
-\label{sec:database_design}
-
-The database was designed with the goal of facilitating the recommendation of stories to users. The data model underpinning the database is visualized in the ER-diagram in \textbf{Figure \ref{Fig:er_diagram}}. User and story are the central entities in this diagram, since the goal of the application is to connect users to stories. Both of these entities has a number of attributes describing the entity. The central relationship in the diagram is the recommendation-relationship, where a user and a story is connected. This connection is described by some additional attributes, such as rating, tag and state. \newline
-
-To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see \textbf{Section \ref{sec:categorymapping}}). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
-
-Another goal of this project was to provide some research data to the customer. To do this, some data about the use of the application is stored. This includes registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e. the rating) and the media format contained in the story.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{fig/er_diagram}
-	\caption{ER-diagram showing the data model.}
-	\label{Fig:er_diagram}
-\end{figure}
-
-
-\section{Docker}
-\label{subsec:docker}
-
-Docker \cite{EHW2} was made to help automation of application deployment. This happens by providing a virtual operative-system-level abstraction. This means that on a server, it is possible to run several virtual operative systems called docker images, which can easily be deployed to another server. This is beneficial for software development, because it means it is easy to setup identical back ends. The customer used this on their servers, which made using it during development a good choice as well. A benefit of using docker is that it can directly access repositories on git. This means that the latest revision is guaranteed to run when starting the back end. However, there are also drawbacks. It is not possible to update files within the docker image currently running without rebuilding it. This means that to update a single line of code, the whole image needs to be rebuilt. This means that while the newest revision is guaranteed to be running, any changes made to the application after the start of that docker image requires manually stopping, rebuilding, and starting the docker image.
-
 \section{Front end structure}
 The front end of the application was designed by using Ionic and AngularJS, and this section will describe how a system made in AngularJS is structured.
 
@@ -79,6 +57,10 @@ AngularJS provides templates to create systems based on a Model-View-Controller(
 \section{User interface}
 
 The user interface design was an essential part of the project, as the customer prioritized usability over all other nonfunctional requirements. The design thus went through many iterations by working on a prototype and continually getting feedback from customer and user tests. This feedback loop was important as the customer did not have clear requirements to the application from the beginning, and making everything easy to understand for the user was also challenging.  Balsamiq was first used to create a basic wireframe, but as its functionality was limited, the next iteration of the design was made using Proto.io. This made it possible to receive better feedback on the flow of the app and not just the views individually. \newline
+
+\todo{Synes de to første avsnittene her passer bedre i implementation}
+
+While designing the user interface, some attention was paid to the projects described in \textbf{Section \ref{sec:existing_solutions}}. The group analyzed this previous work as a basis to decide what would be good or bad design choices for "Vettu hva?". A few general conclusions described in \textbf{Section \ref{sec:existing_solutions}} were that having static images occupying screen space is poor design, and that lists are normally easier to navigate than maps.\newline
 
 The following \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow between all the different views in the application. The blue boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explain what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail.
 
@@ -115,15 +97,67 @@ The following \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow b
 
 \todo{Screenshots and explanations of other views}
 
+The name of the application, "Vettu hva?" was not decided upon until near the end of the project. The group had some issues with finding a name that sounded catchy and also gave a correct impression of what the app does. The customer eventually suggested "Vettu hva?" which is a name that translates to "You know what?" in English. The name gives an impression of having something to tell, which is fitting for an app based on storytelling. The name also appeals to a person's sense of curiosity, as if saying "I know something that you do not".
+
+\section{Reuse of code}
+
+Reusing written code can be a great help to quickly achieve progress when programming.  To investigate possibilities of this, the code from stedr was reviewed. However, since stedr used a different framework on the front end and Java as the server language, reusing code proved difficult. Therefore, the front end code was developed without relying on previous work.
+
+\subsection{Digitalt museum’s application programming interface}
+\label{subsec:api}
+
+All content related to stories displayed in the application was collected from Digitalt fortalt. Initially, to achieve better results when testing the personalization algorithms, the stories collected are limited to the areas Nord-Trøndelag and Sør-Trøndelag. The API \cite{digitaltMuseum} used to retrieve stories belongs to Digitalt museum. This API enables search through data from Digitalt museum, displaying pictures, and provides access to an XML representation of available objects.\newline
+
+Digitalt fortalt is established on the same technical platform as Digitalt museum \cite{HM2}. This makes the integration better between the two and the remaining services in Norvegiana. Norvegiana is a data model, database and a web service with the purpose of making cultural heritage information more accessible \cite{HM3}. Example services available in Norvegiana are Digitalt museum, Digitalt fortalt, Arkivportalen and Musikkarkiv. 
+
+\section{Front end - back end communication}
+\label{subsec:frontend-backend_communication}
+
+Communication between front end and back end was handled using HTTP post requests.
+AngularJS \$http is a core service for reading data from remote servers, which is called every time the application needs to add, retrieve, update or delete data. When an HTTP request is made, four fields are set: method, headers, URL and data. The method field determines the HTTP request method, which in this application is set to post, and the headers field sets the content type to JSON. The URL is the location of the remote server script that handles HTTP requests. In the data field the action to be executed is specified, in addition to any data needed to perform the desired action.\newline
+
+Each HTTP request is managed by the same back end PHP script. This script decodes the HTTP request, determines which action to perform and executes it. When the script has finished executing, a JSON response is returned to front end with the desired data.
+
+\section{Back end overview}
+\todo{Skal dette være med? I så fall i designarchitecture eller implementation?}
+The back end implementation is divided into five sections, such that each section addresses a separate concern. A concern is a set of information that affects the code of the application. The value of such a separation is that it simplifies the development and maintenance of the application code. By splitting the code into separate parts the system is more logically structured, and cleaner code is achieved. The result is that e.g. SQL related code is maintained by one part of the system, while for instance HTTP processing is executed by another. Below is a description of the different back end sections.
+
+\begin{description}
+	\item[Models] \hfill \\
+	Consisting of storyModel, userModel and preferenceValue. The models are used to temporarily hold information about a story, a user and a user’s preference value for a story to be utilized by other files. Information is either retrieved from the database, sent from front end, harvested from Digitalt museum’s API or a combination of two. These models also contain formatting methods, which makes it possible to return story or user information to front end.
+	
+	\item[Database] \hfill \\
+	This section contains dbStory, dbUser, dbHelper and harvesting. The db classes are responsible for accessing the database. dbStory contains methods for adding or retrieving story related information from the database and dbUser is responsible for user related information. dbHelper consists of more general methods and is the class which establish a connection with the database. The harvesting script is responsible for collecting all database stories from Digitalt museums API and adding stories to or updating stories in the database. \todo{Skrive om harvesting og referere til det her}
+	
+	\item[Personalization] \hfill \\
+	Consisting of computePreferences and runRecommender. This section computes preference values for each Digitalt fortalt story in the database for each user. runRecommender is also responsible for initializing the Mahout recommendation engine when a user’s preference values have been calculated.
+	
+	\item[Recommender] \hfill \\
+	This section consists of the Java code and recommender.jar file which make up the Mahout recommender (see \textbf{Section \ref{sec:personalization_how}}).
+	
+	\item[Requests] \hfill \\
+	Contains the controller script, which receives and handles front end HTTP requests and returns JSON responses (see \textbf{Section \ref{subsec:frontend-backend_communication}}).
+	
+\end{description}
+
+\textbf{Figure \ref{Fig:overall_backend}} depicts the different back end classes introduced in the previous paragraphs and give an overview of their dependencies.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/overall_backend}
+	\caption{Class diagram of the overall back end structure}
+	\label{Fig:overall_backend}
+\end{figure}
+
 \section{Category mapping} 
 \label{sec:categorymapping}
 
-There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 to 31 subcategories attached to it. To achieve a content based filtering the user has to select some categories of interest. To make it easier for the user, these subcategories are divided into nine main interest categories. Some of these categories were already predefined in [EHW1], while the rest was changed according to discussions with the customer. The subcategories were put into the category interest field that fit them best, with some subcategories being in several category interests. In \textbf{Table \ref{Tab:categorymapping}} this mapping is illustrated. It is obvious that some category interests will have more stories, and some subcategories such as literature contain more stories than most others. In such a way, it was intended to create nine category interests that contain roughly the same amount of stories. Even distribution of stories into category interests was intended, however, when a subset of stories was chosen this intention did not hold true as can be seen in chapter XX. Furthermore, the category interests needed to be distinct while still encompassing all the subcategories. 
+There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 to 31 subcategories attached to it. To achieve content-based filtering the user has to select some categories of interest. To make it easier for the user, these subcategories are divided into nine main interest categories. Some of these categories were already predefined in [EHW1], while the rest was changed according to discussions with the customer. The subcategories were put into the category interest field that fit them best, with some subcategories being in several category interests. In \textbf{Table \ref{Tab:categorymapping}} this mapping is illustrated. It is obvious that some category interests will have more stories, and some subcategories such as literature contain more stories than most others. In such a way, it was intended to create nine category interests that contain roughly the same amount of stories. Even distribution of stories into category interests was intended, however, when a subset of stories was chosen this intention did not hold true as can be seen in chapter XX. Furthermore, the category interests needed to be distinct while still encompassing all the subcategories. 
 
 \begin{table}[!h]
-	\label{Tab:categorymapping}
 	\begin{center}
-	\caption{Category mapping performed to facilitate, and simplify content based filtering. Each category is assigned to one or more interests.}
+		\caption{Category mapping performed to facilitate, and simplify content-based filtering. Each category is assigned to one or more interests.}
+		\label{Tab:categorymapping}
 		\begin{tabular}{ | p{5cm} | p{12cm}|}
 			\hline
 			\textbf{Archeology} & Arkeologi og forminne \\ \hline
@@ -160,63 +194,36 @@ similarity = \frac{\vec{x}\cdot\vec{y}}{||\vec{x}||\cdot||\vec{y}||}
 
 The dot product in the numerator is in our system equivalent to the number of common subcategories for two stories, while the denominator is the product of the square roots of the number of subcategories for each of the two stories. If two stories have exactly the same subcategories the similarity value will be 1, and if they do not share any subcategory the value will be 0. \newline
 
-These similarities are put in a CSV file at the time of harvesting. This file is read when the recommendation is run and the values are put in the appropriate Mahout objects. Mahout then uses the data model and the similarity model with similarity values for all possible pairs of stories to produce a ranked list of recommendations using item based recommending.
+These similarities are put in a CSV file at the time of harvesting. This file is read before the recommendations are computed and the similarity values are put in the appropriate Mahout objects. Mahout then uses the data model and the similarity model with similarity values for all possible pairs of stories to produce a ranked list of recommendations.
 
 
 \subsection{Collaborative filtering}
 
-Collaborative filtering uses a data model with multiple users. Only the stories a user has rated will be included in the data model since this is the most precise user feedback. In our application collaborative filtering is done by combining two different methods provided by Mahout, namely item based recommendations and user based recommendations. The item based approach creates a similarity model based on similarity between items in the data model using Log Likelihood, while the user based approach creates a similarity model based on similarity between users in the data model using Pearson correlation. To prevent dissimilar users from affecting the recommendations in the user based approach, a threshold value for the similarity is set. Two lists of recommendations are produced and then merged to get one list of ranked recommendations.\newline
+Collaborative filtering uses a data model with multiple users. Only the stories a user has rated will be included in the data model since this is the most precise user feedback. In our application collaborative filtering is done by combining two different methods provided by Mahout, namely item-based recommendation and user-based recommendation. The item-based approach creates a similarity model based on similarity between items in the data model using Log Likelihood, while the user-based approach creates a similarity model based on similarity between users in the data model using Pearson correlation. To prevent dissimilar users from affecting the recommendations in the user-based approach, a threshold value for the similarity is set. Two lists of recommendations are produced and then merged to get one list of ranked recommendations.\newline
 
 As was noted in \textbf{Section \ref{sec:personalization_algorithms}} collaborative filtering requires a large amount of data to make recommendations. Since only rated stories are included, collaborative filtering cannot be run when a new user starts using the application as the user will not be part of the data model. The criteria for using collaborative filtering needed to be met is that the user has rated at least ten stories which at least ten other users also have rated. 
 
-\section{Back end overview}
-\todo{Skal dette være med? I så fall i designarchitecture eller implementation?}
-The back end implementation is divided into five sections, such that each section addresses a separate concern. A concern is a set of information that affects the code of the application. The value of such a separation is that it simplifies the development and maintenance of the application code. By splitting the code into separate parts the system is more logically structured, and cleaner code is achieved. The result is that e.g. SQL related code is maintained by one part of the system, while for instance HTTP processing is executed by another. Below is a description of the different back end sections.
+\section{Database design}
+\label{sec:database_design}
 
-\begin{description}
-	\item[Models] \hfill \\
-	Consisting of storyModel, userModel and preferenceValue. The models are used to temporarily hold information about a story, a user and a user’s preference value for a story to be utilized by other files. Information is either retrieved from the database, sent from front end, harvested from Digitalt museum’s API or a combination of two. These models also contain formatting methods, which makes it possible to return story or user information to front end.
-	
-	\item[Database] \hfill \\
-	This section contains dbStory, dbUser, dbHelper and harvesting. The db classes are responsible for accessing the database. dbStory contains methods for adding or retrieving story related information from the database and dbUser is responsible for user related information. dbHelper consists of more general methods and is the class which establish a connection with the database. The harvesting script is responsible for collecting all database stories from Digitalt museums API and adding stories to or updating stories in the database. \todo{Skrive om harvesting og referere til det her}
+The database was designed with the goal of facilitating the recommendation of stories to users. The data model underpinning the database is visualized in the ER-diagram in \textbf{Figure \ref{Fig:er_diagram}}. User and story are the central entities in this diagram, since the goal of the application is to connect users to stories. Both of these entities has a number of attributes describing the entity. The central relationship in the diagram is the recommendation-relationship, where a user and a story is connected. This connection is described by some additional attributes, such as rating, tag and state. \newline
 
-	\item[Personalization] \hfill \\
-	Consisting of computePreferences and runRecommender. This section computes preference values for each Digitalt fortalt story in the database for each user. runRecommender is also responsible for initializing the Mahout recommendation engine when a user’s preference values have been calculated.
-	
-	\item[Recommender] \hfill \\
-	This section consists of the Java code and recommender.jar file which make up the Mahout recommender (see \textbf{Section \ref{sec:personalization_how}}).
-	
-	\item[Requests] \hfill \\
-	Contains the controller script, which receives and handles front end HTTP requests and returns JSON responses (see \textbf{Section \ref{subsec:frontend-backend_communication}}).
-	
-\end{description}
-	
-\textbf{Figure \ref{Fig:overall_backend}} depicts the different back end classes introduced in the previous paragraphs and give an overview of their dependencies.
+To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see \textbf{Section \ref{sec:categorymapping}}). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
+
+Another goal of this project was to provide some research data to the customer. To do this, some data about the use of the application is stored. This includes registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e. the rating) and the media format contained in the story.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{fig/overall_backend}
-	\caption{Class diagram of the overall back end structure}
-	\label{Fig:overall_backend}
+	\includegraphics[width=\textwidth]{fig/er_diagram}
+	\caption{ER-diagram showing the data model.}
+	\label{Fig:er_diagram}
 \end{figure}
 
-\section{Reuse of code}
 
-Reusing written code can be a great help to quickly achieve progress when programming.  To investigate possibilities of this, the code from stedr was reviewed. However, since stedr used a different framework on the front end and Java as the server language, reusing code proved difficult. Therefore, the front end code was developed without relying on previous work.
+\section{Docker}
+\label{subsec:docker}
 
-\subsection{Digitalt museum’s application programming interface}
-\label{subsec:api}
+Docker \cite{EHW2} was made to help automation of application deployment. This happens by providing a virtual operative-system-level abstraction. This means that on a server, it is possible to run several virtual operative systems called docker images, which can easily be deployed to another server. This is beneficial for software development, because it means it is easy to setup identical back ends. The customer used this on their servers, which made using it during development a good choice as well. A benefit of using docker is that it can directly access repositories on git. This means that the latest revision is guaranteed to run when starting the back end. However, there are also drawbacks. It is not possible to update files within the docker image currently running without rebuilding it. This means that to update a single line of code, the whole image needs to be rebuilt. This means that while the newest revision is guaranteed to be running, any changes made to the application after the start of that docker image requires manually stopping, rebuilding, and starting the docker image.
 
-All content related to stories displayed in the application was collected from Digitalt fortalt. Initially, to achieve better results when testing the personalization algorithms, the stories collected are limited to the areas Nord-Trøndelag and Sør-Trøndelag. The API \cite{digitaltMuseum} used to retrieve stories belongs to Digitalt museum. This API enables search through data from Digitalt museum, displaying pictures, and provides access to an XML representation of available objects.\newline
-
-Digitalt fortalt is established on the same technical platform as Digitalt museum \cite{HM2}. This makes the integration better between the two and the remaining services in Norvegiana. Norvegiana is a data model, database and a web service with the purpose of making cultural heritage information more accessible \cite{HM3}. Example services available in Norvegiana are Digitalt museum, Digitalt fortalt, Arkivportalen and Musikkarkiv. 
-
-\section{Front end - back end communication}
-\label{subsec:frontend-backend_communication}
-
-Communication between front end and back end was handled using HTTP post requests.
-AngularJS \$http is a core service for reading data from remote servers, which is called every time the application needs to add, retrieve, update or delete data. When an HTTP request is made, four fields are set: method, headers, URL and data. The method field determines the HTTP request method, which in this application is set to post, and the headers field sets the content type to JSON. The URL is the location of the remote server script that handles HTTP requests. In the data field the action to be executed is specified, in addition to any data needed to perform the desired action.\newline
-
-Each HTTP request is managed by the same back end PHP script. This script decodes the HTTP request, determines which action to perform and executes it. When the script has finished executing, a JSON response is returned to front end with the desired data.
 
 \cleardoublepage
