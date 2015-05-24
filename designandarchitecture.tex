@@ -127,7 +127,7 @@ The back-end implementation is divided into five sections, such that each sectio
 	Consisting of storyModel, userModel and preferenceValue. The models are used to temporarily hold information about a story, a user and a user's preference value for a story to be utilized by other files. Information is either retrieved from the database, sent from front-end, harvested from Digitalt museum's API or a combination of these. These models also contain formatting methods, which makes it possible to return story or user information to front-end.
 	
 	\item[Database] \hfill \\
-	This section contains dbStory, dbUser, dbHelper and harvesting. The db classes are responsible for accessing the database. dbStory contains methods for adding or retrieving story related information from the database and dbUser is responsible for user related information. dbHelper consists of more general methods and is the class which establish a connection with the database. The harvesting script is responsible for collecting all database stories from Digitalt museum's API and adding stories to or updating stories in the database. \todo{Skrive om harvesting og referere til det her}
+	This section contains dbStory, dbUser, dbHelper and harvesting. The db classes are responsible for accessing the database. dbStory contains methods for adding or retrieving story related information from the database and dbUser is responsible for user related information. dbHelper consists of more general methods and is the class which establish a connection with the database. The harvesting script is responsible for collecting all database stories from Digitalt museums API and adding stories to or updating stories in the database (see \textbf{Section \ref{sec:harvesting}}).
 	
 	\item[Personalization] \hfill \\
 	Consisting of computePreferences and runRecommender. This section computes preference values for each Digitalt fortalt story in the database for each user. runRecommender is also responsible for initializing the Mahout recommendation engine when a user's preference values have been calculated.
@@ -152,7 +152,7 @@ The back-end implementation is divided into five sections, such that each sectio
 \section{Category mapping} 
 \label{sec:categorymapping}
 
-There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 to 31 subcategories attached to it. To achieve content-based filtering the user has to select some categories of interest. To make it easier for the user, these subcategories are divided into nine main interest categories. Some of these categories were already predefined in \cite{EHW1}, while the rest was changed according to discussions with the customer. The subcategories were put into the category interest field that fit them best, with some subcategories being in several category interests. In \textbf{Table \ref{Tab:categorymapping}} this mapping is illustrated. It is obvious that some category interests will have more stories, and some subcategories such as literature contain more stories than most others. In such a way, it was intended to create nine category interests that contain roughly the same amount of stories. Even distribution of stories into category interests was intended, however, when a subset of stories was chosen this intention did not hold true as can be seen in chapter \todo{citation}. Furthermore, the category interests needed to be distinct while still encompassing all the subcategories. 
+There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 to 31 subcategories attached to it. To achieve content-based filtering the user has to select some categories of interest. To make it easier for the user, these subcategories are divided into nine main interest categories. Some of these categories were already predefined in \cite{EHW1}, while the rest was changed according to discussions with the customer. The subcategories were put into the category interest field that fit them best, with some subcategories being in several category interests. In \textbf{Table \ref{Tab:categorymapping}} this mapping is illustrated. It is obvious that some category interests will have more stories, and some subcategories such as literature contain more stories than most others. In such a way, it was intended to create nine category interests that contain roughly the same amount of stories. Even distribution of stories into category interests was intended, however, when a subset of stories was chosen this intention did not hold true as can be seen in chapter \textbf{Section \ref{sec:harvesting}}. Furthermore, the category interests needed to be distinct while still encompassing all the subcategories. 
 
 \begin{table}[!h]
 	\begin{center}
@@ -172,6 +172,14 @@ There are 31 subcategories presented at Digitalt fortalt. Each story can have 0 
 		\end{tabular}
 	\end{center}
 \end{table}
+
+
+\section{Harvesting}
+\label{sec:harvesting}
+
+All content related to stories displayed in the application was collected from Digitalt fortalt. At the request of the customer the stories collected are limited to the areas Nord-Trøndelag and Sør-Trøndelag. The API \cite{digitaltMuseum} used to retrieve stories belongs to Digitalt museum. This API enables search through data from Digitalt museum, displaying pictures, and provides access to an XML representation of available objects. Digitalt fortalt is established on the same technical platform as Digitalt museum \cite{HM2}. This makes the integration better between the two and the remaining services in Norvegiana. Norvegiana is a data model, database and a web service with the purpose of making cultural heritage information more accessible \cite{HM3}. Example services available in Norvegiana are Digitalt museum, Digitalt fortalt, Arkivportalen and Musikkarkiv.\newline 
+
+At the time of writing the number of harvested stories is 169. This varies as the harvesting is done each day. The stories are distributed unevenly over the nine categories; both the history and local traditions categories have over one hundred stories connected to them, while the literature category only have two stories connected to it. Media formats distribution also varies, with only fifteen stories having sound and both picture and video included in over one hundred stories.  
 
 \section{Personalization}
 \label{sec:personalization_how}
@@ -194,7 +202,7 @@ similarity = \frac{\vec{x}\cdot\vec{y}}{||\vec{x}||\cdot||\vec{y}||}
 
 The dot product in the numerator is in our system equivalent to the number of common subcategories for two stories, while the denominator is the product of the square roots of the number of subcategories for each of the two stories. If two stories have exactly the same subcategories the similarity value will be 1, and if they do not share any subcategory the value will be 0. \newline
 
-These similarities are put in a CSV file at the time of harvesting. This file is read before the recommendations are computed and the similarity values are put in the appropriate Mahout objects. Mahout then uses the data model and the similarity model with similarity values for all possible pairs of stories to produce a ranked list of recommendations.
+These similarities are put in a CSV file at the time of harvesting. This file is read before the recommendations are computed and the similarity values are put in the appropriate Mahout objects. Mahout then uses the data model and the similarity model with similarity values for all possible pairs of stories to produce a ranked list of recommendations. This list in enhanced with an explanation of why a story was recommended, using a Mahout method that returns the stories most influential for a given recommendation.
 
 
 \subsection{Collaborative filtering}
