@@ -10,21 +10,21 @@ The issues that were discovered during all the tests are described in every test
 \section{Unit testing}
 \label{sec:unit_testing}
 The purpose of unit testing is to ensure that every piece of code that are implemented in the system are functional and correct. The group performed unit tests on new units of code before implementing them in the system. It was necessary to prioritize what units that should be tested, considering the amount of time given for the project. 
-The units in this testing was php, java and javascript classes. Therefore it was necessary to use different unit testing tools. Backend code was tested using phpunit framework \cite{KF2}, and JUnit \cite{jUnit} and the extension DbUnit \cite{dbUnit}. The user interface code was tested by using a Angularjs unit testing tool, called Karma \cite{KF3}. 
-The classes that were tested is listed up under the unit column in tables  \ref{Tab:phptesting}, \ref{Tab:junittesting} and \ref{Tab:karmatesting}. The classes that were left out in the documented testing were tested manually by the developers. If issues were detected during the unit tests, the developers would mend the issues and run the tests again. This cycle was repeated until there was no issues left and all test cases got the expected result.\newline
+The units in this testing was PHP, Java and JavaScript classes. Therefore it was necessary to use different unit testing tools. Backend code was tested using PHPUnit framework \cite{KF2}, and JUnit \cite{jUnit} and the extension DbUnit \cite{dbUnit}. The user interface code was tested by using a AngularJS unit testing tool, called Karma \cite{KF3}. 
+The classes that were tested is listed up under the unit column in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}. The classes that were left out in the documented testing were tested manually by the developers. If issues were detected during the unit tests, the developers would mend the issues and run the tests again. This cycle was repeated until there was no issues left and all test cases got the expected result.
 
-\subsection{Roles \& Responsibilities}
-To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec:scrum_team_and_roles}}), so the tester would have good knowledge to the code and know how it works. The delegated responsibilities is presented in tables  \ref{Tab:phptesting}, \ref{Tab:junittesting} and \ref{Tab:karmatesting}.
+\subsection{Roles and Responsibilities}
+To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec:scrum_team_and_roles}}), so the tester would have good knowledge to the code and know how it works. The delegated responsibilities is presented in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}.
 
 
 
 \begin{table}[H]
-	\caption{shows the delegated responsibilities in testing the back end part of the system written in php code.}
+	\caption{Shows the delegated responsibilities in testing the back end part of the system written in PHP code.}
 	\label{Tab:phptesting}
 	\begin{center}
 		\begin{tabular}{ | l | l | l |}
 			\hline
-			\multicolumn{3}{|c|}{\textbf{PHP unit testing}} \\
+			\multicolumn{3}{|c|}{\textbf{PHPUnit testing}} \\
 			\hline
 			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
 			U1 & Database Helper & Kjersti \\ \hline
@@ -37,7 +37,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 \end{table}
 
 \begin{table}[H]
-		\caption{shows the delegated responsibilities for the back end part of the system written in java code.}
+		\caption{Shows the delegated responsibilities for the back end part of the system written in Java code.}
 		\label{Tab:junittesting}
 	\begin{center}
 		\begin{tabular}{ | l | l | l |}
@@ -53,12 +53,12 @@ To get a structured testing experience, the team had to delegate responsibility 
 \end{table}
 
 \begin{table}[H]
-	\caption{shows the delegated responsibilities for testing the user interface.}
+	\caption{Shows the delegated responsibilities for testing the user interface.}
 	\label{Tab:karmatesting}
 	\begin{center}
 		\begin{tabular}{ | l | l | l |}
 			\hline
-			\multicolumn{3}{|c|}{\textbf{Angularjs Karma testing}} \\
+			\multicolumn{3}{|c|}{\textbf{AngularJS Karma testing}} \\
 			\hline
 			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
 			U8 & UI Login & Ragnhild \\ \hline
@@ -71,7 +71,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 
 
 \subsection{Test Cases}
-The testers created test cases and used these as a guide for performing the tests. The test cases has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running. The test cases are presented in Appendix \ref{app:unittest}.
+The testers created test cases and used these as a guide for performing the tests. The test cases has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running. The test cases are presented in \textbf{Appendix \ref{app:unittest}}.
 
 \subsection{Detected and mended issues}
 This section includes some of the most important issues that were discovered the unit testing, and how they were solved. 
@@ -93,7 +93,7 @@ If issues were detected during the integration tests, the developers would mend 
 
 
 \subsection{Test cases}
-The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Fig \ref{architecture}} of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab:integrationtestcases}}.
+The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Figure \ref{Fig:architecture}} of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab:integrationtestcases}}.
 
 
 \subsection{Detected and mended issues}
@@ -115,9 +115,9 @@ In this test one of the developers were executing the test. Because it is a blac
 When the system test was performed, the testers evaluated the tests results and then decided if the system as a whole fulfilled all goals for the project. If issues were detected, the developers would mend them and run the tests again. This cycle was repeated until the all the test cases got the expected result. The test should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.\newline
 
 \subsection{Test cases}
-The test cases cover the use cases in \ref{subsec:use_cases} and requirements in \ref{app:functional_requirements}. 
+The test cases cover the use cases in \textbf{\ref{subsec:use_cases}} and requirements in \textbf{\ref{app:functional_requirements}}. 
 Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. 
-Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. \textbf{Table \ref{Tab:systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} are presenting two of the test cases that were used. The whole test case document are in Appendix \ref{app:systemtest}. 
+Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. \textbf{Table \ref{Tab:systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} are presenting two of the test cases that were used. The whole test case document are in \textbf{Appendix \ref{app:systemtest}}. 
 
 \begin{table}[H]
 	\centering
@@ -324,7 +324,7 @@ Some of the test cases have a dependability of other tests. If an issue is detec
 			
 			\subsection{Introduction}
 			%FRA USERTEST ROUND 1/2
-			The user testing was performed over several days where the first test was conducted the in on the 21th and 22th. of february 2015. This was an early paper prototype while the second session was with the revised prototype on the digital devices (see Proto.io), this was carried out on feb. 28th and march 1th. All the tests were performed in accordance with the guidelines and tips provided in the book: Designing the User Interface: Strategies for Effective Human-Computer Interaction (5th Edition) – 2009
+			The user testing was performed over several days where the first test was conducted the in on the 21th and 22th. of february 2015. This was an early paper prototype while the second session was with the revised prototype on the digital devices (see Proto.io), this was carried out on feb. 28th and march 1th. All the tests were performed in accordance with the guidelines and tips provided in the book: Designing the User Interface: Strategies for Effective Human-Computer Interaction (5th Edition) – 2009 \todo{Bør inn i bibliografien og refereres til herfra}
 			
 			\subsection{Test Cases}
 			
