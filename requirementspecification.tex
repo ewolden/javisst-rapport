@@ -2,36 +2,37 @@
 
 \chapter{Requirements specification}
 
-This chapter describe the requirements for the application. The chapter is divided into two sections: one section describing the functional requirements and another that describes the non-functional requirements.
+This chapter describe the requirements for the application. The chapter is divided into two sections: one section describing the functional requirements and another that describes the non-functional requirements. All the requirements for this project can be found in \textbf{Appendix \ref{app:requirements}}.
 
 \section{Functional requirements}
 
-A list describing the functional requirements for this project can be found in \textbf{appendix \ref{app:requirements}}. The requirements were formed and agreed upon with the customer in meetings and formalized in the requirement specification. In early customer meetings the functionalities of the application were discussed informally. The group wrote a requirement specification which was discussed at subsequent meetings. In these meetings each proposed requirement was refined and given a priority. The priorities were assigned using a high-medium-low scale. This priority has guided the development process for the project. In addition, the group created its own prioritization where all the requirements were ranked, each with its own unique number ranging from 1 to the total number of requirements. The description of requirements in this chapter is less formal and more high-level than the one found in the requirement specification. 
+The functional requirements were formed and agreed upon with the customer in meetings and formalized in the requirement specification as seen in \textbf{Appendix \ref{app:functional_requirements}}. The first three requirements are non-functional requirements and therefore described in the next section. In early customer meetings the functionalities of the application were discussed informally. The group wrote a requirement specification which was then discussed at subsequent meetings. In these meetings each proposed requirement was refined and given a priority. The priorities were assigned using a high-medium-low scale. This priority has guided the development process for the project. In addition, the group created its own prioritization where all the requirements were ranked, each with its own unique number ranging from 1 to the total number of requirements. The description of requirements in this chapter is less formal and more high-level than the one found in the requirement specification. 
 
 \subsection{Summary of the functional requirements}
 \label{subsec:summary_functional_requirements}
 
-This section provides an informal summary of the main requirements that were initially proposed. These requirements have been detailed and refined in the use case section, as well as the functional requirement specification. \newline
+\begin{itemize}
+	\item Sign up/Sign in view: The application should in some way be able to identify users, but keep them as anonymous as possible. As agreed with the customer, storing the email address is adequate. For research purposes, personal data like age group and gender should be collected.
+	
+	\item Preferences/Settings: The user should be able to specify some preferences regarding interest in cultural categories.
+	
+	\item Main view - Browse recommended stories: The application should provide the user with recommended stories based on user preferences. The user is provided with three choices on each story: to read it now, to go to the next one, or to save it for later.
+	
+	\item Story view: The application should present a chosen story in an clear way that respects the work of the author and resemble the presentation given on \textit{Digitalt fortalt}'s website. Every story should also include a link to the corresponding story on Digitalt fortalt. The user should be given the opportunity to rate the story and to tag the story. In addition, the application should provide an explanation for why each story was recommended.
+	
+	\item List view: The application should be able to keep lists of stories. Lists are created based on the status of the story (to-read, read) or the user's own tags.
+	
+	\item Notifications: The application should provide the user with the opportunity to set a preferred time for receiving a notification about a new recommended story on their device. At the set time, the application should send the notification. In addition, the application should notify the user when a story is missing a rating.
+	
+	\item About site: The application should include an about site, which explains the context in which the application was created.
+	
+	\item Quick tour: An introduction to the application should be given to new users, and also be available through the menu.  
+	
+	\item Personalization: When recommending stories, the application should employ both content-based filtering and collaborative filtering algorithms.
+	
+	\item Research: The application should gather information about usage. The customer provided a list of what this entailed, some details can be found in \textbf{Section \ref{sec:database_design}}.
+\end{itemize}
 
-Sign up/Sign in view: The application should in some way be able to identify users, but keep them as anonymous as possible. As agreed with the customer, storing the email address is adequate. For research purposes, personal data like age group and gender should be collected.\newline
-
-Preferences/Settings: The user should be able to specify some preferences regarding interest in cultural categories.\newline
-
-Main view - Browse recommended stories: The application should provide the user with recommended stories based on user preferences. The user is provided with three choices on each story: to read it now, to go to the next one, or to save it for later.\newline
-
-Story view: The application should present a chosen story in an clear way that respects the work of the author and resemble the presentation given on \textit{Digitalt fortalt}'s website. Every story should also include a link to the corresponding story on Digitalt fortalt. The user should be given the opportunity to rate the story and to tag the story. In addition, the application should provide an explanation for why each story was recommended.\newline
-
-List view: The application should be able to keep lists of stories. Lists are created based on the status of the story (to-read, read) or the user's own tags.\newline
-
-Notifications: The application should provide the user with the opportunity to set a preferred time for receiving a notification about a new recommended story on their device. At the set time, the application should send the notification. In addition, the application should notify the user when a story is missing a rating.\newline
-
-About site: The application should include an about site, which explains the context in which the application was created. \newline
-
-Quick tour: An introduction to the application should be given to new users, and also be available through the menu \newline  
-
-Personalization: When recommending stories, the application should employ both content-based filtering and collaborative filtering algorithms.\newline
-
-Research: The application should gather information about usage. The customer should be provided a list of this, some details can be found in \textbf{Section \ref{sec:database_design}} \newline
 
 \subsection{Use cases}
 \label{subsec:use_cases}
@@ -40,23 +41,29 @@ The use cases in this section give an overview of the interaction with the syste
 
 A use case is a simple scenario that identifies actors involved in an interaction with a system and describe this interaction \cite[p.106-107]{Sommerville}. Actors are entities outside the system interacting with it to accomplish some task. This can be a human using the system or it can be some other system. While defining requirements in a software development process, use cases are particularly effective in making it clear what is expected of the system in terms of user interaction. A use case diagram is usually presented with ellipses and stick figures. The ellipses represent the use case and the stick figures represent the actors (even if the actor is an external system). Include arrows means that the included use case is required to accomplish the use case the arrow originates from, while the extends arrow describe a use case that might be performed after the main use case. This simple notation is often complemented by a textual description which provide more detail.\newline
 
-The use cases in this section define interactions between an actor and the application. Actors in these use cases are the user of the system, the device on which the application run, and Digitalt fortalt. The use cases consist of a textual description accompanied by a visual representation in the form of use case diagrams. The textual description follows a template which consists of these items:
+The use cases in this section define interactions between an actor and the application. Actors in these use cases are the user of the system, the device on which the application run, and Digitalt fortalt. The use cases consist of a textual description as seen in \textbf{\Crefrange{Tab:U1}{Tab:U10}} accompanied by a visual representation in the form of use case diagrams as seen in \textbf{\Crefrange{Fig:U1}{Fig:U10}}. The textual description follows a template which consists of these items:
 \begin{itemize}
 \item ID: A unique identification for the use case.
 \item Name: A short text describing the goal of the use case.
 \item Brief description: This is a more elaborate explanation of the use case than the above.
 \item Actors: These are the users/systems outside the application interacting with it.
-\item Priority: A metric describing the priority of this use case. This metric is derived from the functional requirements document, and uses a high-medium-low scale.
+\item Priority: A metric describing the priority of this use case. This metric is derived from the functional requirements document and uses a high-medium-low scale.
 \item Preconditions: Describe what state the system should be in before the use case can start. Typically, some of the other use cases are already performed to set up the use case.
 \item Basic flow: This describe the normal flow from preconditions to postconditions in a numbered list.
 \item Alternate flow: A description of scenarios that differ from the basic flow described above. This includes exceptions and errors. It is also presented as a list, but the numbering in this list refers to the items in the basic flow list. The items in this list do not relate to each other.
 \item Postconditions: Describe what state the system should be in after the use case is performed.
 \end{itemize}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=\textwidth]{fig/U1}
 	\centering
-	\caption{U1. Create profile}
+	\caption{Use case diagram of U1. Create profile}
+	\label{Fig:U1}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U1. Create profile}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U1									\\\hline
 		\textbf{Name} 				& Create recoverable profile.			\\\hline
@@ -69,7 +76,7 @@ The use cases in this section define interactions between an actor and the appli
 										\item User clicks on register new user
 										\item User fills in mail into a registration form
 										\item Input validated
-										\item User finishes the registration and the syestem saves the user ID
+										\item User finishes the registration and the system saves the user ID
 									  \end{enumerate}						
 									  \end{minipage}						\\\hline&\\[-2ex]
 		\textbf{Alternate flow}		& \begin{minipage}{5in}
@@ -80,12 +87,19 @@ The use cases in this section define interactions between an actor and the appli
 									 \end{minipage}							\\\hline
 		\textbf{Postconditions}		& User is created and saved by the system\\\hline
 	\end{tabular}
+	\label{Tab:U1}
 \end{table}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=0.5\textwidth]{fig/U2}
 	\centering
-	\caption{U2. Sign in}
+	\caption{Use case diagram of U2. Sign in}
+	\label{Fig:U2}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U2. Sign in}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U2									\\\hline
 		\textbf{Name} 				& Sign in.								\\\hline
@@ -109,12 +123,19 @@ The use cases in this section define interactions between an actor and the appli
 		\end{minipage}							\\\hline
 		\textbf{Postconditions}		& User is logged in to the system\\\hline
 	\end{tabular}
+	\label{Tab:U2}
 \end{table}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=\textwidth]{fig/U3}
 	\centering
-	\caption{U3. Set initial settings}
+	\caption{Use case diagram of U3. Set initial settings}
+	\label{Fig:U3}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U3. Set initial settings}
 	\begin{tabular}[b]{|l | p{13cm}|}\hline
 		\textbf{ID} 				& U3									\\\hline
 		\textbf{Name} 				& Set initial settings.					\\\hline
@@ -139,12 +160,19 @@ The use cases in this section define interactions between an actor and the appli
 		\end{minipage}							\\\hline
 		\textbf{Postconditions}		& The system has information about the user in order to provide personalized story recommendations.\\\hline
 	\end{tabular}
+	\label{Tab:U3}
 \end{table}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=\textwidth]{fig/U4}
 	\centering
-	\caption{U4. Browse recommended stories}
+	\caption{Use case diagram of U4. Browse recommended stories}
+	\label{Fig:U4}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U4. Browse recommended stories}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U4									\\\hline
 		\textbf{Name} 				& Browse recommended stories.			\\\hline
@@ -154,29 +182,32 @@ The use cases in this section define interactions between an actor and the appli
 		\textbf{Preconditions}		& Preferences already set				\\\hline&\\[-2ex]
 		\textbf{Basic flow}			& \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
-				\item User is shown a list of recommended stories
+				\item User is shown recommended stories including an explanation of why the story was recommended
 				\item User does one of the three following actions on a story:
 					\begin{enumerate}
 						\item Choose to read the story now
 						\item Reject the story
 						\item Add story to list  
 					\end{enumerate}
-				\item If option (b) or (c) is chosen the user is shown a recommendation list without the story
 			\end{enumerate}						
 		\end{minipage}						\\\hline&\\[-2ex]
 		\textbf{Alternate flow}		& \begin{minipage}{5in}
-			\begin{enumerate}[noitemsep]
-				\item If the user chose to read the story now, the story - and not the updated recommendation list - will be shown.
-			\end{enumerate}
 		\end{minipage}							\\\hline
 		\textbf{Postconditions}		& The system has stored information about the choice of the user.\\\hline
 	\end{tabular}
+	\label{Tab:U4}
 \end{table}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=0.5\textwidth]{fig/U5}
 	\centering
-	\caption{U5. Add story to list}
+	\caption{Use case diagram of U5. Add story to list}
+	\label{Fig:U5}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U5. Add story to list}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U5									\\\hline
 		\textbf{Name} 				& Add story to list.					\\\hline
@@ -198,41 +229,55 @@ The use cases in this section define interactions between an actor and the appli
 		\end{minipage}							\\\hline
 		\textbf{Postconditions}		& Story will be added to and/or removed from various lists according to user's actions\\\hline
 	\end{tabular}
+	\label{Tab:U5}
 \end{table}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=\textwidth]{fig/U6}
 	\centering
-	\caption{U6. View story}
+	\caption{Use case diagram of U6. View story}
+	\label{Fig:U6}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U6. View story}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U6									\\\hline
 		\textbf{Name} 				& View story.							\\\hline
 		\textbf{Brief description}	& Display media (text, images, video, sound clips) related to the story selected. 		\\\hline
 		\textbf{Actors} 			& User, Digitalt fortalt				\\\hline
 		\textbf{Priority}			& High									\\\hline
-		\textbf{Preconditions}		& The story is in the list of recommended stories or favorites			\\\hline&\\[-2ex]
+		\textbf{Preconditions}		& The story has been recommended to the user at some point and is either in the current recommendations list or in one of the other lists			\\\hline&\\[-2ex]
 		\textbf{Basic flow}			& \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 				\item User selects story
 				\item Display:
 					\begin{enumerate}
-						\item Available media files
+						\item The story
+						\item Available media formats
 						\item Link to story on Digitalt fortalt
-						\item Explanation of why the story was recommended
 					\end{enumerate}
-				\item User selects media type (text default)
+				\item User may select a media format
 			\end{enumerate}						
 		\end{minipage}						\\\hline&\\[-2ex]
 		\textbf{Alternate flow}		& \begin{minipage}{5in}
 		\end{minipage}							\\\hline
 		\textbf{Postconditions}		& The story is shown according to the user preferences\\\hline
 	\end{tabular}
+	\label{Tab:U6}
 \end{table}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=\textwidth]{fig/U7}
 	\centering
-	\caption{U7. Rate story}
+	\caption{Use case diagram of U7. Rate story}
+	\label{Fig:U7}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U7. Rate story}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U7									\\\hline
 		\textbf{Name} 				& Give feedback / rating.				\\\hline
@@ -255,12 +300,19 @@ The use cases in this section define interactions between an actor and the appli
 		\end{minipage}							\\\hline
 		\textbf{Postconditions}		& The rating of the story from the user is saved\\\hline
 	\end{tabular}
+	\label{Tab:U7}
 \end{table}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=\textwidth]{fig/U8}
 	\centering
-	\caption{U8. View list}
+	\caption{Use case diagram of U8. View list}
+	\label{Fig:U8}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U8. View list}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U8									\\\hline
 		\textbf{Name} 				& View list.							\\\hline
@@ -282,12 +334,19 @@ The use cases in this section define interactions between an actor and the appli
 		\end{minipage}							\\\hline
 		\textbf{Postconditions}		& User is shown all of the stories collected\\\hline
 	\end{tabular}
+	\label{Tab:U8}
 \end{table}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=0.5\textwidth]{fig/U9}
 	\centering
-	\caption{U9. Specify settings}
+	\caption{Use case diagram of U9. Specify settings}
+	\label{Fig:U9}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U9. Specify settings}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U9									\\\hline
 		\textbf{Name} 				& Specify settings.						\\\hline
@@ -311,12 +370,19 @@ The use cases in this section define interactions between an actor and the appli
 		\end{minipage}							\\\hline
 		\textbf{Postconditions}		& Settings are changed and saved\\\hline
 	\end{tabular}
+	\label{Tab:U9}
 \end{table}
 
-\begin{table}[htp]
+\begin{figure}[htp]
 	\includegraphics[width=0.5\textwidth]{fig/U10}
 	\centering
-	\caption{U10. Read about app}
+	\caption{Use case diagram of U10. Read about app}
+	\label{Fig:U10}
+\end{figure}
+
+\begin{table}[htp]
+	\centering
+	\caption{Textual description of U10. Read about app}
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U10									\\\hline
 		\textbf{Name} 				& Read about app.						\\\hline
@@ -334,6 +400,7 @@ The use cases in this section define interactions between an actor and the appli
 		\end{minipage}							\\\hline
 		\textbf{Postconditions}		& \\\hline
 	\end{tabular}
+	\label{Tab:U10}
 \end{table}
 
 \pagebreak
