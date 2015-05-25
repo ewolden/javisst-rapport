@@ -47,8 +47,16 @@
 
 %Defining the colors from the Application
 \definecolor{primary}{HTML}{249c9c}
-\definecolor{primary}{HTML}{249c9c}
+\definecolor{contrast}{HTML}{eb6963}
 
+%Forsøk på å endre section farge til contrast
+%\titleformat{\section}
+%{\color{contrast}\normalfont\Large\bfseries}
+%{\color{contrast}\thesection}{2em}{}
+
+%\titleformat{\subsection}
+%{\color{contrast}\normalfont\Large\bfseries}
+%{\color{contrast}\thesection}{1em}{}
 
 \titleformat{\chapter}
 {\normalfont\sffamily\Huge\scshape}
@@ -83,7 +91,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1 }{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \renewcommand{\headrulewidth}{0.1ex}
 \renewcommand{\footrulewidth}{0.1ex}
