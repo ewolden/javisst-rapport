@@ -79,7 +79,7 @@ This section includes some of the most important issues that were discovered the
 In the database communication there was some changes done during the development which made it easier to handle the code. One example was to make the database connection return an array where the array keys matched the column names. This way made it easier to access the different values returned from the database.  
 Another issue that was discovered with the media format per story that was not stored correctly in the database, because of an error during the harvesting of the stories from Digitalt Fortalt. These types of issues were solves with several checks to see if the information was in the right format or was not null. 
 
-During the tests of the first version of the recommender it was running with the time of 11-12 seconds. This was improved by increasing the efficiency of the communication with the database. The recommender was more efficient when the insertion of preference values and recommendations was done with one insert statement to the database in stead of respectively 167 and 10 statements. Previously the recommender fetched a whole table from the database with the preference values. By fetching a preference value to a specific user helped the recommendation module to run faster too.
+During the tests of the first version of the recommender it was running with the time of 11-12 seconds. This was improved by increasing the efficiency of the communication with the database. The recommender was more efficient when the insertion of preference values and recommendations was done with one insert statement to the database instead of respectively 167 and 10 statements. Previously the recommender fetched a whole table from the database with the preference values. Fetching preference values for a specific user instead of all users helped the recommendation module to run faster too.
 
 
 
@@ -88,7 +88,7 @@ During the tests of the first version of the recommender it was running with the
 \label{sec:integration_testing}
 
 Integration testing were performed after unit testing and before system testing. After the back end and front end code was testet and integrated, the integration testing started and focused on that these two modules communicated correctly and that the data was moving between them in the right manner. 
-Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. All the tests was executing by simulating http requests from the UI and check that the back end gives the correct response to the specific http request. 
+Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. All the tests was executing by simulating HTTP requests from the UI and check that the back end gives the correct response to the specific HTTP request. 
 If issues were detected during the integration tests, the developers would mend the issues and run the tests again. This cycle was repeated until there was no issues left and all test cases got the expected result. \newline
 
 
