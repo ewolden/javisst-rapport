@@ -86,7 +86,11 @@ The applications uses many different icons in various parts of the interface, an
 
 Adopting accurate naming conventions for the different components has also been a considerable issue. Stories can be saved in collections, but these collections have interchangeably been called lists, tags, and bookmarks in the system. Also when asking a user to input their preferred categories to receive stories from, there has been some confusion because of interchangeably calling these categories for interests,  preferences, and categories.\newline
 
-Implementing media, and especially video, has been a challenge in the project. An issue with this has been that playing videos is handled differently on iOS and Android, which had resulted in some bugs that only appear on one platform and not the other. These types of issues have been problematic to fix and has taken up much time. In addition, the videos provided by the Digitalt fortalt website come from different sources. Some of them are Youtube videos, others are Vimeo videos, and there are also other variations. Integrating all these different formats smoothly into the application has been a considerable challenge as well.
+Implementing media, and especially video, has been a challenge in the project. An issue with this has been that playing videos is handled differently on iOS and Android, which had resulted in some bugs that only appear on one platform and not the other. These types of issues have been problematic to fix and has taken up much time. In addition, the videos provided by the Digitalt fortalt website come from different sources. Some of them are Youtube videos, others are Vimeo videos, and there are also other variations. Integrating all these different formats smoothly into the application has been a considerable challenge as well. \newline
+
+Being able to reject a recommended story was a feature that was supposed to be implemented, but it was more difficult than it seemed. The problem was with the slide component from the Ionic framework, which did not do well with dynamic content. When removing a slide from the middle of the list of recommendations, it would not update properly and swiping did no longer work. \newline
+
+It was also decided to remove the "not interested" option when rating a story. It was not intuitive what the button would actually do, and the user can convey the same "not interested" message in other ways. In order to rate, the user has to at least look at the story. If the user does not like the story after looking at it, then it is both more intuitive and useful that the user gives a low rating rather than "not interested". 
 
 \subsection{Prototype}
 
@@ -95,7 +99,7 @@ The prototype has been through multiple iterations. Early on, it was imagined to
 
 Another of the early ideas was for the user to receive a “daily story” or some sort of schedule for being presented with recommended stories. However, due to workload and time constraints, this requirement was heavily down-prioritized. The most important parts were the personalization and usability aspects, so receiving notifications seemed like an unnecessary extra feature.\newline
 
-A big issue for the interface design has been the handling of the different media elements (text, pictures, audio, video) and how these should be positioned relative to each other. For a while the team designed the application to have one tab for each of these four elements in the story view, as shown to the left in \textbf{Figure \ref{Fig:prototype}}. The customer had a concern that this might not be the optimal solution, as a user would for example not be able to read text and view pictures simultaneously. After some discussion, the interface was redesigned so that the text would be persistent, and instead the user could tab between pictures, audio, and video. The resulting design can be seen to the right in \textbf{Figure \ref{Fig:prototype}}. 
+A big issue for the interface design has been the handling of the different media elements (text, pictures, audio, video) and how these should be positioned relative to each other. For a while the team designed the application to have one tab for each of these four elements in the story view, as shown to the left in \textbf{Figure \ref{Fig:prototype}}. The customer had a concern that this might not be the optimal solution, as a user would for example not be able to read text and view pictures simultaneously. After some discussion, the interface was redesigned so that the text would be persistent, and instead the user could tab between pictures, audio, and video. The resulting design can be seen to the right in \textbf{Figure \ref{Fig:prototype}}. \newline
 
 \begin{figure}
 	\centering
@@ -111,6 +115,15 @@ A big issue for the interface design has been the handling of the different medi
 	\caption{Comparison of the story view in the first and second versions of the prototype and the final design implemented.}
 	\label{Fig:prototype}
 \end{figure}
+
+In the first prototype a media preference view was also included when creating a new user. In this view the user should put the media formats (text, images, video, audio) in order by which format the user preferred. This was discarded in the second prototype, as it was difficult for users to understand the purpose of it and the customer agreed it was not necessary. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{fig/prototype_media}
+	\caption{Media preference view from the first prototype, which was later discarded.}	
+\end{figure}
+
+
 
 \section{Back end}
 
