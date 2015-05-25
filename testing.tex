@@ -119,14 +119,15 @@ Some of the test cases have a dependability on other tests. If an issue is detec
 \begin{table}[H]
 	\centering
 	\caption{System test case for creating a recoverable profile.}
+	\begin{adjustbox}{center}
 	\begin{tabular}[b]{ | l | l  |}
 		\hline
 		\textbf{Test ID} & T1  \\ \hline
-		\textbf{Test Item} & Create recoverable profile \\ \hline
-		\textbf{Approach} & \begin{minipage}{5in}The user locate and press the “register user” button in the app. Applies the email in the correct format.. The response is valid and the user gets feedback. \end{minipage}\\ \hline
-		\textbf{Input data} &  “newuser@example.com”\\ \hline
+		\textbf{Test Item} & Create recoverable profile \\ \hline&\\[-2ex]
+		\textbf{Approach} & \begin{minipage}{5in}The user locate and press the “register user” button in the app. Applies the email in the correct format.. The response is valid and the user gets feedback. \end{minipage}\\ &\\[-2ex]\hline
+		\textbf{Input data} &  “newuser@example.com”\\ \hline&\\[-2ex]
 		
-		\textbf{Expected results} & \begin{minipage}{5in}The user writes the correct email address and get the correct feedback from the system: "Kontakter server" and will be directed to the startup page.\end{minipage}\\ \hline&\\[-3.8ex]
+		\textbf{Expected results} & \begin{minipage}{5in}The user writes the correct email address and get the correct feedback from the system: "Kontakter server" and will be directed to the startup page.\end{minipage}\\ \hline&\\[-2ex]
 		
 		\textbf{Testing task} & \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
@@ -135,10 +136,11 @@ Some of the test cases have a dependability on other tests. If an issue is detec
 				\item Receive feedback feedback from the system
 				\item Check email inbox to se if the correct mail from the system was received 
 			\end{enumerate} \end{minipage}
-			\\&\\[-3.8ex] \hline
+			\\&\\[-2ex] \hline
 			\textbf{Depends on tests}& NaN \\ \hline	
 			\textbf{Pass/Fail} & Passed \\\hline				
 		\end{tabular}
+		\end{adjustbox}
 		\label{Tab:systemtest1}
 	\end{table}
 	
@@ -146,12 +148,13 @@ Some of the test cases have a dependability on other tests. If an issue is detec
 \begin{table}[H]
 	\centering
 	\caption{System test case for login with email registration}
+	\begin{adjustbox}{center}
 	\begin{tabular}{ | l | l  |}
 		\hline
 		\textbf{Test ID} & T2  \\ \hline 
-		\textbf{Test Item} & Log in with email registration \\ \hline
-		\textbf{Approach} & \begin{minipage}{5in}The user locate the login-button and applies the registrated email and obtain access to the system and the profile connected to this email address . \end{minipage}\\ \hline
-		\textbf{Input data} &  valid email: “user@example.com”, \newline example invalid email: “mail@example”\\ \hline&\\[-3.8ex]
+		\textbf{Test Item} & Log in with email registration \\ \hline&\\[-2ex]
+		\textbf{Approach} & \begin{minipage}{5in}The user locate the login-button and applies the registrated email and obtain access to the system and the profile connected to this email address . \end{minipage}\\ &\\[-2ex]\hline
+		\textbf{Input data} &  valid email: “user@example.com”, \newline example invalid email: “mail@example”\\ \hline&\\[-2ex]
 		\textbf{Expected results} & \begin{minipage}{5in}
 			\begin{itemize}[noitemsep]
 				\item The first time the user have logged in \newline System Response:  Choose preferences-view should appear.
@@ -159,18 +162,18 @@ Some of the test cases have a dependability on other tests. If an issue is detec
 				\item The user types an email with wrong email format \newline System Response: "Ikke en gyldig adresse" 
 				
 			\end{itemize} \end{minipage}
-			\\ &\\[-3.8ex]\hline&\\[-3.8ex]
+			\\ &\\[-2ex]\hline&\\[-2ex]
 			\textbf{Testing task} & \begin{minipage}{5in}
 				\begin{enumerate}[noitemsep]
 					\item Navigate to the login view
 					\item Apply email address to the email input field
 					\item Receive response from system
 				\end{enumerate}\end{minipage}
-				\\ &\\[-3.8ex]\hline
+				\\ &\\[-2ex]\hline
 				\textbf{Depends on tests} & T1 \\ \hline					
 				\textbf{Pass/Fail} & Passed \\\hline
 	\end{tabular}
-	
+	\end{adjustbox}
 	\label{Tab_systemtest2}
 \end{table}
 			
