@@ -200,20 +200,166 @@ I2: Importance (Likelihood * Impact)\\
 \section{WBS Description}
 \label{app:wbs_description}
 
-	\textbf{Introduction} \newline
-	This week has mostly been spent organising and making decisions that will impact the whole project.\newline
 
 \begin{itemize}
-	\item First level, itemize, first item
+	\item \textbf{Project Management}
 	\begin{itemize}
-		\item Second level, itemize, first item
-		\item Second level, itemize, second item
-		\begin{enumerate}
-			\item Third level, enumerate, first item
-			\item Third level, enumerate, second item
-		\end{enumerate}
+		\item \textbf{Method} \newline
+		How does the team work, what kind of development process is used
+		\item \textbf{Product Backlog} \newline
+		What is to be produced, and estimation of its costs. Maintained on Trello
+		\item \textbf{Risk Management} \newline
+		What are the project's risks and what is done to counter/prevent them? 
+		\item \textbf{Tools} \newline
+		What tools are needed to execute the project.
+		\item \textbf{Schedule} \newline
+		When does the team meet, customer meetings, etc.
+		\item \textbf{Rules of Engagement } \newline
+		What are the team’s core principles
 	\end{itemize}
-	\item First level, itemize, second item
+	\item \textbf{Analysis}
+	\begin{itemize}
+		\item \textbf{Requirement Specification} \newline
+		Specify what the product should be used for
+		\begin{itemize}
+			\item \textbf{Scenario} \newline
+			Describing ways to use the product and in what context
+			\item \textbf{Use-Case} \newline
+			Describing ways to interact with the product
+			
+		\end{itemize}
+		\item \textbf{Functionalities} \newline
+		Define the functionalities of the system
+		\item \textbf{Non-Functional Specifications} \newline
+		Define the system’s non-functional dependencies	
+		\item \textbf{Past Work} \newline
+		How does the past work affect this project, what is to be reused and copied	
+		\item \textbf{Algorithms} \newline
+		What algorithms are of use to the personalization	
+		\item \textbf{Framework} \newline
+		What framework should be used for the cross-platform development
+	\end{itemize}
+	\item \textbf{Design}
+			\item \textbf{User Interface} \newline
+			What should the application look like
+			
+			\begin{itemize}
+				\item \textbf{Concept} \newline
+				Making a mockup and iterating
+				
+				\item \textbf{Prototypes} \newline
+				Finalizing the mockup into a prototype to test on customer/users
+				
+				\item \textbf{IOS} \newline
+				What are the distinctions between the systems
+				\item \textbf{Android} \newline
+				What are the distinctions between the systems
+			\end{itemize}
+			\item \textbf{System Modeling} \newline
+			Top-level software design
+			
+			\begin{itemize}
+				\item \textbf{Architecture} \newline
+				How is the system built, how does the component fit together
+				\item \textbf{Documentation} \newline
+				Detailed software design
+				
+			\end{itemize}
+			\item \textbf{Database Modeling} \newline
+			Model how the database should work
+			\begin{itemize}
+				\item \textbf{Documentation} \newline
+				Detailed database design
+			\end{itemize}
+	\item \textbf{Development}
+			\item \textbf{Back-end} \newline
+			\begin{itemize}
+				\item \textbf{Database} \newline
+				Implementing a database
+				\item \textbf{Harvesting} \newline
+				Harvest the data from Digital Fortalt
+				
+				\item \textbf{Personalizing } \newline
+				Main objective for the project
+				\begin{itemize}
+					\item \textbf{Collaborative Filtering} \newline
+					Filter content on the basis of other users
+					\item \textbf{Content-based Filtering} \newline
+					Filter content on the basis of you past feedback
+				\end{itemize}
+				\item \textbf{Server} \newline
+				Getting the server up and running managing reboots and updates
+				\item \textbf{Front-end Communication} \newline
+				How should the system communicate with front-end
+				\item \textbf{Research Data} \newline
+				I what way would the research data be recorded and saved
+				\item \textbf{Feedback} \newline
+				Handling feedback
+				\begin{itemize}
+					\item \textbf{Bug-fixing} \newline
+					Setting a side time for fixing bugs
+					\item \textbf{Customer Adjustment} \newline
+					Be ready for requirement modifications and small adjustments on functionalities
+				\end{itemize}
+			\end{itemize}
+			\item \textbf{Front-End} \newline
+			\begin{itemize}
+				\item \textbf{IOS / Android} \newline
+				\begin{itemize}
+					\item \textbf{Onboarding} \newline
+					Make a introduction for the application
+					\item \textbf{List} \newline
+					Make stories viewable in a list 
+					\item \textbf{Login} \newline
+					Login view
+					\item \textbf{Story} \newline
+					Presenting a story in accordance with the source
+					\item \textbf{Recommendation } \newline
+					View to present the recommendations 
+					\item \textbf{Settings} \newline
+					View for changing the personal settings
+				\end{itemize}
+				\item \textbf{Research Data} \newline
+				Log and send the research data
+				\item \textbf{Feedback} \newline
+				Accommodate user feedback and customer feedback 
+				\begin{itemize}
+					\item \textbf{Bug-fixing} \newline
+					Setting a side time for fixing bugs
+					\item \textbf{Customer Adjustment} \newline
+					requirement modifications and UI adjustments.
+				\end{itemize}
+				\item \textbf{Back-end Communication} \newline
+				Set up communication with back-end
+			\end{itemize}
+	\item \textbf{Testing}
+		\begin{itemize}
+			\item \textbf{Unit Testing} \newline
+			Complete unit test on as many function as feasible 
+			\item \textbf{Component Testing} \newline
+			Complete component testing on relevant modules and components 
+			\item \textbf{Integration testing} \newline
+			Test the integration between the modules
+			\item \textbf{System testing} \newline
+			Test the system as a whole
+			\item \textbf{User Testing } \newline
+			Test the application on potential users 
+			\item \textbf{Acceptance testing} \newline
+			Preform a acceptance test on the customer 
+		\end{itemize}
+	\item \textbf{Documentation}
+		\begin{itemize}
+			\item \textbf{Theory} \newline
+			Find relevant theory for the project 
+			\item \textbf{Commenting} \newline
+			Well commented code 
+			\item \textbf{Justification} \newline
+			Justify decisions 
+			\item \textbf{Logging} \newline
+			Log meeting, activities and work hours
+			\item \textbf{Licensing} \newline
+			Update and write about the licensing deal, on repositories and other relevant places 
+		\end{itemize}
 \end{itemize}
 
 
