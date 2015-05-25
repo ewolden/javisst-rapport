@@ -135,8 +135,6 @@ Using docker as a deployment tool proved easier than initially suspected. This i
 
 Once work on personalization started it was necessary to have Java and Mahout in the docker image as well. This proved uncomplicated and worked as intended. Passwords and other important keys were put in a separate file that can be included along with the Dockerfile where this is required.
 
-\ref{subsec:docker}
-
 \subsection{Database}
 
 Based on the first version of the functional requirements for the application, an initial ER-diagram was made in the middle of February. At this stage the customer and the team had not come to an agreement on a prioritization of the non-functional requirements. This meant that it was for instance not clear how important the performance of the system would be for the customer, an attribute of the system which would influence how much info should be stored for each story in the database versus how much info should be retrieved from Digitalt fortalt every time a user views a story. However, the changes to the initial diagram have been relatively minor. Some of the alterations were based on updated requirements from the customer (for instance regarding research data), while others stemmed from the group and were optimization of the data model or changes made to facilitate the personalization.\newline
