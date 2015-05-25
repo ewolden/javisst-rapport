@@ -444,7 +444,7 @@ Status report week 6\newline
 		
 		UN1.12 & Get subcategories to a specific story & Random storyId & Should return a row with an array of subcategory Ids & Pass\\ \hline
 		
-		UN1.13 & Get story information & Specified userId: 105, specified storyId: 'DF.5220' & Should return row with an array with the keys: userId, storyId, explanation, rating, false\textunderscore recommend, recommended\textunderscore ranking, in\textunderscore frontend\textunderscore array, estimated\textunderscore Rating & Pass  \\ \hline
+		UN1.13 & Get story information & Specified userId: 105, specified storyId: 'DF.5220' & Should return row with an array with the keys: userId, storyId, explanation, rating, false\textunderscore recommend, recommended\textunderscore ranking, in\textunderscore front-end\textunderscore array, estimated\textunderscore Rating & Pass  \\ \hline
 		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 2: Database Story}	\\\hline			
 		
 		UN2.1 & Fetch Story & Specified storyId: 'DF.1812', specified userId: 105 & Should return row with an array of the categories to the story and tags and tagName that are connected to the userId  & Pass\\ \hline
@@ -515,7 +515,7 @@ Status report week 6\newline
 		UN7.3 & Delete recommendations & UserId: 1 & Expected table in XML representation(delete-expected.xml)  is the same table returned from DB & Pass\\ \hline		
 		
 		UN7.4 & Rated  & UserIds: 3,5 \newline	numericalId: 1812,1901 & The getRated function should fetch the correct stories. The input rating should be the same as the returned ratings & Pass \\ \hline						
-		UN7.5 & Test frontend array & Numerical Ids: 1849, 1901  & Get stories from frontend array should match the fronted array in XML format(setUp.xml) & Pass\\ \hline	
+		UN7.5 & Test front-end array & Numerical Ids: 1849, 1901  & Get stories from front-end array should match the front-end array in XML format(setUp.xml) & Pass\\ \hline	
 		
 		UN7.6 & Create explanation  & Numerical Ids: 1098,1115,1501  & The create explanation function should return a string with the correct storyIds and their titles. & Pass\\ \hline								
 		
