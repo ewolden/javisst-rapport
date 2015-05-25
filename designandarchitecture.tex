@@ -60,10 +60,6 @@ The user interface design was an essential part of the project, as the customer 
 
 \todo{Synes de to første avsnittene her passer bedre i implementation}
 
-While designing the user interface, some attention was paid to the projects described in \textbf{Section \ref{sec:existing_solutions}}. The group analyzed this previous work as a basis to decide what would be good or bad design choices for "Vettu hva?". A few general conclusions described in \textbf{Section \ref{sec:existing_solutions}} were that having static images occupying screen space is poor design, and that lists are normally easier to navigate than maps.\newline
-
-The following \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow between all the different views in the application. The blue boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explain what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail.
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{fig/flow_diagram}
@@ -71,10 +67,23 @@ The following \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow b
 	\label{Fig:flow_diagram}
 \end{figure}
 
+While designing the user interface, some attention was paid to the projects described in \textbf{Section \ref{sec:existing_solutions}}. The group analyzed this previous work as a basis to decide what would be good or bad design choices for "Vettu hva?". A few general conclusions described in \textbf{Section \ref{sec:existing_solutions}} were that having static images occupying screen space is poor design, and that lists are normally easier to navigate than maps.\newline
+
+The following \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow between all the different views in the application. The blue boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explain what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail.
+
+
+
 \begin{description}
 	
 	\item[Recommendation view] \hfill \\ 
 	This view displays the stories that should be the most relevant to the user. The user can browse them by swiping through them or by clicking the left and right arrows. When tapping on a card the detailed view of the story will be displayed. The “X” in the right corner of each card is used to reject the story, which takes it out of the list of the current recommendations and makes this kind of stories less likely to appear in the future. The bookmark icon in the top bar opens a modal for adding a bookmark. 
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]{fig/screenshot_recommendations}
+		\caption{Recommendation view}
+		\label{Fig:recommendation_view}
+	\end{figure}
 	
 	\item[Story view] \hfill \\
 	This view displays the chosen story in detail. There is a box which displays the media files associated with the story. The tabs above it will depend on which media types the story contains. Videos will be displayed by default if there are any, as they can be a major component of the story which should not be hidden in another tab. When tapping on a video or image it will be displayed in fullscreen mode. The user can give feedback on the story either by tapping the stars on the bottom part of the view, or by tapping the star icon in the top bar which will open up a modal. The modal will ask the user to rate the story, and the user can exit it by tapping “Ferdig” or by tapping outside of the modal. Tapping the bookmark icon will make the same modal as in the recommendation view appear. 
@@ -82,15 +91,9 @@ The following \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow b
 \end{description}
 
 \begin{figure}[h!]
+	\ContinuedFloat
 	\centering
-	\includegraphics[width=0.5\textwidth]{fig/screenshot_recommendations}
-	\caption{Recommendation view}
-	\label{Fig:recommendation_view}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.5\textwidth]{fig/screenshot_story}
+	\includegraphics[width=0.4\textwidth]{fig/screenshot_story}
 	\caption{Story view}
 	\label{Fig:story_view}
 \end{figure}

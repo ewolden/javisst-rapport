@@ -2,24 +2,23 @@
 \chapter{Testing}
 \label{chap:testing}
 
-The following subsections describes the strategies for the testing levels unit test, integration test, system test, costumer acceptance test and usability test. 
-The unit, integration and system tests were done in a iterative manner. After the test suits were performed and the results were documented, the testers mended the issues in the system if they appeared during the test. After the mending, the test suit was executed again. This cycle was repeated until there was no issues left in the system and all test cases got the expected result. 
-The issues that were discovered during all the tests are described in every testing level section. 
+The following subsections describe the strategies for the testing levels unit test, integration test, system test, costumer acceptance test and usability test. 
+The unit, integration and system tests were done in an iterative manner. After the test suits were performed and the results were documented, the testers mended the issues in the system that appeared during the test. After the mending, the test suit was executed again. This cycle was repeated until there was no issues left in the system and all test cases got the expected result. The issues that were discovered during all the tests are described in every testing level section. 
 
 
 \section{Unit testing}
 \label{sec:unit_testing}
-The purpose of unit testing is to ensure that every piece of code that are implemented in the system are functional and correct. The group performed unit tests on new units of code before implementing them in the system. It was necessary to prioritize what units that should be tested, considering the amount of time given for the project. 
-The units in this testing was PHP, Java and JavaScript classes. Therefore it was necessary to use different unit testing tools. Backend code was tested using PHPUnit framework \cite{KF2}, and JUnit \cite{jUnit} and the extension DbUnit \cite{dbUnit}. The user interface code was tested by using a AngularJS unit testing tool, called Karma \cite{KF3}. 
-The classes that were tested is listed up under the unit column in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}. The classes that were left out in the documented testing were tested manually by the developers. If issues were detected during the unit tests, the developers would mend the issues and run the tests again. This cycle was repeated until there was no issues left and all test cases got the expected result.
+The purpose of unit testing is to ensure that every piece of code that is implemented in the system is functional and correct. The group performed unit tests on new units of code before implementing them in the system. It was necessary to prioritize which units should be tested, considering the amount of time given for the project. 
+The units in these tests were PHP, Java and JavaScript classes. Therefore it was necessary to use different unit testing tools. Back-end code was tested using PHPUnit framework \cite{KF2}, and JUnit \cite{jUnit} and the extension DbUnit \cite{dbUnit}. The front-end code was tested by using an AngularJS unit testing tool, called Karma \cite{KF3}. 
+The classes that were tested are listed under the unit column in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}. The classes that were left out in the documented tests were tested manually by the developers. If issues were detected during the unit tests, the developers would mend the issues and run the tests again. This cycle was repeated until there was no issues left and all test cases got the expected result.
 
 \subsection{Roles and Responsibilities}
-To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec:scrum_team_and_roles}}), so the tester would have good knowledge to the code and know how it works. The delegated responsibilities is presented in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}.
+To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec:scrum_team_and_roles}}), so the testers would have good knowledge of the code and know how it works. The delegated responsibilities are presented in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}.
 
 
 
 \begin{table}[H]
-	\caption{Shows the delegated responsibilities in testing the back end part of the system written in PHP code.}
+	\caption{Shows the delegated responsibilities in testing the back-end part of the system written in PHP code.}
 	\label{Tab:phptesting}
 	\begin{center}
 		\begin{tabular}{ | l | l | l |}
@@ -37,7 +36,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 \end{table}
 
 \begin{table}[H]
-		\caption{Shows the delegated responsibilities for the back end part of the system written in Java code.}
+		\caption{Shows the delegated responsibilities for the back-end part of the system written in Java code.}
 		\label{Tab:junittesting}
 	\begin{center}
 		\begin{tabular}{ | l | l | l |}
@@ -53,7 +52,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 \end{table}
 
 \begin{table}[H]
-	\caption{Shows the delegated responsibilities for testing the user interface.}
+	\caption{Shows the delegated responsibilities for testing the front-end.}
 	\label{Tab:karmatesting}
 	\begin{center}
 		\begin{tabular}{ | l | l | l |}
@@ -63,7 +62,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 			\textbf{Unit ID} & \textbf{Unit} & \textbf{Responsible} \\ \hline
 			U8 & UI Login & Ragnhild \\ \hline
 			U9 & UI Story View & Ragnhild \\ \hline
-			U10 & UI Setting & Roar \\ \hline
+			U10 & UI Settings & Roar \\ \hline
 		\end{tabular}
 	\end{center}
 
@@ -71,53 +70,51 @@ To get a structured testing experience, the team had to delegate responsibility 
 
 
 \subsection{Test Cases}
-The testers created test cases and used these as a guide for performing the tests. The test cases has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running. The test cases are presented in \textbf{Appendix \ref{app:unittest}}.
+The testers created test cases and used these as a guide for performing the tests. Each test case has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running. The test cases are presented in \textbf{Appendix \ref{app:unittest}}.
 
 \subsection{Detected and mended issues}
-This section includes some of the most important issues that were discovered the unit testing, and how they were solved. 
+This section includes some of the most important issues that were discovered during the unit testing, and how they were solved. \newline
 
-In the database communication there was some changes done during the development which made it easier to handle the code. One example was to make the database connection return an array where the array keys matched the column names. This way made it easier to access the different values returned from the database.  
-Another issue that was discovered with the media format per story that was not stored correctly in the database, because of an error during the harvesting of the stories from Digitalt Fortalt. These types of issues were solves with several checks to see if the information was in the right format or was not null. 
+In the database communication there were some changes done during the development which made it easier to handle the code. One example was to make the database connection return an array where the array keys matched the column names. This way made it easier to access the different values returned from the database.  
+Another issue was discovered with the media format on each story, which was not stored correctly in the database because of an error during the harvesting of the stories from Digitalt Fortalt. These types of issues were solves with several checks to see if the information was in the right format or was not null.\newline
 
-During the tests of the first version of the recommender it was running with the time of 11-12 seconds. This was improved by increasing the efficiency of the communication with the database. The recommender was more efficient when the insertion of preference values and recommendations was done with one insert statement to the database instead of respectively 167 and 10 statements. Previously the recommender fetched a whole table from the database with the preference values. Fetching preference values for a specific user instead of all users helped the recommendation module to run faster too.
+During the tests of the first version of the recommender it was running with the time of 11-12 seconds. This was improved by increasing the efficiency of the communication with the database. The recommender was more efficient when the insertion of preference values and recommendations was done with one insert statement to the database instead of respectively 167 and 10 statements. Previously the recommender fetched a whole table from the database with the preference values. Fetching preference values for a specific user instead of all users helped the recommendation module to run faster as well.
 
-
-
-
-\section{Integration test}
+\section{Integration testing}
 \label{sec:integration_testing}
 
-Integration testing were performed after unit testing and before system testing. After the back end and front end code was testet and integrated, the integration testing started and focused on that these two modules communicated correctly and that the data was moving between them in the right manner. 
-Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. All the tests was executing by simulating HTTP requests from the UI and check that the back end gives the correct response to the specific HTTP request. 
+Integration testing was performed after unit testing, and before system testing. After the back-end and front-end code was tested and integrated, the integration testing could be started, and focused on ensuring that these two modules communicated correctly and that data was moving between them in the right manner. 
+Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit test cases. The unit testing framework was already known to the developers and therefore easier and less time consuming to use. All the tests were executed by simulating HTTP requests from the UI and checking that the back-end gives the correct response to the specific HTTP request. 
 If issues were detected during the integration tests, the developers would mend the issues and run the tests again. This cycle was repeated until there was no issues left and all test cases got the expected result. \newline
 
 
 \subsection{Test cases}
-The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Figure \ref{Fig:architecture}} of the architecture. for this project. The modules that the integration testing was performed on were front end(User Interface), back end with a general processing module and a personalization module, and the database. Because of the personalization module of our system is considered to be a crucial one, the most important data flows was the users input in the form of preferences and ratings. Also the communication with the database was crucial because the users information about ratings and preferences should be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab:integrationtestcases}}.
+The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Figure \ref{Fig:architecture}} of the architecture for this project. The modules that the integration testing was performed on were front-end (User Interface), back-end with a general processing module and a personalization module, and the database. Because the personalization module of the system was considered to be a crucial one, the most important data flows were the user's input in the form of preferences and ratings. Also, the communication with the database was crucial because the user's information about ratings and preferences had to be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab:integrationtestcases}}.
 
 
 \subsection{Detected and mended issues}
 
-The following paragaph includes some of the most important issues that were discovered the integration testing, and how they were solved.
+The following paragraph includes some of the most important issues that were discovered during the integration testing, and how they were solved.
 
-The issue that was considered to be the most time consuming one, was to update a user in the database. This issue was detected in the test case I.3. When a user was updated in the UI in the application, the unchanged information that should still be there, was deleted. This was tried to be fixed several times with methods that was not adequate. The problem was eventually solved with fetching all information about a user in the database, update the fields in the user model that had been changed, and then insert all the information in the database again. \newline
+The issue that was considered to be the most time consuming one, was to update a user in the database. This issue was detected in the test case I.3. When a user was updated in the UI in the application, the unchanged information that should still be there, was deleted. This was attempted fixed several times with methods that were not adequate. The problem was eventually solved by fetching all information about a user in the database, update the fields in the user model that had been changed, and then insert all the information in the database again. \newline
 
-Other minor issues that were handled were syntax-issues, redundant code that created unnecessary confusion and missing table attributes in the database.\newline
-Changes in the code where made to obtain better structure in the code, such as dividing long code files into smaller ones and to make sure functions returns a response if an error occur. \newline
+Other minor issues that were handled were syntax-issues, redundant code that created unnecessary confusion, and missing table attributes in the database.\newline
 
-Due to a misunderstanding between frontend and backend developers, the database returned names of category preference and story category, and not ids. \newline
+Changes in the code were made to obtain better structure in the code, such as dividing long code files into smaller ones and to make sure functions return a response if an error occurs. \newline
 
+Due to a misunderstanding between front-end and back-end developers, the database returned names of category preference and story categories, and not ID's.
 
 \section{System testing}
-The system testing were perfomed after the unit test and integration tests. The test gave the developers a measure of whether the system met all the goals set for the project.  The system test included performing a black box testing of the system, where the test cases was based on the use cases(\textbf{Section \ref{subsec:use_cases}}) and the specified requirements(\textbf{Section \ref{subsec:summary_functional_requirements}})  defined earlier in this report. \newline
-In this test one of the developers were executing the test. Because it is a black box test, the tester executed the test cases with no access to the code. The tester went through all of the test cases one by one and performed the test cases manually. If issues were detected during the integration tests, the developers would mend the issues and the tests was runned again. This cycle was repeated until there was no issues left and all test cases got the expected result. Due to the time limits of this project the team were not able to write scripts to perform the test cases. \newline
+The system testing was performed after the unit tests and integration tests. The test gave the developers a measure of whether the system met all the goals set for the project. The system test included performing a black box test of the system, where the test cases were based on the use cases (\textbf{Section \ref{subsec:use_cases}}) and the specified requirements (\textbf{Section \ref{subsec:summary_functional_requirements}})  defined earlier in this report. \newline
 
-When the system test was performed, the testers evaluated the tests results and then decided if the system as a whole fulfilled all goals for the project. If issues were detected, the developers would mend them and run the tests again. This cycle was repeated until the all the test cases got the expected result. The test should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.\newline
+In this test, one of the developers was executing the test. Because it is a black box test, the tester executed the test cases with no access to the code. The tester went through all of the test cases one by one and performed the test cases manually. Due to the time limits of this project, the team was not able to write scripts to perform the test cases. \newline
+
+When the system test was performed, the testers evaluated the test results and then decided if the system as a whole fulfilled all goals for the project. If issues were detected, the developers would mend them and run the tests again. This cycle was repeated until the all the test cases got the expected result. The test should, if done in the expected manner, help the developers of this project to verify and validate if the application meets all the requirements.
 
 \subsection{Test cases}
-The test cases cover the use cases in \textbf{\ref{subsec:use_cases}} and requirements in \textbf{\ref{app:functional_requirements}}. 
-Each test case has a test identifier and an approach for the tester, and a description of what was intended to happen when the test case was performed. The tester will be referred to as “the user”. 
-Some of the test cases have a dependability of other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. \textbf{Table \ref{Tab:systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} are presenting two of the test cases that were used. The whole test case document are in \textbf{Appendix \ref{app:systemtest}}. 
+The test cases cover the use cases in \textbf{Section \ref{subsec:use_cases}} and requirements in \textbf{Appendix \ref{app:functional_requirements}}. 
+Each test case has a test identifier and an approach for the tester, and a description of what is intended to happen when the test case is performed. The tester will be referred to as “the user”. 
+Some of the test cases have a dependability on other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. \textbf{Table \ref{Tab:systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} present two of the test cases that were used. The whole test case document is in \textbf{Appendix \ref{app:systemtest}}. 
 
 \begin{table}[H]
 	\centering
@@ -146,413 +143,422 @@ Some of the test cases have a dependability of other tests. If an issue is detec
 	\end{table}
 	
 	
-	\begin{table}[H]
-		\centering
-		\caption{System test case for login with email registration}
-		\begin{tabular}{ | l | l  |}
-			\hline
-			\textbf{Test ID} & T2  \\ \hline 
-			\textbf{Test Item} & Log in with email registration \\ \hline
-			\textbf{Approach} & \begin{minipage}{5in}The user locate the login-button and applies the registrated email and obtain access to the system and the profile connected to this email address . \end{minipage}\\ \hline
-			\textbf{Input data} &  valid email: “user@example.com”, \newline example invalid email: “mail@example”\\ \hline&\\[-3.8ex]
-			\textbf{Expected results} & \begin{minipage}{5in}
-				\begin{itemize}[noitemsep]
-					\item The first time the user have logged in \newline System Response:  Choose preferences-view should appear.
-					\item The user have done this process before \newline System Response: "Vennligst vent mens vi finner historier vi tror du vil like" and direct the user to the view with the recommended stories.
-					\item The user types an email with wrong email format \newline System Response: "Ikke en gyldig adresse" 
-					
-				\end{itemize} \end{minipage}
-				\\ &\\[-3.8ex]\hline&\\[-3.8ex]
-				\textbf{Testing task} & \begin{minipage}{5in}
-					\begin{enumerate}[noitemsep]
-						\item Navigate to the login view
-						\item Apply email address to the email input field
-						\item Receive response from system
-					\end{enumerate}\end{minipage}
-					\\ &\\[-3.8ex]\hline
-					\textbf{Depends on tests} & T1 \\ \hline					
-					\textbf{Pass/Fail} & Passed \\\hline
-				\end{tabular}
+\begin{table}[H]
+	\centering
+	\caption{System test case for login with email registration}
+	\begin{tabular}{ | l | l  |}
+		\hline
+		\textbf{Test ID} & T2  \\ \hline 
+		\textbf{Test Item} & Log in with email registration \\ \hline
+		\textbf{Approach} & \begin{minipage}{5in}The user locate the login-button and applies the registrated email and obtain access to the system and the profile connected to this email address . \end{minipage}\\ \hline
+		\textbf{Input data} &  valid email: “user@example.com”, \newline example invalid email: “mail@example”\\ \hline&\\[-3.8ex]
+		\textbf{Expected results} & \begin{minipage}{5in}
+			\begin{itemize}[noitemsep]
+				\item The first time the user have logged in \newline System Response:  Choose preferences-view should appear.
+				\item The user have done this process before \newline System Response: "Vennligst vent mens vi finner historier vi tror du vil like" and direct the user to the view with the recommended stories.
+				\item The user types an email with wrong email format \newline System Response: "Ikke en gyldig adresse" 
 				
-				\label{Tab_systemtest2}
-			\end{table}
+			\end{itemize} \end{minipage}
+			\\ &\\[-3.8ex]\hline&\\[-3.8ex]
+			\textbf{Testing task} & \begin{minipage}{5in}
+				\begin{enumerate}[noitemsep]
+					\item Navigate to the login view
+					\item Apply email address to the email input field
+					\item Receive response from system
+				\end{enumerate}\end{minipage}
+				\\ &\\[-3.8ex]\hline
+				\textbf{Depends on tests} & T1 \\ \hline					
+				\textbf{Pass/Fail} & Passed \\\hline
+	\end{tabular}
+	
+	\label{Tab_systemtest2}
+\end{table}
 			
 			
-			\subsection{Detected and mended issues}
+\subsection{Detected and mended issues}
+
+\todo{Fyll ut hvordan de forskjellige bugsene ble fikset}
+During the system testing, the testers found repeating recommended stories. This was solved by checking the front-end array and the top ten recommendations and the ratings done by the user. \newline
+
+Picture description. \newline
+
+categories ? \newline
+
+Sound clips not working.\newline
+
+Log in and out, log in again with a different user - Gives the previous user's recommendations. \newline
+
+Use a long time to load recommendations - or it does not show up at all.\newline
+
+Can not scroll down if you are scrolling by touching the frame of video, picture and sound- \newline
+
+Can not remove bookmark list the user made. \newline
+
+Icons are different in different views.\newline
+
+Can not scroll if you have many bookmark lists.\newline
+
+\section{Customer acceptance test}
+\label{sec:acceptance_test}
+
+The customer acceptance test (CAT) was executed during the whole software development life cycle. After a sprint, the customer tested the product, evaluated and gave feedback. In the early stages of the project process this included testing of the prototypes. When working software was delivered to the customer after a sprint, the customer used their own real input data to test the behavior of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic since the customer defined it. The customer brought feedback either in meetings or through email. The planned delivery dates are presented in \textbf{Section \ref{sec:milestone_plan}} Project milestone plan.  
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
 		
-			\todo{Fyll ut hvordan de forskjellige bugsene ble fikset}
-			Found repeating recommended stories. This was solved by checking if the frontend array and the top ten recommendations and the ratings done by the user. 
-			Picture description, 
-			categories ? 
-			Sound clips not working.
-			Log in and out, log in again with a different user - Gives the previous users recommendations. 
-			Use a long time to load recommendations - or it doesnt show up at all.
-			Can not scroll down if you are scrolling by touching the frame of video, picture and sound 
-			Cant remove bookmark list the user made.  
-			Icons are different in different views.
-			Cant scroll if you have many bookmark lists.
+		\caption[Customer Acceptance test]{Customer Acceptance Test - First paper prototype } \label{Tab:cattest1}\\
+		\hline
+		\textbf{Delivery} & First paper prototype\\ \hline
+		\textbf{Date} & 20.02.15 \\ \hline 
+		\textbf{Comments} &Intuitive interface. The selection of categories is good and fast. Category icon in the listview looks very good.
+		\\ \hline
+		\textbf{Issues} &	
+		\begin{itemize}
+			\item It should have a description of why the user have to sign in by email and give the user the option to choose age group and gender,
+			\item The customer thinks it is easier to click something than to drag a icon from one place to another. 
+			\item The customer prefer one story per view when the user browse recommended stories, the swiping from one story to another should be explained. 
+			\item Customer want a to-be-rated list and a to-read list. To have a trash is confusing. It is okay to not prioritize the notifications in the app. 
+		\end{itemize}	
+		\\ \hline
+		
+	\end{longtable}
+\end{center}
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
+		
+		\caption[Customer Acceptance test]{Customer Acceptance Test - Second prototype presented in prototyping tool} \label{Tab:cattest2}\\
+		\hline
+		\textbf{Delivery} & Second prototype presented in prototyping tool\\ \hline
+		\textbf{Date} & 27.02.15 \\ \hline 
+		\textbf{Comments}&
+		The customer is overall pleased with the prototype, but they have some constructive comments. 
+		There are some confusing icons, some lack of consistent terminology, missing introduction for the app, suggestions for other text for buttons and headlines.
+		\\ \hline
+		\textbf{Issues} 	 &	 	 	 	
+		\begin{itemize}[noitemsep]
+			\item Overlap between not interested and one star. Remove the not interested.
+			\item The author of a story expects that the story is presented the way he/her made it. It would be more correct to have the elements of the story together, in accordance with the authors intention.The elements of every story is now separated with the tabs in the storyview. 
+		\end{itemize}
+		\\ \hline
+		\textbf{Suggestions} &
+		\begin{itemize}[noitemsep]
+			\item Have a number connected to the rating stars.
+			\item It is interesting for the customer to know if the user prefer picture, video or sound. The system should log this for every user. 
+			\item 	It is important to collect the information about the user of the system(age, gender, preferences), want to make it hard for the user to skip this step. Profile information such as age and gender can not be changed after the specification is once set by the user. 
+			\item Have a little text that appear when you hover the category icons, or apply a function where you can press a button and reveal the descriptions of the categories. \newline
+			\item Have the option to share the saved stories on social media. The customer have given this a low priority.
+		\end{itemize}
+		\\ \hline
+	\end{longtable}
+\end{center}
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
+		
+		\caption[Customer Acceptance test]{Customer Acceptance Test -First working software } \label{Tab:cattest3}\\
+		\hline
+		\textbf{Delivery} & First working software\\ \hline
+		\textbf{Date} & 17.03.15 \\ \hline
+		\textbf{Comments} & The customer likes the user interface of this version and says that it is not necessary to add more functionality, except for the concept view that are not yet implemented. The customer thinks that fetching the stories from Digitalt Fortalt is working fast enough.  \\ \hline			
+		\textbf{Issues} & 
+		\begin{itemize}[noitemsep]
 			
-			\section{Customer acceptance test}
-			\label{sec:acceptance_test}
+			\item Missing a concept description for the application 
+			\item There are some stories that do not have categories connected to them. 
+			\item These stories should be included in the collaborative filtering.
+		\end{itemize}
+		\\ \hline		
+	\end{longtable}
+\end{center}
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
+		
+		\caption[Customer Acceptance test]{Customer Acceptance Test - Second working software} \label{Tab:cattest4}\\
+		\hline
+		\textbf{Delivery} & Second working software\\ \hline
+		\textbf{Date} & 20.04.15\\ \hline
+		\textbf{Comments} & The customer is satisfied with the appearance and structure in the story view. 
+		\\ \hline
+		\textbf{Issues} & 
+		\begin{itemize}[noitemsep]
 			
-			Customer acceptance test (CAT) will be executed during the whole software development life cycle. After a sprint, the customer will test the product, evaluate and bring feedback. In the early stages of the project process this contains testing of the prototypes. When working software is delivered to the customer after a sprint, the customer use their own real input data to test the behaviour of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic when the customer defines it. The customer brought feedback either in meetings or through email. The planned delivery dates are presented in \textbf{Section \ref{sec:milestone_plan}} Project milestone plan.  
+			\item There are only 3 stories in the recommendation view 
+			When you choose interests in the setup of the application - the interests are not marked when you click on them. \newline
+			\item When choosing a gender in the setup of the application, the selection is not stored in the settings view
+			The customer discovered some stories have mismatched icons connected to them. \newline
+			\item Stories that include a sound clip, does not view this immediately. The sound clip is located inside a tab, and the user would have to click on this will reveal it. \newline
+			\item  Some stories include video clips that are not playing.  \newline
+			\item  A user have to sign in every time to visit the app, the user is not remembered. \newline
+			\item  A story that are read are not automatically stored in the ‘Read List’. \newline
+			\item  Uncertain about the cross in the corner of a story in ‘recommended stories view’. The use of this button could mean two things. Either that the user is not interested in this story, or that the user have read this story and just want to close it for now. \newline
+			\item  The application does not at any time give the user new recommended stories. \newline
+			Missing some kind of feedback when a user has changed the interests in settings. The system should let the user know that it is trying to get new recommended stories based on the new interests. \newline
+			\item Some stories do not have a picture attached to it. The customer is suggesting a default picture for these stories.
+		\end{itemize}
+		\\ \hline 
+		
+		
+		
+	\end{longtable}
+\end{center}
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{13cm} | }
+		
+		\caption[Customer Acceptance Test - Final product]{Customer Acceptance Test - Final product} \label{Tab:cattest5}\\
+		\hline
+		\textbf{Delivery} & Final product\\ \hline
+		\textbf{Date} & 01.05.15 \\ \hline
+		\textbf{Comments} & Customer reported positive feedback and expressed contentment towards the final product.  The last meeting was spent on going through the requirements list to see if the product met al requirements. There was some comments during the review. 
+		R18 is not conducted but the customer sees no problem with this and is satisfied with how the system looks now. 
+		R22: The information about the app is now hidden and should be moved to a different location in the menu.   \\ \hline
+		\textbf{Issues} \\ \hline
+	\end{longtable}
+\end{center}
+
+\section{Usability testing}
+
+The user testing was performed by the front-end developers. The preliminary work for the user test included doing an analysis of the requirements, and used these as a base for making several test cases. 
+A test case included several test steps that the user followed, and the tester observed how the user reacted in every test case. After each test finished there was a discussion with follow-up questions the user had to answer to get a better insight into what was problematic and what was easily understandable. \todo{For further information on this see the framework for the usability testing in Appendix XX(Usability test template).}
+
+\subsection{Introduction}
+%FRA USERTEST ROUND 1/2
+The user testing was performed over several days where the first test was conducted on the 21st and 22nd of February 2015. This was an early paper prototype while the second session was with the revised prototype on digital devices (see Proto.io\todo{ref}), this was carried out on Feb. 28th and March 1st. All the tests were performed in accordance with the guidelines and tips provided in the book: Designing the User Interface: Strategies for Effective Human-Computer Interaction (5th Edition) – 2009 \todo{Bør inn i bibliografien og refereres til herfra}
+
+\subsection{Test Cases}
+
+\begin{itemize}
+	\item Create a user 	
+	\begin{enumerate}
+		\item Login 
+		\item Set personal data 
+		\item Add at least 2 categories 
+	\end{enumerate}
+	\item Read a story 
+	\begin{enumerate}
+		\item Browse the suggestions 
+		\item Add a story to "Les senere" 
+		\item Read another story and look at images 
+	\end{enumerate}
+	\item Find and delete 
+	\begin{enumerate}
+		\item Find the "Les senere" collection
+		\item Delete a story from the collection
+		\item Read another story from the list 
+	\end{enumerate}
+	\item Change settings 
+	\begin{enumerate}
+		\item Navigate to settings 
+		\item Change preferences 
+	\end{enumerate}
+	
+\end{itemize}
+
+\subsection{Test users}
+
+\todo{table needs caption and refer to it at some point}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ | l | l | l | l |}
+			\hline
+			\textbf{Gender} & \textbf{Age} & \textbf{Application usage} & \textbf{Other} \\ \hline
+			Female & 26 & Medium & Reads some \\\hline
+			Male & 32 & High & Does not read much \\\hline
+			Female & 51 & Low & Reads a lot \\\hline
+			Male & 31 & High & Reads some \\\hline 
 			
-			\renewcommand{\arraystretch}{2}%
-			\begin{center}
-				\begin{longtable}{ | p{4cm} | p{13cm} | }
-					
-					\caption[Customer Acceptance test]{Customer Acceptance Test - First paper prototype } \label{Tab:cattest1}\\
-					\hline
-					\textbf{Delivery} & First paper prototype\\ \hline
-					\textbf{Date} & 20.02.15 \\ \hline 
-					\textbf{Comments} &Intuitive interface. The selection of categories is good and fast. Category icon in the listview looks very good.
-					\\ \hline
-					\textbf{Issues} &	
-					\begin{itemize}
-						\item It should have a description of why the user have to sign in by email and give the user the option to choose age group and gender,
-						\item The customer thinks it is easier to click something than to drag a icon from one place to another. 
-						\item The customer prefer one story per view when the user browse recommended stories, the swiping from one story to another should be explained. 
-						\item Customer want a to-be-rated list and a to-read list. To have a trash is confusing. It is okay to not prioritize the notifications in the app. 
-					\end{itemize}	
-					\\ \hline
-					
-				\end{longtable}
-			\end{center}
+		\end{tabular}
+	\end{center}
+\end{table}
+
+The test subjects were asked in advance how much and how many applications they use on handheld devices. They were also asked if and how much reading they see themselves generally doing.\newline
+
+Low - 1-2 applications/ 1-2 times a day.
+Medium - 2-4 applications/ 2-4 times a day.
+High - more than 5 applications/ more than 5 times a day.
+
+
+\subsection{Summary}
+The time set aside for each test was about 20 minutes for the test and about 10 minutes for follow-up questions. Observations during the test and the answers provided in the follow-up were implemented in the view feedback and/or the general changes.
+
+To summarize the tests; Each user had his or her own problems with the application but on the whole the user is able to do the task they are asked to complete. So considering the scenarios and use-cases, the application is translating and making the user understand what its functionalities are. There are of course some major inadequate parts, but this is as intended for the test and we are aware of the missing parts.
+
+When it comes to the intuitive understanding, the application has some work to be done. This is covered on a per view basis. And since the user group is not narrow enough we aim to design for everybody and this will act as a constraint for the UI. 
+
+The parts where users are confused are mentioned in the views section.
+
+Paths are on the whole followed by the majority of the testers with some deviation, but this is expected since the prototype is a bit unclear on its formulation on some of the views. But to conclude, the users are almost without issues following the scenarios to the point.
+
+\subsection{Usability test cases}
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{3cm} | p{9cm}|}
+		
+		\caption[Usability test]{Usability Test } \label{Tab:usabilityTest}\\
+		\hline
+		\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
+		\\ \hline
+		
+		\textbf{1. Intro/Tutorial} & 2 & 
+		\begin{itemize}
+			\item “Do  I swipe?”
+			\item This view is very lacking in content
+			\item Are the user able to navigate both ways at the start
+			\item It`s nice to have a introduction to the application
+		\end{itemize}
+		Changes:
+		Add animation/intro
+		\\\hline
+		
+		\textbf{2. Login} & 3  & 
+		\begin{itemize}
+			\item Several users don’t want to login, they want to test the application first.
+			\item “Am I supposed to verify mail after entering?”
+			\item	The text over Email is not clear about  what its for. (Need new wording)
+			\item The text was too small
+			\item Mail verification?
+		\end{itemize}
+		Changes:
+		\begin{itemize}
+			\item Change wording
+			\item Make the “Hopp over” button a small link and encourage users to user the “Logg inn”
+			\item  Add a “?” for hints
+		\end{itemize}
+		\\\hline
+		
+		\textbf{3. Profil} & 4 & 
+		\begin{itemize}
+			\item Should separate this from the personalization, some user thought this was part of the recommendation. 
+			\item Is this research data or for the application
+		\end{itemize}
+		Changes:
+		\begin{itemize}
+			\item Explain why this is needed and if this is related to the personalizing.
+			\item Make the default NONE selected
+			\item Add/Change a category to “Hemmelig/Ønsker ikke dele”
+		\end{itemize}
+		\\\hline
+		
+		\textbf{4. Interests} & 5  & 
+		\begin{itemize}		
+			\item “What is this”
+			\item This would need an explanation 
+			\item Can one choose more the one.
+		\end{itemize}			
+		Changes:
+		\begin{itemize}
+			\item Change the wording: “Velg kategorier”
+		\end{itemize}\\\hline
+		\textbf{5.Media format} & 5 & 
+		Text>Image>Sound>Video
+		\begin{itemize}
+			\item The sound icon was interpreted as music
+			\item Some users did not understand this; it was not the icons what how this affected the stories
+			\item several users reported the this was a bit confusing 
+		\end{itemize}
+		Changes:
+		\begin{itemize}
+			\item Removing this view; because is not adding much to the application and user tests uncovering a lot of misunderstanding about its function and meaning.
+		\end{itemize}
+		\\\hline
+		
+		\textbf{6. Recommendations} & 6 & 
+		\begin{itemize}
 			
-			\renewcommand{\arraystretch}{2}%
-			\begin{center}
-				\begin{longtable}{ | p{4cm} | p{13cm} | }
-					
-					\caption[Customer Acceptance test]{Customer Acceptance Test - Second prototype presented in prototyping tool} \label{Tab:cattest2}\\
-					\hline
-					\textbf{Delivery} & Second prototype presented in prototyping tool\\ \hline
-					\textbf{Date} & 27.02.15 \\ \hline 
-					\textbf{Comments}&
-					The customer is overall pleased with the prototype, but they have some constructive comments. 
-					There are some confusing icons, some lack of consistent terminology, missing introduction for the app, suggestions for other text for buttons and headlines.
-					\\ \hline
-					\textbf{Issues} 	 &	 	 	 	
-					\begin{itemize}[noitemsep]
-						\item Overlap between not interested and one star. Remove the not interested.
-						\item The author of a story expects that the story is presented the way he/her made it. It would be more correct to have the elements of the story together, in accordance with the authors intention.The elements of every story is now separated with the tabs in the storyview. 
-					\end{itemize}
-					\\ \hline
-					\textbf{Suggestions} &
-					\begin{itemize}[noitemsep]
-						\item Have a number connected to the rating stars.
-						\item It is interesting for the customer to know if the user prefer picture, video or sound. The system should log this for every user. 
-						\item 	It is important to collect the information about the user of the system(age, gender, preferences), want to make it hard for the user to skip this step. Profile information such as age and gender can not be changed after the specification is once set by the user. 
-						\item Have a little text that appear when you hover the category icons, or apply a function where you can press a button and reveal the descriptions of the categories. \newline
-						\item Have the option to share the saved stories on social media. The customer have given this a low priority.
-					\end{itemize}
-					\\ \hline
-				\end{longtable}
-			\end{center}
-			
-			\renewcommand{\arraystretch}{2}%
-			\begin{center}
-				\begin{longtable}{ | p{4cm} | p{13cm} | }
-					
-					\caption[Customer Acceptance test]{Customer Acceptance Test -First working software } \label{Tab:cattest3}\\
-					\hline
-					\textbf{Delivery} & First working software\\ \hline
-					\textbf{Date} & 17.03.15 \\ \hline
-					\textbf{Comments} & The customer likes the user interface of this version and says that it is not necessary to add more functionality, except for the concept view that are not yet implemented. The customer thinks that fetching the stories from Digitalt Fortalt is working fast enough.  \\ \hline			
-					\textbf{Issues} & 
-					\begin{itemize}[noitemsep]
-						
-						\item Missing a concept description for the application 
-						\item There are some stories that do not have categories connected to them. 
-						\item These stories should be included in the collaborative filtering.
-					\end{itemize}
-					\\ \hline		
-				\end{longtable}
-			\end{center}
-			
-			\renewcommand{\arraystretch}{2}%
-			\begin{center}
-				\begin{longtable}{ | p{4cm} | p{13cm} | }
-					
-					\caption[Customer Acceptance test]{Customer Acceptance Test - Second working software} \label{Tab:cattest4}\\
-					\hline
-					\textbf{Delivery} & Second working software\\ \hline
-					\textbf{Date} & 20.04.15\\ \hline
-					\textbf{Comments} & The customer is satisfied with the appearance and structure in the story view. 
-					\\ \hline
-					\textbf{Issues} & 
-					\begin{itemize}[noitemsep]
-						
-						\item There are only 3 stories in the recommendation view 
-						When you choose interests in the setup of the application - the interests are not marked when you click on them. \newline
-						\item When choosing a gender in the setup of the application, the selection is not stored in the settings view
-						The customer discovered some stories have mismatched icons connected to them. \newline
-						\item Stories that include a sound clip, does not view this immediately. The sound clip is located inside a tab, and the user would have to click on this will reveal it. \newline
-						\item  Some stories include video clips that are not playing.  \newline
-						\item  A user have to sign in every time to visit the app, the user is not remembered. \newline
-						\item  A story that are read are not automatically stored in the ‘Read List’. \newline
-						\item  Uncertain about the cross in the corner of a story in ‘recommended stories view’. The use of this button could mean two things. Either that the user is not interested in this story, or that the user have read this story and just want to close it for now. \newline
-						\item  The application does not at any time give the user new recommended stories. \newline
-						Missing some kind of feedback when a user has changed the interests in settings. The system should let the user know that it is trying to get new recommended stories based on the new interests. \newline
-						\item Some stories do not have a picture attached to it. The customer is suggesting a default picture for these stories.
-					\end{itemize}
-					\\ \hline 
-					
-					
-					
-				\end{longtable}
-			\end{center}
-			
-			\renewcommand{\arraystretch}{2}%
-			\begin{center}
-				\begin{longtable}{ | p{4cm} | p{13cm} | }
-					
-					\caption[Customer Acceptance Test - Final product]{Customer Acceptance Test - Final product} \label{Tab:cattest5}\\
-					\hline
-					\textbf{Delivery} & Final product\\ \hline
-					\textbf{Date} & 01.05.15 \\ \hline
-					\textbf{Comments} & Customer reported positive feedback and expressed contentment towards the final product.  The last meeting was spent on going through the requirements list to see if the product met al requirements. There was some comments during the review. 
-					R18 is not conducted but the customer sees no problem with this and is satisfied with how the system looks now. 
-					R22: The information about the app is now hidden and should be moved to a different location in the menu.   \\ \hline
-					\textbf{Issues} \\ \hline
-				\end{longtable}
-			\end{center}
-			
-			\section{Usability testing}
-			
-			The user testing was performed by the front end developers. The preliminary work for the user test included doing an analysis of the requirements, and used these as a base for making several test cases. 
-			A test case included several test steps that the user followed, and the tester observed how the user reacted in every test case. After each test finished there was a discussion with follow-up questions the user had to answer to get a better insight into what was problematic and what was easily understandable. For further information on this see the framework for the usability testing in Appendix XX(Usability test template).
-			
-			\subsection{Introduction}
-			%FRA USERTEST ROUND 1/2
-			The user testing was performed over several days where the first test was conducted the in on the 21th and 22th. of february 2015. This was an early paper prototype while the second session was with the revised prototype on the digital devices (see Proto.io), this was carried out on feb. 28th and march 1th. All the tests were performed in accordance with the guidelines and tips provided in the book: Designing the User Interface: Strategies for Effective Human-Computer Interaction (5th Edition) – 2009 \todo{Bør inn i bibliografien og refereres til herfra}
-			
-			\subsection{Test Cases}
-			
-			\begin{itemize}
-				\item Create a user 	
-				\begin{enumerate}
-					\item Login 
-					\item Set personal data 
-					\item Add at least 2 categories 
-				\end{enumerate}
-				\item Read a story 
-				\begin{enumerate}
-					\item Browse the suggestions 
-					\item Add a story to "Les senere" 
-					\item Read another story and look at images 
-				\end{enumerate}
-				\item Find and delete 
-				\begin{enumerate}
-					\item Find the "Les senere" collection
-					\item Delete a story from the collection
-					\item Read another story from the list 
-				\end{enumerate}
-				\item Change settings 
-				\begin{enumerate}
-					\item Navigate to settings 
-					\item Change preferences 
-				\end{enumerate}
-				
-			\end{itemize}
-			
-			\subsection{Test users}
-			
-			\todo{table needs caption and refer to it at some point}
-			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{ | l | l | l | l |}
-						\hline
-						\textbf{Gender} & \textbf{Age} & \textbf{Application usage} & \textbf{Other} \\ \hline
-						Female & 26 & Medium & Reads some \\\hline
-						Male & 32 & High & Does not read much \\\hline
-						Female & 51 & Low & Reads alot \\\hline
-						Male & 31 & High & Reads some \\\hline 
-						
-					\end{tabular}
-				\end{center}
-			\end{table}
-			
-			The test subjects was in advance  asked how much and how many applications they use on the handheld devices. They were also asked if and how much reading they see themselves generally doing.
-			
-			Low - 1-2 applications/ 1-2 times a day.
-			Medium - 2-4 applications/ 2-4 times a day.
-			High - more the 5 applications/ more than 5 times a day.
-			
-			
-			\subsection{Summary}
-			Time set aside for each test was about 20 min for the test and with about 10 minutes for some follow-up questions. Both observations during the test and the answers provided in the follow-up is implemented in the view feedback and/or the general changes.
-			
-			To summarize the tests; each user had his or her own problems with the application but on the whole the user is able to do the task they are asked to complete. So considering the scenarios and use-cases the application is translating and making the user understand what its functionalities are. There are of course some major inadequate parts, but this is as intended for the test and we are aware of the missing parts.
-			
-			When it comes to the intuitive understanding, the application has some work to be done. This is covered on a per view basis. And since the user group is not narrow enough we go to design for everybody and this will act as a constraint for the UI. 
-			
-			The parts where users are confused are mentioned in the views section.
-			
-			Paths are on the whole followed by the majority of the testers with some deviation, but this is expected since the prototype is a bit unclear on its formulation on some of the views. But to conclude, the users are almost without issues following the scenarios to the point.
-			
-			\subsection{title}
-			\renewcommand{\arraystretch}{2}%
-			\begin{center}
-				\begin{longtable}{ | p{4cm} | p{3cm} | p{9cm}|}
-					
-					\caption[Usability test]{Usability Test } \label{Tab:usabilityTest}\\
-					\hline
-					\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
-					\\ \hline
-					
-					\textbf{1. Intro/Tutorial} & 2 & 
-					\begin{itemize}
-						\item “Do  I swipe?”
-						\item This view is very lacking in content
-						\item Are the user able to navigate both ways at the start
-						\item It`s nice to have a introduction to the application
-					\end{itemize}
-					Changes:
-					Add animation/intro
-					\\\hline
-					
-					\textbf{2. Login} & 3  & 
-					\begin{itemize}
-						\item Several users don’t want to login, they want to test the application first.
-						\item “Am I supposed to verify mail after entering?”
-						\item	The text over Email is not clear about  what its for. (Need new wording)
-						\item The text was too small
-						\item Mail verification?
-					\end{itemize}
-					Changes:
-					\begin{itemize}
-						\item Change wording
-						\item Make the “Hopp over” button a small link and encourage users to user the “Logg inn”
-						\item  Add a “?” for hints
-					\end{itemize}
-					\\\hline
-					
-					\textbf{3. Profil} & 4 & 
-					\begin{itemize}
-						\item Should separate this from the personalization, some user thought this was part of the recommendation. 
-						\item Is this research data or for the application
-					\end{itemize}
-					Changes:
-					\begin{itemize}
-						\item Explain why this is needed and if this is related to the personalizing.
-						\item Make the default NONE selected
-						\item Add/Change a category to “Hemmelig/Ønsker ikke dele”
-					\end{itemize}
-					\\\hline
-					
-					\textbf{4. Interests} & 5  & 
-					\begin{itemize}		
-						\item “What is this”
-						\item This would need an explanation 
-						\item Can one choose more the one.
-					\end{itemize}			
-					Changes:
-					\begin{itemize}
-						\item Change the wording: “Velg kategorier”
-					\end{itemize}\\\hline
-					\textbf{5.Media format} & 5 & 
-					Text>Image>Sound>Video
-					\begin{itemize}
-						\item The sound icon was interpreted as music
-						\item Some users did not understand this; it was not the icons what how this affected the stories
-						\item several users reported the this was a bit confusing 
-					\end{itemize}
-					Changes:
-					\begin{itemize}
-						\item Removing this view; because is not adding much to the application and user tests uncovering a lot of misunderstanding about its function and meaning.
-					\end{itemize}
-					\\\hline
-					
-					\textbf{6. Recommendations} & 6 & 
-					\begin{itemize}
-						
-						\item The read later is very misunderstood, they don’t seem to understand that this is placed in a list. And what happen when I press this again
-						\item Missing hint to the swipe right/left
-						\item The user feels a bit dumped into this view
-						\item “What can I touch?”
-					\end{itemize}
-					Changes:
-					\begin{itemize}
-						\item Remove button and add a bookmark icon at the top right of the card. 
-						\item Adding cards at either side to show that there is more. (or adding a card deck to incentive a swipe)
-						\item Add a loading animation, Simulating the “magic” that is finding stories for the user.
-						\item Add/Change title: Anbefalte Fortellinger/Historier
-						\item Make it clear the the card is touchable (ie. make the text fade out in the card)
-						\item Add and function to remove the card.
-					\end{itemize}
-					\\\hline
-					
-					\textbf{7. Story View} & 7 & 
-					\begin{itemize}
-						\item Bookmark icon was not understood by some.
-						\item Everything else ok.
-						\item “Where do I touch”
-						\item A bit of confusion about what the “ikke interessert” button does.
-					\end{itemize}
-					Changes:
-					\begin{itemize}
-						\item Add a back button
-						\item Change name of button “Ikke interessert”
-						\item Make a better link to the icons (Add color etc.)
-					\end{itemize}
-					\\\hline
-					
-					\textbf{8.Story view(images and videos)} & 8 & 
-					\begin{itemize}
-						\item 	Expects full screen when touching
-					\end{itemize}
-					
-					
-					Changes:
-					NON
-					\\\hline
-					\textbf{Story bookmark} & 9  & 
-					\begin{itemize}
-						\item “Can I change the name of the lists?”
-					\end{itemize}
-					
-					Changes: None	
-					\\\hline
-					\textbf{9.Menu} & 10  &
-					\begin{itemize}
-						\item “What is utforsk?” 
-					\end{itemize}
-					Changes
-					\begin{itemize}
-						\item Change name of “Utforsk” - Make is clear that this is where the main function/personalisation happens  		 	
-						\item Skill “Utforsk” og innstillinger (ie. old font)
-					\end{itemize}			
-					\\\hline
-					\textbf{10. List} & 10 \textgreater 12 &
-					\begin{itemize}
-						\item Some users is a bit unsure about how to delete a story.
-						\item Want to swipe both direction
-					\end{itemize} 
-					
-					Changes:
-					\begin{itemize}
-						\item Add a hint to show the one can swipe
-						\item 	Add swipe both ways?
-					\end{itemize}
-					
-					\\\hline
-					\textbf{11.Settings} & 4   & 
-					\begin{itemize}
-						\item This look exactly the same
-					\end{itemize}
-					Changes: 
-					\begin{itemize}
-						\item Remove the page indicator?
-					\end{itemize}
-					\\ \hline
-				\end{longtable}
-			\end{center}
-			
-			General changes/implementation before next usertest:
-			
-			Add navigation between the setup views make the user also able to navigate back 
-			Add finalized icons
-			Add the intended color scheme 
-			
-			
-			\cleardoublepage
+			\item The read later is very misunderstood, they don’t seem to understand that this is placed in a list. And what happen when I press this again
+			\item Missing hint to the swipe right/left
+			\item The user feels a bit dumped into this view
+			\item “What can I touch?”
+		\end{itemize}
+		Changes:
+		\begin{itemize}
+			\item Remove button and add a bookmark icon at the top right of the card. 
+			\item Adding cards at either side to show that there is more. (or adding a card deck to incentive a swipe)
+			\item Add a loading animation, Simulating the “magic” that is finding stories for the user.
+			\item Add/Change title: Anbefalte Fortellinger/Historier
+			\item Make it clear the the card is touchable (ie. make the text fade out in the card)
+			\item Add and function to remove the card.
+		\end{itemize}
+		\\\hline
+		
+		\textbf{7. Story View} & 7 & 
+		\begin{itemize}
+			\item Bookmark icon was not understood by some.
+			\item Everything else ok.
+			\item “Where do I touch”
+			\item A bit of confusion about what the “ikke interessert” button does.
+		\end{itemize}
+		Changes:
+		\begin{itemize}
+			\item Add a back button
+			\item Change name of button “Ikke interessert”
+			\item Make a better link to the icons (Add color etc.)
+		\end{itemize}
+		\\\hline
+		
+		\textbf{8.Story view(images and videos)} & 8 & 
+		\begin{itemize}
+			\item 	Expects full screen when touching
+		\end{itemize}
+		
+		
+		Changes:
+		NON
+		\\\hline
+		\textbf{Story bookmark} & 9  & 
+		\begin{itemize}
+			\item “Can I change the name of the lists?”
+		\end{itemize}
+		
+		Changes: None	
+		\\\hline
+		\textbf{9.Menu} & 10  &
+		\begin{itemize}
+			\item “What is utforsk?” 
+		\end{itemize}
+		Changes
+		\begin{itemize}
+			\item Change name of “Utforsk” - Make is clear that this is where the main function/personalisation happens  		 	
+			\item Skill “Utforsk” og innstillinger (ie. old font)
+		\end{itemize}			
+		\\\hline
+		\textbf{10. List} & 10 \textgreater 12 &
+		\begin{itemize}
+			\item Some users is a bit unsure about how to delete a story.
+			\item Want to swipe both direction
+		\end{itemize} 
+		
+		Changes:
+		\begin{itemize}
+			\item Add a hint to show the one can swipe
+			\item 	Add swipe both ways?
+		\end{itemize}
+		
+		\\\hline
+		\textbf{11.Settings} & 4   & 
+		\begin{itemize}
+			\item This look exactly the same
+		\end{itemize}
+		Changes: 
+		\begin{itemize}
+			\item Remove the page indicator?
+		\end{itemize}
+		\\ \hline
+	\end{longtable}
+\end{center}
+
+\textbf{General changes/implementation before next user test:}
+\begin{itemize}
+\item Add navigation between the setup views to make the user able to navigate back.
+\item Add finalized icons.
+\item Add the intended color scheme.
+\end{itemize}
+
+\cleardoublepage
