@@ -8,7 +8,7 @@ The unit, integration and system tests were done in an iterative manner. After t
 
 \section{Unit testing}
 \label{sec:unit_testing}
-The purpose of unit testing is to ensure that every piece of code that is implemented in the system is functional and correct. The group performed unit tests on new units of code before implementing them in the system. It was necessary to prioritize which units should be tested, considering the amount of time given for the project. 
+The purpose of unit testing is to ensure that every piece of code that is implemented in the system is functional and correct. It was necessary to prioritize which units should be tested, considering the amount of time given for the project. 
 The units in these tests were PHP, Java and JavaScript classes. Therefore it was necessary to use different unit testing tools. Back-end code was tested using PHPUnit framework \cite{KF2}, and JUnit \cite{jUnit} and the extension DbUnit \cite{dbUnit}. The front-end code was tested by using an AngularJS unit testing tool, called Karma \cite{KF3}. 
 The classes that were tested are listed under the unit column in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}. The classes that were left out in the documented tests were tested manually by the developers. If issues were detected during the unit tests, the developers would mend the issues and run the tests again. This cycle was repeated until there was no issues left and all test cases got the expected result.
 
@@ -70,7 +70,21 @@ To get a structured testing experience, the team had to delegate responsibility 
 
 
 \subsection{Test Cases}
-The testers created test cases and used these as a guide for performing the tests. Each test case has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running. The test cases are presented in \textbf{Appendix \ref{app:unittest}}.
+The testers created test cases and used these as a guide for performing the tests. Each test case has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running. An example of a unit test can be found in \textbf{Table \ref{Tab:unittestexample}}. All the unit test cases are presented in \textbf{Appendix \ref{app:unittest}}.
+
+\begin{center}
+	\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
+		\caption[Unit Test cases]{ Unit test case for updating rating value} \label{Tab:unittestexample}\\
+		
+		\hline {\bf Test case ID} & {\bf Description} & {\bf Input data} & {\bf Expected results} & {\bf Result}\\ \hline
+		
+		\multicolumn{5}{| >{\columncolor[gray]{0.8}} c |}{Unit 1: Database Helper}	\\\hline
+		
+		
+		UN1.1 & Update one rating value in the database & Random userId, random storyId, updateValue: 2 & The function should return true when running the database request. & Pass \\\hline
+	\end{longtable}
+\end{center}
+\raggedbottom
 
 \subsection{Detected and mended issues}
 This section includes some of the most important issues that were discovered during the unit testing, and how they were solved. \newline
@@ -89,7 +103,19 @@ If issues were detected during the integration tests, the developers would mend 
 
 
 \subsection{Test cases}
-The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Figure \ref{Fig:architecture}} of the architecture for this project. The modules that the integration testing was performed on were front-end (User Interface), back-end with a general processing module and a personalization module, and the database. Because the personalization module of the system was considered to be a crucial one, the most important data flows were the user's input in the form of preferences and ratings. Also, the communication with the database was crucial because the user's information about ratings and preferences had to be stored properly to get a beneficial recommendation. The test cases are described in \textbf{Table \ref{Tab:integrationtestcases}}.
+The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Figure \ref{Fig:architecture}} of the architecture for this project. The modules that the integration testing was performed on were front-end (User Interface), back-end with a general processing module and a personalization module, and the database. Because the personalization module of the system was considered to be a crucial one, the most important data flows were the user's input in the form of preferences and ratings. Also, the communication with the database was crucial because the user's information about ratings and preferences had to be stored properly to get a beneficial recommendation. An example of an integration test can be found in \textbf{Table \ref{Tab:integrationtestexample}}. All the integration test cases are described in \textbf{Appendix \ref{Tab:integrationtestcases}}.
+
+\begin{center}
+	\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
+		
+		\caption[Integration Test Case for creating a user]{Integration Test Case for creating a user} \label{Tab:integrationtestexample}\\
+		\hline
+		\textbf{Test case ID} & \textbf{Description} & \textbf{Input data} & \textbf{Expected results} & \textbf{Result} \\ \hline
+		
+		I.1 & Simulate a HTTP request which will log in a user for the first time with an email adress \newline Call getUserFromEmail to the database & email: 'testnr16@example.com,\newline requestType: addUser & The HTTP request should return successfull message included the newly created userId. The database  function should return a row with the userId, mail, age\textunderscore group, gender and use\textunderscore of\textunderscore location  & Pass \\ \hline
+	\end{longtable}
+\end{center}
+\raggedbottom
 
 
 \subsection{Detected and mended issues}
@@ -114,7 +140,7 @@ When the system test was performed, the testers evaluated the test results and t
 \subsection{Test cases}
 The test cases cover the use cases in \textbf{Section \ref{subsec:use_cases}} and requirements in \textbf{Appendix \ref{app:functional_requirements}}. 
 Each test case has a test identifier and an approach for the tester, and a description of what is intended to happen when the test case is performed. The tester will be referred to as “the user”. 
-Some of the test cases have a dependability on other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. \textbf{Table \ref{Tab:systemtest1}} and \textbf{Table \ref{Tab_systemtest2}} present two of the test cases that were used. The whole test case document is in \textbf{Appendix \ref{app:systemtest}}. 
+Some of the test cases have a dependability on other tests. If an issue is detected in one test case, it might cause issues in its dependent test cases. \textbf{Table \ref{Tab:systemtest1}} presents an example of the test cases that were used. The whole system test case document is in \textbf{Appendix \ref{app:systemtest}}. 
 
 \begin{table}[H]
 	\centering
@@ -143,39 +169,6 @@ Some of the test cases have a dependability on other tests. If an issue is detec
 		\end{adjustbox}
 		\label{Tab:systemtest1}
 	\end{table}
-	
-	
-\begin{table}[H]
-	\centering
-	\caption{System test case for login with email registration}
-	\begin{adjustbox}{center}
-	\begin{tabular}{ | l | l  |}
-		\hline
-		\textbf{Test ID} & T2  \\ \hline 
-		\textbf{Test Item} & Log in with email registration \\ \hline&\\[-2ex]
-		\textbf{Approach} & \begin{minipage}{5in}The user locate the login-button and applies the registrated email and obtain access to the system and the profile connected to this email address . \end{minipage}\\ &\\[-2ex]\hline
-		\textbf{Input data} &  valid email: “user@example.com”, \newline example invalid email: “mail@example”\\ \hline&\\[-2ex]
-		\textbf{Expected results} & \begin{minipage}{5in}
-			\begin{itemize}[noitemsep]
-				\item The first time the user have logged in \newline System Response:  Choose preferences-view should appear.
-				\item The user have done this process before \newline System Response: "Vennligst vent mens vi finner historier vi tror du vil like" and direct the user to the view with the recommended stories.
-				\item The user types an email with wrong email format \newline System Response: "Ikke en gyldig adresse" 
-				
-			\end{itemize} \end{minipage}
-			\\ &\\[-2ex]\hline&\\[-2ex]
-			\textbf{Testing task} & \begin{minipage}{5in}
-				\begin{enumerate}[noitemsep]
-					\item Navigate to the login view
-					\item Apply email address to the email input field
-					\item Receive response from system
-				\end{enumerate}\end{minipage}
-				\\ &\\[-2ex]\hline
-				\textbf{Depends on tests} & T1 \\ \hline					
-				\textbf{Pass/Fail} & Passed \\\hline
-	\end{tabular}
-	\end{adjustbox}
-	\label{Tab_systemtest2}
-\end{table}
 			
 			
 \subsection{Detected and mended issues}
@@ -337,6 +330,8 @@ The user testing was performed over several days where the first test was conduc
 
 \subsection{Test Cases}
 
+On each test, the user received a set of tasks to complete. These tasks were the following:
+
 \begin{itemize}
 	\item Create a user 	
 	\begin{enumerate}
@@ -363,6 +358,38 @@ The user testing was performed over several days where the first test was conduc
 	\end{enumerate}
 	
 \end{itemize}
+
+An example of a usability test results can be found in \textbf{Table \ref{Tab:usabilityTestexample}}. All the usability test cases are described in \textbf{Appendix \ref{app:usabilitytest}}.
+
+\renewcommand{\arraystretch}{2}%
+\begin{center}
+	\begin{longtable}{ | p{4cm} | p{3cm} | p{9cm}|}
+		
+		\caption[Usability test]{Usability Test example } \label{Tab:usabilityTestexample}\\
+		\label{Tab:usabilitytestexample}
+		\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
+		\\ \hline
+		
+		\textbf{6. Recommendations} & 6 & 
+		\begin{itemize}
+			
+			\item The read later is very misunderstood, they don’t seem to understand that this is placed in a list. And what happen when I press this again
+			\item Missing hint to the swipe right/left
+			\item The user feels a bit dumped into this view
+			\item “What can I touch?”
+		\end{itemize}
+		Changes:
+		\begin{itemize}
+			\item Remove button and add a bookmark icon at the top right of the card. 
+			\item Adding cards at either side to show that there is more. (or adding a card deck to incentive a swipe)
+			\item Add a loading animation, Simulating the “magic” that is finding stories for the user.
+			\item Add/Change title: Anbefalte Fortellinger/Historier
+			\item Make it clear the the card is touchable (ie. make the text fade out in the card)
+			\item Add and function to remove the card.
+		\end{itemize}
+		\\\hline
+	\end{longtable}
+\end{center}
 
 \subsection{Test users}
 
@@ -398,170 +425,5 @@ When it comes to the intuitive understanding, the application has some work to b
 The parts where users are confused are mentioned in the views section.
 
 Paths are on the whole followed by the majority of the testers with some deviation, but this is expected since the prototype is a bit unclear on its formulation on some of the views. But to conclude, the users are almost without issues following the scenarios to the point.
-
-\subsection{Results}
-\renewcommand{\arraystretch}{2}%
-\begin{center}
-	\begin{longtable}{ | p{4cm} | p{3cm} | p{9cm}|}
-		
-		\caption[Usability test]{Usability Test } \label{Tab:usabilityTest}\\
-		\hline
-		\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
-		\\ \hline
-		
-		\textbf{1. Intro/Tutorial} & 2 & 
-		\begin{itemize}
-			\item “Do  I swipe?”
-			\item This view is very lacking in content
-			\item Are the user able to navigate both ways at the start
-			\item It`s nice to have a introduction to the application
-		\end{itemize}
-		Changes:
-		Add animation/intro
-		\\\hline
-		
-		\textbf{2. Login} & 3  & 
-		\begin{itemize}
-			\item Several users don’t want to login, they want to test the application first.
-			\item “Am I supposed to verify mail after entering?”
-			\item	The text over Email is not clear about  what its for. (Need new wording)
-			\item The text was too small
-			\item Mail verification?
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Change wording
-			\item Make the “Hopp over” button a small link and encourage users to user the “Logg inn”
-			\item  Add a “?” for hints
-		\end{itemize}
-		\\\hline
-		
-		\textbf{3. Profil} & 4 & 
-		\begin{itemize}
-			\item Should separate this from the personalization, some user thought this was part of the recommendation. 
-			\item Is this research data or for the application
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Explain why this is needed and if this is related to the personalizing.
-			\item Make the default NONE selected
-			\item Add/Change a category to “Hemmelig/Ønsker ikke dele”
-		\end{itemize}
-		\\\hline
-		
-		\textbf{4. Interests} & 5  & 
-		\begin{itemize}		
-			\item “What is this”
-			\item This would need an explanation 
-			\item Can one choose more the one.
-		\end{itemize}			
-		Changes:
-		\begin{itemize}
-			\item Change the wording: “Velg kategorier”
-		\end{itemize}\\\hline
-		\textbf{5.Media format} & 5 & 
-		Text>Image>Sound>Video
-		\begin{itemize}
-			\item The sound icon was interpreted as music
-			\item Some users did not understand this; it was not the icons what how this affected the stories
-			\item several users reported the this was a bit confusing 
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Removing this view; because is not adding much to the application and user tests uncovering a lot of misunderstanding about its function and meaning.
-		\end{itemize}
-		\\\hline
-		
-		\textbf{6. Recommendations} & 6 & 
-		\begin{itemize}
-			
-			\item The read later is very misunderstood, they don’t seem to understand that this is placed in a list. And what happen when I press this again
-			\item Missing hint to the swipe right/left
-			\item The user feels a bit dumped into this view
-			\item “What can I touch?”
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Remove button and add a bookmark icon at the top right of the card. 
-			\item Adding cards at either side to show that there is more. (or adding a card deck to incentive a swipe)
-			\item Add a loading animation, Simulating the “magic” that is finding stories for the user.
-			\item Add/Change title: Anbefalte Fortellinger/Historier
-			\item Make it clear the the card is touchable (ie. make the text fade out in the card)
-			\item Add and function to remove the card.
-		\end{itemize}
-		\\\hline
-		
-		\textbf{7. Story View} & 7 & 
-		\begin{itemize}
-			\item Bookmark icon was not understood by some.
-			\item Everything else ok.
-			\item “Where do I touch”
-			\item A bit of confusion about what the “ikke interessert” button does.
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Add a back button
-			\item Change name of button “Ikke interessert”
-			\item Make a better link to the icons (Add color etc.)
-		\end{itemize}
-		\\\hline
-		
-		\textbf{8.Story view(images and videos)} & 8 & 
-		\begin{itemize}
-			\item 	Expects full screen when touching
-		\end{itemize}
-		
-		
-		Changes:
-		NON
-		\\\hline
-		\textbf{Story bookmark} & 9  & 
-		\begin{itemize}
-			\item “Can I change the name of the lists?”
-		\end{itemize}
-		
-		Changes: None	
-		\\\hline
-		\textbf{9.Menu} & 10  &
-		\begin{itemize}
-			\item “What is utforsk?” 
-		\end{itemize}
-		Changes
-		\begin{itemize}
-			\item Change name of “Utforsk” - Make is clear that this is where the main function/personalisation happens  		 	
-			\item Skill “Utforsk” og innstillinger (ie. old font)
-		\end{itemize}			
-		\\\hline
-		\textbf{10. List} & 10 \textgreater 12 &
-		\begin{itemize}
-			\item Some users is a bit unsure about how to delete a story.
-			\item Want to swipe both direction
-		\end{itemize} 
-		
-		Changes:
-		\begin{itemize}
-			\item Add a hint to show the one can swipe
-			\item 	Add swipe both ways?
-		\end{itemize}
-		
-		\\\hline
-		\textbf{11.Settings} & 4   & 
-		\begin{itemize}
-			\item This look exactly the same
-		\end{itemize}
-		Changes: 
-		\begin{itemize}
-			\item Remove the page indicator?
-		\end{itemize}
-		\\ \hline
-	\end{longtable}
-\end{center}
-
-\textbf{General changes/implementation before next user test:}
-\begin{itemize}
-\item Add navigation between the setup views to make the user able to navigate back.
-\item Add finalized icons.
-\item Add the intended color scheme.
-\end{itemize}
 
 \cleardoublepage
