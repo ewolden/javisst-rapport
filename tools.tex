@@ -22,6 +22,7 @@ This section briefly describes all the tools used for this project, which includ
 \end{itemize}
 
 \subsection{Back-end}
+\label{subsec:back_end_tools}
 \begin{itemize}
 	\item Docker \cite{EHW2} - Docker is an open platform that provides the possibility for system developers to build their application and deploy it to other computers or servers, which can then run the same application, unchanged. The motivation for using Docker was mainly so the team could run the developed application on SINTEF's own server. More details about Docker is described in \textbf{Section \ref{subsec:docker}}
 	\item MySQL \cite{es8} - MySQL is one of the most widely used open source databases. It has many advantages when it comes to scalability and flexibility, and it is well suited for many types of application development. More details about this project's database and its design can be found in \textbf{Section \ref{sec:database_design}}
@@ -29,7 +30,7 @@ This section briefly describes all the tools used for this project, which includ
 	\item PHPUnit \cite{KF2} - PHPUnit is a framework for writing and performing unit tests on PHP code. More details about how PHPUnit was used in this project can be found in \textbf{Section \ref{sec:unit_testing}}
 	\item JUnit \cite{jUnit} - JUnit is a framework for doing unit testing in Java. 
 	\item DbUnit \cite{dbUnit} - DbUnit is an extension of JUnit that can be used to test methods accessing a database. Among its advantages is the ability to put the database in a known state before each test, which gives the tester control over what to expect as results of tests that change the contents of the database.
-	\item Mahout \cite{as9} \todo{Mahout krever at man har Apache Commons Math, Guava-libraries og slf4j. Skal disse nevnes?} - Mahout is a project that provides scalable machine learning algorithms. Mahout is primarily focused on algorithms for collaborative filtering, clustering and classification. How Mahout has been used in this project is described in \textbf{Section \ref{sec:personalization_how}}.
+	\item Mahout \cite{as9} - Mahout is a project that provides scalable machine learning algorithms. Mahout is primarily focused on algorithms for collaborative filtering, clustering and classification. How Mahout has been used in this project is described in \textbf{Section \ref{sec:personalization_how}}.
 \end{itemize}
 
 \section{Communication tools}

@@ -27,6 +27,7 @@ It is a difficult task to model a whole system in an accurate way, and while the
 \end{figure}
 
 \section{Front-end structure}
+\label{sec:frontend_structure}
 The front-end of the application was designed by using Ionic and AngularJS, and this section will describe how a system made in AngularJS is structured.
 
 AngularJS provides templates to create systems based on a Model-View-Controller(MVC) architecture, and also provides a variety of components to assist in easing the programming and speeding up the application. It is essentially another layer of abstraction above writing regular JavaScript. These are some of the main concepts that are used to create an Angular application:
@@ -56,9 +57,7 @@ AngularJS provides templates to create systems based on a Model-View-Controller(
 
 \section{User interface}
 
-The user interface design was an essential part of the project, as the customer prioritized usability over all other nonfunctional requirements. The design thus went through many iterations by working on a prototype and continually getting feedback from customer and user tests. This feedback loop was important as the customer did not have all the specific requirements to the application from the beginning, and making everything easy to understand for the user was also challenging.  Balsamiq was first used to create a basic wireframe, but as its functionality was limited, the next iteration of the design was made using Proto.io. This made it possible to receive better feedback on the flow of the app and not just the views individually. \newline
-
-\todo{Synes de to første avsnittene her passer bedre i implementation}
+\todo{Introduksjon}
 
 \begin{figure}[h!]
 	\centering
@@ -98,8 +97,6 @@ The following \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow b
 	\label{Fig:story_view}
 \end{figure}
 
-\todo{Screenshots and explanations of other views}
-
 The name of the application, "Vettu hva?" was not decided upon until near the end of the project. The group had some issues with finding a name that sounded catchy and also gave a correct impression of what the app does. The customer eventually suggested "Vettu hva?" which is a name that translates to "You know what?" in English. The name gives an impression of having something to tell, which is fitting for an app based on storytelling. The name also appeals to a person's sense of curiosity, as if saying "I know something that you do not".
 
 \section{Front-end - back-end communication}
@@ -111,8 +108,7 @@ AngularJS \$http is a core service for reading data from remote servers, which i
 Each HTTP request is managed by the same back-end PHP script. This script decodes the HTTP request, determines which action to perform and executes it. When the script has finished executing, a JSON response is returned to front-end with the desired data.
 
 \section{Back-end overview}
-\todo{Skal dette være med? I så fall i designarchitecture eller implementation?}
-The back-end implementation is divided into five sections, such that each section addresses a separate concern. A concern is a set of information that affects the code of the application. The value of such a separation is that it simplifies the development and maintenance of the application code. By splitting the code into separate parts the system is more logically structured, and cleaner code is achieved. The result is as an example that SQL related code is maintained by one part of the system, while HTTP processing is executed by another. Below is a description of the different back-end sections.
+The back-end design is divided into five sections, such that each section addresses a separate concern. A concern is a set of information that affects the code of the application. The value of such a separation is that it simplifies the development and maintenance of the application code. By splitting the code into separate parts the system is more logically structured, and cleaner code is achieved. The result is as an example that SQL related code is maintained by one part of the system, while HTTP processing is executed by another. Below is a description of the different back-end sections.
 
 \begin{description}
 	\item[Models] \hfill \\
