@@ -165,4 +165,9 @@ PHP is a server-side scripting language that is especially suited for web develo
 \noindent\textbf{Java}\newline
 Java is a very popular general-purpose object oriented programming language developed by Sun Microsystems and later Oracle Corporation \cite{HM9}. Java was later in the project chosen as a secondary back-end language. This was because Mahout, which was used to implement the recommender engine (see \textbf{Section \ref{sec:personalization_how}}), is written in Java. 
 
+
+\subsection{E-mail}
+
+To create a user in “Vettu hva?” the user only needs to provide an e-mail address. E-mail was chosen as the identifier because it is unique for a specific person. When a user tries to log in and the e-mail does not exist in the database, a new user is created and the user is assigned a user ID and the ID is returned to front end. A message is also sent to the provided e-mail, to confirm that the user is registered. If the e-mail already exists, the previously created user ID is returned to front end and the user can continue where he/she left of. The mail service used to send the confirmation email is an email sending library for PHP called PHPMailer. Originally, the plan was to use the built in mail() function in PHP. However, in order for this to work a properly configured local SMTP server was required. This proved to be too much work for this assignment, so the solution was to use PHPMailer with a “Vettu hva?” gmail. PHPMailer can be used to send e-mails from existing mail servers, like Google Mail, by providing a username (gmail) and password.
+
 \cleardoublepage
