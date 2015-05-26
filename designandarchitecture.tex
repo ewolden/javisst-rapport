@@ -8,7 +8,7 @@ To get a brief overview of the complete product and its required parts, the desi
 
 The overall architectural design of the system was made to achieve a rough mapping of what needed to be done in terms of actual programming. The architecture focuses heavily on interactions between the different instances in the systems without going into the specific details on how this is done. To illustrate the architecture, two different views were created. One showing only the components, and the other showing the processes in the different components. The overall system structure can be seen in \textbf{Figure \ref{Fig:system_structure}}, this shows the four different components and how they interact. As shown in this diagram, the system is created as a client-server model, where the mobile application constitutes the client, which communicates with the PHP back-end server. The server is connected to a database, and Digitalt fortalt provides an API to retrieve stories from.\newline
 
-In \textbf{Figure \ref{Fig:architecture}} a diagram showing the architecture with processes can be found. As seen in the legend, the square boxes represent individual components or processes. The boxes with oval corners represent compound processes or larger parts. These are mainly shown because they give an overview of which processes belong to and will be performed by which part of the system. Double lined boxes are external sources which provide an API. Lastly, arrows indicate information flow.
+The \textbf{Figure \ref{Fig:architecture}} shows a diagram presenting the architecture for the application. As seen in the legend, the square boxes represent individual components or processes. The boxes with oval corners represent compound processes or larger parts. These are mainly shown because they give an overview of which processes belong to and will be performed by which part of the system. Double lined boxes are external sources which provide an API. Lastly, arrows indicate information flow.
 
 \begin{figure}[h!]
 	\centering
@@ -30,7 +30,7 @@ It is a difficult task to model a whole system in an accurate way, and while the
 \label{sec:frontend_structure}
 The front-end of the application was designed by using Ionic and AngularJS, and this section will describe how a system made in AngularJS is structured.
 
-AngularJS provides templates to create systems based on a Model-View-Controller(MVC) architecture, and also provides a variety of components to assist in easing the programming and speeding up the application. It is essentially another layer of abstraction above writing regular JavaScript. These are some of the main concepts that are used to create an Angular application:
+AngularJS provides templates to create systems based on a Model-View-Controller(MVC) architecture, and also provides a variety of components to assist in making the programming more effective and speeding up the application. It is essentially another layer of abstraction above writing regular JavaScript. These are some of the main concepts that are used to create an Angular application:
 
 \begin{description}
 	\item[Model] \hfill \\ 
@@ -68,14 +68,14 @@ AngularJS provides templates to create systems based on a Model-View-Controller(
 
 While designing the user interface, some attention was paid to the projects described in \textbf{Section \ref{sec:existing_solutions}}. The group analyzed this previous work as a basis to decide what would be good or bad design choices for "Vettu hva?". A few general conclusions described in \textbf{Section \ref{sec:existing_solutions}} were that having static images occupying screen space is poor design, and that lists are normally easier to navigate than maps.\newline
 
-The following \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow between all the different views in the application. The blue boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explain what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail.
+The \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow between all the different views in the application. The blue boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explain what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail.
 
 
 
 \begin{description}
 	
 	\item[Recommendation view] \hfill \\ 
-	This view displays the stories that should be the most relevant to the user. The user can browse them by swiping through them or by clicking the left and right arrows. When tapping on a card the detailed view of the story will be displayed. The “X” in the right corner of each card is used to reject the story, which takes it out of the list of the current recommendations and makes this kind of stories less likely to appear in the future. The bookmark icon in the top bar opens a modal for adding a bookmark. 
+	This view displays the stories that should be the most relevant to the user. The user can browse them by swiping through them or by clicking the left and right arrows. When tapping on a card the detailed view of the story will be displayed. The bookmark icon in the top bar opens a modal for adding a bookmark. 
 	
 	\begin{figure}[h!]
 		\centering
@@ -112,13 +112,13 @@ The back-end design is divided into five sections, such that each section addres
 
 \begin{description}
 	\item[Models] \hfill \\
-	Consisting of storyModel, userModel and preferenceValue. The models are used to temporarily hold information about a story, a user and a user's preference value for a story to be utilized by other files. Information is either retrieved from the database, sent from front-end, harvested from Digitalt museum's API or a combination of these. These models also contain formatting methods, which makes it possible to return story or user information to front-end.
+	Consisting of the classes storyModel, userModel and preferenceValue. The models are used to temporarily hold information about a story, a user and a user's preference value for a story to be utilized by other files. Information is either retrieved from the database, sent from front-end, harvested from Digitalt museum's API or a combination of these. These models also contain formatting methods, which makes it possible to return story or user information to front-end.
 	
 	\item[Database] \hfill \\
-	This section contains dbStory, dbUser, dbHelper and harvesting. The db classes are responsible for accessing the database. dbStory contains methods for adding or retrieving story related information from the database and dbUser is responsible for user related information. dbHelper consists of more general methods and is the class which establish a connection with the database. The harvesting script is responsible for collecting all database stories from Digitalt museums API and adding stories to or updating stories in the database (see \textbf{Section \ref{sec:harvesting}}).
+	This section contains the classes dbStory, dbUser, dbHelper and harvesting. The db classes are responsible for accessing the database. dbStory contains methods for adding or retrieving story related information from the database and dbUser is responsible for user related information. dbHelper consists of more general methods and is the class which establish a connection with the database. The harvesting script is responsible for collecting all database stories from Digitalt museums API and adding stories to or updating stories in the database (see \textbf{Section \ref{sec:harvesting}}).
 	
 	\item[Personalization] \hfill \\
-	Consisting of computePreferences and runRecommender. This section computes preference values for each Digitalt fortalt story in the database for each user. runRecommender is also responsible for initializing the Mahout recommendation engine when a user's preference values have been calculated.
+	Consisting of the classes computePreferences and runRecommender. This section computes preference values for each Digitalt fortalt story in the database for each user. runRecommender is also responsible for initializing the Mahout recommendation engine when a user's preference values have been calculated.
 	
 	\item[Recommender] \hfill \\
 	This section consists of the Java code and recommender.jar file which make up the Mahout recommender (see \textbf{Section \ref{sec:personalization_how}}).
