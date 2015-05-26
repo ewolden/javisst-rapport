@@ -20,11 +20,14 @@ The \textbf{Figure \ref{Fig:architecture}} shows a diagram presenting the archit
 It is a difficult task to model a whole system in an accurate way, and while the architecture diagram shows an overlook, it can not give much insight into the complexity of each process. This is further complicated by the fact that in the startup phase of the project there are a great number of unknowns. Both complexity and requirements are subject to change. As such, the diagram should only be used as a guide for understanding the composition of the complete system.
 
 \begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{fig/architecture}
-	\caption{Diagram of the architecture for this project.}
-	\label{Fig:architecture}
-\end{figure}
+	\begin{center}
+		\advance\leftskip-3cm
+		\advance\rightskip-3cm
+		\includegraphics[keepaspectratio=true,scale=0.4]{fig/architecture}
+		\caption{Diagram of the architecture for this project.}
+		\label{Fig:architecture}
+	\end{center}
+	\end{figure}
 
 \section{Front-end structure}
 \label{sec:frontend_structure}
@@ -132,7 +135,7 @@ The back-end design is divided into five sections, such that each section addres
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{fig/overall_backend}
+	\includegraphics[keepaspectratio=true,scale=0.6]{fig/overall_backend}
 	\caption{Class diagram of the overall back-end structure}
 	\label{Fig:overall_backend}
 \end{figure}
