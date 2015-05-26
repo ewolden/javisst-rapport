@@ -105,18 +105,20 @@ If issues were detected during the integration tests, the developers would mend 
 \subsection{Test cases}
 The test cases were made by first having a closer look at the different modules and the data flows between them. The modules in question are shown in \textbf{Figure \ref{Fig:architecture}} of the architecture for this project. The modules that the integration testing was performed on were front-end (User Interface), back-end with a general processing module and a personalization module, and the database. Because the personalization module of the system was considered to be a crucial one, the most important data flows were the user's input in the form of preferences and ratings. Also, the communication with the database was crucial because the user's information about ratings and preferences had to be stored properly to get a beneficial recommendation. An example of an integration test can be found in \textbf{Table \ref{Tab:integrationtestexample}}. All the integration test cases are described in \textbf{Appendix \ref{Tab:integrationtestcases}}.
 
+\begin{table}
+	\centering
+	\small
 \begin{center}
-	\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
-		
-		\caption[Integration test case for creating a user]{Integration test case for creating a user} \label{Tab:integrationtestexample}\\
+	\caption{Integration test case for creating a user}
+	\label{Tab:integrationtestexample}
+	\begin{tabular}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{1cm}|}
 		\hline
 		\textbf{Test case ID} & \textbf{Description} & \textbf{Input data} & \textbf{Expected results} & \textbf{Result} \\ \hline
 		
 		I.1 & Simulate a HTTP request which will log in a user for the first time with an email adress \newline Call getUserFromEmail to the database & email: 'testnr16@example.com,\newline requestType: addUser & The HTTP request should return successfull message included the newly created userId. The database  function should return a row with the userId, mail, age\textunderscore group, gender and use\textunderscore of\textunderscore location  & Pass \\ \hline
-	\end{longtable}
+	\end{tabular}
 \end{center}
-\raggedbottom
-
+\end{table}
 
 \subsection{Detected and mended issues}
 
@@ -163,7 +165,7 @@ Some of the test cases have a dependability on other tests. If an issue is detec
 				\item Check email inbox to se if the correct mail from the system was received 
 			\end{enumerate} \end{minipage}
 			\\&\\[-2ex] \hline
-			\textbf{Depends on tests}& NaN \\ \hline	
+			\textbf{Depends on tests}& \\ \hline	
 			\textbf{Pass/Fail} & Passed \\\hline				
 		\end{tabular}
 		\end{adjustbox}
@@ -173,26 +175,21 @@ Some of the test cases have a dependability on other tests. If an issue is detec
 			
 \subsection{Detected and mended issues}
 
-\todo{Fyll ut hvordan de forskjellige bugsene ble fikset}
-During the system testing, the testers found repeating recommended stories. This was solved by checking the front-end array and the top ten recommendations and the ratings done by the user. \newline
+During the system testing, the testers found repeating recommended stories. This was solved by checking the front-end array and the top ten recommendations and the ratings done by the user for duplicates. \newline
 
-Picture description. \newline
+One category icon looked completely different in different views. The reason for this was because this icon had been updated in one part of the code, but not everywhere. This was quickly found and solved. \newline
 
-categories ? \newline
+Sound clips were not working on some Android versions. This was a tough issue which was eventually fixed by using dedicated plug-ins for media, and rewriting the functions for retrieving audio files.\newline
 
-Sound clips not working.\newline
+An issue was detected when logging out from a user and then logging in with a different user. The current user would then get the same recommendations as the previous user. The issue was that a user's ID was not cleared properly from the cache when logging out. \newline
 
-Log in and out, log in again with a different user - Gives the previous user's recommendations. \newline
-
-Use a long time to load recommendations - or it does not show up at all.\newline
+Sometimes the recommended stories would take a long time to load. This was fixed by optimizing the harvester. \newline
 
 Can not scroll down if you are scrolling by touching the frame of video, picture and sound- \newline
 
-Can not remove bookmark list the user made. \newline
+It was discovered that there was no way to delete the user-made lists. This was easily remedied by adding an "X"-button on these lists to allow deleting them. \newline
 
-Icons are different in different views.\newline
-
-Can not scroll if you have many bookmark lists.\newline
+When a user created many lists, there was no way to scroll through them. This was remedied by adding a scroll function to the menu. \newline
 
 \section{Customer acceptance test}
 \label{sec:acceptance_test}
@@ -209,13 +206,8 @@ The customer acceptance test (CAT) was executed during the whole software develo
 		\textbf{Date} & 20.02.15 \\ \hline 
 		\textbf{Comments} &Intuitive interface. The selection of categories is good and fast. Category icon in the listview looks very good.
 		\\ \hline
-		\textbf{Issues} &	
-		\begin{itemize}
-			\item It should have a description of why the user have to sign in by email and give the user the option to choose age group and gender,
-			\item The customer thinks it is easier to click something than to drag a icon from one place to another. 
-			\item The customer prefer one story per view when the user browse recommended stories, the swiping from one story to another should be explained. 
-			\item Customer want a to-be-rated list and a to-read list. To have a trash is confusing. It is okay to not prioritize the notifications in the app. 
-		\end{itemize}	
+		\textbf{Issues} &
+		There should be a description of why the user has to sign in by email, and give the user the option to choose age group and gender. The customer thinks it is easier to click something than to drag an icon from one place to another.  The customer prefers one story per view when the user is browsing recommended stories. The swiping from one story to another should be explained. The customer wants a to-be-rated list and a to-read list. The trash can icon is confusing. It is okay to not prioritize the notifications in the app. 	
 		\\ \hline
 		
 	\end{longtable}
@@ -231,22 +223,13 @@ The customer acceptance test (CAT) was executed during the whole software develo
 		\textbf{Date} & 27.02.15 \\ \hline 
 		\textbf{Comments}&
 		The customer is overall pleased with the prototype, but they have some constructive comments. 
-		There are some confusing icons, some lack of consistent terminology, missing introduction for the app, suggestions for other text for buttons and headlines.
+		There are some confusing icons, some lack of consistent terminology, missing introduction for the app, suggestions for different text for buttons and headlines.
 		\\ \hline
-		\textbf{Issues} 	 &	 	 	 	
-		\begin{itemize}[noitemsep]
-			\item Overlap between not interested and one star. Remove the not interested.
-			\item The author of a story expects that the story is presented the way he/her made it. It would be more correct to have the elements of the story together, in accordance with the authors intention.The elements of every story is now separated with the tabs in the storyview. 
-		\end{itemize}
+		\textbf{Issues} 	 &	
+		Overlap between not interested and one star rating. Remove the not interested. The author of a story expects that the story is presented the way he/her made it. It would be more correct to have the elements of the story together, in accordance with the authors intention. The elements of every story are now separated with the tabs in the storyview. 	 	
 		\\ \hline
 		\textbf{Suggestions} &
-		\begin{itemize}[noitemsep]
-			\item Have a number connected to the rating stars.
-			\item It is interesting for the customer to know if the user prefer picture, video or sound. The system should log this for every user. 
-			\item 	It is important to collect the information about the user of the system(age, gender, preferences), want to make it hard for the user to skip this step. Profile information such as age and gender can not be changed after the specification is once set by the user. 
-			\item Have a little text that appear when you hover the category icons, or apply a function where you can press a button and reveal the descriptions of the categories. \newline
-			\item Have the option to share the saved stories on social media. The customer have given this a low priority.
-		\end{itemize}
+		 Have a number connected to the rating stars. It is interesting for the customer to know if the user prefers picture, video or sound. The system should log this for every user. It is important to collect the information about the user of the system(age, gender, preferences). It should be discouraged for the user to skip this step. Profile information such as age and gender can not be changed after the specification is once set by the user. Have a little text that appears when you hover over the category icons, or apply a function where you can press a button and reveal the descriptions of the categories. Have the option to share the saved stories on social media. The customer has given this a low priority.
 		\\ \hline
 	\end{longtable}
 \end{center}
@@ -259,14 +242,9 @@ The customer acceptance test (CAT) was executed during the whole software develo
 		\hline
 		\textbf{Delivery} & First working software\\ \hline
 		\textbf{Date} & 17.03.15 \\ \hline
-		\textbf{Comments} & The customer likes the user interface of this version and says that it is not necessary to add more functionality, except for the concept view that are not yet implemented. The customer thinks that fetching the stories from Digitalt fortalt is working fast enough.  \\ \hline			
+		\textbf{Comments} & The customer likes the user interface of this version and says that it is not necessary to add more functionality, except for the concept view that is not yet implemented. The customer thinks that fetching the stories from Digitalt fortalt is working fast enough.  \\ \hline			
 		\textbf{Issues} & 
-		\begin{itemize}[noitemsep]
-			
-			\item Missing a concept description for the application 
-			\item There are some stories that do not have categories connected to them. 
-			\item These stories should be included in the collaborative filtering.
-		\end{itemize}
+		Missing a concept description for the application. There are some stories that do not have categories connected to them, these stories should be included in the collaborative filtering.
 		\\ \hline		
 	\end{longtable}
 \end{center}
@@ -279,28 +257,11 @@ The customer acceptance test (CAT) was executed during the whole software develo
 		\hline
 		\textbf{Delivery} & Second working software\\ \hline
 		\textbf{Date} & 20.04.15\\ \hline
-		\textbf{Comments} & The customer is satisfied with the appearance and structure in the story view. 
+		\textbf{Comments} & The customer is satisfied with the appearance and structure of the story view. 
 		\\ \hline
 		\textbf{Issues} & 
-		\begin{itemize}[noitemsep]
-			
-			\item There are only 3 stories in the recommendation view 
-			When you choose interests in the setup of the application - the interests are not marked when you click on them. \newline
-			\item When choosing a gender in the setup of the application, the selection is not stored in the settings view
-			The customer discovered some stories have mismatched icons connected to them. \newline
-			\item Stories that include a sound clip, does not view this immediately. The sound clip is located inside a tab, and the user would have to click on this will reveal it. \newline
-			\item  Some stories include video clips that are not playing.  \newline
-			\item  A user have to sign in every time to visit the app, the user is not remembered. \newline
-			\item  A story that are read are not automatically stored in the ‘Read List’. \newline
-			\item  Uncertain about the cross in the corner of a story in ‘recommended stories view’. The use of this button could mean two things. Either that the user is not interested in this story, or that the user have read this story and just want to close it for now. \newline
-			\item  The application does not at any time give the user new recommended stories. \newline
-			Missing some kind of feedback when a user has changed the interests in settings. The system should let the user know that it is trying to get new recommended stories based on the new interests. \newline
-			\item Some stories do not have a picture attached to it. The customer is suggesting a default picture for these stories.
-		\end{itemize}
-		\\ \hline 
-		
-		
-		
+		There are only 3 stories in the recommendation view. When you choose interests in the setup of the application, the interests are not marked clearly when you click on them. When choosing a gender in the setup of the application, the selection is not stored in the settings view. The customer discovered that some stories have mismatched icons connected to them. Stories that include a sound clip, do not show this immediately. The sound clip is located inside a tab, and the user would have to click on this to reveal it. Some stories include video clips that are not playing. A user has to sign in every time to visit the app, the user is not remembered. A story that is read is not automatically stored in the ‘Read List’. Uncertain about the cross in the corner of a story in ‘recommended stories view’. The use of this button could mean two things: Either that the user is not interested in this story, or that the user has read this story and just wants to close it for now. The application does not at any time give the user new recommended stories. Missing some kind of feedback when a user has changed the interests in settings. The system should let the user know that it is trying to get new recommended stories based on the new interests. Some stories do not have a picture attached to them. The customer is suggesting a default picture for these stories.
+		\\ \hline 	
 	\end{longtable}
 \end{center}
 
@@ -312,8 +273,8 @@ The customer acceptance test (CAT) was executed during the whole software develo
 		\hline
 		\textbf{Delivery} & Final product\\ \hline
 		\textbf{Date} & 01.05.15 \\ \hline
-		\textbf{Comments} & Customer reported positive feedback and expressed contentment towards the final product.  The last meeting was spent on going through the requirements list to see if the product met al requirements. There was some comments during the review. 
-		R18 is not conducted but the customer sees no problem with this and is satisfied with how the system looks now. 
+		\textbf{Comments} & Customer reported positive feedback and expressed contentment towards the final product.  The last meeting was spent on going through the requirements list found in \textbf{Appendix \ref{app:requirements}} to see if the product met all requirements. There were some comments during the review. 
+		R18 is not completed but the customer sees no problem with this and is satisfied with how the system looks now. 
 		R22: The information about the app is now hidden and should be moved to a different location in the menu.   \\ \hline
 		\textbf{Issues} \\ \hline
 	\end{longtable}
@@ -361,40 +322,34 @@ On each test, the user received a set of tasks to complete. These tasks were the
 
 An example of a usability test results can be found in \textbf{Table \ref{Tab:usabilityTestexample}}. All the usability test cases are described in \textbf{Appendix \ref{app:usabilitytest}}.
 
-\renewcommand{\arraystretch}{2}%
+\begin{table}
 \begin{center}
-	\begin{longtable}{ | p{4cm} | p{3cm} | p{9cm}|}
-		
-		\caption[Usability test]{Usability Test example } \label{Tab:usabilityTestexample}\\
-		\label{Tab:usabilitytestexample}
+	\caption{Usability Test example }
+	\label{Tab:usabilityTestexample}
+	\begin{tabular}{ | p{2cm} | p{2cm} | p{13cm}|}	
+
 		\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
 		\\ \hline
 		
 		\textbf{6. Recommendations} & 6 & 
-		\begin{itemize}
-			
-			\item The read later is very misunderstood, they don’t seem to understand that this is placed in a list. And what happen when I press this again
-			\item Missing hint to the swipe right/left
-			\item The user feels a bit dumped into this view
-			\item “What can I touch?”
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Remove button and add a bookmark icon at the top right of the card. 
-			\item Adding cards at either side to show that there is more. (or adding a card deck to incentive a swipe)
-			\item Add a loading animation, Simulating the “magic” that is finding stories for the user.
-			\item Add/Change title: Anbefalte Fortellinger/Historier
-			\item Make it clear the the card is touchable (ie. make the text fade out in the card)
-			\item Add and function to remove the card.
-		\end{itemize}
+		\textbf{Feedback:} The read later button is not understood. Users do not understand that it places the story in a list. Users do not understand that they can swipe in this view, or what they can touch. The users feel a bit "dumped" into this view with no explanation.\newline
+		\textbf{Changes:} Remove read later button and add a bookmark icon at the top right instead. Add a card deck or something else to show users that they can swipe. Add a loading animation for when the view is retrieving stories. Change the title of the view to "Anbefalte historier". Make it clear that the card can be touched and make it possible to remove the card.
 		\\\hline
-	\end{longtable}
+	\end{tabular}
 \end{center}
-
+\end{table}
+	
 \subsection{Test users}
 
-\todo{table needs caption and refer to it at some point}
+The test subjects were asked in advance how much and how many applications they use on handheld devices. They were also asked if and how much reading they see themselves generally doing. The \textbf{Table \ref{Tab:testgroup}} below describes the users that were used as test subjects for the usability testing.  \newline
+
+Low - 1-2 applications/ 1-2 times a day.\newline
+Medium - 2-4 applications/ 2-4 times a day.\newline
+High - more than 5 applications/ more than 5 times a day.
+
 \begin{table}[H]
+	\caption{Test group}
+	\label{Tab:testgroup}
 	\begin{center}
 		\begin{tabular}{ | l | l | l | l |}
 			\hline
@@ -402,18 +357,10 @@ An example of a usability test results can be found in \textbf{Table \ref{Tab:us
 			Female & 26 & Medium & Reads some \\\hline
 			Male & 32 & High & Does not read much \\\hline
 			Female & 51 & Low & Reads a lot \\\hline
-			Male & 31 & High & Reads some \\\hline 
-			
+			Male & 31 & High & Reads some \\\hline 	
 		\end{tabular}
 	\end{center}
 \end{table}
-
-The test subjects were asked in advance how much and how many applications they use on handheld devices. They were also asked if and how much reading they see themselves generally doing.\newline
-
-Low - 1-2 applications/ 1-2 times a day.
-Medium - 2-4 applications/ 2-4 times a day.
-High - more than 5 applications/ more than 5 times a day.
-
 
 \subsection{Summary}
 The time set aside for each test was about 20 minutes for the test and about 10 minutes for follow-up questions. Observations during the test and the answers provided in the follow-up were implemented in the view feedback and/or the general changes.
