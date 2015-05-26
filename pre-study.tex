@@ -11,7 +11,7 @@ In this section, assumptions and known constraints for the project are addressed
 
 Assumptions on which the planning of the project was based:
 \begin{itemize}
-	\item Access to an  API for Digitalt fortalt would be provided by the customer.
+	\item Access to an Application Programming Interface(API) for Digitalt fortalt would be provided by the customer.
 	\item The customer would give access to a server to deploy the back-end part of the application on.
 	\item The frameworks chosen for development had the features needed.
 	\item The customer would be available for weekly meetings
@@ -31,9 +31,9 @@ Constraints which the team had to work within throughout the project:
 
 \section{Choice of framework}
 
-As one of the requirements from the customer was that the application should be cross-platform (Android and iOS), a hybrid app was found to be the best option. The alternative would have been to create two separate native apps for both platforms. However, this would have required more work. This would have complicated a delivery within the deadline, especially as the team had little experience with developing for either platform. A hybrid app is a web app made with HTML and JavaScript wrapped in a native shell so that it can be run like a normal native app. This was a big advantage, as the team already had experience with web design. It also makes it possible to make use of the many tools available for web development, and most of the code can be reused for multiple platforms. Bad performance used to be a disadvantage to the hybrid approach, however mobile hardware has improved significantly in the last few years, so this is not a major issue today. The following sections will discuss the advantages and disadvantages of different frameworks that were considered, and explain the final choice for this project. \newline
+As one of the requirements from the customer was that the application should be cross-platform (Android and iOS), a hybrid app was found to be the best option. The alternative would have been to create two separate native apps for both platforms. However, this would have required more work and complicated a delivery within the deadline, especially as the team had little experience with developing for either platform. A hybrid app is a web app made with HTML and JavaScript wrapped in a native shell so that it can be run like a normal native app. This was a big advantage, as the team already had experience with web design. It also makes it possible to make use of the many tools available for web development, and most of the code can be reused for multiple platforms. Bad performance used to be a disadvantage to the hybrid approach, however mobile hardware has improved significantly in the last few years, so this is not a major issue today. The following sections will discuss the advantages and disadvantages of different frameworks that were considered, and explain the final choice for this project. \newline
 
-\textbf{Table \ref{Tab:framework}} below summarizes some of the capabilities and limitations of the various frameworks that were under consideration.
+The \textbf{Table \ref{Tab:framework}} summarizes some of the capabilities and limitations of the various frameworks that were under consideration.
 
 \begin{table}[!h]
 	\caption{Framework comparison}
@@ -70,7 +70,7 @@ Sencha touch is a mobile framework with a large number of UI components and an a
 
 \subsection{Conclusion}
 
-The framework combination chosen for this project was Ionic and PhoneGap, as this seemed to fit this project's properties and requirements the best. They are both some of the most popular hybrid frameworks and they are a common combination to use. A prototype can quickly be set up with Ionic, and then iteratively customize it to fit the requirements and create a good user experience. One of the non-functional requirements was that it should be easy to extend the application and to reuse parts of it for other apps. This is fulfilled by Ionic's modular structure. PhoneGap makes it easier to wrap the code in a native iOS and Android shell. This process could also have been done manually, but it requires some knowledge about the native code languages and SDKs. The many plugins available for PhoneGap should also cover the need for use of native features.
+The framework combination chosen for this project was Ionic and PhoneGap, as this seemed to fit this project's properties and requirements the best. They are both some of the most popular hybrid frameworks and they are a common combination to use. A prototype can quickly be set up with Ionic, and then iteratively customize it to fit the requirements and create a good user experience. One of the non-functional requirements was that it should be easy to extend the application and to reuse parts of it for other apps. This is fulfilled by Ionic's modular structure. PhoneGap makes it easier to wrap the code in a native iOS and Android shell. This process could also have been done manually, but it requires some knowledge about the native code languages and Software Developent Kits(SDK). The many plugins available for PhoneGap should also cover the need for use of native features.
 
 \section{Software development process}
 
@@ -126,7 +126,7 @@ Content-based filtering methods are used to find similarities between a user's p
 
 \subsection{Collaborative filtering}
 
-Collaborative filtering is based on collecting and comparing information on users' behavior, activities or preferences and to recommend items based on a user's similarity to other users \cite{HM6}. This approach tries to predict what a user will like based on what similar users have liked. Collaborative filtering assumes that users who have agreed in the past will agree in the future, and that they will like similar items as they liked in the past. These methods often suffer from the problems; cold start and sparsity. Collaborative filtering often requires a large amount of existing data on users to be able to make accurate recommendations. The cold start problem is the absence of such data at the beginning of a project. The sparsity problem is that collaborative systems are dependent on having many active users to properly distribute ratings across all the items in the system. However, most active users have only rated a few items in the overall database, which means that even the most popular items have very few ratings. The greatest strength of these techniques is that they are independent of any documented representation, e.g. textual descriptions and subject-tags, of the objects being recommended and work well for objects that are difficult to define such as music and movies.\cite{HM4}
+Collaborative filtering is based on collecting and comparing information on users' behavior, activities or preferences and to recommend items based on a user's similarity to other users \cite{HM6}. This approach tries to predict what a user will like based on what similar users have liked. Collaborative filtering assumes that users who have agreed in the past will agree in the future, and that they will like similar items as they liked in the past. These methods often suffer from the problems; cold start and sparsity. Collaborative filtering often requires a large amount of existing data on users to be able to make accurate recommendations. The cold start problem is the absence of such data at the beginning of a project. The sparsity problem is that collaborative systems are dependent on having many active users to properly distribute ratings across all the items in the system. However, most active users have only rated a few items in the overall database, which means that even the most popular items could have very few ratings. The greatest strength of these techniques is that they are independent of any documented representation, e.g. textual descriptions and subject-tags, of the objects being recommended and work well for objects that are difficult to define such as music and movies.\cite{HM4}
 
 \section{Existing solutions}
 \label{sec:existing_solutions}
@@ -151,7 +151,7 @@ The main findings in the evaluation are summarized in \textbf{Table \ref{Tab:exi
 		\textbf{Usability} & 
 			- Requires knowledge of the location to find places on map \newline
 			- The picture occupies much of the space in the place and story view \newline
-			- Good help site\newline
+			- Informative and useful help site\newline
 			- Clear and consistent language 
 			& 
 			- List of locations is easier to navigate than a map and does not require knowledge of the exact location of the places\newline
