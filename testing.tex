@@ -12,7 +12,7 @@ The purpose of unit testing is to ensure that every piece of code that is implem
 The units in these tests were PHP, Java and JavaScript classes. Therefore it was necessary to use different unit testing tools. Back-end code was tested using PHPUnit framework \cite{KF2}, and JUnit \cite{jUnit} and the extension DbUnit \cite{dbUnit}. The front-end code was tested by using an AngularJS unit testing tool, called Karma \cite{KF3}. 
 The classes that were tested are listed under the unit column in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}. The classes that were left out in the documented tests were tested manually by the developers. If issues were detected during the unit tests, the developers would mend the issues and run the tests again. This cycle was repeated until there was no issues left and all test cases got the expected result.
 
-\subsection{Roles and Responsibilities}
+\subsection{Roles and responsibilities}
 To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec:scrum_team_and_roles}}), so the testers would have good knowledge of the code and know how it works. The delegated responsibilities are presented in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}.
 
 
@@ -69,7 +69,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 \end{table}
 
 
-\subsection{Test Cases}
+\subsection{Test cases}
 The testers created test cases and used these as a guide for performing the tests. Each test case has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running. An example of a unit test can be found in \textbf{Table \ref{Tab:unittestexample}}. All the unit test cases are presented in \textbf{Appendix \ref{app:unittest}}.
 
 \begin{center}
@@ -90,7 +90,7 @@ The testers created test cases and used these as a guide for performing the test
 This section includes some of the most important issues that were discovered during the unit testing, and how they were solved. \newline
 
 In the database communication there were some changes done during the development which made it easier to handle the code. One example was to make the database connection return an array where the array keys matched the column names. This way made it easier to access the different values returned from the database.  
-Another issue was discovered with the media format on each story, which was not stored correctly in the database because of an error during the harvesting of the stories from Digitalt Fortalt. These types of issues were solves with several checks to see if the information was in the right format or was not null.\newline
+Another issue was discovered with the media format on each story, which was not stored correctly in the database because of an error during the harvesting of the stories from Digitalt fortalt. These types of issues were solves with several checks to see if the information was in the right format or was not null.\newline
 
 During the tests of the first version of the recommender it was running with the time of 11-12 seconds. This was improved by increasing the efficiency of the communication with the database. The recommender was more efficient when the insertion of preference values and recommendations was done with one insert statement to the database instead of respectively 167 and 10 statements. Previously the recommender fetched a whole table from the database with the preference values. Fetching preference values for a specific user instead of all users helped the recommendation module to run faster as well.
 
@@ -259,7 +259,7 @@ The customer acceptance test (CAT) was executed during the whole software develo
 		\hline
 		\textbf{Delivery} & First working software\\ \hline
 		\textbf{Date} & 17.03.15 \\ \hline
-		\textbf{Comments} & The customer likes the user interface of this version and says that it is not necessary to add more functionality, except for the concept view that are not yet implemented. The customer thinks that fetching the stories from Digitalt Fortalt is working fast enough.  \\ \hline			
+		\textbf{Comments} & The customer likes the user interface of this version and says that it is not necessary to add more functionality, except for the concept view that are not yet implemented. The customer thinks that fetching the stories from Digitalt fortalt is working fast enough.  \\ \hline			
 		\textbf{Issues} & 
 		\begin{itemize}[noitemsep]
 			
@@ -328,7 +328,7 @@ A test case included several test steps that the user followed, and the tester o
 %FRA USERTEST ROUND 1/2
 The user testing was performed over several days where the first test was conducted on the 21st and 22nd of February 2015. This was an early paper prototype while the second session was with the revised prototype on digital devices (see Proto.io\todo{ref}), this was carried out on Feb. 28th and March 1st. All the tests were performed in accordance with the guidelines and tips provided in the book: Designing the User Interface: Strategies for Effective Human-Computer Interaction (5th Edition) – 2009 \todo{Bør inn i bibliografien og refereres til herfra}
 
-\subsection{Test Cases}
+\subsection{Test cases}
 
 On each test, the user received a set of tasks to complete. These tasks were the following:
 

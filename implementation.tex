@@ -5,7 +5,7 @@
 This chapter discusses the details of the system implementation process, both for front-end and back-end implementation but also how the project was managed through out the process.
 
 
-\section{Project Progression}
+\section{Project progression}
 Project progression is derived from the activity plan ref{app:activityplan}, meeting minutes \todo{ref{app:group-meeting}} and Trello archive \todo{Blir dette referet til? + legg inn ref her. Står det noe om hvor lange sprintene er tidliger? når de slutter of started klokkeslett}  and will only briefly summarize what was done at each sprint and only serves as a "quick tour" through the development process  
 
 \begin{description}
@@ -139,7 +139,7 @@ Once work on personalization started it was necessary to have Java in the docker
 
 Based on the first version of the functional requirements for the application, an initial ER-diagram was made in the middle of February. At this stage the customer and the team had not come to an agreement on a prioritization of the non-functional requirements. This meant that it was for instance not clear how important the performance of the system would be for the customer, an attribute of the system which would influence how much info should be stored for each story in the database versus how much info should be retrieved from Digitalt fortalt every time a user views a story. However, the changes to the initial diagram have been relatively minor. Some of the alterations were based on updated requirements from the customer (for instance regarding research data), while others stemmed from the group and were optimization of the data model or changes made to facilitate the personalization.\newline
 
-The relational database was created from the ER-diagram using the mapping algorithm in \cite[p.270-278]{AS2}. Some of the tables in the database has the potential for NULL values, but this was accepted as it was considered more important to keep the mapping from a entity to one table. In addition, the database already had quite a few tables and further splitting would make the extraction of information more costly, with numerous join operations. \newline 
+The relational database was created from the ER-diagram using the mapping algorithm in \cite[p.270-278]{AS2}. Some of the tables in the database has the potential for NULL values, but this was accepted as it was considered more important to keep the mapping from one entity to one table. In addition, the database already had quite a few tables and further splitting would make the extraction of information more costly, with numerous join operations. \newline 
 
 The team did not decide or understand how to do the personalization until mid March. This decision introduced changes to existing tables and the need to create additional tables and views in the database. Mahout had requirements for the input data, which meant that a view was created to store all the necessary data for collaborative filtering. Using this view made it straightforward to put the desired data from the database into Mahouts data model.
 
