@@ -17,6 +17,7 @@
 L: Likelihood (1-9)\\
 I1: Impact (1-9)\\
 I2: Importance (Likelihood * Impact)\\
+\small
 \begin{longtable}{ | p{4.5cm} | p{1cm} | p{1cm} | p{1cm} | p{4.5cm} | p{4.5cm} |}\caption{Risk list}\label{Tab:risklist}\\
 	\hline
 	\textbf{Description} & \textbf{L} & \textbf{I1} & \textbf{I2} & \textbf{Preventive action} & \textbf{Remedial action} \\ \hline\endhead
@@ -72,6 +73,7 @@ I2: Importance (Likelihood * Impact)\\
 
 \renewcommand{\arraystretch}{2}
 \begin{center}
+	\small
 	\begin{longtable}{ | p{1cm} | p{3cm} | p{5cm} | p{1.5cm} | p{2.5cm} | p{3cm} | }
 	\caption[Functional requirements]{The functional requirements listed up and  prioritized by the customers wishes} \\
 	
@@ -171,6 +173,7 @@ I2: Importance (Likelihood * Impact)\\
 \label{app:quality_attributes}
 
 \begin{table}[!h]
+	\small
 	\centering
 	\caption[Quality attributes]{The quality attributes used in this project. Prioritized by the customer} 
 	\begin{tabular}{ | p{2.9cm} | p{9.5cm} | p{1.4cm} | p{2cm} | }	
@@ -417,6 +420,7 @@ Status report week 6\newline
 \label{app:unittest}
 \renewcommand{\arraystretch}{2}%
 \begin{center}
+	\small
 	\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
 		\caption[Unit Test cases]{ Here presented by a testId, description of how the test should be perfomed, what input data to use and expected results.} \label{Tab:unittestcases}\\
 		
@@ -558,6 +562,7 @@ Status report week 6\newline
 \label{app:integrationtest}
 \renewcommand{\arraystretch}{2}%
 \begin{center}
+	\small
 	\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
 		
 		\caption[Integration Test Cases]{Integration Test Cases} \label{Tab:integrationtestcases}\\
@@ -604,6 +609,7 @@ Status report week 6\newline
 \label{app:systemtest}
 
 \begin{table}[H]
+	\small
 	\centering
 	\caption{System test case for creating a recoverable profile.}
 	\begin{tabular}[b]{ | l | l  |}
@@ -631,6 +637,7 @@ Status report week 6\newline
 
 
 	\begin{table}[H]
+		\small
 		\centering
 		\caption{System test case for login with email registration}
 		\begin{tabular}{ | l | l  |}
@@ -662,6 +669,7 @@ Status report week 6\newline
 	\end{table}
 
 	\begin{table}[H]
+		\small
 		\centering
 		\caption{System test case for initial settings}
 		\begin{tabular}{ | l | l |}			
@@ -691,6 +699,7 @@ Status report week 6\newline
 
 
 	\begin{table}[H]
+		\small
 		\centering
 		\caption{System test case for browsing recommended stories}
 		\begin{tabular}{ | l | l  |}
@@ -721,6 +730,7 @@ Status report week 6\newline
 
 
 	\begin{table}[H]
+		\small
 		\centering
 		\caption{System test case for adding a story to list}
 		\begin{tabular}{ | l | l  |}
@@ -756,6 +766,7 @@ Status report week 6\newline
 
 
 	\begin{table}[H]
+		\small
 		\centering
 		\caption{System test case for giving rating}
 		\begin{tabular}{ | l | l  |}
@@ -785,6 +796,7 @@ Status report week 6\newline
 
 
 	\begin{table}[H]
+		\small
 		\centering
 		\caption{System test case for specifying settings}
 		\begin{tabular}{ | l | l  |}
@@ -814,158 +826,62 @@ Status report week 6\newline
 \label{app:usabilitytest}
 \renewcommand{\arraystretch}{2}%
 \begin{center}
-	\begin{longtable}{ | p{4cm} | p{3cm} | p{9cm}|}
-		
+	\small
+	\begin{longtable}{ | p{2cm} | p{1cm} | p{13cm}|}
 		\caption[Usability test]{Usability Test } \label{Tab:usabilityTest}\\
 		\hline
 		\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
 		\\ \hline
 		
 		\textbf{1. Intro/Tutorial} & 2 & 
-		\begin{itemize}
-			\item “Do  I swipe?”
-			\item This view is very lacking in content
-			\item Are the user able to navigate both ways at the start
-			\item It`s nice to have a introduction to the application
-		\end{itemize}
-		Changes:
-		Add animation/intro
+		\textbf{Feedback:} Not clear if user is supposed to swipe or not. The view is lacking in content. Users do not know if they can go back between views. The users would like an introduction to the application.\newline
+		\textbf{Changes:} Add animation/intro
 		\\\hline
 		
 		\textbf{2. Login} & 3  & 
-		\begin{itemize}
-			\item Several users don’t want to login, they want to test the application first.
-			\item “Am I supposed to verify mail after entering?”
-			\item	The text over Email is not clear about  what its for. (Need new wording)
-			\item The text was too small
-			\item Mail verification?
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Change wording
-			\item Make the “Hopp over” button a small link and encourage users to user the “Logg inn”
-			\item  Add a “?” for hints
-		\end{itemize}
+		\textbf{Feedback:} Users often click the skip button instead of logging in. The description of why users have to input their email is not clear. The text is too small. The term "email verification" is not understood.\newline
+		\textbf{Changes:} Change wording in the view. Make the skip button smaller to encourage logging in instead.
 		\\\hline
 		
 		\textbf{3. Profil} & 4 & 
-		\begin{itemize}
-			\item Should separate this from the personalization, some user thought this was part of the recommendation. 
-			\item Is this research data or for the application
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Explain why this is needed and if this is related to the personalizing.
-			\item Make the default NONE selected
-			\item Add/Change a category to “Hemmelig/Ønsker ikke dele”
-		\end{itemize}
+		\textbf{Feedback:} Some users thought this was part of the recommendation. They wonder if this is for research data or for the application.\newline
+		\textbf{Changes:} Explain why age and gender information is needed. Make the default age and gender not selected so user is not forced to choose.
 		\\\hline
 		
 		\textbf{4. Interests} & 5  & 
-		\begin{itemize}		
-			\item “What is this”
-			\item This would need an explanation 
-			\item Can one choose more the one.
-		\end{itemize}			
-		Changes:
-		\begin{itemize}
-			\item Change the wording: “Velg kategorier”
-		\end{itemize}\\\hline
+		\textbf{Feedback:} Users do not understand what this view is, they want an explanation. It is not clear if you can choose more than one interest.\newline		
+		\textbf{Changes:} Add a better explanation.
+		\\\hline
+		
 		\textbf{5.Media format} & 5 & 
-		Text>Image>Sound>Video
-		\begin{itemize}
-			\item The sound icon was interpreted as music
-			\item Some users did not understand this; it was not the icons what how this affected the stories
-			\item several users reported the this was a bit confusing 
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Removing this view; because is not adding much to the application and user tests uncovering a lot of misunderstanding about its function and meaning.
-		\end{itemize}
+		\textbf{Feedback:} The sound icon was interpreted as music. User did not understand what they were choosing, and how this would affect stories.\newline
+		\textbf{Changes:} Remove this view, because it does not add much to the application, and users are confused about its function and meaning.
 		\\\hline
 		
 		\textbf{6. Recommendations} & 6 & 
-		\begin{itemize}
-			
-			\item The read later is very misunderstood, they don’t seem to understand that this is placed in a list. And what happen when I press this again
-			\item Missing hint to the swipe right/left
-			\item The user feels a bit dumped into this view
-			\item “What can I touch?”
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Remove button and add a bookmark icon at the top right of the card. 
-			\item Adding cards at either side to show that there is more. (or adding a card deck to incentive a swipe)
-			\item Add a loading animation, Simulating the “magic” that is finding stories for the user.
-			\item Add/Change title: Anbefalte Fortellinger/Historier
-			\item Make it clear the the card is touchable (ie. make the text fade out in the card)
-			\item Add and function to remove the card.
-		\end{itemize}
+		\textbf{Feedback:} The read later button is not understood. Users do not understand that it places the story in a list. Users do not understand that they can swipe in this view, or what they can touch. The users feel a bit "dumped" into this view with no explanation.\newline
+		\textbf{Changes:} Remove read later button and add a bookmark icon at the top right instead. Add a card deck or something else to show users that they can swipe. Add a loading animation for when the view is retrieving stories. Change the title of the view to "Anbefalte historier". Make it clear that the card can be touched and make it possible to remove the card.
 		\\\hline
 		
 		\textbf{7. Story View} & 7 & 
-		\begin{itemize}
-			\item Bookmark icon was not understood by some.
-			\item Everything else ok.
-			\item “Where do I touch”
-			\item A bit of confusion about what the “ikke interessert” button does.
-		\end{itemize}
-		Changes:
-		\begin{itemize}
-			\item Add a back button
-			\item Change name of button “Ikke interessert”
-			\item Make a better link to the icons (Add color etc.)
-		\end{itemize}
+		\textbf{Feedback:} Some users did not understand the bookmark icon. They did not know where to go from this view. There was also some confusion about what the "ikke interessert" button means.\newline 
+		\textbf{Changes:} Add a back button. Change the name of the "ikke interessert" button. Make the icons more understandable.
 		\\\hline
 		
-		\textbf{8.Story view(images and videos)} & 8 & 
-		\begin{itemize}
-			\item 	Expects full screen when touching
-		\end{itemize}
-		
-		
-		Changes:
-		NON
+		\textbf{Story bookmark} & 8  & 
+		\textbf{Feedback:} Users want to know if they can change the name of existing lists.\newline
+		\textbf{Changes:} None	
 		\\\hline
-		\textbf{Story bookmark} & 9  & 
-		\begin{itemize}
-			\item “Can I change the name of the lists?”
-		\end{itemize}
 		
-		Changes: None	
+		\textbf{8.Menu} & 9  &
+		\textbf{Feedback:} User does not understand what the "utforsk" button mean.\newline
+		\textbf{Changes:} Change the name of "utforsk" to make it clear that this is where the main personalization view is.		
 		\\\hline
-		\textbf{9.Menu} & 10  &
-		\begin{itemize}
-			\item “What is utforsk?” 
-		\end{itemize}
-		Changes
-		\begin{itemize}
-			\item Change name of “Utforsk” - Make is clear that this is where the main function/personalisation happens  		 	
-			\item Skill “Utforsk” og innstillinger (ie. old font)
-		\end{itemize}			
-		\\\hline
-		\textbf{10. List} & 10 \textgreater 12 &
-		\begin{itemize}
-			\item Some users is a bit unsure about how to delete a story.
-			\item Want to swipe both direction
-		\end{itemize} 
 		
-		Changes:
-		\begin{itemize}
-			\item Add a hint to show the one can swipe
-			\item 	Add swipe both ways?
-		\end{itemize}
-		
+		\textbf{9. List} & 9 \textgreater 12 &
+		\textbf{Feedback:} Some users are unsure how to delete a story from a list. They try to swipe in both directions.\newline
+		\textbf{Changes:} Add some hint or indicator that you can swipe. Maybe let users swipe both ways.
 		\\\hline
-		\textbf{11.Settings} & 4   & 
-		\begin{itemize}
-			\item This look exactly the same
-		\end{itemize}
-		Changes: 
-		\begin{itemize}
-			\item Remove the page indicator?
-		\end{itemize}
-		\\ \hline
 	\end{longtable}
 \end{center}
 
