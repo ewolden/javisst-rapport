@@ -26,7 +26,7 @@ Constraints which the team had to work within throughout the project:
 \item The front-end should be developed for both the iOS and Android platforms.
 \item The team consisted of 7 people, with little previous experience in mobile application development and no knowledge of personalization algorithms.
 \item The application is under the Apache license version 2.0 \cite{HM7}. In summary, this grants copyright and patent rights for users to further distribute it, or distribute a modified version using the same license. It should be clear what the eventual modifications are. The source code can also be used as a part of a closed source project.
-\item No budget to pay for software tools.
+\item The customer would cover the cost of software tools if necessary, but encouraged the team to use freely available tools if possible.
 \end{itemize}
 
 \section{Choice of framework}
@@ -66,7 +66,7 @@ Titanium is a cross-platform Javascript runtime and API framework \cite{RA3}. It
 
 \subsection{Sencha touch}
 
-Sencha touch is a mobile framework with a large number of UI components and an architecture for the front-end \cite{RA4}. Instead of enhancing an HTML file, it generates the document object model (DOM) with JavaScript. The DOM is an interface which creates a representation of the HTML code and allows the developer to manipulate the HTML elements. Sencha touch can be used with PhoneGap, but also has its own native packager. It is harder to learn than Ionic, and the performance is not as good.  It supports the platforms iOS, Android, BlackBerry, and Windows Phone.
+Sencha touch is a mobile framework with a large number of UI components and an architecture for the front-end \cite{RA4}. Instead of enhancing an HTML file, it generates the document object model (DOM) with JavaScript. The DOM is an interface which creates a representation of the HTML code and allows the developer to manipulate the HTML elements. Sencha touch can be used with PhoneGap, but also has its own native packager. It supports the platforms iOS, Android, BlackBerry, and Windows Phone.
 
 \subsection{Conclusion}
 
@@ -108,7 +108,7 @@ Extreme programming is an agile method focused on pushing out new system version
 Scrum is a general agile method with focus on managing iterative development rather than specific technical engineering approaches \cite[p.72-74]{Sommerville}. It also allows for a rapidly changing development environment and close collaboration between the members of a team. To provide this, scrum makes use of phases called sprints, daily scrum meetings, and several types of charts and logs. One of the main challenges for a scrum team is to choose the right amount of work per sprint so that they do not end up with too little or too much work. Scrum has several similarities with extreme programming, such as high involvement of the customer in the development, as well as continuous testing while implementing new functionality.
 
 \subsection{Conclusion}
-For this project, the agile software development methodology scrum was used. The project was not very well defined from the beginning, because the customer was not entirely sure of exactly what they wanted. Scrum would be helpful in this regard as it would allow the group to quickly make a simple application which could be tested by the users and customer. Also, an agile process was beneficial as it allowed the team to be flexible and rapidly respond to changes in requirements. 
+For this project, the agile software development methodology scrum was used. The customer wanted to keep the flexibility to adapt the requirements based on the feedback from the users involved in the usability tests. Scrum would be helpful in this regard as it would allow the group to quickly make a simple application which could be tested by the users and customer. Also, an agile process was beneficial as it allowed the team to be flexible and rapidly respond to changes in requirements. 
 
 \section{Personalization}
 \label{sec:personalization_algorithms}
@@ -146,14 +146,14 @@ The main findings in the evaluation are summarized in \textbf{Table \ref{Tab:exi
 	\begin{tabular}[b]{ | p{2.7cm} | >{\raggedright}p{4.3cm} | >{\raggedright}p{4.3cm} | p{4.3cm} |}
 		\hline
 		\textbf{} & \textbf{stedr} & \textbf{Cooltura} & \textbf{Magic Tate Ball} \\ \hline
-		\textbf{Content} & Stories related to places in Trondheim & Stories from three places, including Trondheim & Artworks and some information about them \\ \hline
+		\textbf{Content} & Stories from Trondheim and other cities in Europe & Stories from three pilot sites, including Trondheim & Artworks and some information about them \\ \hline
 		\textbf{Usability} & 
-			- Requires knowledge of the location to find places on map \newline
-			- The picture occupies much of the space in the place and story view \newline
+			- Requires knowledge of the location to find sites on map \newline
+			- The picture occupies much of the space in the site and story view \newline
 			- Informative and useful help site\newline
 			- Clear and consistent language 
 			& 
-			- List of locations is easier to navigate than a map and does not require knowledge of the exact location of the places\newline
+			- List of locations is easier to navigate than a map and does not require knowledge of the exact location of the sites\newline
 			- Picture is dynamic and makes room for the relevant information to the user when scrolling \newline
 			- Lacks a help site
 			&  
@@ -168,21 +168,21 @@ The main findings in the evaluation are summarized in \textbf{Table \ref{Tab:exi
 \subsection{stedr}
 \label{subsec:stedr}
 
-The stedr application was developed by students as a prototype to research cultural heritage interest. Content was not the primary focus in the application and thus consists mainly of stories related to places in Trondheim. A possible problem in the application is finding the place the user is looking for since the main view consist of a map with markers representing each available place. In order to know which place each marker represents the user have to click on the marker, which means that the user might click on multiple markers do find the desired place. \newline
+The stedr application was developed by students as a prototype to test which forms of storytelling can contribute to engaging people in cultural heritage. It also allows users to create their own stories, to evaluate what kind of cultural stories amateurs are willing to produce. Content was not the primary focus in the application, however it contains stories related to many cities in Europe. A possible problem in the application is finding the site the user is looking for, since the main view consists of a map with nondescript markers representing each available site. \newline
 
-The place view in stedr can be seen in \textbf{Figure \ref{Fig:stedr_screenshot}}. To see all the content, one might have to scroll down. The main picture is static when scrolling, occupying the upper half of the screen, which is also the case when viewing a specific story in the story view. It might be argued that Nielsen's heuristic of aesthetic and minimalist design in case of scrolling is violated as the picture's importance in the dialogue is less important than the space it occupies suggests. \newline
+The site view in stedr can be seen in \textbf{Figure \ref{Fig:stedr_screenshot}}. To see all the content, one might have to scroll down. The main picture is static when scrolling, occupying the upper half of the screen, which is also the case when viewing a specific story in the story view. It might be argued that Nielsen's heuristic of aesthetic and minimalist design in case of scrolling is violated as the picture's importance in the dialogue is less important than the space it occupies suggests. \newline
 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[t]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{fig/stedr_screenshot}
-		\caption{A screenshot from stedr showing the available options for one place}
+		\caption{A screenshot from stedr showing the available options for one site}
 		\label{Fig:stedr_screenshot}
 	\end{subfigure}
 	\hspace{0.5cm}
 	\begin{subfigure}[t]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{fig/cooltura_screenshot2}
-		\caption{A screenshot of Cooltura showing the view for one particular place}
+		\caption{A screenshot of Cooltura showing the view for one particular site}
 		\label{Fig:cooltura_screenshot2}	
 	\end{subfigure}	
 	\hspace{0.5cm}	
@@ -194,23 +194,23 @@ The place view in stedr can be seen in \textbf{Figure \ref{Fig:stedr_screenshot}
 	\caption{Place views in stedr and Cooltura and the main view of Magic Tate Ball}
 \end{figure}
 
-The application provides a help site which gives a thorough guide to the user on how to accomplish tasks. This is in accordance with Nielsen's heuristic of help and documentation. The application also helps the user when errors occur, for instance by offering the user a refresh opportunity when the map does not load the places. The language used in the application is both user-centered and consistent, avoiding misunderstandings and making it easy for the user to understand what different actions entails. \newline
+The application provides a help site which gives a thorough guide to the user on how to accomplish tasks. This is in accordance with Nielsen's heuristic of help and documentation. The application also helps the user when errors occur, for instance by offering the user a refresh opportunity when the map does not load the sites. The language used in the application is both user-centered and consistent, avoiding misunderstandings and making it easy for the user to understand what different actions entails. \newline
 
-The application does not provide any personalization feature, which is the main difference between stedr and our application. The customer’s motivation for creating an entirely new application instead of expanding stedr was mainly because they wished to test personalization systems on users, and thus needed an application focused mainly around the personalization aspect. In addition, it became possible to access a larger number of stories than stedr currently does. 
+The customer’s motivation for creating an entirely new application instead of expanding stedr was mainly because they wished to test personalization systems on users, and thus needed an application focused mainly around the personalization aspect. A more detailed overview of stedr is not included here, as this was done earlier in two student projects related to stedr \cite{es26}.
 
 \subsection{Cooltura}
 
 Cooltura is another application developed under the TAG CLOUD umbrella. The version of Cooltura evaluated here is a demo version, so more developed versions of the application may include more functionality and address some of the issues discussed here. \newline
 
-The content is somewhat similar to stedr, with respect to the places and the stories available. In fact, when clicking to view stories in Cooltura one is directed to the stedr app. Cooltura does not use a map like stedr, but instead a list of available locations. This makes it far easier for the user to navigate to the right place, especially since the selection is quite limited. When viewing a specific place on Cooltura the user gets a view with a main picture and some text describing the place as seen in \textbf{Figure \ref{Fig:cooltura_screenshot2}}. Like in stedr the user can scroll down to see more content, but unlike stedr the main picture is not static, that is, the user see less and less of it as it scrolls down. This is more in accordance with Nielsen's point of aesthetic and minimalist design, where less relevant information fills up less space in the user interface. The same is true for the view for a specific tourist attraction. The application does not provide any help site, but the possible user actions are quite few and similar (most of them are about navigating to the desired place), so this might not be a problem.\newline
+The content of the stories is somewhat similar to stedr's, with respect to the sites and the stories available. In fact, when clicking to view stories in Cooltura one is directed to the stedr app. However, Cooltura harvests stories from different databases and provides access to much more content than stedr does. When viewing a specific site on Cooltura the user sees a view with a main picture and some text describing the site as seen in \textbf{Figure \ref{Fig:cooltura_screenshot2}}. Like in stedr the user can scroll down to see more content, but unlike stedr the main picture is not static, that is, the user sees progressively less of it as they scroll down. This is more in accordance with Nielsen's point of aesthetic and minimalist design, where less relevant information fills up less space in the user interface. The same is true for the view for a specific tourist attraction. The application does not provide any help site, but the possible user actions are quite few and similar (most of them are about navigating to the desired site), so this might not be a problem.\newline
 
-It appears that the application intends to make use of personalization, but this is not implemented at the time of writing this report \cite{AS4}. The “Anbefalte steder”-view in Cooltura now list every place added in the application (which is three different places), but the heading suggests that personalization is planned for. 
+The application intends to make use of personalization, but the version of the Cooltura app used by the group was not connected to the Cooltura personalization backend \cite{AS4}. The “Anbefalte steder”(Recommended sites)-view in Cooltura now list every site added in the application (which is three different pilot sites), but the heading suggests that personalization is planned for. 
 
 \subsection{Magic Tate Ball}
 
-Magic Tate Ball is an application that presents the user with an artwork based on the input parameters: date, time-of-day, geographical location, live weather data and ambient noise levels \cite{AS5}. The content in the application is the artwork, a description of the artwork and an explanation of why the artwork was chosen. Personalization is the main selling point of Magic Tate Ball. The application uses the input parameters to give the user some control of what content is presented as the user can turn each of these parameters on and off. Even though the application provides an explanation to why an artwork was chosen, how it was chosen remains in the dark (e.g. how to know which input parameter was emphasized in the personalization).\newline
+Magic Tate Ball is an application that presents the user with an artwork based on the input parameters: date, time-of-day, geographical location, live weather data and ambient noise levels \cite{AS5}. The content in the application is the artwork, a description of the artwork and an explanation of why the artwork was chosen. Personalization is the main selling point of Magic Tate Ball. The application uses the input parameters to give the user some control of what content is presented as the user can turn each of these parameters on and off. Even though the application provides an explanation to why an artwork was chosen, how it was chosen remains in the dark (e.g. how to know which input parameters were emphasized in the personalization).\newline
 
 
-The main task in the application is to be presented with an artwork. This is done by shaking the phone or by clicking a button in the center of the magic ball, see \textbf{Figure \ref{Fig:tateball_screenshot}} for a screenshot of this. Another task is to browse all artworks presented to the user, which is done by swiping or clicking on arrows. Providing these two options makes it easy for different types of users, those accustomed to swiping and those who are not. When the application is processing to come up with an artwork to present to the user, it shows the user what the input parameters are. This is in accordance with Nielsen's heuristics on visibility of system status. \newline
+The main task in the application is to present an artwork. This is done by shaking the phone or by clicking a button in the center of the magic ball, see \textbf{Figure \ref{Fig:tateball_screenshot}} for a screenshot of this. Another task is to browse all artworks presented to the user, which is done by swiping or clicking on arrows. Providing these two options makes it easy for different types of users, those accustomed to swiping and those who are not. When the application is processing to come up with an artwork to present to the user, it shows the user what the input parameters are. This is in accordance with Nielsen's heuristics on visibility of system status. \newline
 
 \cleardoublepage
