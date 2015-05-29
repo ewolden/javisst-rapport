@@ -284,63 +284,11 @@ The customer acceptance test (CAT) was executed during the whole software develo
 The user testing was performed by the front-end developers. The preliminary work for the user test included doing an analysis of the requirements, and used these as a base for making several test cases. 
 A test case included several test steps that the user followed, and the tester observed how the user reacted in every test case. After each test finished there was a discussion with follow-up questions the user had to answer to get a better insight into what was problematic and what was easily understandable.
 
-\subsection{Introduction}
-%FRA USERTEST ROUND 1/2
 The user testing was performed over several days where the first test was conducted on the 21st and 22nd of February 2015. This was an early paper prototype while the second session was with the revised prototype on digital devices\cite{protoIO}, this was carried out on Feb. 28th and March 1st. All the tests were performed in accordance with the guidelines and tips provided in \cite{norman2007designing}.
 
-\subsection{Test cases}
-
-On each test, the user received a set of tasks to complete. These tasks were the following:
-
-\begin{itemize}
-	\item Create a user 	
-	\begin{enumerate}
-		\item Login 
-		\item Set personal data 
-		\item Add at least 2 categories 
-	\end{enumerate}
-	\item Read a story 
-	\begin{enumerate}
-		\item Browse the suggestions 
-		\item Add a story to "Les senere" 
-		\item Read another story and look at images 
-	\end{enumerate}
-	\item Find and delete 
-	\begin{enumerate}
-		\item Find the "Les senere" bookmark list
-		\item Delete a story from the list
-		\item Read another story from the list 
-	\end{enumerate}
-	\item Change settings 
-	\begin{enumerate}
-		\item Navigate to settings 
-		\item Change preferences 
-	\end{enumerate}
-	
-\end{itemize}
-
-An example of a usability test results can be found in \textbf{Table \ref{Tab:usabilityTestexample}}. All the usability test cases are described in \textbf{Appendix \ref{app:usabilitytest}}.
-
-\begin{table}
-\begin{center}
-	\caption{Usability Test example }
-	\label{Tab:usabilityTestexample}
-	\begin{tabular}{ | p{2cm} | p{2cm} | p{13cm}|}	
-
-		\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
-		\\ \hline
-		
-		\textbf{6. Recommendations} & 6 & 
-		\textbf{Feedback:} The read later button is not understood. Users do not understand that it places the story in a list. Users do not understand that they can swipe in this view, or what they can touch. The users feel a bit "dumped" into this view with no explanation.\newline
-		\textbf{Changes:} Remove read later button and add a bookmark icon at the top right instead. Add a card deck or something else to show users that they can swipe. Add a loading animation for when the view is retrieving stories. Change the title of the view to "Anbefalte historier". Make it clear that the card can be touched and make it possible to remove the card.
-		\\\hline
-	\end{tabular}
-\end{center}
-\end{table}
-	
 \subsection{Test users}
 
-The test subjects were asked in advance how much and how many applications they use on handheld devices. They were also asked if and how much reading they see themselves generally doing. The \textbf{Table \ref{Tab:testgroup}} below describes the users that were used as test subjects for the usability testing.  \newline
+The test users were asked in advance how much and how many applications they use on handheld devices. They were also asked if and how much reading they see themselves generally doing. The \textbf{Table \ref{Tab:testgroup}} below describes the users that were used as test subjects for the usability testing.  \newline
 
 Low - 1-2 applications/ 1-2 times a day.\newline
 Medium - 2-4 applications/ 2-4 times a day.\newline
@@ -360,6 +308,57 @@ High - more than 5 applications/ more than 5 times a day.
 		\end{tabular}
 	\end{center}
 \end{table}
+
+\subsection{Test cases}
+
+On each test, the user received a set of tasks to complete. These tasks were the following:
+
+
+\textbf{Create a user} 	
+	\begin{enumerate}
+		\item Login 
+		\item Set personal data 
+		\item Add at least 2 categories 
+	\end{enumerate}
+\textbf{Read a story} 
+	\begin{enumerate}
+		\item Browse the suggestions 
+		\item Add a story to "Les senere" 
+		\item Read another story and look at images 
+	\end{enumerate}
+\textbf{Find and delete }
+	\begin{enumerate}
+		\item Find the "Les senere" bookmark list
+		\item Delete a story from the list
+		\item Read another story from the list 
+	\end{enumerate}
+ \textbf{Change settings}
+	\begin{enumerate}
+		\item Navigate to settings 
+		\item Change preferences 
+	\end{enumerate}
+	
+
+
+An example of a usability test results can be found in \textbf{Table \ref{Tab:usabilityTestexample}}. All the usability test cases are described in \textbf{Appendix \ref{app:usabilitytest}}.
+
+\begin{table}[H]
+\begin{center}
+	\caption{Usability Test example }
+	\label{Tab:usabilityTestexample}
+	\begin{tabular}{ | p{2cm} | p{2cm} | p{13cm}|}	
+		\hline
+		\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
+		\\ \hline
+		
+		\textbf{6. Recommendations} & 6 & 
+		\textbf{Feedback:} The read later button is not understood. Users do not understand that it places the story in a list. Users do not understand that they can swipe in this view, or what they can touch. The users feel a bit "dumped" into this view with no explanation.\newline
+		\textbf{Changes:} Remove read later button and add a bookmark icon at the top right instead. Add a card deck or something else to show users that they can swipe. Add a loading animation for when the view is retrieving stories. Change the title of the view to "Anbefalte historier". Make it clear that the card can be touched and make it possible to remove the card.
+		\\\hline
+	\end{tabular}
+\end{center}
+\end{table}
+	
 
 \subsection{Summary}
 The time set aside for each test was about 20 minutes for the test and about 10 minutes for follow-up questions. Observations during the test and the answers provided in the follow-up were implemented in the view feedback and/or the general changes.
