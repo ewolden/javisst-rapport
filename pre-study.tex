@@ -2,7 +2,7 @@
 
 \chapter{Pre-study}
 
-This chapter discusses the research that had to be done, and the choices that the team made in relation to choosing development frameworks and technologies. The chosen development process for the project can be found here. The chapter also describes some already existing applications that are similar to this one, and a study about personalization which was a key aspect for this project.
+This chapter discusses the research that had to be done, and the choices that the team made in relation to choosing development frameworks and technologies. The chosen development process for the project can be found here. The chapter also describes some already existing applications that are similar to this one, and a study about personalization which was a key aspect of this project.
 
 \section{Project assumptions and constraints}
 \label{sec:assumptions}
@@ -11,10 +11,10 @@ In this section, assumptions and known constraints for the project are addressed
 
 Assumptions on which the planning of the project was based:
 \begin{itemize}
-	\item Access to an Application Programming Interface(API) for Digitalt fortalt would be provided by the customer.
+	\item Access to an Application Programming Interface (API) for Digitalt fortalt would be provided by the customer.
 	\item The customer would give access to a server to deploy the back-end part of the application on.
 	\item The frameworks chosen for development had the features needed.
-	\item The customer would be available for weekly meetings
+	\item The customer would be available for weekly meetings.
 	\item Each member of the team would be able to work about 20 hours a week.
 	\item The team would meet at least three times a week.
 	\item The team would follow the set ground rules as seen in \textbf{Appendix \ref{app:rules_of_engagement}}.
@@ -25,7 +25,7 @@ Constraints which the team had to work within throughout the project:
 \item The deadline for delivering the project was May 30th, and there was no possibility to extend it.
 \item The front-end should be developed for both the iOS and Android platforms.
 \item The team consisted of 7 people, with little previous experience in mobile application development and no knowledge of personalization algorithms.
-\item The application is under the Apache license version 2.0 \cite{HM7}. In summary, this grants copyright and patent rights for users to further distribute it, or distribute a modified version using the same license. It should be clear what the eventual modifications are. The source code can also be used as a part of a closed source project.
+\item The application is under the Apache License version 2.0 \cite{HM7}. In summary, this grants copyright and patent rights for users to further distribute it, or distribute a modified version using the same license. It should be clear what the eventual modifications are. The source code can also be used as a part of a closed source project.
 \item The customer would cover the cost of software tools if necessary, but encouraged the team to use freely available tools if possible.
 \end{itemize}
 
@@ -33,7 +33,7 @@ Constraints which the team had to work within throughout the project:
 
 As one of the requirements from the customer was that the application should be cross-platform (Android and iOS), a hybrid app was found to be the best option. The alternative would have been to create two separate native apps for both platforms. However, this would have required more work and complicated a delivery within the deadline, especially as the team had little experience with developing for either platform. A hybrid app is a web app made with HTML and JavaScript wrapped in a native shell so that it can be run like a normal native app. This was a big advantage, as the team already had experience with web design. It also makes it possible to make use of the many tools available for web development, and most of the code can be reused for multiple platforms. Bad performance used to be a disadvantage to the hybrid approach, however mobile hardware has improved significantly in the last few years, so this is not a major issue today. The following sections will discuss the advantages and disadvantages of different frameworks that were considered, and explain the final choice for this project. \newline
 
-The \textbf{Table \ref{Tab:framework}} summarizes some of the capabilities and limitations of the various frameworks that were under consideration.
+\textbf{Table \ref{Tab:framework}} summarizes some of the capabilities and limitations of the various frameworks that were under consideration.
 
 \begin{table}[!h]
 	\caption{Framework comparison}
@@ -53,7 +53,7 @@ The \textbf{Table \ref{Tab:framework}} summarizes some of the capabilities and l
 \subsection{PhoneGap}
 \label{subsec:phonegap}
 
-PhoneGap is an open-source mobile app framework for native packaging \cite{RA2}. What it does is take in a mobile app consisting of HTML, CSS and JavaScript files, and wrap it in a native shell. It can then be deployed to iOS, Android and Windows 8. It also gives easy access to the native features of the phones (geolocation, notifications, storage, etc.) through different APIs. It is not necessary to think about the native SDKs, as the app will be compiled and built with the newest SDK for the platform.  It is a very popular framework, and there are many plugins created for it that provide additional functionality.
+PhoneGap is an open-source mobile app framework for native packaging \cite{RA2}. What it does is take in a mobile app consisting of HTML, CSS and JavaScript files, and wrap it in a native shell. It can then be deployed to iOS, Android and Windows 8. It also gives easy access to the native features of the phones (geolocation, notifications, storage, etc.) through different APIs. It is not necessary to think about the native software development kits (SDKs), as the app will be compiled and built with the newest SDK for the platform.  It is a very popular framework, and there are many plugins created for it that provide additional functionality.
 
 \subsection{Ionic}
 \label{subsec:ionic}
@@ -72,11 +72,11 @@ Sencha Touch is a mobile framework with a large number of UI components and an a
 
 \subsection{Conclusion}
 
-The framework combination chosen for this project was Ionic and PhoneGap, as this seemed to fit this project's properties and requirements the best. They are both some of the most popular hybrid frameworks and they are a common combination to use. A prototype can quickly be set up with Ionic, and then iteratively customize it to fit the requirements and create a good user experience. One of the non-functional requirements was that it should be easy to extend the application and to reuse parts of it for other apps. This is fulfilled by Ionic's modular structure. PhoneGap makes it easier to wrap the code in a native iOS and Android shell. This process could also have been done manually, but it requires some knowledge about the native code languages and Software Developent Kits(SDK). The many plugins available for PhoneGap should also cover the need for use of native features.
+The framework combination chosen for this project was Ionic and PhoneGap, as this seemed to fit this project's properties and requirements the best. They are both some of the most popular hybrid frameworks and they are a common combination to use. A prototype can quickly be set up with Ionic, and then iteratively customize it to fit the requirements and create a good user experience. One of the non-functional requirements was that it should be easy to extend the application and to reuse parts of it for other apps. This is fulfilled by Ionic's modular structure. PhoneGap makes it easier to wrap the code in a native iOS and Android shell. This process could also have been done manually, but it requires some knowledge about the native code languages and SDK. The many plugins available for PhoneGap should also cover the need for use of native features.
 
 \section{Software development process}
 
-The choice of which development process to use in the project was a central decision to be made. The following sections describe the different models that were under consideration by the team, as well as some advantages and disadvantages of each, which influenced the decision of which one to be used for the project. \textbf{Table \ref{Tab:dev-process}} below gives a comparison of some aspects of the various processes that were considered relevant for the project.
+The choice of which development process to use in the project was a central decision to make. The following sections describe the different models that were under consideration by the team, as well as some advantages and disadvantages of each, which influenced the decision of which one to be used for the project. \textbf{Table \ref{Tab:dev-process}} below gives a comparison of some aspects of the various processes that were considered relevant for the project.
 
 \begin{table}[!h]
 	\caption{Development process comparison}
@@ -107,7 +107,7 @@ Extreme programming is an agile method focused on pushing out new system version
 
 \subsection{Scrum }
 \label{sec:scrum}
-Scrum is a general agile method with focus on managing iterative development rather than specific technical engineering approaches \cite[p.72-74]{Sommerville}. It also allows for a rapidly changing development environment and close collaboration between the members of a team. To provide this, scrum makes use of phases called sprints, daily scrum meetings, and several types of charts and logs. One of the main challenges for a scrum team is to choose the right amount of work per sprint so that they do not end up with too little or too much work. Scrum has several similarities with extreme programming, such as high involvement of the customer in the development, as well as continuous testing while implementing new functionality.
+Scrum is a general agile method with focus on managing iterative development rather than specific technical engineering approaches \cite[p.72-74]{Sommerville}. It also allows for a rapidly changing development environment and close collaboration between the members of a team. To facilitate this, scrum makes use of phases called sprints, daily scrum meetings, and several types of charts and logs. One of the main challenges for a scrum team is to choose the right amount of work per sprint so that they do not end up with too little or too much work. Scrum has several similarities with extreme programming, such as high involvement of the customer in the development, as well as continuous testing while implementing new functionality.
 
 \subsection{Conclusion}
 For this project, the agile software development methodology scrum was used. The customer wanted to keep the flexibility to adapt the requirements based on the feedback from the users involved in the usability tests. Scrum would be helpful in this regard as it would allow the group to quickly make a simple application which could be tested by the users and customer. Also, an agile process was beneficial as it allowed the team to be flexible and rapidly respond to changes in requirements. 
@@ -128,12 +128,12 @@ Content-based filtering methods are used to find similarities between a user's p
 \subsection{Collaborative filtering}
 \label{subsec:prestudy_collaborative}
 
-Collaborative filtering is based on collecting and comparing information on users' behavior, activities or preferences and to recommend items based on a user's similarity to other users \cite{HM6}. This approach tries to predict what a user will like based on what similar users have liked. Collaborative filtering assumes that users who have agreed in the past will agree in the future, and that they will like similar items as they liked in the past. These methods often suffer from the problems; cold start and sparsity. Collaborative filtering often requires a large amount of existing data on users to be able to make accurate recommendations. The cold start problem is the absence of such data at the beginning of a project. The sparsity problem is that collaborative systems are dependent on having many active users to properly distribute ratings across all the items in the system. However, most active users have only rated a few items in the overall database, which means that even the most popular items could have very few ratings. The greatest strength of these techniques is that they are independent of any documented representation, e.g. textual descriptions and subject-tags, of the objects being recommended and work well for objects that are difficult to define such as music and movies.\cite{HM4}
+Collaborative filtering is based on collecting and comparing information on users' behavior, activities or preferences and to recommend items based on a user's similarity to other users \cite{HM6}. This approach tries to predict what a user will like based on what similar users have liked. Collaborative filtering assumes that users who have agreed in the past will agree in the future, and that they will like similar items as they liked in the past. These methods often suffer from two problems; cold start and sparsity. Collaborative filtering often requires a large amount of existing data on users to be able to make accurate recommendations. The cold start problem is the absence of such data at the beginning of a project. The sparsity problem is that collaborative systems are dependent on having many active users to properly distribute ratings across all the items in the system. However, most active users have only rated a few items in the overall database, which means that even the most popular items could have very few ratings. The greatest strength of these techniques is that they are independent of any documented representation, e.g. textual descriptions and subject-tags, of the objects being recommended and work well for objects that are difficult to define such as music and movies.\cite{HM4}
 
 \section{Existing solutions}
 \label{sec:existing_solutions}
 
-Among the previous work there has been developed applications through the TAG CLOUD project. This section evaluates two of these applications, namely \textit{stedr} and \textit{Cooltura}. Both of these applications present stories regarding cultural heritage. Since this project also included personalization, an evaluation was also performed on the application \textit{Magic Tate Ball}. This application was chosen because the customer mentioned this as a possible inspiration for the current project. \newline
+Our application is not the only application that has been developed in connection to the TAG CLOUD project. This section evaluates two of these applications, namely \textit{stedr} and \textit{Cooltura}. Both of these applications present stories regarding cultural heritage. Since this project also included personalization, an evaluation was also performed on the application \textit{Magic Tate Ball}. This application was chosen because the customer mentioned this as a possible inspiration for the current project. \newline
 
 These three applications were evaluated using the following criteria:
 \begin{itemize}
@@ -205,7 +205,7 @@ The customer’s motivation for creating an entirely new application instead of 
 
 Cooltura is another application developed under the TAG CLOUD umbrella. The version of Cooltura evaluated here is a demo version, so more developed versions of the application may include more functionality and address some of the issues discussed here. \newline
 
-The content of the stories is somewhat similar to stedr's, with respect to the sites and the stories available. In fact, when clicking to view stories in Cooltura one is directed to the stedr app. However, Cooltura harvests stories from different databases and provides access to much more content than stedr does. When viewing a specific site on Cooltura the user sees a view with a main picture and some text describing the site as seen in \textbf{Figure \ref{Fig:cooltura_screenshot2}}. Like in stedr the user can scroll down to see more content, but unlike stedr the main picture is not static, that is, the user sees progressively less of it as they scroll down. This is more in accordance with Nielsen's point of aesthetic and minimalist design, where less relevant information fills up less space in the user interface. The same is true for the view for a specific tourist attraction. The application does not provide any help site, but the possible user actions are quite few and similar (most of them are about navigating to the desired site), so this might not be a problem.\newline
+The content of the stories is somewhat similar to stedr's, with respect to the sites and the stories available. In fact, when clicking to view stories in Cooltura one is directed to the stedr app. However, Cooltura harvests stories from different databases and provides access to much more content about each site than stedr does. When viewing a specific site on Cooltura the user sees a view with a main picture and some text describing the site as seen in \textbf{Figure \ref{Fig:cooltura_screenshot2}}. Like in stedr the user can scroll down to see more content, but unlike stedr the main picture is not static, that is, the user sees progressively less of it as they scroll down. This is more in accordance with Nielsen's point of aesthetic and minimalist design, where less relevant information fills up less space in the user interface. The same is true for the view for a specific tourist attraction. The application does not provide any help site, but the possible user actions are quite few and similar (most of them are about navigating to the desired site), so this might not be a problem.\newline
 
 The application intends to make use of personalization, but the version of the Cooltura app used by the group was not connected to the Cooltura personalization backend \cite{AS4}. The “Anbefalte steder”(Recommended sites)-view in Cooltura now list every site added in the application (which is three different pilot sites), but the heading suggests that personalization is planned for. 
 
