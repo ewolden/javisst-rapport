@@ -16,11 +16,43 @@
 %% PART 2
 \input{abstract.tex}		%% Optional
 %%\input{preface.tex}			%% Optional
+\titleformat{\chapter}
+{\normalfont\sffamily\Huge\scshape}
+{}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+	\node[yshift=-3cm] at (current page.north west)
+	{\begin{tikzpicture}[remember picture, overlay]
+		\fill [primary] (-0.1,-1) rectangle
+		(\paperwidth,3cm);
+		\node[anchor=west,xshift=.10\paperwidth,yshift=.0025\paperheight,rectangle]
+		{};
+		\node[anchor=west,xshift=.10\paperwidth,yshift=-.065\paperheight,rectangle]
+		{\color{primary}\Huge\MakeUppercase{#1}};
+		\end{tikzpicture}
+	};
+\end{tikzpicture}
+}
 \input{list.tex}			%% Generate TOC, list of tables, and list of figures automatically
 %%\input{abbreviations.tex}	%% Optional
 
 %% PART 3 -- The Chapters
 \mainmatter
+\titleformat{\chapter}
+{\normalfont\sffamily\Huge\scshape}
+{}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+	\node[yshift=-3cm] at (current page.north west)
+	{\begin{tikzpicture}[remember picture, overlay]
+		\fill [primary] (-0.1,-1) rectangle
+		(\paperwidth,3cm);
+		\node[anchor=west,xshift=.10\paperwidth,yshift=.0025\paperheight,rectangle]
+		{\color{white}\LARGE CHAPTER \Huge\thechapter};
+		\node[anchor=west,xshift=.10\paperwidth,yshift=-.065\paperheight,rectangle]
+		{\color{primary}\Huge\MakeUppercase{#1}};
+		\end{tikzpicture}
+	};
+\end{tikzpicture}
+}
 \input{introduction.tex}
 \input{requirementspecification.tex}
 \input{pre-study.tex}
@@ -33,6 +65,22 @@
 \input{conclusion.tex}
 
 %% PART 4
+\titleformat{\chapter}
+{\normalfont\sffamily\Huge\scshape}
+{}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+	\node[yshift=-3cm] at (current page.north west)
+	{\begin{tikzpicture}[remember picture, overlay]
+		\fill [primary] (-0.1,-1) rectangle
+		(\paperwidth,3cm);
+		\node[anchor=west,xshift=.10\paperwidth,yshift=.0025\paperheight,rectangle]
+		{};
+		\node[anchor=west,xshift=.10\paperwidth,yshift=-.065\paperheight,rectangle]
+		{\color{primary}\Huge\MakeUppercase{#1}};
+		\end{tikzpicture}
+	};
+\end{tikzpicture}
+}
 \input{references.tex}	%% Edit your references in "ourlib.bib"
 
 \titleformat{\chapter}
