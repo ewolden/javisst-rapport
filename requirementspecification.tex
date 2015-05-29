@@ -45,7 +45,7 @@ A use case is a simple scenario that identifies actors involved in an interactio
 \item Name: A short text describing the goal of the use case.
 \item Brief description: This is a more elaborate explanation of the use case than the above.
 \item Actors: These are the users/systems outside the application interacting with it.
-\item Priority: A metric describing the priority of this use case. This metric is derived from the functional requirements document and uses a high-medium-low scale.
+\item Priority: A metric describing the priority of this use case. The metric is derived from the functional requirements document and uses a high-medium-low scale.
 \item Preconditions: Describe what state the system should be in before the use case can start. Typically, some of the other use cases are already performed to set up the use case.
 \item Basic flow: This describes the normal flow from preconditions to postconditions in a numbered list.
 \item Alternate flow: A description of scenarios that differ from the basic flow described above. This includes exceptions and errors. It is also presented as a list, but the numbering in this list refers to the items in the basic flow list. The items in this list do not relate to each other.
@@ -69,7 +69,7 @@ A use case is a simple scenario that identifies actors involved in an interactio
 		\textbf{Brief description}	& Enter mail to register. 				\\\hline
 		\textbf{Actors} 			& User									\\\hline
 		\textbf{Priority}			& High									\\\hline
-		\textbf{Preconditions}		& Application installed	and no user is logged in				\\\hline&\\[-2ex]
+		\textbf{Preconditions}		& Application installed	and no user is signed in				\\\hline&\\[-2ex]
 		\textbf{Basic flow}			& \begin{minipage}{5in}
 									  \begin{enumerate}[noitemsep]
 										\item User clicks on register new user
@@ -121,7 +121,7 @@ A use case is a simple scenario that identifies actors involved in an interactio
 				\item Error message displayed, go to 2.
 			\end{enumerate}
 		\end{minipage}							\\\hline
-		\textbf{Postconditions}		& User is logged in to the system\\\hline
+		\textbf{Postconditions}		& User is signed in to the system\\\hline
 	\end{tabular}
 	\label{Tab:U2}
 \end{table}
@@ -400,7 +400,7 @@ A use case is a simple scenario that identifies actors involved in an interactio
 		\textbf{Preconditions}		& User is signed in						\\\hline&\\[-2ex]
 		\textbf{Basic flow}			& \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
-				\item While logged in, user clicks on settings
+				\item While signed in, user clicks on settings
 				\item User clicks on read about app and is presented with information about the app
 			\end{enumerate}						
 		\end{minipage}						\\\hline&\\[-2ex]
@@ -447,7 +447,7 @@ A quality attribute (QA) is a measurable or testable property of a system that i
 
 The described quality attributes are the most generic or descriptive for this project \todo{Hva er ment med dette? Omformulere?}. The reader should also keep in mind that there are crossover attributes, e.g.. Maintainability/Testability may increase availability, that could be included in a project of greater scope.\newline
 
-The ranked list was helpful in choosing the solutions, architecture and patterns that were most in accordance with the customer's vision and needs. In a project with more resources or a more narrow scope there would have been more plans for measuring and quality assure each of the attributes, but this would broaden the scope and workload of a project which was already on a tight schedule. Instead this was used as a guideline assisting the development and decision making throughout the project. This was not a decision that was easily compromised but was believed to be one area we could free up some time. With that said, extensive testing and measuring was done to achieve a high quality product(\textbf{Chapter \ref{chap:testing}}).\newline
+The ranked list was helpful in choosing the solutions, architecture and patterns that were most in accordance with the customer's vision and needs. In a project with more resources or a more narrow scope there would have been more plans for measuring and quality assure each of the attributes, but this would broaden the scope and workload of a project which was already on a tight schedule. Instead this was used as a guideline assisting the development and decision making throughout the project. This was not a decision that was easily compromised but was believed to be one area we could free up some time. With that said, extensive testing and measuring was done to achieve a high quality product (see \textbf{Chapter \ref{chap:testing}}).\newline
 
 
 
