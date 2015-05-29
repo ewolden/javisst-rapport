@@ -857,91 +857,7 @@ Status report week 6\newline
 		\\\hline
 	\end{longtable}
 \end{center}
-
-\chapter{Screenshots}
-	\begin{figure}[h]
-		\centering
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_intro1}
-			\caption{Introduction 1}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_intro2}
-			\caption{Introduction 2}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_intro3}
-			\caption{Introduction 3}
-		\end{subfigure}
-
-	\end{figure}
-	\begin{figure}
-		\ContinuedFloat
-		\centering
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_login}
-			\caption{Sign in}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_profile}
-			\caption{Profile}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_interests}
-			\caption{Interests}
-		\end{subfigure}
-		
-	\end{figure}
-	\begin{figure}[h]
-		\ContinuedFloat
-		\centering
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_recommendations}
-			\caption{Recommendations}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_story}
-			\caption{Story}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_story2}
-			\caption{Story 2}
-		\end{subfigure}
-		
-	\end{figure}
-	\begin{figure}[h]
-		\ContinuedFloat
-		\centering
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_rating}
-			\caption{Rating}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_bookmark}
-			\caption{Add bookmark}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_image}
-			\caption{Fullscreen image}
-		\end{subfigure}
-	
-	\end{figure}
-	\begin{figure}[h]
-		\ContinuedFloat
-		\centering
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_menu}
-			\caption{Menu}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_list}
-			\caption{Bookmark list}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.3\textwidth}
-			\includegraphics[width=\textwidth]{fig/screenshot_settings}
-			\caption{Settings}
-		\end{subfigure}
-	\end{figure}
+
 	
 \chapter{Meeting report examples}
 \label{app:meetingreport}
@@ -949,6 +865,167 @@ Status report week 6\newline
 	\includepdf[pages=1, pagecommand=\label{app:group_meeting}]{pdffig/group_meeting}
 
 	\includepdf[pages=1, pagecommand=\label{app:customer_meeting}]{pdffig/customer_meeting}
+
+\chapter{Developer guide}
+\label{app:developer_guide}
+
+\section{Front-end}
+
+\subsection{Dependencies}
+
+\subsubsection{Android}
+\begin{itemize}
+	\item Android SDK (See the Requirements and Support section at \url{https://cordova.apache.org/docs/en/3.3.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)}
+\end{itemize}
+
+To sign apk file:
+\begin{itemize}
+	\item Keytool (JDK)
+	\item jarsigner (JDK)
+	\item zipalign (JDK)
+\end{itemize}
+
+\subsubsection{iOS}
+Only possible on Mac OSX
+\begin{itemize}
+	\item Xcode (install from the App Store)
+	Minimum required version is Xcode 4.5. More on this at \url{https://cordova.apache.org/docs/en/3.3.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide}
+\end{itemize}
+
+\subsection{Setup Guide}
+
+\begin{enumerate}
+	\item Install NodeJS (\url{https://nodejs.org/download/})
+	\item Install Cordova and Ionic (\url{http://ionicframework.com/getting-started/}) 
+ 		\begin{verbatim}
+ 			npm install -g cordova ionic
+ 		\end{verbatim}
+	\item Install Gulp (\url{https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md})
+		\begin{verbatim}
+			npm install -g gulp
+		\end{verbatim}
+	\item Restore State (Install dependencies)
+  		\begin{verbatim}
+  			ionic state restore
+  		\end{verbatim}
+\end{enumerate}
+  
+\subsection{Testing} 
+
+Use these commands in the root folder of the project to run the application.
+
+\subsubsection{Android}
+
+First run:
+	\begin{verbatim}
+		ionic build android
+	\end{verbatim}
+\begin{itemize}
+	\item Emulator (Note that the default Android emulator has many problems and is not recommended to use)
+		\begin{verbatim}
+			ionic emulate android
+		\end{verbatim}
+	\item Device
+		\begin{verbatim}
+			ionic run android
+		\end{verbatim}
+\end{itemize}
+
+Read more about ionic testing here: \url{http://ionicframework.com/docs/guide/testing.html}
+
+\subsubsection{iOS}
+
+First run:
+\begin{verbatim}
+	ionic build ios
+\end{verbatim}
+
+\begin{itemize}
+	\item Emulator
+		(You need to run this to install the emulator: \verb|npm install -g ios-sim|)
+		\begin{verbatim}
+			ionic emulate ios
+		\end{verbatim}
+	\item Device (requires Apple Developer account)
+		\begin{verbatim}
+			ionic run ios
+		\end{verbatim}
+	\item Ionic View app
+
+You can install an app on iOS called Ionic view, and test "Vettu Hva?" through it. 
+Requires an Ionic user. 
+
+Run: 
+\begin{verbatim}
+	ionic upload
+\end{verbatim}
+
+You will then be asked to enter login information. 
+
+Then it should be possible to download and run in Ionic View. If it for some reason should not appear, click on the eye icon at the top left and enter the ID from the command line. 
+
+More information about Ionic View: \url{http://blog.ionic.io/view-app-is-alive/}
+
+\end{itemize}
+
+\subsubsection{Browser} 
+
+The application requires internet access.
+Testing this way is not recommended. The app uses cordova plugins, and these will not work in the browser. 
+\begin{itemize}
+	\item Both platforms (Android and iOS) in one view
+		\begin{verbatim}
+			ionic serve --lab
+		\end{verbatim}
+	\item Single view which can be resized
+		\begin{verbatim}
+			ionic serve
+		\end{verbatim}
+\end{itemize}
+
+
+\subsection{Building}
+  
+\subsubsection{Android}
+
+\begin{enumerate}
+	\item Generate release build
+		\begin{verbatim}
+  			cordova build --release android
+  		\end{verbatim}
+	\item Generate key
+		\begin{verbatim}
+  			keytool -genkey -v -keystore my-release-key.keystore -alias alias_name 
+  				-keyalg RSA -keysize 2048 -validity 10000
+  		\end{verbatim}
+	\item Signing the APK
+		\begin{verbatim}
+  		jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 
+  			-keystore my-release-key.keystore HelloWorld-release-unsigned.apk alias_name
+  		\end{verbatim}
+    Where the AKP is located i.e. \verb|StoryTelling-Frontend\platforms\android\ant-build|
+	\item Optimize the APK
+		\begin{verbatim}
+  			zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
+  		\end{verbatim} 
+  \end{enumerate} 
+
+(These steps are necessary to update the application after you published it the first time) 
+
+PS. Save the keystore file generated in step 2 for further patching.
+
+Read more about publishing Ionic applications on Android here: \url{http://ionicframework.com/docs/guide/publishing.html}
+
+\subsubsection{iOS}
+Apple Developer account required. You can open the .xcodeproj project from the platforms/ios folder.\newline 
+
+You need to set up Xcode with your certificates: 
+\url{https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6}\newline
+
+How to distribute the app to test users:
+\url{https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1}
+
+
 
 \end{appendices}
 \cleardoublepage
