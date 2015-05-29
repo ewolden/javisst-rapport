@@ -13,32 +13,37 @@ The risk analysis contains a list of possible occurrences that could be harmful 
 
 \textbf{Table \ref{Tab:riskexample}} describes three of the most important risks in the risk analysis. The complete risk analysis is located in \textbf{Appendix \ref{app:risklist}}.
 
+L: Likelihood (1-9)\\
+I1: Impact (1-9)\\
+I2: Importance (Likelihood * Impact)\\
 
+\begin{table}[!h]
 \begin{center}
-	\begin{longtable}{ | p{3.5cm} | p{2cm} | p{1.5cm} | p{2cm} | p{3.5cm} | p{3.5cm}|}
-		
-		\caption[Risk list example]{Risk list example } \label{Tab:riskexample}\\
-		\hline
-		\textbf{Description} & \textbf{Likelihood(1-9)} & \textbf{Impact(1-9)} & \textbf{Importance (Likelihood * Impact)} & \textbf{Preventive action} & \textbf{Remedial action}\\ \hline
-		
-		The group does not receive quality feedback from supervisor & 6 & 6 & 36 & Be prepared for supervisor meetings. Prepare concrete questions and discuss issues with supervisor & Ask qualified aquaintances to read and give feedback on the report. \\ \hline
-		
-		Project complexity / Project too difficult & 5 & 5 & 25 & Do not plan many complicated tasks & Downgrade demands \\ \hline  
-		
-		Poor communication within the group leading to misunderstandings and doubts about the progress of the project & 4 & 6 & 24 & Write meeting minutes to document decisions. Have frequent meetings where every team member explains what they have done and what they are planning to do & Make a group decision to solve the misunderstanding \\ \hline
+	\caption{Risk list example} 
+	\label{Tab:riskexample}
+	\begin{tabular}{ | p{3.5cm} | p{2cm} | p{1.5cm} | p{2cm} | p{3.5cm} | p{3.5cm}|}
 
-	\end{longtable}
+		\hline
+		\textbf{Description} & \textbf{L} & \textbf{I1} & \textbf{I2} & \textbf{Preventive action} & \textbf{Remedial action} \\ \hline
+		
+		Underestimate the time planned to use for assignments & 8 & 8 & 64 & Estimate a little higher. continuous meetings. Continuous status update on tasks & Extra work hours and help each other. Have a clear prioritization of tasks so that some less important tasks can be delayed if needed. \\ \hline
+		
+		The group does not deliver updated information on the report and cannot maximize the quality of the feedback obtained from the supervisor & 6 & 7 & 42 & Always make sure the report meet the demands upon delivery & Ask concrete questions to the supervisor or other competent acquaintances of the group members \\ \hline
+		
+		An issue in the code that is not understood or can not be fixed. & 5 & 8 & 40 & Comment on the code, and talk with each other about the work done on the code & Get help from the supervisor or other people involved. \\ \hline
+	\end{tabular}
 \end{center}
+\end{table}
 
 \section{Meetings}
 
-There group had many meetings with parties that were involved with the project and/or the application. The three main types of meetings documented were group meetings, customer meetings, and supervisor meetings.\newline 
+The group had many meetings with parties that were involved with the project and/or the application. The three main types of meetings documented were group meetings, customer meetings, and supervisor meetings.\newline 
 
 It became a logical decision to make use of scrum to have 1-week sprints, which would include daily scrum meetings with the group. Since the team was a group of seven, it was impossible to always work together. Because of this, the regular scrum meetings were beneficial to share and discuss progress. During each meeting, a summary was written to document what the group members had done since last, what issues had occurred, and any other important notes. An example of a group meeting report can be found in \textbf{Appendix \ref{app:meetingreport}}.\newline
 
 The customer requested weekly meetings, and to make the most out of these meetings, the team planned an agenda ahead of each meeting. This included any issues that the team wanted to bring up, or anything that required feedback from the customer. During the meetings, a summary was written as well. An example of a customer meeting report can also be found in \textbf{Appendix \ref{app:meetingreport}}.\newline
 
-The supervisor requested bi-weekly meetings which were used to discuss the report. The supervisor read the most recent version of the report in advance of each meeting and gave feedback on what needed to be changed. Because of this, after each meeting the team kept a list of feedback from the supervisor of issues that should be handled before the next supervisor meeting.
+The supervisor requested bi-weekly meetings which were used to discuss the report. The supervisor read the most recent version of the report in advance of each meeting and gave feedback on what needed to be changed. Because of this, after each meeting the team kept a list of feedback from the supervisor of issues that should be handled before the next supervisor meeting. Status reports were also made and sent to the supervisor before each meeting, and an example of a status report can be found in \textbf{Appendix \ref{app:status_report}}
 
 \section{Scrum team and roles}
 \label{sec:scrum_team_and_roles}
@@ -49,11 +54,13 @@ The role delegation in the team is detailed in \textbf{Table \ref{Tab:roles}}. T
 	\small
 	\centering
 		\caption{Role delegation}
-		\begin{tabular}{ | p{3.7cm} | p{2.8cm} | p{10.5cm} |}
+		\begin{tabular}{ | p{2.5cm} | p{2.8cm} | p{12cm} |}
 			\hline
 			\textbf{Role} & \textbf{Responsible} & \textbf{Details} \\ \hline
 			
 			\textbf{Product Owner} & Jacqueline Floch (SINTEF) \newline Shanshan Jiang (SINTEF) & \\ \hline
+			
+			\textbf{Group supervisor} & Soudabeh Khodambashi & \\ \hline
 			
 			\textbf{Main back-end staff} & Hanne Marie, Eivind, Kjersti, Audun & \\ \hline
 			
@@ -131,7 +138,7 @@ A polished and well tested application and ready to deploy back-end should be re
 
 \section{Burn down}
 
-\todo(Skrive om activity plan)
+\todo{Skrive om activity plan}
 
 A burn down chart is a visual representation of the outstanding work(Appendix \ref{app:activity_plan}) relative to the projects remaining time. Its visual representation is outlined in a graph where the x-axis represents the timeline where each point on the graph is one sprint, and the y-axis represents the estimated hours needed to finish the project. This is useful to have a better understanding of the rate that the project is moving and it indicates whether or not one will meet the project's estimates.\todo{Skal vi sitere her? http://idiacomputing.com/pub/BetterSoftware-BurnCharts.pdf, http://joel.inpointform.net/software-development/burn-down-charts-tutorial-simple-agile-project-tracking/  }\newline
 
@@ -160,7 +167,7 @@ Therefore, this section will describe four features considered important by the 
 
 As was noted in \textbf{Section \ref{sec:scrum}}, an important part of the scrum methodology is the close collaboration between the team members. Scrum provides some events to enhance this collaboration, for instance the daily scrum meetings, and some artifacts, such as the sprint backlog. These features of scrum were used by the group and helped create a framework for the process development. However, scrum does not define how the group should interact, and the group interaction consisted of more than the methods provided by scrum, for instance when doing sessions of collaborative work.\newline
 
-In order to ensure that the scrum events and the interactions external to these events would create the desired quality culture, the team discussed and agreed upon some basic rules of engagement for the project (see \textbf{Appendix \ref{app:rules_of_engagement}}). These rules specified how the team should create a quality process in order to create a quality product, for instance by setting ground rules for communication between the group members. The tools described in \textbf{Section \ref{sec:communication tools}} were used to facilitate the implementation of the rules. In addition, meeting minutes from every meeting was made so that every group member would be aware of the status of the project even if they were not present at the meeting.\newline
+In order to ensure that the scrum events and the interactions external to these events would create the desired quality culture, the team discussed and agreed upon some basic rules of engagement for the project (see \textbf{Appendix \ref{app:rules_of_engagement}}). These rules specified how the team should create a quality process in order to create a quality product, for instance by setting ground rules for communication between the group members. The tools described in \textbf{Section \ref{sec:communication tools}} were used to facilitate the implementation of the rules. In addition, meeting minutes from every meeting were made so that every group member would be aware of the status of the project even if they were not present at the meeting.\newline
 
 The division of the group described in \textbf{Section \ref{sec:scrum_team_and_roles}} meant that a member of the front-end part would have more detailed information about what other front-end developers were doing than what individual members of the back-end part were doing, and vice versa. However, when important decisions were to be made in one part of the project or important problems had to be solved, both parts would be involved in the discussion, even if the decision did not affect their part of the project directly. An example of such a decision was the choice of colors to use in the user interface.
 
