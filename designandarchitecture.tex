@@ -203,17 +203,24 @@ As was noted in \textbf{Section \ref{sec:personalization_algorithms}} collaborat
 \section{Database design}
 \label{sec:database_design}
 
-The database was designed with the goal of facilitating the recommendation of stories to users. The data model underpinning the database is visualized in the ER-diagram in \textbf{Figure \ref{Fig:er_diagram}}. User and story are the central entities in this diagram, since the goal of the application is to connect users to stories. Both of these entities has a number of attributes describing the entity. The central relationship in the diagram is the recommendation-relationship, where a user and a story is connected. This connection is described by some additional attributes, such as rating, tag and state. \newline
-
-To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see \textbf{Section \ref{sec:categorymapping}}). A user is connected to one or more of these categories by the setting of personal preferences. In addition, the database stores information about the changing state of recommended stories in order to make better recommendations. \newline
-
-Another goal of this project was to provide some research data to the customer. To do this, some data about the use of the application is stored. This includes registering what actions are taken during a user session. The state entity records changes in the state of stories connected to a user. For research purposes the customer also wished to know the relationship between satisfaction of a story (i.e. the rating) and the media format contained in the story.
+The database was designed with the goal of facilitating the recommendation of stories to users. The data model underpinning the database is visualized in the ER-diagram in \textbf{Figure \ref{Fig:er_diagram}}. User and story are the central entities in this diagram, since the goal of the application is to connect users to stories. Both of these entities has a number of attributes describing the entity. The central relationship in the diagram is the recommendation-relationship, where a user and a story is connected. This connection is described by some additional attributes, such as rating, tag (bookmark) and state. \newline
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{fig/er_diagram}
-	\caption{ER-diagram showing the data model.}
+	\caption{ER-diagram showing the data model}
 	\label{Fig:er_diagram}
+\end{figure}
+
+To make the right connections between user and story, some attributes describing the user and the stories are necessary to store in the database. For instance, in order to make recommendations based on nine predefined categories, every story is mapped from subcategories gathered from Digitalt fortalt to one or more of the nine categories (see \textbf{Section \ref{sec:categorymapping}}). A user is connected to one or more of these categories by the setting of personal preferences. The changing state of recommended stories is also recorded, partially to make better recommendations and partially for research purposes. \newline
+
+As described in \textbf{Section \ref{subsec:summary_functional_requirements}} a requirement for the project was to provide some research data to the customer. To do this some data about the use of the application is stored, including registering what actions are taken during a user session with regards to a story. The state entity records changes in the state of a story for a specific user. The state diagram in \textbf{Figure \ref{Fig:state_diagram}} shows the states a story can have and the possible transitions between them. There are four states in our system (recommended, read, to-be-read and rated), all of which can be recorded multiple times for a story for a given user. The labels on the arrows between states are the events that trigger the transition from one state to another, with one exception: the "Story not rated"-label (marked with a border around the text). This is a boolean condition which must evaluate to true to enable the transition. For our system, this means that a story can be recommended again after it has been opened (read) or bookmarked with "Les senere" (to-be-read), but only if the story has not been rated at any point. Another point to emphasize is that a story has no state in the system before it has been "Viewed" (seen in the state diagram as the initial transition from the solid circle which represent the start point). A story is "Viewed" when the user sees the story in the recommendation view at front-end. This means that the only way a user can experience a story is to be recommended the story. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=11cm]{fig/state_diagram}
+	\caption{State diagram showing states and transitions for a story for one user}
+	\label{Fig:state_diagram}
 \end{figure}
 
 
