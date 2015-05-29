@@ -2,18 +2,18 @@
 \chapter{Testing}
 \label{chap:testing}
 
-The following subsections describe the strategies for the testing levels unit test, integration test, system test, costumer acceptance test and usability test. 
+The following sections describe the strategies for the testing levels unit test, integration test, system test, costumer acceptance test and usability test. 
 The unit, integration and system tests were done in an iterative manner. After the test suits were performed and the results were documented, the testers mended the issues in the system that appeared during the test. After the mending, the test suit was executed again. This cycle was repeated until there was no issues left in the system and all test cases got the expected result. The issues that were discovered during all the tests are described in every testing level section. 
 
 
 \section{Unit testing}
 \label{sec:unit_testing}
-The purpose of unit testing is to ensure that every piece of code that is implemented in the system is functional and correct. It was necessary to prioritize which units should be tested, considering the amount of time given for the project. 
-The units in these tests were PHP, Java and JavaScript classes. Therefore it was necessary to use different unit testing tools. Back-end code was tested using PHPUnit framework \cite{KF2}, and JUnit \cite{jUnit} and the extension DbUnit \cite{dbUnit}. The front-end code was tested by using an AngularJS unit testing tool, called Karma \cite{KF3}. 
+The purpose of unit testing is to ensure that every piece of code that is implemented in the system is functional and correct. It was necessary to prioritize which units should be tested, considering the amount of time given to the project. 
+The units in these tests were PHP, Java and JavaScript classes. Therefore it was necessary to use different unit testing tools. Back-end code was tested using the PHPUnit framework \cite{KF2}, and JUnit \cite{jUnit} and the extension DbUnit \cite{dbUnit}. The front-end code was tested by using an AngularJS unit testing tool called Karma \cite{KF3}. 
 The classes that were tested are listed under the unit column in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}. The classes that were left out in the documented tests were tested manually by the developers.
 
 \subsection{Roles and responsibilities}
-To get a structured testing experience, the team had to delegate responsibility for the units. The roles correspond with the roles that were given at the start of this project (see \textbf{Section \ref{sec:scrum_team_and_roles}}), so the testers would have good knowledge of the code and know how it works. The delegated responsibilities are presented in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}.
+To get a structured testing experience, the team had to delegate responsibility for the units. The roles corresponded with the roles that were given at the start of this project (see \textbf{Section \ref{sec:scrum_team_and_roles}}), so the testers would have good knowledge of the code and know how it worked. The delegated responsibilities are presented in \textbf{\Crefrange{Tab:phptesting}{Tab:karmatesting}}.
 
 
 
@@ -89,25 +89,25 @@ The testers created test cases and used these as a guide for performing the test
 \subsection{Detected and mended issues}
 This subsection includes some of the most important issues that were discovered during the unit testing, and how they were solved. \newline
 
-In the database communication there were some changes done during the development which made it easier to handle the code. One example was to make the database connection return an array where the array keys matched the column names. This way made it easier to access the different values returned from the database.  
+In the database communication there were some changes done during the development which made it easier to handle the code. One example of this was to make the database connection return an array where the array keys matched the column names. This way made it easier to access the different values returned from the database.  
 Another issue was discovered with the media format on each story, which was not stored correctly in the database because of an error during the harvesting of the stories from Digitalt fortalt. These types of issues were solves with several checks to see if the information was in the right format or was not null.\newline
 
-During the tests of the first version of the recommender it was running with the time of 11-12 seconds. This was improved by increasing the efficiency of the communication with the database. The recommender was more efficient when the insertion of preference values and recommendations was done with one insert statement to the database instead of respectively 167 and 10 statements. Previously the recommender fetched a whole table from the database with the preference values. Fetching preference values for a specific user instead of all users helped the recommendation module to run faster as well.
+During the tests of the first version of the recommender it was running at a time of 11-12 seconds. This was improved by increasing the efficiency of the communication with the database. The recommender was more efficient when the insertion of preference values and recommendations was done with one insert statement to the database instead of 167 and 10 statements respectively. Previously the recommender fetched a whole table from the database with the preference values. Fetching preference values for a specific user instead of all users helped the recommendation module to run faster as well.
 
 \section{Integration testing}
 \label{sec:integration_testing}
 
 Integration testing was performed after unit testing, and before system testing. After the back-end and front-end code was tested and integrated, the integration testing could be started, and focused on ensuring that these two modules communicated correctly and that data was moving between them in the right manner. 
-Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit testing framework, more particulary with PHPUnit. This testing framework was already known to the developers and therefore easier and less time consuming to use. All the tests were executed by simulating HTTP requests from the UI and checking that the back-end gives the correct response to the specific HTTP request. 
+Because of the time limitations and the difficulty with learning a new interface to perform integration testing, the developers decided to perform the integration testing with unit testing framework, more particulary with PHPUnit. This testing framework was already known to the developers and therefore easier and less time consuming to use. All the tests were executed by simulating HTTP requests from the UI and checking that the back-end gave the correct response to the specific HTTP request. 
 
 
 
 \subsection{Test cases}
 The test cases were made by first having a closer look at the different components of the system and the data flows between them (See \textbf{Figure \ref{Fig:architecture}}) 
-The integration was performed on the communication between front-end and back-end code, and included test cases made to test all the HTTP request front-end sent to back-end.(About HTTP request in \textbf{Subsection \ref{subsec:frontend-backend_communication}}).
+The integration was performed on the communication between front-end and back-end code, and included test cases made to test all the HTTP request front-end sent to back-end.(About HTTP request in \textbf{Section \ref{subsec:frontend-backend_communication}}).
 An example of an integration test can be found in \textbf{Table \ref{Tab:integrationtestexample}}. All the integration test cases are described in \textbf{Appendix \ref{Tab:integrationtestcases}}.
 
-\begin{table}
+\begin{table}[H]
 	\centering
 	\small
 \begin{center}
@@ -124,15 +124,15 @@ An example of an integration test can be found in \textbf{Table \ref{Tab:integra
 
 \subsection{Detected and mended issues}
 
-The following paragraph includes some of the most important issues that were discovered during the integration testing, and how they were solved.
+The following paragraph includes some of the most important issues that were discovered during the integration testing, and how they were solved.\newline
 
-The issue that was considered to be the most time consuming one, was to update a user in the database. This issue was detected in the test case I.3. When a user was updated in the UI in the application, the unchanged information that should still be there, was deleted. This was attempted fixed several times with methods that were not adequate. The problem was eventually solved by fetching all information about a user in the database, update the fields in the user model that had been changed, and then insert all the information in the database again. \newline
+The issue that was considered to be the most time consuming one was to update a user in the database. This issue was detected in the test case I.3. When a user was updated in the UI in the application, the unchanged information that should still be there, was deleted. This was attempted fixed several times with methods that were not adequate. The problem was eventually solved by fetching all information about a user in the database, update the fields in the user model that had been changed, and then insert all the information in the database again. \newline
 
 Other minor issues that were handled were syntax-issues, redundant code that created unnecessary confusion, and missing table attributes in the database.
 Changes in the code were made to obtain better structure in the code, such as dividing long code files into smaller ones and to make sure functions return a response if an error occurs. Due to a misunderstanding between front-end and back-end developers, the database returned names of category preference and story categories, and not ID's, this was also mended after the integration testing. 
 
 \section{System testing}
-The system testing was performed after the unit tests and integration tests. The test gave the developers a measure of whether the system met all the goals set for the project. The system test included performing a black box test of the system, where the test cases were based on the specified requirements ( See \textbf{Section \ref{subsec:summary_functional_requirements}}) and the use cases (See \textbf{Section \ref{subsec:use_cases}}) defined earlier in this report. \newline
+The system testing was performed after the unit tests and integration tests. The test gave the developers a measure of whether the system met all the goals set for the project. The system test included performing a black box test of the system, where the test cases were based on the specified requirements (See \textbf{Section \ref{subsec:summary_functional_requirements}}) and the use cases (See \textbf{Section \ref{subsec:use_cases}}) defined earlier in this report. \newline
 
 In this test, one of the developers was executing the test. Because it is a black box test, the tester executed the test cases with no access to the code. The tester went through all of the test cases one by one and performed the test cases manually. Due to the time limits of this project, the team was not able to write scripts to perform the test cases. \newline
 
@@ -184,7 +184,7 @@ An issue was detected when logging out from a user and then logging in with a di
 
 Sometimes the recommended stories would take a long time to load. This was fixed by optimizing the harvester. \newline
 
-Can not scroll down if you are scrolling by touching the frame of video, picture and sound- \newline
+Can not scroll down if you are scrolling by touching the frame of video, picture and sound. \newline
 
 It was discovered that there was no way to delete the user-made lists. This was easily remedied by adding an "X"-button on these lists to allow deleting them. \newline
 
@@ -193,7 +193,7 @@ When a user created many lists, there was no way to scroll through them. This wa
 \section{Customer acceptance test}
 \label{sec:acceptance_test}
 
-The customer acceptance test (CAT) was executed during the whole software development life cycle. After a sprint, the customer tested the product, evaluated and gave feedback. In the early stages of the project process this included testing of the prototypes. When working software was delivered to the customer after a sprint, the customer used their own real input data to test the behavior of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic since the customer defined it. The customer brought feedback either in meetings or through email. The planned delivery dates are presented in \textbf{Section \ref{sec:milestone_plan}} Project milestone plan.  
+The customer acceptance test (CAT) was executed during the whole software development life cycle. After a sprint, the customer tested the product, evaluated and gave feedback. In the early stages of the project process this included testing of the prototypes. When working software was delivered to the customer after a sprint, the customer used their own real input data to test the behavior of the system. This kind of testing might reveal a different result than from a regular unit or system testing, when the data could be more realistic since the customer defined it. The customer brought feedback either in meetings or through email. The planned delivery dates are presented in \textbf{Section \ref{sec:milestone_plan}}.  
 
 \renewcommand{\arraystretch}{2}%
 \begin{center}
@@ -339,7 +339,7 @@ On each test, the user received a set of tasks to complete. These tasks were the
 	
 
 
-An example of a usability test results can be found in \textbf{Table \ref{Tab:usabilityTestexample}}. All the usability test cases are described in \textbf{Appendix \ref{app:usabilitytest}}.
+An example of usability test results can be found in \textbf{Table \ref{Tab:usabilityTestexample}}. All the usability test cases are described in \textbf{Appendix \ref{app:usabilitytest}}.
 
 \begin{table}[H]
 \begin{center}
@@ -360,13 +360,11 @@ An example of a usability test results can be found in \textbf{Table \ref{Tab:us
 	
 
 \subsection{Summary}
-The time set aside for each test was about 20 minutes for the test and about 10 minutes for follow-up questions. Observations during the test and the answers provided in the follow-up were implemented in the view feedback and/or the general changes.
+The time set aside for each test was about 20 minutes for the test and about 10 minutes for follow-up questions. Observations during the test and the answers provided in the follow-up were implemented in the view feedback and/or the general changes.\newline
 
-To summarize the tests; Each user had his or her own problems with the application but on the whole the user is able to do the task they are asked to complete. So considering the scenarios and use-cases, the application is translating and making the user understand what its functionalities are. There are of course some major inadequate parts, but this is as intended for the test and we are aware of the missing parts.
+To summarize the tests; each user had his or her own problems with the application but on the whole the user is able to do the task they are asked to complete. So considering the scenarios and use-cases, the application is translating and making the user understand what its functionalities are. There are of course some major inadequate parts, but this is as intended for the test and we are aware of the missing parts.\newline
 
-When it comes to the intuitive understanding, the application has some work to be done. This is covered on a per view basis. And since the user group is not narrow enough we aim to design for everybody and this will act as a constraint for the UI. 
-
-The parts where users are confused are mentioned in the views section.
+When it comes to the intuitive understanding, the application has some work to be done. This is covered on a per view basis. And since the user group is not narrow enough we aim to design for everybody and this will act as a constraint for the UI.The parts where users are confused are mentioned in the views section.\newline
 
 Paths are on the whole followed by the majority of the testers with some deviation, but this is expected since the prototype is a bit unclear on its formulation on some of the views. But to conclude, the users are almost without issues following the scenarios to the point.
 
