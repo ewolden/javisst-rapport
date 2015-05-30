@@ -72,9 +72,12 @@ To get a structured testing experience, the team had to delegate responsibility 
 \subsection{Test cases}
 The testers created test cases and used these as a guide for performing the tests. Each test case has an ID and describes exactly what the test should do, what input data to use and what is expected to happen when the test is running. An example of a unit test can be found in \textbf{Table \ref{Tab:unittestexample}}. All the unit test cases are presented in \textbf{Appendix \ref{app:unittest}}.
 
-\begin{center}
-	\begin{longtable}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
-		\caption[Unit test cases]{ Unit test case for updating rating value} \label{Tab:unittestexample}\\
+\begin{table}[h]
+	\centering
+	\caption[Unit test cases]{ Unit test case for updating rating value} \label{Tab:unittestexample}
+	\begin{adjustbox}{center}
+	\begin{tabular}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{2cm}|}
+		
 		
 		\hline {\bf Test case ID} & {\bf Description} & {\bf Input data} & {\bf Expected results} & {\bf Result}\\ \hline
 		
@@ -82,8 +85,9 @@ The testers created test cases and used these as a guide for performing the test
 		
 		
 		UN1.1 & Update one rating value in the database & Random userId, random storyId, updateValue: 2 & The function should return true when running the database request. & Pass \\\hline
-	\end{longtable}
-\end{center}
+	\end{tabular}
+	\end{adjustbox}
+\end{table}
 \raggedbottom
 
 \subsection{Detected and mended issues}
