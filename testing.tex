@@ -20,7 +20,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 \begin{table}[H]
 	\caption{Shows the delegated responsibilities in testing the back-end part of the system written in PHP code.}
 	\label{Tab:phptesting}
-	\begin{center}
+	\begin{adjustbox}{center}
 		\begin{tabular}{ | l | l | l |}
 			\hline
 			\multicolumn{3}{|c|}{\textbf{PHPUnit testing}} \\
@@ -32,13 +32,13 @@ To get a structured testing experience, the team had to delegate responsibility 
 			UN4 & User Model & Eivind \\ \hline			
 			UN5 & Compute Preference Value & Kjersti \\ \hline			
 		\end{tabular}
-	\end{center}
+	\end{adjustbox}
 \end{table}
 
 \begin{table}[H]
 		\caption{Shows the delegated responsibilities for the back-end part of the system written in Java code.}
 		\label{Tab:junittesting}
-	\begin{center}
+	\begin{adjustbox}{center}
 		\begin{tabular}{ | l | l | l |}
 			\hline
 			\multicolumn{3}{|c|}{\textbf{JUnit and DbUnit testing}} \\
@@ -47,14 +47,14 @@ To get a structured testing experience, the team had to delegate responsibility 
 			UN6 & Recommendation  & Audun \\ \hline
 			UN7 & Database connection with Java & Audun \\\hline			
 		\end{tabular}
-	\end{center}
+	\end{adjustbox}
 
 \end{table}
 
 \begin{table}[H]
 	\caption{Shows the delegated responsibilities for testing the front-end.}
 	\label{Tab:karmatesting}
-	\begin{center}
+	\begin{adjustbox}{center}
 		\begin{tabular}{ | l | l | l |}
 			\hline
 			\multicolumn{3}{|c|}{\textbf{AngularJS Karma testing}} \\
@@ -64,7 +64,7 @@ To get a structured testing experience, the team had to delegate responsibility 
 			UN9 & UI Story View & Ragnhild \\ \hline
 			UN10 & UI Settings & Roar \\ \hline
 		\end{tabular}
-	\end{center}
+	\end{adjustbox}
 
 \end{table}
 
@@ -110,16 +110,17 @@ An example of an integration test can be found in \textbf{Table \ref{Tab:integra
 \begin{table}[H]
 	\centering
 	\small
-\begin{center}
+	
 	\caption{Integration test case for creating a user}
 	\label{Tab:integrationtestexample}
+	\begin{adjustbox}{center}
 	\begin{tabular}{ | p{1cm} | p{5.5cm} | p{4cm} | p{4.5cm} | p{1cm}|}
 		\hline
 		\textbf{Test case ID} & \textbf{Description} & \textbf{Input data} & \textbf{Expected results} & \textbf{Result} \\ \hline
 		
 		I.1 & Simulate a HTTP request which will log in a user for the first time with an email adress \newline Call getUserFromEmail to the database & email: 'testnr16@example.com,\newline requestType: addUser & The HTTP request should return successfull message included the newly created userId. The database  function should return a row with the userId, mail, age\textunderscore group, gender and use\textunderscore of\textunderscore location  & Pass \\ \hline
 	\end{tabular}
-\end{center}
+	\end{adjustbox}
 \end{table}
 
 \subsection{Detected and mended issues}
@@ -301,7 +302,7 @@ High - more than 5 applications/ more than 5 times a day.
 \begin{table}[H]
 	\caption{Test group}
 	\label{Tab:testgroup}
-	\begin{center}
+	\begin{adjustbox}{center}
 		\begin{tabular}{ | l | l | l | l |}
 			\hline
 			\textbf{Gender} & \textbf{Age} & \textbf{Application usage} & \textbf{Other} \\ \hline
@@ -310,7 +311,7 @@ High - more than 5 applications/ more than 5 times a day.
 			Female & 51 & Low & Reads a lot \\\hline
 			Male & 31 & High & Reads some \\\hline 	
 		\end{tabular}
-	\end{center}
+	\end{adjustbox}
 \end{table}
 
 \subsection{Test cases}
@@ -347,9 +348,10 @@ On each test, the user received a set of tasks to complete. These tasks were the
 An example of usability test results can be found in \textbf{Table \ref{Tab:usabilityTestexample}}. All the usability test cases are described in \textbf{Appendix \ref{app:usabilitytest}}.
 
 \begin{table}[H]
-\begin{center}
+
 	\caption{Usability test example }
 	\label{Tab:usabilityTestexample}
+	\begin{adjustbox}{center}
 	\begin{tabular}{ | p{2cm} | p{2cm} | p{13cm}|}	
 		\hline
 		\textbf{View} & \textbf{Desired next step} & \textbf{Comments}
@@ -360,7 +362,7 @@ An example of usability test results can be found in \textbf{Table \ref{Tab:usab
 		\textbf{Changes:} Remove read later button and add a bookmark icon at the top right instead. Add a card deck or something else to show users that they can swipe. Add a loading animation for when the view is retrieving stories. Change the title of the view to "Anbefalte historier". Make it clear that the card can be touched and make it possible to remove the card.
 		\\\hline
 	\end{tabular}
-\end{center}
+\end{adjustbox}
 \end{table}
 	
 
