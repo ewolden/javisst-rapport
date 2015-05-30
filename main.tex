@@ -19,7 +19,7 @@
 %%\input{dedication.tex}		%% Optional
 
 %% PART 2
-\fancyhead[R]{\rightmark}
+\fancyhead[LE, RO]{\leftmark} %% LE=left even, RO=right odd
 \input{abstract.tex}		%% Optional
 \input{preface.tex}			%% Optional
 \titleformat{\chapter}
@@ -44,6 +44,7 @@
 %% PART 3 -- The Chapters
 \mainmatter
 \fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
 \titleformat{\chapter}
 {\normalfont\sffamily\Huge\scshape}
 {}{0pt}
