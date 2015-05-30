@@ -20,7 +20,7 @@ The functional requirements were elicited and agreed upon with the customer in m
 	
 	\item Story view: The application should present a chosen story in a way that respects the work of the author and resembles the presentation given on \textit{Digitalt fortalt}'s website. Every story should also include a link to the corresponding story on Digitalt fortalt. The user should be given the opportunity to rate the story and to bookmark the story. 
 	
-	\item List view: The application should be able to keep lists of stories. Lists are created based on the status of the story (to-read, read) or the user's own bookmarks.
+	\item List view: The application should be able to keep lists of stories. Lists are created based on the bookmarks on stories, which are either system-generated (to-read, read) or the user's own bookmarks.
 	
 	\item Notifications: The application should provide the user with the opportunity to set a preferred time for receiving a notification about a new recommended story on their device. At the set time, the application should send the notification. In addition, the application should notify the user when a story is missing a rating.
 	
@@ -66,14 +66,14 @@ A use case is a simple scenario that identifies actors involved in an interactio
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U1									\\\hline
 		\textbf{Name} 				& Create recoverable profile.			\\\hline
-		\textbf{Brief description}	& Enter mail to register. 				\\\hline
+		\textbf{Brief description}	& Enter e-mail to register. 				\\\hline
 		\textbf{Actors} 			& User									\\\hline
 		\textbf{Priority}			& High									\\\hline
 		\textbf{Preconditions}		& Application installed	and no user is signed in				\\\hline&\\[-2ex]
 		\textbf{Basic flow}			& \begin{minipage}{5in}
 									  \begin{enumerate}[noitemsep]
 										\item User clicks on register new user
-										\item User fills in mail into a registration form
+										\item User fills in e-mail into a registration form
 										\item Input validated
 										\item User finishes the registration and the system saves the user ID
 									  \end{enumerate}						
@@ -103,15 +103,15 @@ A use case is a simple scenario that identifies actors involved in an interactio
 	\begin{tabular}[b]{|l | l|}\hline
 		\textbf{ID} 				& U2									\\\hline
 		\textbf{Name} 				& Sign in.								\\\hline
-		\textbf{Brief description}	& Enter email address to sign in. 		\\\hline
+		\textbf{Brief description}	& Enter e-mail address to sign in. 		\\\hline
 		\textbf{Actors} 			& User									\\\hline
 		\textbf{Priority}			& High									\\\hline
 		\textbf{Preconditions}		& User has already registered, but is not signed in on this device			\\\hline&\\[-2ex]
 		\textbf{Basic flow}			& \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 				\item User clicks on sign in
-				\item User fills in mail into form
-				\item System checks email address. User id returned
+				\item User fills in e-mail into form
+				\item System checks e-mail address. User id returned
 				\item Main view displayed
 			\end{enumerate}						
 		\end{minipage}						\\\hline&\\[-2ex]
@@ -189,7 +189,7 @@ A use case is a simple scenario that identifies actors involved in an interactio
 					\begin{enumerate}
 						\item Choose to read the story now
 						\item Reject the story
-						\item Add story to list  
+						\item Bookmark story  
 					\end{enumerate}
 			\end{enumerate}						
 		\end{minipage}						\\\hline&\\[-2ex]
@@ -203,34 +203,34 @@ A use case is a simple scenario that identifies actors involved in an interactio
 \begin{figure}[hp]
 	\includegraphics[width=0.5\textwidth]{fig/U5}
 	\centering
-	\caption{Use case diagram of U5. Add story to list}
+	\caption{Use case diagram of U5. Bookmark story}
 	\label{Fig:U5}
 \end{figure}
 
 \begin{table}[hp]
 	\renewcommand{\arraystretch}{1.5}
 	\centering
-	\caption{Textual description of U5. Add story to list}
+	\caption{Textual description of U5. Bookmark story}
 	\begin{tabular}[b]{| p{3.5cm} | p{13cm}|}\hline
 		\textbf{ID} 				& U5									\\\hline
-		\textbf{Name} 				& Add story to list.					\\\hline
-		\textbf{Brief description}	& Put a story in to-read list or user-defined  list. 		\\\hline
+		\textbf{Name} 				& Bookmark story.					\\\hline
+		\textbf{Brief description}	& Bookmark story as to-read or use user-defined bookmarks. 		\\\hline
 		\textbf{Actors} 			& User									\\\hline
 		\textbf{Priority}			& Medium								\\\hline
 		\textbf{Preconditions}		& User is registered and signed in		\\\hline&\\[-2ex]
 		\textbf{Basic flow}			& \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 				\item User opens a story to read
-				\item User clicks the bookmark button in the story and selects the desired list to put the story in.
-				\item Story will be put in the selected list
+				\item User clicks the bookmark button in the story and selects the desired bookmark to add to the story.
+				\item Story will be bookmarked with the chosen bookmark.
 			\end{enumerate}						
 		\end{minipage}						\\\hline&\\[-2ex]
 		\textbf{Alternate flow}		& \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
-				\item The desired list does not exist. The user clicks to add new list.
+				\item The desired bookmark does not exist. The user clicks to add new bookmark.
 			\end{enumerate}
 		\end{minipage}							\\\hline
-		\textbf{Postconditions}		& Story will be added to and/or removed from various lists according to user's actions\\\hline
+		\textbf{Postconditions}		& Bookmarks will be added to and/or removed from the story according to user's actions\\\hline
 	\end{tabular}
 	\label{Tab:U5}
 \end{table}
@@ -252,7 +252,7 @@ A use case is a simple scenario that identifies actors involved in an interactio
 		\textbf{Brief description}	& Display the selected story. 		\\\hline
 		\textbf{Actors} 			& User, Digitalt fortalt				\\\hline
 		\textbf{Priority}			& High									\\\hline
-		\textbf{Preconditions}		& The story has been recommended to the user at some point and is either in the current recommendations list or in one of the other lists			\\\hline&\\[-2ex]
+		\textbf{Preconditions}		& The story has been recommended to the user at some point and is either in the current recommendations list or is bookmarked by the user.			\\\hline&\\[-2ex]
 		\textbf{Basic flow}			& \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
 				\item User selects story
@@ -294,7 +294,7 @@ A use case is a simple scenario that identifies actors involved in an interactio
 			\begin{enumerate}[noitemsep]
 				\item After reading the story,  the user clicks on a rating to give feedback on the story
 				\item The system saves the rating
-				\item Story will be put in read list
+				\item Story will be bookmarked with "Lest"
 			\end{enumerate}						
 		\end{minipage}						\\\hline&\\[-2ex]
 		\textbf{Alternate flow}		& \begin{minipage}{5in}
@@ -311,24 +311,24 @@ A use case is a simple scenario that identifies actors involved in an interactio
 \begin{figure}[hp]
 	\includegraphics[width=\textwidth]{fig/U8}
 	\centering
-	\caption{Use case diagram of U8. View list}
+	\caption{Use case diagram of U8. View bookmarked stories}
 	\label{Fig:U8}
 \end{figure}
 
 \begin{table}[hp]
 	\renewcommand{\arraystretch}{1.5}
 	\centering
-	\caption{Textual description of U8. View list}
-	\begin{tabular}[b]{|l | l|}\hline
+	\caption{Textual description of U8. View bookmarked stories}
+	\begin{tabular}[b]{| p{3.5cm} | p{13cm}|}\hline
 		\textbf{ID} 				& U8									\\\hline
-		\textbf{Name} 				& View list.							\\\hline
-		\textbf{Brief description}	& View list of collected stories (favorites,to-read,bookmarks defined by user). 			\\\hline
+		\textbf{Name} 				& View bookmarked stories.				\\\hline
+		\textbf{Brief description}	& View stories connected to a bookmark (read,to-read,bookmarks defined by user). 			\\\hline
 		\textbf{Actors} 			& User									\\\hline
 		\textbf{Priority}			& Medium								\\\hline
 		\textbf{Preconditions}		& User is registered and signed in		\\\hline&\\[-2ex]
 		\textbf{Basic flow}			& \begin{minipage}{5in}
 			\begin{enumerate}[noitemsep]
-				\item User selects list from menu
+				\item User selects bookmark from menu
 				\item List of stories shown
 			\end{enumerate}						
 		\end{minipage}						\\\hline&\\[-2ex]
