@@ -8,16 +8,14 @@ To get a brief overview of the complete product and its required parts, the desi
 
 The overall architectural design of the system was made to achieve a rough mapping of what needed to be done in terms of actual programming. The architecture focuses heavily on interactions between the different instances of the systems without going into the specific details on how this is done. To illustrate the architecture, two different views were created. One showing only the components, and the other showing the processes in the different components. The overall system structure can be seen in \textbf{Figure \ref{Fig:system_structure}}, this shows the four different components and how they interact. As shown in this diagram, the system is created as a client-server model, where the mobile application constitutes the client, which communicates with the PHP back-end server. The server is connected to a database, and Digitalt fortalt provides an API to retrieve stories from.\newline
 
-\textbf{Figure \ref{Fig:architecture}} shows a diagram presenting the architecture for the application. As seen in the legend, the square boxes represent individual components or processes. The boxes with oval corners represent compound processes or larger parts. These are mainly shown because they give an overview of which processes belong to and will be performed by which part of the system. Double lined boxes are external sources which provide an API. Lastly, arrows indicate information flow.\newline
-
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\textwidth]{fig/system_structure}
+	\includegraphics[width=0.45\textwidth]{fig/system_structure}
 	\caption{Diagram of the overall system structure for this project.}
 	\label{Fig:system_structure}
 \end{figure}
 
-It is a difficult task to model a whole system in an accurate way, and while the architecture diagram gives an overview, it can not give much insight into the complexity of each process. This is further complicated by the fact that in the startup phase of the project there are a great number of unknowns. Both complexity and requirements are subject to change. As such, the diagram should only be used as a guide for understanding the composition of the complete system.
+\textbf{Figure \ref{Fig:architecture}} shows a diagram presenting the architecture for the application. As seen in the legend, the square boxes represent individual components or processes. The boxes with oval corners represent compound processes or larger parts. These are mainly shown because they give an overview of which processes belong to and will be performed by which part of the system. Double lined boxes are external sources which provide an API. Lastly, arrows indicate information flow.\newline
 
 \begin{figure}[h!]
 	\begin{center}
@@ -28,6 +26,11 @@ It is a difficult task to model a whole system in an accurate way, and while the
 		\label{Fig:architecture}
 	\end{center}
 \end{figure}
+
+As seen in \textbf{Figure \ref{Fig:architecture}} the application structure is divided into three components; database, back-end and front-end. The front-end component is responsible for displaying information to the user. It also handles user input, which it conveys to back-end for processing (see \textbf{Section \ref{subsec:frontend-backend_communication}}). How front-end is built up and what is displayed to user can be found in \textbf{Sections \ref{sec:frontend_structure}} and \textbf{Sections \ref{sec:design_user-interface}}, respectively. The back-end section is responsible for handling requests from front-end, returning information to front-end and for harvesting the stories stored in the database from Digitalt fortalt. \textbf{Section \ref{sec:backend_overview}} describes the back-end structure. The database component stores all the persistent information related to users and stories. The database is described in \textbf{Section \ref{sec:database_design}}.   \newline
+
+
+It is a difficult task to model a whole system in an accurate way, and while the architecture diagram gives an overview, it can not give much insight into the complexity of each process. This is further complicated by the fact that in the startup phase of the project there are a great number of unknowns. Both complexity and requirements are subject to change. As such, the diagram should only be used as a guide for understanding the composition of the complete system.
 
 \section{Front-end structure}
 \label{sec:frontend_structure}
@@ -59,7 +62,7 @@ AngularJS provides templates to create systems based on a Model-View-Controller 
 \end{description}
 
 \section{User interface}
-
+\label{sec:design_user-interface}
 
 \begin{figure}[h!]
 	\centering
@@ -68,7 +71,7 @@ AngularJS provides templates to create systems based on a Model-View-Controller 
 	\label{Fig:flow_diagram}
 \end{figure}
 
-It was very important to the customer that the application should be easy to use (\textbf{Section \ref{sec:non-functional_requirements}}). The elements added to the user interface were thus only things that were absolutely needed in order to satisfy the customer's requirements. The customer also wanted it to "feel native". As it would be very time consuming to make two very different designs for Android and iOS, the design of the app was made quite different typical Android or iOS. This way it would not look out of place on either platform, and it would not be dated as easily when new operative system versions come out. For example, the hamburger menu pattern can be found on both platforms. This also made the interface simpler as the functions that are not used as often can be out of sight. It helped the focus on the main function, exploring stories.
+It was very important to the customer that the application should be easy to use (\textbf{Section \ref{sec:non-functional_requirements}}). The elements added to the user interface were thus only things that were absolutely needed in order to satisfy the customer's requirements. The customer also wanted it to "feel native". As it would be very time consuming to make two very different designs for Android and iOS, the design of the app was made quite different typical Android or iOS. This way it would not look out of place on either platform, and it would not be dated as easily when new operative system versions come out. For example, the hamburger menu pattern can be found on both platforms. This also made the interface simpler as the functions that are not used as often can be out of sight. It helped the focus on the main function, exploring stories.\ newline
 
 The usability of an application is not just about the individual views, it is also about the structure and flow of the app. \textbf{Figure \ref{Fig:flow_diagram}} explains the overall flow between all the different views in the application. The green boxes represent views, while the white ones represent modals placed on top of the view the user came from. The text of the arrows explain what the user clicked in the view the arrow comes from, and the arrow points to which view this action leads to.  The functionality of the more complex views will then be explained in further detail. The rest of the views can be found in the user manual (\textbf{Appendix \ref{app:user_manual}}). 
 
@@ -108,6 +111,8 @@ AngularJS \$http is a core service for reading data from remote servers, which i
 Each HTTP request is managed by the same back-end PHP script. This script decodes the HTTP request, determines which action to perform and executes it. When the script has finished executing, a JSON response is returned to front-end with the desired data. "Get story" is an example of a request. When a user wishes to read a story front-end sends the JSON formatted paramaters userId, storyId and request type, in addition to the previously mentioned fields, as an HTTP request to back-end. Back-end retrieves story information from the database and Digitalt fortalt, which is then returned as a JSON formatted response to front-end. Other request examples are "Add user", "Edit user" and "Get recommended stories".
 
 \section{Back-end overview}
+\label{sec:backend_overview}
+
 The back-end design is divided into five sections, such that each section addresses a separate concern. A concern is a set of information that affects the code of the application. The value of such a separation is that it simplifies the development and maintenance of the application code. By splitting the code into separate parts the system is more logically structured, and cleaner code is achieved. The result is as an example that SQL related code is maintained by one part of the system, while HTTP processing is executed by another. Below is a description of the different back-end sections.
 
 \begin{description}
@@ -115,7 +120,7 @@ The back-end design is divided into five sections, such that each section addres
 	Consisting of the classes storyModel, userModel and preferenceValue. The models are used to temporarily hold information about a story, a user and a user's preference value for a story to be utilized by other files. Information is either retrieved from the database, sent from front-end, harvested from Digitalt museum's API or a combination of these. These models also contain formatting methods, which makes it possible to return story or user information to front-end.
 	
 	\item[Database] \hfill \\
-	This section contains the classes dbStory, dbUser, dbHelper and harvesting. The db classes are responsible for accessing the database. dbStory contains methods for adding or retrieving story related information from the database and dbUser is responsible for user related information. dbHelper consists of more general methods and is the class which establish a connection with the database. The harvesting script is responsible for collecting all database stories from Digitalt museums API and adding stories to or updating stories in the database (see \textbf{Section \ref{sec:harvesting}}).
+	This section contains the classes dbStory, dbUser, dbHelper and harvesting. The db classes are responsible for accessing the database. dbStory contains methods for adding or retrieving story related information from the database and dbUser is responsible for user related information. dbHelper consists of more general methods and is the class which establishes a connection with the database. The harvesting script is responsible for collecting all database stories from Digitalt museums API and adding stories to or updating stories in the database (see \textbf{Section \ref{sec:harvesting}}).
 	
 	\item[Personalization] \hfill \\
 	Consisting of the classes computePreferences and runRecommender. This section computes preference values for each Digitalt fortalt story in the database for each user. runRecommender is also responsible for initializing the Mahout recommendation engine when a user's preference values have been calculated.

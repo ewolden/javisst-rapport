@@ -857,7 +857,8 @@ Status report week 6\newline
 		\\\hline
 	\end{longtable}
 \end{center}
-
+
+
 	
 \chapter{Meeting report examples}
 \label{app:meetingreport}
@@ -1024,6 +1025,91 @@ You need to set up Xcode with your certificates:
 
 How to distribute the app to test users:
 \url{https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1}
+
+\section{Back-end}
+
+\subsection{Dependencies}
+
+\subsubsection{PHP}
+
+Choose between installing and configuring PHP or downloading a development environment with PHP and MySQL.
+\begin{itemize}
+	\item Install and configure PHP: \url{http://php.net/manual/en/install.php}
+	\item Development environment alternatives:
+	\begin{itemize}
+		\item XAMPP: \url{https://www.apachefriends.org/download.html}
+		\item WAMP for windows: \url{http://www.wampserver.com/en/#download-wrapper}
+	\end{itemize}
+\end{itemize}
+	
+\subsubsection{MySQL}
+\begin{itemize}
+	\item MySQL workbench: \url{https://dev.mysql.com/downloads/workbench/}
+\end{itemize}
+		
+\subsubsection{Java}
+\begin{itemize}
+	\item Download Java Development Kit: \url{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}
+\end{itemize}
+			
+\subsubsection{Docker}
+\begin{itemize}
+	\item Docker install: \url{https://docs.docker.com/installation/}
+\end{itemize}
+				
+				
+\subsection{Setup Guide}
+\begin{enumerate}
+	\item Install PHP, MySQL and Java on preferred development device
+	\item Install Docker on chosen server
+	\item Clone "Vettu hva?" repository:
+	\begin{verbatim}
+	git clone https://github.com/ewolden/vettu-hva
+	\end{verbatim}
+	\item Copy config.php and Dockerfile to server.
+	\item Define the paramaters in the config.php file:
+	\begin{itemize}
+		\item DB\_USERNAME - Can be left as root since this is only used internally in the image
+		\item DB\_PASSWORD - Can be left blank since this is only used internally in the image
+		\item DB\_HOST - Can be left blank which is the same as typing localhost
+		\item DB\_NAME - storytelling is the name of the database
+		\item API\_URL - This is the URL to digitalt musems API
+		\item API\_KEY - The API key needed to use digitalt museums API
+		\item APP\_MAIL - The email used for sending users emails upon creation of user (uses a gmail address)
+		\item APP\_MAIL\_PASS - The password for the email given
+	\end{itemize}
+	
+	\item Set up docker container on server
+	\begin{itemize}
+		\item Run the following command to set up a docker container (see more detailed description here: \url{https://github.com/ewolden/vettu-hva}):
+		\begin{verbatim}
+		docker build -t optional_ImageName folder_with_config_and_dockerfile
+		\end{verbatim}
+		\item Create a volume for docker to store databases in (only needs to be done the first time):
+		\begin{verbatim}
+		docker create -v /dbdata --name Storytelling-DBdata optional_imageName
+		\end{verbatim}
+		\item Start the docker image and from the database storage:
+		\begin{verbatim}
+		docker run -d --volumes-from vettuhva-DBdata --name vettuhva-backend -p 
+		optional_external_port:80 -p optional_external_port:3306 -e 
+		MYSQL_PASS="chosen password" optional_imageName
+		\end{verbatim}
+		\item To stop the running container:
+		\begin{verbatim}
+		docker stop containerName
+		\end{verbatim}
+		\item To remove old containers:
+		\begin{verbatim}
+		docker rm containerName
+		\end{verbatim}
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Testing} 	
+Use PHPUnit for testing PHP code. Download and get started with PHPUnit here:  \url{https://phpunit.de/getting-started.html} \newline
+Use JUnit for testing Java code. Get started with JUnit here: \url{https://github.com/junit-team/junit/wiki/Getting-started}
+
 
 \clearpage
 \chapter{User manual}
