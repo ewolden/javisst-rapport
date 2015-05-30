@@ -1,6 +1,12 @@
 \appendix
-\begin{appendices}
-
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+\fancyfoot[LE,RO]{\thepage}			% Setter inn de forsvunnede sidetallene
+\renewcommand{\chaptername}{Appendix}
+\begin{appendices}	
+	
 \chapter{Rules of engagement}
 \label{app:rules_of_engagement}
 \begin{figure}[!h]
@@ -1282,7 +1288,6 @@ From the menu it is possible to view bookmarks, settings, go through the app int
 		\end{subfigure}
 		\label{fig:other}
 	\end{figure}
-
 
 \end{appendices}
 \cleardoublepage
