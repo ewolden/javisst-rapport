@@ -1110,6 +1110,36 @@ Choose between installing and configuring PHP or downloading a development envir
 Use PHPUnit for testing PHP code. Download and get started with PHPUnit here:  \url{https://phpunit.de/getting-started.html} \newline
 Use JUnit for testing Java code. Get started with JUnit here: \url{https://github.com/junit-team/junit/wiki/Getting-started}
 
+\begin{comment}
+Occantionally, when testing the controller.php file in the requests folder, a variation of this code have been used:
+
+\begin{verbatim}
+	$url = 'serverlocation/requests/controller.php';
+	$postarray = json_encode(array('request parameters'));
+
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postarray);
+	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	//curl_setopt($ch, CURLOPT_HEADER, 0);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+	'Content-Type: application/json',
+	'Accept: application/json'
+	));
+	//curl_setopt($ch, CURLOPT_VERBOSE, 1);
+	//curl_setopt($ch, CURLOPT_HEADER, 0);
+	
+	$response = json_decode(curl_exec($ch), true);
+	if(curl_errno($ch)) echo 'error:' . curl_error($ch);
+	
+	curl_close($ch);
+	print_r($response);
+\end{verbatim}
+\end{comment}
+
+
 
 \clearpage
 \chapter{User manual}
