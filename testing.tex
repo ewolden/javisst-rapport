@@ -104,7 +104,7 @@ Because of the time limitations and the difficulty with learning a new interface
 
 \subsection{Test cases}
 The test cases were made by first having a closer look at the different components of the system and the data flows between them (See \textbf{Figure \ref{Fig:architecture}}) 
-The integration was performed on the communication between front-end and back-end code, and included test cases made to test all the HTTP request front-end sent to back-end.(About HTTP request in \textbf{Section \ref{subsec:frontend-backend_communication}}).
+The integration was performed on the communication between front-end and back-end code, and included test cases made to test all the HTTP request front-end sent to back-end (read about HTTP request in \textbf{Section \ref{subsec:frontend-backend_communication}}).
 An example of an integration test can be found in \textbf{Table \ref{Tab:integrationtestexample}}. All the integration test cases are described in \textbf{Appendix \ref{Tab:integrationtestcases}}.
 
 \begin{table}[H]
@@ -127,7 +127,7 @@ An example of an integration test can be found in \textbf{Table \ref{Tab:integra
 
 The following paragraph includes some of the most important issues that were discovered during the integration testing, and how they were solved.\newline
 
-The issue that was considered to be the most time consuming one was to update a user in the database. This issue was detected in the test case I.3. When a user was updated in the UI in the application, the unchanged information that should still be there, was deleted. This was attempted fixed several times with methods that were not adequate. The problem was eventually solved by fetching all information about a user in the database, update the fields in the user model that had been changed, and then insert all the information in the database again. \newline
+The issue that was considered to be the most time consuming one was to update a user in the database. This issue was detected in test case I.3. When a user was updated in the UI in the application, the unchanged information that should still be there, was deleted. This was attempted fixed several times with methods that were not adequate. The problem was eventually solved by fetching all information about a user in the database, update the fields in the user model that had been changed, and then insert all the information in the database again. \newline
 
 Other minor issues that were handled were syntax-issues, redundant code that created unnecessary confusion, and missing table attributes in the database.
 Changes in the code were made to obtain better structure in the code, such as dividing long code files into smaller ones and to make sure functions return a response if an error occurs. Due to a misunderstanding between front-end and back-end developers, the database returned names of category preference and story categories, and not ID's, this was also mended after the integration testing. 
@@ -184,8 +184,6 @@ Sound clips were not working on some Android versions. This was a tough issue wh
 An issue was detected when logging out from a user and then logging in with a different user. The current user would then get the same recommendations as the previous user. The issue was that a user's ID was not cleared properly from the cache when logging out. \newline
 
 Sometimes the recommended stories would take a long time to load. This was fixed by optimizing the harvester. \newline
-
-Can not scroll down if you are scrolling by touching the frame of video, picture and sound. \newline
 
 It was discovered that there was no way to delete the user-made lists. This was easily remedied by adding an "X"-button on these lists to allow deleting them. \newline
 
@@ -371,7 +369,7 @@ The time set aside for each test was about 20 minutes for the test and about 10 
 
 To summarize the tests; each user had his or her own problems with the application but on the whole the user is able to do the task they are asked to complete. So considering the scenarios and use-cases, the application is translating and making the user understand what its functionalities are. There are of course some major inadequate parts, but this is as intended for the test and we are aware of the missing parts.\newline
 
-When it comes to the intuitive understanding, the application has some work to be done. This is covered on a per view basis. And since the user group is not narrow enough we aim to design for everybody and this will act as a constraint for the UI.The parts where users are confused are mentioned in the views section.\newline
+When it comes to the intuitive understanding, the application has some work to be done. This is covered on a per view basis. And since the user group is not narrow enough we aim to design for everybody and this will act as a constraint for the UI. The parts where users are confused are mentioned in the views section.\newline
 
 Paths are on the whole followed by the majority of the testers with some deviation, but this is expected since the prototype is a bit unclear on its formulation on some of the views. But to conclude, the users are almost without issues following the scenarios to the point.
 
