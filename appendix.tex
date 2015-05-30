@@ -1110,17 +1110,17 @@ Choose between installing and configuring PHP or downloading a development envir
 	\begin{itemize}
 		\item Run the following command to set up a docker container (see more detailed description here: \url{https://github.com/ewolden/vettu-hva}):
 		\begin{verbatim}
-		docker build -t optional_ImageName folder_with_config_and_dockerfile
+		docker build -t preferred_ImageName path_to_folder_with_config_and_dockerfile
 		\end{verbatim}
 		\item Create a volume for docker to store databases in (only needs to be done the first time):
 		\begin{verbatim}
-		docker create -v /dbdata --name Storytelling-DBdata optional_imageName
+		docker create -v /dbdata --name Storytelling-DBdata preferred_imageName
 		\end{verbatim}
 		\item Start the docker image and from the database storage:
 		\begin{verbatim}
 		docker run -d --volumes-from vettuhva-DBdata --name vettuhva-backend -p 
-		optional_external_port:80 -p optional_external_port:3306 -e 
-		MYSQL_PASS="chosen password" optional_imageName
+		preferred_external_port:80 -p preferred_external_port:3306 -e 
+		MYSQL_PASS="chosen password" preferred_imageName
 		\end{verbatim}
 		\item To stop the running container:
 		\begin{verbatim}
@@ -1129,6 +1129,10 @@ Choose between installing and configuring PHP or downloading a development envir
 		\item To remove old containers:
 		\begin{verbatim}
 		docker rm containerName
+		\end{verbatim}
+		\item To remove old images:
+		\begin{verbatim}
+		docker rmi imageName
 		\end{verbatim}
 	\end{itemize}
 \end{enumerate}
