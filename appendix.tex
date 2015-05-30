@@ -125,7 +125,7 @@ I2: Importance (Likelihood * Impact)\\
 	
 		R14& Give feedback / rating on story  & The application should provide the user with the opportunity to rate the story. The rating is in the form of a star system with 5 stars.  & H & U7 &\\\hline
 				
-		R15 & Tag story / Add story to list  & The user should be given the opportunity to connect a story to tags. The tags could be predefined by the system, like "Les senere" or defined by the user & M  & U5 &\\\hline
+		R15 & Bookmark story / Add story to list  & The user should be given the opportunity to connect a story to bookmarks. The bookmarks could be predefined by the system, like "Les senere" or defined by the user & M  & U5 &\\\hline
 		
 		R16& Link to Digitalt fortalt  & Every story should include a link to the corresponding story on Digitalt fortalt. & H & U6 &	\\\hline
 		
@@ -404,7 +404,7 @@ Status report week 6\newline
 		
 		UN1.2 & Update rating values in the database & Random userId, random storyId, update Value : 5 & The function should return true when running the database request & Pass\\\hline
 		
-		UN1.3 & Update new tag that user have created & Random userId, tagName: 'NyTestTag2' & The function should return true when running the database request& Pass \\\hline
+		UN1.3 & Update new tag\footnote{A tag is equivalent to a bookmark. Because of references to variable names such as tagName, this has not been changed in this section.} that user have created & Random userId, tagName: 'NyTestTag2' & The function should return true when running the database request& Pass \\\hline
 		
 		UN1.4 & Update a user's tag which is connected to a story & Random userId, Random storyId, tagName: 'Les senere' & The function should return true when running the database request& Pass \\\hline
 		
@@ -533,6 +533,8 @@ Status report week 6\newline
 
 \section{Integration test cases}
 \label{app:integrationtest}
+
+
 \renewcommand{\arraystretch}{2}%
 \begin{center}
 	\small
