@@ -46,7 +46,7 @@ AngularJS provides templates to create systems based on a Model-View-Controller 
 	The interfaces that the user can see. This means some form of visual representation of the model.
 	
 	\item[Controller] \hfill \\ 
-	The logic and behavior of the views. The controllers also make changes the model.
+	The logic and behavior of the views. The controllers also make changes to the model.
 	
 	\item[Directive] \hfill \\ 
 	Special functionality applied to the DOM elements, you can create your own directives as well as use the numerous ones provided by AngularJS itself. In "Vettu hva?", several of these were used, such as directives that call on some function when DOM elements are clicked on, or directives that show or hide parts of the DOM based on some condition.
@@ -55,7 +55,7 @@ AngularJS provides templates to create systems based on a Model-View-Controller 
 	A module encapsulates a part of the application. Instead of having a single "main" function that holds the application together, Angular applications normally have multiple modules that work together. The benefit of this is that the application is decomposed into logical parts that can be reused, loaded, and tested in any order. In "Vettu hva?", each controller is its own module. The part of the program that communicates with the back-end is also encapsulated in a module. Furthermore, there is a module that starts up the application and binds together views and controller into different states.
 	
 	\item[Scope] \hfill \\ 
-	The scope contains all the elements that the application currently has access too. It can be viewed as a container that stores the current model, and so if a controller or directive is going to modify or access the model, this has to be done by using the scope.
+	The scope contains all the elements that the application currently has access to. It can be viewed as a container that stores the current model, and so if a controller or directive is going to modify or access the model, this has to be done by using the scope.
 	
 	\item[Service] \hfill \\ 
 	A service contains "global" logic that is accessible to the entire application. In "Vettu hva?", this is used in the module that contains the communication with the back-end. This module has three different services, which respectively gives the application access to user data, story data, and requests from front-end to back-end.
